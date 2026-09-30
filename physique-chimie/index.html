@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physique-chimie — Cahier de Ruben</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../cahier.css" />
+</head>
+<body data-vue="synthese">
+  <div class="wrap">
+    <header class="top">
+      <a class="back" href="../">Toutes les matières</a>
+      <p class="kicker">Physique-chimie · 3e · Partie I</p>
+      <h1>Organisation et transformation de la matière</h1>
+      <p class="lede">
+        Deux chapitres sont dans les scans : la masse volumique, puis l’atome.
+        La synthèse garde les formules et les résultats. La lecture complète reprend les expériences et les calculs du cahier.
+      </p>
+      <div class="toolbar" role="group" aria-label="Longueur de la lecture">
+        <button type="button" id="btnSynthese" aria-pressed="true">Synthèse</button>
+        <button type="button" id="btnComplet" aria-pressed="false">Complet</button>
+      </div>
+    </header>
+
+    <div class="vue-synthese">
+      <section>
+        <article class="card">
+          <h2>Chapitre 1 — La masse volumique</h2>
+          <p class="note">ρ = m / V. Masse en g, volume en mL, masse volumique en g/mL. Pour l’eau, 1 g/mL : c’est une convention, le gramme a été défini comme la masse d’un centimètre cube d’eau.</p>
+          <ol class="timeline">
+            <li>
+              <time>Eau</time>
+              <p>50 g pour 50 mL. ρ = 50 / 50 = 1 g/mL.</p>
+            </li>
+            <li>
+              <time>Huile</time>
+              <p>45,9 g pour 50 mL. ρ = 45,9 / 50 = 0,918 g/mL.</p>
+            </li>
+            <li>
+              <time>Mélange</time>
+              <p>L’eau et l’huile ne se mélangent pas. L’huile reste au-dessus, parce que sa masse volumique est plus petite.</p>
+            </li>
+            <li>
+              <time>Laiton</time>
+              <p>Volume déplacé : 16 − 12,5 = 3,5 mL. Masse 23,5 g. ρ = 23,5 / 3,5 = 6,71 g/mL.</p>
+            </li>
+          </ol>
+        </article>
+      </section>
+      <section>
+        <article class="card">
+          <h2>Chapitre 2 — L’atome</h2>
+          <ul class="bullets">
+            <li>La matière est faite d’atomes. Des atomes liés ensemble forment une molécule.</li>
+            <li>Un atome : un noyau, et des électrons qui gravitent autour. Entre les deux, du vide. Structure lacunaire.</li>
+            <li>Dans le noyau : protons, charge +, et neutrons, sans charge. Les électrons ont une charge −.</li>
+            <li>Un atome est électriquement neutre : autant de protons que d’électrons.</li>
+            <li>Z est le numéro atomique, le nombre de protons. A est le nombre de masse, protons + neutrons. N = A − Z.</li>
+            <li>Exemple du cahier, le cuivre : <sup>63</sup><sub>29</sub>Cu. Z = 29, A = 63, donc N = 34 neutrons.</li>
+            <li>Les isotopes d’un élément ont le même Z et un A différent. Carbone 12, 13 et 14 sont des isotopes du carbone.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+    <div class="vue-complet">
+      <section>
+        <article class="card">
+          <span class="tag">Chapitre 1 · définition</span>
+          <h2>La masse volumique</h2>
+          <p>La masse volumique ρ d’un échantillon est le quotient de sa masse m par le volume V qu’il occupe.</p>
+          <p><strong>ρ = m / V</strong>, avec ρ en g/mL, m en g, V en mL.</p>
+          <p>À savoir : ρ<sub>eau</sub> = 1 g/cm³. Un centimètre cube d’eau a une masse de 1 g. Ce n’est pas une coïncidence, c’est une convention.</p>
+          <p>Expérience du cours : on mesure la masse de deux solides de même volume. Les masses sont différentes. Interprétation : la masse par unité de volume est caractéristique d’une substance. Sur le document, les balances affichent 172,5 g et 210,7 g.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Chapitre 1 · liquides</span>
+          <h2>Eau et huile</h2>
+          <p>Protocole : poser une éprouvette graduée vide sur la balance et tarer. Verser 50 mL d’huile, noter la masse. Recommencer avec l’eau.</p>
+          <div class="stats">
+            <div class="stat"><strong>1 g/mL</strong><span>eau, 50 g / 50 mL</span></div>
+            <div class="stat"><strong>0,918 g/mL</strong><span>huile, 45,9 g / 50 mL</span></div>
+            <div class="stat"><strong>huile au-dessus</strong><span>mélange hétérogène</span></div>
+          </div>
+          <p>Observation de Ruben : l’eau ne se mélange pas avec l’huile. On obtient un mélange hétérogène. L’huile reste au-dessus de l’eau car sa masse volumique est plus petite.</p>
+          <p>La grandeur qui explique ce comportement est la masse volumique.</p>
+          <figure class="figure">
+            <img src="../drive/files/105UYypqi8ePc80v-wrX5gILBMHtfbObi/pages/page-01.png" alt="Fiche de masse volumique avec les calculs eau et huile" />
+            <figcaption>Pages 1 et 2 de la fiche, avec les calculs et le schéma du tube à essai.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Chapitre 1 · solide</span>
+          <h2>Le laiton</h2>
+          <p>Protocole : verser 80 mL d’eau dans l’éprouvette, plonger une masse marquée en laiton de 23,5 g.</p>
+          <p>Sur le schéma du cahier, le volume passe de 12,5 mL à 16 mL. Volume de l’objet : V = 16 − 12,5 = 3,5 mL.</p>
+          <p>ρ = 23,5 / 3,5 = 6,71 g/mL. La masse volumique de cet objet est 6,71 g/mL.</p>
+          <figure class="figure">
+            <img src="../drive/files/105UYypqi8ePc80v-wrX5gILBMHtfbObi/pages/page-02.png" alt="Schéma du laiton et exercices de masse volumique" />
+            <figcaption>Déplacement d’eau pour le laiton, puis le tableau d’exercices déjà calculé.</figcaption>
+          </figure>
+          <h3>Calculs déjà faits sur la fiche</h3>
+          <ul class="bullets">
+            <li>20 g et 25 mL : ρ = 20 / 25 = 0,8 g/mL.</li>
+            <li>270 g et ρ = 13,5 g/mL : V = 270 / 13,5 = 20 mL.</li>
+            <li>80 mL et ρ = 1,25 g/mL : m = 1,25 × 80 = 100 g.</li>
+            <li>Éprouvette : 79 g pour 100 mL, ρ = 79 / 100 = 0,79 g/mL.</li>
+          </ul>
+          <p>Pour une essence à 0,80 g/mL, un litre fait 0,80 × 1000 = 800 g, pas 80 g.</p>
+          <p>Trois exercices de la feuille ne sont pas encore remplis : les canettes, le pont, l’anneau. Ils utilisent les mêmes relations, m = ρ × V et V = m / ρ.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Chapitre 2</span>
+          <h2>L’atome</h2>
+          <ul class="bullets">
+            <li>La matière est constituée d’atomes. Quand les atomes sont liés ensemble, ils forment une molécule.</li>
+            <li>L’atome est constitué d’un noyau autour duquel gravitent un ou plusieurs électrons, portant chacun une charge négative.</li>
+            <li>Le noyau est constitué de particules chargées positivement, les protons, et de particules sans charge électrique, les neutrons. Protons et neutrons sont les nucléons.</li>
+            <li>Structure lacunaire : entre les électrons et le noyau, il y a du vide.</li>
+            <li>L’atome est électriquement neutre : autant de protons (charge +) que d’électrons (charge −).</li>
+            <li>Tous les atomes sont répertoriés dans la classification périodique des éléments. Ils sont classés selon leur numéro atomique Z.</li>
+          </ul>
+          <p>Z correspond au nombre de protons dans le noyau. Le nombre de nucléons, aussi appelé nombre de masse, est noté A. Le nombre de neutrons est noté N. A = Z + N, donc N = A − Z.</p>
+          <figure class="figure">
+            <img src="../drive/files/105UYypqi8ePc80v-wrX5gILBMHtfbObi/pages/page-07.png" alt="Schéma atomes et noyaux avec protons, neutrons et électrons" />
+            <figcaption>Schéma du cahier. Protons positifs, électrons négatifs, neutrons neutres. Exemple noté : Z = 8, N = 24, A = 32.</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="../drive/files/105UYypqi8ePc80v-wrX5gILBMHtfbObi/pages/page-08.png" alt="Notation symbolique d’un noyau et isotopes du carbone" />
+            <figcaption>Notation <sup>A</sup><sub>Z</sub>X. Les carbones 12, 13 et 14 sont des isotopes de l’élément carbone.</figcaption>
+          </figure>
+          <p>Exemple recopié, l’atome de cuivre : <sup>63</sup><sub>29</sub>Cu. Z = 29, A = 63, N = 63 − 29 = 34 neutrons.</p>
+          <p>La feuille d’exercices du chapitre 2, atome de sodium et lingot d’or, est dans le scan. Elle n’est pas encore remplie.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Méthode, dans le même scan</span>
+          <h2>Comprendre une consigne</h2>
+          <ul class="bullets">
+            <li>Lire la consigne complètement.</li>
+            <li>Repérer les verbes d’action : décrire, démontrer, comparer, déduire, justifier, calculer.</li>
+            <li>Repérer les adverbes et les pronoms interrogatifs : qui, comment, pourquoi.</li>
+            <li>Reformuler en phrase affirmative : « Pour répondre, je dois… »</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="quiz">
+        <article class="card">
+          <div class="quiz-head">
+            <div>
+              <h2>Quiz</h2>
+              <p class="note">Huit questions, à partir des calculs et du cours.</p>
+            </div>
+            <p id="score">0 / 8</p>
+          </div>
+          <div id="quiz"></div>
+        </article>
+      </section>
+    </div>
+
+    <footer>
+      Sources : deux PDF du 30 septembre, la fiche de masse volumique et le cahier jusqu’au cuivre.
+      L’orthographe est corrigée. Les exercices non remplis restent indiqués comme tels.
+    </footer>
+  </div>
+
+  <script>
+    const body = document.body;
+    const synthese = document.getElementById("btnSynthese");
+    const complet = document.getElementById("btnComplet");
+
+    function setVue(vue) {
+      body.dataset.vue = vue;
+      synthese.setAttribute("aria-pressed", vue === "synthese" ? "true" : "false");
+      complet.setAttribute("aria-pressed", vue === "complet" ? "true" : "false");
+    }
+    synthese.addEventListener("click", () => setVue("synthese"));
+    complet.addEventListener("click", () => setVue("complet"));
+
+    const questions = [
+      {
+        q: "Quelle est la formule de la masse volumique ?",
+        choices: ["ρ = m × V", "ρ = m / V", "ρ = V / m", "ρ = m + V"],
+        answer: 1,
+        why: "ρ = m / V. Masse sur volume."
+      },
+      {
+        q: "Quelle masse volumique Ruben trouve-t-il pour l’huile ?",
+        choices: ["1 g/mL", "0,918 g/mL", "6,71 g/mL", "0,79 g/mL"],
+        answer: 1,
+        why: "45,9 g / 50 mL = 0,918 g/mL. L’eau du même volume vaut 1 g/mL."
+      },
+      {
+        q: "Pourquoi l’huile reste-t-elle au-dessus de l’eau ?",
+        choices: ["Elle est plus chaude", "Sa masse volumique est plus petite", "Elle contient des neutrons", "Le volume d’huile est plus grand"],
+        answer: 1,
+        why: "0,918 g/mL est inférieur à 1 g/mL. Le mélange est hétérogène."
+      },
+      {
+        q: "Comment obtient-on le volume du laiton dans l’éprouvette ?",
+        choices: ["On ajoute 80 mL", "Volume final moins volume initial", "On divise la masse par 2", "On lit la température"],
+        answer: 1,
+        why: "16 mL − 12,5 mL = 3,5 mL, puis ρ = 23,5 / 3,5 = 6,71 g/mL."
+      },
+      {
+        q: "De quoi est constitué le noyau ?",
+        choices: ["D’électrons seulement", "De protons et de neutrons", "De molécules", "D’huile et d’eau"],
+        answer: 1,
+        why: "Protons, charge positive, et neutrons, sans charge. Les électrons tournent autour."
+      },
+      {
+        q: "Que signifie « un atome est électriquement neutre » ?",
+        choices: ["Il n’a pas de noyau", "Autant de protons que d’électrons", "Il n’a pas de neutrons", "Z est égal à A"],
+        answer: 1,
+        why: "Autant de charges + que de charges −."
+      },
+      {
+        q: "Pour le cuivre 63 sur 29, combien de neutrons ?",
+        choices: ["63", "29", "34", "92"],
+        answer: 2,
+        why: "N = A − Z = 63 − 29 = 34."
+      },
+      {
+        q: "Que sont le carbone 12, le carbone 13 et le carbone 14 ?",
+        choices: ["Trois éléments différents", "Des isotopes du carbone", "Trois molécules", "Des neutrons"],
+        answer: 1,
+        why: "Même élément, même nombre de protons, nombres de masse différents."
+      }
+    ];
+
+    const root = document.getElementById("quiz");
+    const scoreEl = document.getElementById("score");
+    let score = 0;
+    questions.forEach((item, index) => {
+      const block = document.createElement("div");
+      block.className = "q";
+      const title = document.createElement("h3");
+      title.textContent = (index + 1) + ". " + item.q;
+      const choices = document.createElement("div");
+      choices.className = "choices";
+      const why = document.createElement("p");
+      why.className = "why";
+      why.hidden = true;
+      item.choices.forEach((label, choiceIndex) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = label;
+        button.addEventListener("click", () => {
+          if (block.dataset.done) return;
+          block.dataset.done = "1";
+          choices.querySelectorAll("button").forEach((candidate) => { candidate.disabled = true; });
+          choices.children[item.answer].classList.add("good");
+          if (choiceIndex === item.answer) score += 1;
+          else button.classList.add("bad");
+          why.hidden = false;
+          why.textContent = item.why;
+          scoreEl.textContent = score + " / " + questions.length;
+        });
+        choices.appendChild(button);
+      });
+      block.append(title, choices, why);
+      root.appendChild(block);
+    });
+  </script>
+</body>
+</html>
