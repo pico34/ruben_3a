@@ -10,15 +10,300 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../cahier.css" />
 </head>
-<body>
+<body data-vue="synthese">
   <div class="wrap">
     <header class="top">
       <a class="back" href="../">Toutes les matières</a>
-      <p class="kicker">Ruben · 3e A</p>
-      <h1>Sciences de la vie et de la Terre</h1>
-      <p class="lede">Aucun document de cette matière n’est encore dans le Drive. La page est prête pour le premier cours.</p>
+      <p class="kicker">SVT · 3e · Thème 3, chapitre 1</p>
+      <h1>Système nerveux et comportement responsable</h1>
+      <p class="lede">
+        Le premier chapitre de l’année ouvre le thème 3, « Le corps humain et la santé ».
+        La synthèse garde les idées à savoir dans l’ordre du cours. La lecture complète reprend les deux fiches d’activité, la fiche méthode et le programme.
+      </p>
+      <div class="toolbar" role="group" aria-label="Longueur de la lecture">
+        <button type="button" id="btnSynthese" aria-pressed="true">Synthèse</button>
+        <button type="button" id="btnComplet" aria-pressed="false">Complet</button>
+      </div>
     </header>
-    <footer>Les PDF déposés dans le dossier seront rangés ici, dans l’ordre du cours.</footer>
+
+    <div class="vue-synthese">
+      <section>
+        <article class="card">
+          <h2>I. Rappels — le fonctionnement du système nerveux</h2>
+          <ol class="timeline">
+            <li>
+              <time>Commande</time>
+              <p>Stimulus → organe récepteur → nerf sensitif → centre nerveux (cerveau, moelle épinière) → nerf moteur → organe effecteur (muscle) → mouvement, la réponse.</p>
+            </li>
+            <li>
+              <time>Aires</time>
+              <p>Le cerveau, partie de l’encéphale, est organisé en aires cérébrales. Chacune est spécialisée dans une fonction : motricité, langage, vision, audition.</p>
+            </li>
+            <li>
+              <time>IRM</time>
+              <p>L’IRM fonctionnelle permet de voir quelles aires s’activent pendant une tâche.</p>
+            </li>
+            <li>
+              <time>Plasticité</time>
+              <p>Le cerveau s’adapte : les connexions entre neurones se modifient au cours de la vie, notamment pendant les apprentissages. C’est la plasticité cérébrale.</p>
+            </li>
+            <li>
+              <time>Neurone</time>
+              <p>Le système nerveux est fait de neurones reliés en réseaux. Un neurone : un corps cellulaire, des dendrites qui reçoivent le message, un axone qui le transmet sous forme d’un signal électrique, l’influx nerveux.</p>
+            </li>
+            <li>
+              <time>Synapse</time>
+              <p>Zone de contact entre deux neurones. Le message y devient chimique : un neurotransmetteur est libéré, traverse l’espace synaptique et déclenche un nouveau message électrique dans le neurone suivant.</p>
+            </li>
+          </ol>
+        </article>
+      </section>
+      <section>
+        <article class="card">
+          <h2>II. Les conditions d’un bon fonctionnement</h2>
+          <ul class="bullets">
+            <li>Le fonctionnement du système nerveux dépend de l’hygiène de vie.</li>
+            <li>Le favorisent : un sommeil suffisant, le sport régulier.</li>
+            <li>Le perturbent, parfois durablement : les écrans le soir, l’alcool, le tabac, un stress important, le cannabis.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+    <div class="vue-complet">
+      <section>
+        <article class="card">
+          <span class="tag">Méthode · début du cahier</span>
+          <h2>Consignes pour travailler en SVT</h2>
+          <ul class="bullets">
+            <li>Matériel à chaque séance : le cahier de SVT et le cahier d’exercices SVT cycle 4, Lelivrescolaire.</li>
+            <li>Trois couleurs dans le cahier. Noir : les activités, à comprendre. Bleu : les leçons, à comprendre. Rouge : les définitions, les titres et les conclusions, à apprendre par cœur.</li>
+            <li>Après chaque séance : relire la leçon le soir même et la veille du cours suivant, finir les exercices, apprendre l’orthographe et la définition des mots nouveaux, faire signer et corriger les contrôles.</li>
+            <li>De courtes évaluations de connaissances ont lieu environ toutes les 3 semaines.</li>
+            <li>Les évaluations de fin de séquence sont annoncées une semaine avant. Utiliser la fiche de révision (FR) collée en fin de leçon.</li>
+            <li>Avant l’évaluation, vérifier : les définitions en rouge sont connues, les notions en bleu et les activités en noir sont comprises, les fiches méthode du chapitre sont relues.</li>
+            <li>S’entraîner avec le cahier d’exercices, corrigé sur Pronote (monENT Occitanie → Scolarité → Pronote → Cahier de texte), en corrigeant avec une autre couleur. Les exercices corrigés rapportés le jour de l’évaluation comptent en bonus.</li>
+            <li>Pronote : utiliser son propre code élève, retrouver les traces écrites dans « Contenu et ressources SVT » en cas d’absence, contacter le professeur par la messagerie.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Programme · année 2026-2027</span>
+          <h2>Les chapitres de 3e</h2>
+          <p class="note">Tous les chapitres du cycle 4 sont à réviser pour le brevet. Les pages sont celles du cahier d’exercices Lelivrescolaire.</p>
+          <ol class="timeline">
+            <li><time>Chap. 1</time><p>Système nerveux et comportement responsable (thème 3). Pages 72-73 et 88.</p></li>
+            <li><time>Chap. 2</time><p>Monde microbien et santé : micro-organismes, réactions immunitaires, prévention, lutte contre le SIDA (thème 3). Pages 78-81, exercices p. 15 et p. 33.</p></li>
+            <li><time>Chap. 3</time><p>Changements climatiques passés et actuels, avec exposés (thème 1). Pages 34-35, 40-43, exercice p. 10.</p></li>
+            <li><time>Chap. 4</time><p>Diversité et stabilité génétique des êtres vivants (thème 2). Pages 58-63, exercices p. 11 et p. 31.</p></li>
+            <li><time>Chap. 5</time><p>Biodiversité et évolution : histoire de la Terre, évolution de la vie, théorie de l’évolution (thème 2). Pages 66-69.</p></li>
+          </ol>
+          <p>Les autres chapitres du tableau sont vus avant la 3e et reviennent en rappels : ressources naturelles, parenté des êtres vivants, alimentation et digestion, reproduction. Pour ces deux derniers, le tableau indique « rappels fin d’année ? ».</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Chapitre 1 · activité 1</span>
+          <h2>Le cerveau : des aires spécialisées</h2>
+          <p>Situation de départ : Alain pose sa main sur une plaque chaude et la retire rapidement. Qu’est-ce qui a déclenché le mouvement ? Qui l’a « commandé » ?</p>
+          <h3>Schéma de la commande du mouvement</h3>
+          <p>Stimulus → organe récepteur → nerf sensitif → centre nerveux (cerveau et moelle épinière) → nerf moteur → organe effecteur (muscle) → mouvement (réponse).</p>
+          <p class="note">Retouche signalée : sur le schéma, Ruben a écrit « yeux » comme organe récepteur. Dans la situation de la plaque chaude, c’est plutôt la peau de la main. Il a aussi écrit « neurone » sur la flèche du stimulus. À vérifier avec le corrigé.</p>
+          <p>Notes ajoutées autour du schéma : aires cérébrales, neurones, synapse, neurotransmetteur, puis stress, hygiène de vie, relaxation, et « comportement → mémoire ». Ce sont les notions qui arrivent dans la suite du chapitre.</p>
+          <h3>Tableau : quelle aire s’active ?</h3>
+          <ul class="bullets">
+            <li>A. Le sujet entend un son de cloche : aire auditive.</li>
+            <li>B. Le sujet voit un flash lumineux : aire visuelle primaire.</li>
+            <li>C. Le sujet bouge l’index droit : aire motrice primaire.</li>
+          </ul>
+          <h3>Le cas d’Alain</h3>
+          <p>Après un accident, une lésion d’une aire motrice empêche presque Alain de marcher. Après plusieurs semaines de rééducation, il remarche. Les IRM montrent que les zones activées pendant la marche ne sont plus les mêmes : c’est la plasticité cérébrale.</p>
+          <p>Question 3, réponse de Ruben : avant l’accident, ce sont les aires motrices primaires et secondaires qui sont impliquées dans la marche.</p>
+          <p>Question 4, « Expliquez comment le cerveau d’Alain a pu s’adapter » : pas encore remplie.</p>
+          <figure class="figure">
+            <img src="../drive/files/1O5xbMe44RRGCd-jeBT96IeQ-EALJoKhA/pages/page-5.png" alt="Fiche d’activité 1 : schéma de la commande du mouvement et aires cérébrales" />
+            <figcaption>Fiche d’activité n° 1, avec le schéma complété et le tableau des aires.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Chapitre 1 · leçon, partie I</span>
+          <h2>Rappels : le fonctionnement du système nerveux</h2>
+          <p><strong>1.</strong> Le cerveau (partie de l’encéphale) est organisé en zones appelées <strong>aires cérébrales</strong>, chacune spécialisée dans une fonction précise (motricité, langage, vision, audition).</p>
+          <p>L’imagerie médicale (IRM fonctionnelle) permet de visualiser l’activité de ces aires lors de la réalisation d’une tâche.</p>
+          <p>Le cerveau conserve une capacité d’adaptation appelée <strong>plasticité cérébrale</strong> : les connexions entre neurones peuvent se modifier au cours de la vie, notamment lors des apprentissages.</p>
+          <p><strong>2.</strong> Le système nerveux est constitué de cellules appelées <strong>neurones</strong>, reliées entre elles en réseaux.</p>
+          <p>Un neurone est formé d’un corps cellulaire, de <strong>dendrites</strong> (qui reçoivent le message) et d’un <strong>axone</strong> (qui transmet le message sous forme d’un signal électrique appelé <strong>influx nerveux</strong>).</p>
+          <p>La zone de contact entre deux neurones est appelée <strong>synapse</strong>. Le message y change de nature : il devient chimique grâce à la libération d’une molécule, le <strong>neurotransmetteur</strong>, qui traverse l’espace synaptique et déclenche un nouveau message électrique dans le neurone suivant.</p>
+          <p class="note">Numérotation : le cahier écrit « 1/ Rappels », puis « 2/ », puis « II/ ». La page la range en partie I (points 1 et 2) et partie II.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Chapitre 1 · activité 2</span>
+          <h2>Le neurone et la synapse</h2>
+          <p>Objectif : décrire la structure d’un neurone et comprendre comment le message nerveux passe d’un neurone à l’autre au niveau d’une synapse.</p>
+          <h3>Légendes de Ruben</h3>
+          <ul class="bullets">
+            <li>Schéma du neurone : dendrites, noyau, membrane plasmique, gaine de myéline, corps cellulaire.</li>
+            <li>Schéma de la synapse : influx nerveux, synapse, vésicule, neurotransmetteur, neurone postsynaptique.</li>
+          </ul>
+          <p class="note">Retouche signalée : « espace synaptique » est écrit en face de l’accolade du bas du neurone, à l’endroit où l’on attend plutôt l’axone. Les mots « axone », « bouton synaptique » et « récepteurs » de la liste ne sont pas encore placés. À vérifier avec le corrigé.</p>
+          <h3>Blocage des récepteurs</h3>
+          <ul class="bullets">
+            <li>Récepteurs du neurone postsynaptique fonctionnels : le message passe, le muscle se contracte.</li>
+            <li>Récepteurs bloqués par une substance : le message ne passe pas, aucune contraction.</li>
+          </ul>
+          <p>Questions 1 (comparer les deux situations) et 2 (rôle du neurotransmetteur et de ses récepteurs) : pas encore remplies.</p>
+          <figure class="figure">
+            <img src="../drive/files/1O5xbMe44RRGCd-jeBT96IeQ-EALJoKhA/pages/page-7.png" alt="Fiche d’activité 2 : schémas légendés d’un neurone et d’une synapse" />
+            <figcaption>Fiche d’activité n° 2, schémas du neurone et de la synapse légendés par Ruben.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Chapitre 1 · leçon, partie II</span>
+          <h2>Les conditions d’un bon fonctionnement du système nerveux</h2>
+          <p>Le fonctionnement du système nerveux dépend de l’hygiène de vie. Le sommeil suffisant et le sport régulier le favorisent ; les écrans le soir, l’alcool, le tabac, le stress important et le cannabis le perturbent, parfois de façon durable.</p>
+          <h3>Exercice 2, réponses de Ruben</h3>
+          <ul class="bullets">
+            <li>Grâce à la relaxation, on se concentre plus sur le contrôle et on diminue notre stress.</li>
+            <li>Question 3 : le sport favorise le bon fonctionnement, ainsi qu’un sommeil suffisant et une relaxation avant quelque chose d’important.</li>
+          </ul>
+          <p class="note">L’énoncé de l’exercice 2 n’est pas dans le scan : seules les réponses sont recopiées.</p>
+        </article>
+      </section>
+
+      <section id="quiz">
+        <article class="card">
+          <div class="quiz-head">
+            <div>
+              <h2>Quiz</h2>
+              <p class="note">Huit questions sur le chapitre 1.</p>
+            </div>
+            <p id="score">0 / 8</p>
+          </div>
+          <div id="quiz"></div>
+        </article>
+      </section>
+    </div>
+
+    <footer>
+      Source : un PDF du 30 septembre, le début du cahier de SVT, du titre à la fin de la partie II du chapitre 1.
+      L’orthographe est corrigée. Les questions non remplies restent indiquées comme telles.
+    </footer>
   </div>
+
+  <script>
+    const body = document.body;
+    const synthese = document.getElementById("btnSynthese");
+    const complet = document.getElementById("btnComplet");
+
+    function setVue(vue) {
+      body.dataset.vue = vue;
+      synthese.setAttribute("aria-pressed", vue === "synthese" ? "true" : "false");
+      complet.setAttribute("aria-pressed", vue === "complet" ? "true" : "false");
+    }
+    synthese.addEventListener("click", () => setVue("synthese"));
+    complet.addEventListener("click", () => setVue("complet"));
+
+    const questions = [
+      {
+        q: "Dans quel ordre le message circule-t-il lors d’un mouvement ?",
+        choices: [
+          "Organe effecteur → nerf sensitif → cerveau → organe récepteur",
+          "Organe récepteur → nerf sensitif → centre nerveux → nerf moteur → organe effecteur",
+          "Centre nerveux → organe récepteur → nerf moteur → muscle",
+          "Nerf moteur → organe récepteur → nerf sensitif → muscle"
+        ],
+        answer: 1,
+        why: "Le récepteur capte le stimulus, le nerf sensitif amène le message au centre nerveux, le nerf moteur l’envoie au muscle."
+      },
+      {
+        q: "Comment s’appellent les zones spécialisées du cerveau ?",
+        choices: ["Les synapses", "Les aires cérébrales", "Les dendrites", "Les vésicules"],
+        answer: 1,
+        why: "Aires cérébrales : motricité, langage, vision, audition."
+      },
+      {
+        q: "Le sujet bouge l’index droit. Quelle aire s’active ?",
+        choices: ["L’aire auditive", "L’aire visuelle primaire", "L’aire motrice primaire", "L’aire olfactive"],
+        answer: 2,
+        why: "Un mouvement volontaire active l’aire motrice primaire."
+      },
+      {
+        q: "Qu’est-ce que la plasticité cérébrale ?",
+        choices: [
+          "La capacité du cerveau à se modifier et à s’adapter",
+          "La couleur du cerveau à l’IRM",
+          "Le blocage des récepteurs",
+          "La vitesse de l’influx nerveux"
+        ],
+        answer: 0,
+        why: "Les connexions entre neurones se modifient au cours de la vie, comme pour Alain après sa rééducation."
+      },
+      {
+        q: "Quelle partie du neurone reçoit le message ?",
+        choices: ["L’axone", "Les dendrites", "La gaine de myéline", "L’espace synaptique"],
+        answer: 1,
+        why: "Les dendrites reçoivent, l’axone transmet."
+      },
+      {
+        q: "Comment s’appelle le signal électrique transmis par l’axone ?",
+        choices: ["Le neurotransmetteur", "L’influx nerveux", "La synapse", "Le stimulus"],
+        answer: 1,
+        why: "L’influx nerveux est le message électrique."
+      },
+      {
+        q: "Que se passe-t-il au niveau de la synapse ?",
+        choices: [
+          "Le message reste électrique",
+          "Le message devient chimique grâce au neurotransmetteur",
+          "Le message s’arrête toujours",
+          "Le neurone se divise"
+        ],
+        answer: 1,
+        why: "Le neurotransmetteur traverse l’espace synaptique et déclenche un nouveau message électrique."
+      },
+      {
+        q: "Lequel perturbe le fonctionnement du système nerveux ?",
+        choices: ["Un sommeil suffisant", "Le sport régulier", "Les écrans le soir", "La relaxation"],
+        answer: 2,
+        why: "Écrans le soir, alcool, tabac, stress important et cannabis le perturbent."
+      }
+    ];
+
+    const root = document.getElementById("quiz");
+    const scoreEl = document.getElementById("score");
+    let score = 0;
+    questions.forEach((item, index) => {
+      const block = document.createElement("div");
+      block.className = "q";
+      const title = document.createElement("h3");
+      title.textContent = (index + 1) + ". " + item.q;
+      const choices = document.createElement("div");
+      choices.className = "choices";
+      const why = document.createElement("p");
+      why.className = "why";
+      why.hidden = true;
+      item.choices.forEach((label, choiceIndex) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = label;
+        button.addEventListener("click", () => {
+          if (block.dataset.done) return;
+          block.dataset.done = "1";
+          choices.querySelectorAll("button").forEach((candidate) => { candidate.disabled = true; });
+          choices.children[item.answer].classList.add("good");
+          if (choiceIndex === item.answer) score += 1;
+          else button.classList.add("bad");
+          why.hidden = false;
+          why.textContent = item.why;
+          scoreEl.textContent = score + " / " + questions.length;
+        });
+        choices.appendChild(button);
+      });
+      block.append(title, choices, why);
+      root.appendChild(block);
+    });
+  </script>
 </body>
 </html>
