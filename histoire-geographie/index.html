@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../cahier.css" />
 </head>
-<body data-vue="synthese">
+<body data-vue="complet">
   <div class="wrap">
     <header class="top">
       <a class="back" href="../">Toutes les matières</a>
@@ -19,11 +19,13 @@
       <p class="lede">
         Thème 1, 1914-1945. Pour l’instant, un seul chapitre est dans le cahier :
         civils et militaires pendant la Première Guerre mondiale.
-        La lecture courte suit les dates. La lecture complète reprend le cours.
+        La lecture complète reprend le cours. La synthèse suit les dates.
+        L’extra va plus loin que le cahier, dans le même chapitre.
       </p>
-      <div class="toolbar" role="group" aria-label="Longueur de la lecture">
-        <button type="button" id="btnSynthese" aria-pressed="true">Synthèse</button>
-        <button type="button" id="btnComplet" aria-pressed="false">Complet</button>
+      <div class="toolbar" role="group" aria-label="Version de la lecture">
+        <button type="button" data-vue="complet" aria-pressed="true">Complet</button>
+        <button type="button" data-vue="synthese" aria-pressed="false">Synthèse</button>
+        <button type="button" data-vue="extra" aria-pressed="false">Extra</button>
       </div>
     </header>
 
@@ -209,19 +211,76 @@
         </article>
       </section>
 
-      <section id="quiz">
+    </div>
+
+    <div class="vue-extra">
+      <p class="avertissement">Cette partie n’est pas dans le cahier de Ruben. Ce sont des connaissances ajoutées, dans le périmètre du chapitre, pour aller plus loin. Ce qui compte pour le contrôle reste le cours de Mme Grillon.</p>
+      <section>
         <article class="card">
-          <div class="quiz-head">
-            <div>
-              <h2>Quiz</h2>
-              <p class="note">Dix questions, uniquement à partir du cahier.</p>
-            </div>
-            <p id="score">0 / 10</p>
-          </div>
-          <div id="quiz"></div>
+          <span class="tag">Extra · avant la guerre</span>
+          <h2>Pourquoi l’Europe s’embrase</h2>
+          <ul class="bullets">
+            <li>Les grandes puissances sont rivales : pour les colonies, pour l’industrie, et par une course aux armements.</li>
+            <li>Les Balkans sont surnommés la « poudrière de l’Europe » : les nationalismes y sont très forts, notamment celui des Serbes.</li>
+            <li>L’héritier assassiné à Sarajevo s’appelle l’archiduc François-Ferdinand. Son assassin est Gavrilo Princip, un jeune nationaliste serbe de Bosnie.</li>
+            <li>Début août 1914, l’Allemagne déclare la guerre à la Russie, puis à la France. Elle passe par la Belgique, pays neutre : le Royaume-Uni entre alors en guerre.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · les grandes batailles</span>
+          <h2>Du mouvement aux tranchées</h2>
+          <ol class="timeline">
+            <li><time>Sept. 1914</time><p>Bataille de la Marne. Les Français et les Britanniques arrêtent l’avancée allemande près de Paris. Les deux armées essaient ensuite de se contourner vers le nord : c’est la « course à la mer ». Le front se fige de la mer du Nord à la Suisse.</p></li>
+            <li><time>Avril 1915</time><p>Près d’Ypres, en Belgique, l’armée allemande utilise pour la première fois des gaz de combat à grande échelle.</p></li>
+            <li><time>Juil. – nov. 1916</time><p>Bataille de la Somme, offensive franco-britannique. Le 1er juillet 1916 reste le jour le plus meurtrier de l’histoire de l’armée britannique. Les premiers chars y apparaissent.</p></li>
+            <li><time>Avril 1917</time><p>Offensive du Chemin des Dames, menée par le général Nivelle. C’est un échec sanglant qui déclenche les mutineries de mai-juin 1917.</p></li>
+            <li><time>Mars 1918</time><p>Traité de Brest-Litovsk : la Russie bolchevique signe la paix séparée avec l’Allemagne.</p></li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · nuances</span>
+          <h2>Ce qu’on sait en plus</h2>
+          <ul class="bullets">
+            <li>Mutineries : le général Pétain remplace Nivelle. Il réprime, mais améliore aussi les permissions et le ravitaillement. Plusieurs centaines de soldats sont condamnés à mort ; la plupart des peines sont commuées, une cinquantaine de soldats sont fusillés.</li>
+            <li>Les États-Unis entrent en guerre en avril 1917, en partie à cause de la guerre sous-marine allemande, qui coule aussi des navires américains.</li>
+            <li>La France fait venir des soldats de son empire colonial, par exemple les tirailleurs dits « sénégalais », venus de toute l’Afrique de l’Ouest. Des travailleurs coloniaux et chinois remplacent aussi les ouvriers partis au front.</li>
+            <li>Les ouvrières des usines d’obus sont appelées les « munitionnettes ».</li>
+            <li>Le génocide arménien commence le 24 avril 1915 par l’arrestation des élites arméniennes à Constantinople. Cette date sert aujourd’hui de jour de commémoration. La France l’a reconnu officiellement par une loi en 2001.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · après la guerre</span>
+          <h2>Les traces de la guerre</h2>
+          <ul class="bullets">
+            <li>Les soldats défigurés sont appelés les « gueules cassées ».</li>
+            <li>Presque chaque commune de France élève un monument aux morts. Un soldat inconnu est inhumé sous l’Arc de Triomphe à Paris, en 1921.</li>
+            <li>Une épidémie de grippe, dite « espagnole », tue des dizaines de millions de personnes dans le monde en 1918-1919.</li>
+            <li>Le président américain Wilson propose la Société des Nations (SDN), créée en 1920 pour préserver la paix. Les États-Unis n’y entrent pas.</li>
+            <li>Les autres traités démembrent l’Autriche-Hongrie et l’Empire ottoman. De nouveaux États apparaissent, comme la Pologne, la Tchécoslovaquie et le royaume des Serbes, Croates et Slovènes, future Yougoslavie.</li>
+          </ul>
         </article>
       </section>
     </div>
+
+    <section>
+      <article class="card">
+        <div class="quiz-head">
+          <div>
+            <h2>Quiz</h2>
+            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions et l’ordre des réponses.</p>
+          </div>
+          <p id="score">0 / 10</p>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="quizNouveau">Nouveau quiz</button>
+          <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
+        </div>
+        <div id="quiz"></div>
+      </article>
+    </section>
 
     <footer>
       Sources : fiche repères du 30 septembre, puis le cahier numérisé le même jour (9 pages).
@@ -230,20 +289,8 @@
   </div>
 
   <script>
-    const body = document.body;
-    const synthese = document.getElementById("btnSynthese");
-    const complet = document.getElementById("btnComplet");
-
-    function setVue(vue) {
-      body.dataset.vue = vue;
-      synthese.setAttribute("aria-pressed", vue === "synthese" ? "true" : "false");
-      complet.setAttribute("aria-pressed", vue === "complet" ? "true" : "false");
-    }
-
-    synthese.addEventListener("click", () => setVue("synthese"));
-    complet.addEventListener("click", () => setVue("complet"));
-
-    const questions = [
+    window.QUIZ = {};
+    QUIZ.cahier = [
       {
         q: "Qui forme la Triple Entente au début de la guerre ?",
         choices: ["Allemagne et Autriche-Hongrie", "France, Royaume-Uni et Russie", "États-Unis, France et Italie", "Serbie et Russie seulement"],
@@ -303,43 +350,222 @@
         choices: ["Un cessez-le-feu", "Un ordre qui oblige à fournir un service ou un bien", "Le lieu où les armées s’affrontent", "La prise du pouvoir par les bolcheviks"],
         answer: 1,
         why: "Réquisition : ordre qui oblige à fournir un service ou un bien matériel."
+      },
+      {
+        q: "Quels pays rejoignent ensuite la Triple Alliance ?",
+        choices: ["L’Italie et la Grèce", "La Bulgarie et l’Empire ottoman", "Les États-Unis et le Portugal", "La Roumanie et la Serbie"],
+        answer: 1,
+        why: "La Bulgarie et l’Empire ottoman rejoignent les empires centraux."
+      },
+      {
+        q: "Pourquoi les empires centraux doivent-ils se battre sur deux fronts ?",
+        choices: ["Ils sont pris en étau par l’Entente", "Ils ont deux capitales", "Ils attaquent l’Amérique", "Ils ont perdu leurs colonies"],
+        answer: 0,
+        why: "L’Entente les prend en étau, à l’ouest et à l’est."
+      },
+      {
+        q: "Qu’est-ce que la guerre de mouvement ?",
+        choices: ["Les armées se déplacent et attaquent", "Les armées restent dans les tranchées", "Les civils fabriquent des armes", "On signe la paix"],
+        answer: 0,
+        why: "Guerre de mouvement : des offensives, les armées se déplacent."
+      },
+      {
+        q: "Sur le schéma des tranchées, qu’est-ce que le no man’s land ?",
+        choices: ["L’arrière, où sont les usines", "L’espace entre les tranchées des deux camps", "La ville de Verdun", "Le poste de l’artillerie"],
+        answer: 1,
+        why: "Le no man’s land est au milieu, entre les lignes, avec les barbelés."
+      },
+      {
+        q: "Quel est le but des nouvelles armes, d’après la conclusion du cahier ?",
+        choices: ["Protéger les civils", "Tuer le plus grand nombre de soldats ennemis", "Construire des tranchées", "Remplacer les soldats"],
+        answer: 1,
+        why: "On entre dans la violence de masse."
+      },
+      {
+        q: "Que suppose un génocide, d’après la définition du cahier ?",
+        choices: ["Une bataille entre deux armées", "Une planification", "Une révolution", "Un armistice"],
+        answer: 1,
+        why: "Destruction d’un peuple pour des raisons ethniques, raciales ou religieuses. Cela suppose une planification."
+      },
+      {
+        q: "Combien de morts le cours donne-t-il pour le génocide arménien ?",
+        choices: ["300 000", "1,5 million", "10 millions", "70 millions"],
+        answer: 1,
+        why: "1,5 million, soit environ les deux tiers de la communauté arménienne de Turquie."
+      },
+      {
+        q: "Où les Arméniens sont-ils déportés ?",
+        choices: ["En Belgique", "Dans le désert syrien", "En Russie", "À Verdun"],
+        answer: 1,
+        why: "Ils sont déportés dans le désert syrien, où ils meurent de faim, de soif et d’épuisement."
+      },
+      {
+        q: "En quelle année éclatent les mutineries ?",
+        choices: ["1914", "1915", "1917", "1919"],
+        answer: 2,
+        why: "1917 : des soldats désespérés refusent d’obéir."
+      },
+      {
+        q: "Qui dirige les bolcheviks en octobre 1917 ?",
+        choices: ["Le tsar", "Lénine et Trotski", "Les spartakistes", "Le gouvernement turc"],
+        answer: 1,
+        why: "Les bolcheviks, menés par Lénine et Trotski, prennent le pouvoir les 24 et 25 octobre 1917."
+      },
+      {
+        q: "Quel pays entre en guerre en 1917 aux côtés de la Triple Entente ?",
+        choices: ["L’Empire ottoman", "Les États-Unis", "La Bulgarie", "L’Allemagne"],
+        answer: 1,
+        why: "Les États-Unis rejoignent l’Entente en 1917."
+      },
+      {
+        q: "Combien l’Allemagne doit-elle payer d’après le traité de Versailles ?",
+        choices: ["1,5 million de francs", "132 milliards de marks", "10 millions de dollars", "Rien"],
+        answer: 1,
+        why: "Elle est jugée responsable et doit payer 132 milliards de marks."
+      },
+      {
+        q: "Quelle région l’Allemagne rend-elle à la France ?",
+        choices: ["La Rhénanie", "L’Alsace-Lorraine", "La Belgique", "Le couloir de Dantzig"],
+        answer: 1,
+        why: "L’Alsace-Lorraine, prise par la Prusse en 1870."
+      },
+      {
+        q: "À quel pays est donné le couloir de Dantzig ?",
+        choices: ["Au Danemark", "À la Pologne", "À la France", "À la Russie"],
+        answer: 1,
+        why: "Il coupe l’Allemagne en deux."
+      },
+      {
+        q: "Quel bilan humain le cahier donne-t-il à la fin du chapitre ?",
+        choices: ["Environ 1 million de morts", "Environ 10 millions de morts", "Environ 70 millions de morts", "Environ 300 000 morts"],
+        answer: 1,
+        why: "10 millions de morts, des millions de mutilés, des veuves et des orphelins."
+      },
+      {
+        q: "Qu’est-ce que la pénurie ?",
+        choices: ["Une hausse des prix", "Un manque", "Une réquisition", "Une offensive"],
+        answer: 1,
+        why: "Pénurie : manque. L’inflation, c’est la hausse des prix."
+      },
+      {
+        q: "Que font les femmes à l’arrière ?",
+        choices: ["Elles combattent dans les tranchées", "Elles remplacent les hommes dans les champs et les usines", "Elles dirigent l’armée", "Elles partent en Amérique"],
+        answer: 1,
+        why: "Mobilisation de tout le pays : les femmes remplacent les hommes partis au front."
+      },
+      {
+        q: "Que se passe-t-il pour les lettres des poilus ?",
+        choices: ["Elles sont censurées", "Elles sont publiées dans les journaux", "Elles sont interdites", "Elles sont envoyées en Russie"],
+        answer: 0,
+        why: "Les lettres des poilus sont censurées."
+      },
+      {
+        q: "Dans quel pays agissent les spartakistes ?",
+        choices: ["En Russie", "En Allemagne", "En France", "En Serbie"],
+        answer: 1,
+        why: "Ils s’inspirent du modèle russe. Leur mouvement échoue."
+      },
+      {
+        q: "Pourquoi les Allemands parlent-ils de « Diktat » ?",
+        choices: ["Ils ont gagné la guerre", "Ils n’ont pas pu participer aux négociations", "Ils ont écrit le traité", "Le traité leur donne des colonies"],
+        answer: 1,
+        why: "Une paix humiliante, imposée sans eux."
+      },
+      {
+        q: "Qu’est-ce que le front ?",
+        choices: ["Le lieu où les armées s’affrontent", "Une usine d’armement", "Un traité de paix", "La capitale d’un pays"],
+        answer: 0,
+        why: "Front : lieu où les armées s’affrontent."
+      },
+      {
+        q: "Qu’est-ce qui fait de 1914-1918 une guerre totale ?",
+        choices: ["Elle dure une semaine", "Le pays entier et les civils sont pris dans la guerre", "Seuls les soldats sont concernés", "Il n’y a qu’un pays en guerre"],
+        answer: 1,
+        why: "Le pays consacre tout à la guerre, les civils sont impliqués, de nombreux pays sont concernés."
+      },
+      {
+        q: "Ce que subissent les habitants du Nord de la France et de Belgique ?",
+        choices: ["L’occupation : travail forcé, réquisitions", "La révolution bolchevique", "Le génocide", "Aucun changement"],
+        answer: 0,
+        why: "Ils supportent le poids de l’occupation."
       }
     ];
 
-    const root = document.getElementById("quiz");
-    const scoreEl = document.getElementById("score");
-    let score = 0;
-
-    questions.forEach((item, index) => {
-      const block = document.createElement("div");
-      block.className = "q";
-      const title = document.createElement("h3");
-      title.textContent = (index + 1) + ". " + item.q;
-      const choices = document.createElement("div");
-      choices.className = "choices";
-      const why = document.createElement("p");
-      why.className = "why";
-      why.hidden = true;
-      item.choices.forEach((label, choiceIndex) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = label;
-        button.addEventListener("click", () => {
-          if (block.dataset.done) return;
-          block.dataset.done = "1";
-          choices.querySelectorAll("button").forEach((candidate) => { candidate.disabled = true; });
-          choices.children[item.answer].classList.add("good");
-          if (choiceIndex === item.answer) score += 1;
-          else button.classList.add("bad");
-          why.hidden = false;
-          why.textContent = item.why;
-          scoreEl.textContent = score + " / " + questions.length;
-        });
-        choices.appendChild(button);
-      });
-      block.append(title, choices, why);
-      root.appendChild(block);
-    });
+    QUIZ.extra = [
+      {
+        q: "Qui est l’héritier assassiné à Sarajevo ?",
+        choices: ["Guillaume II", "L’archiduc François-Ferdinand", "Le tsar Nicolas II", "Lénine"],
+        answer: 1,
+        why: "L’archiduc François-Ferdinand, tué par Gavrilo Princip le 28 juin 1914."
+      },
+      {
+        q: "Quelle bataille arrête l’avancée allemande en septembre 1914 ?",
+        choices: ["Verdun", "La Marne", "La Somme", "Le Chemin des Dames"],
+        answer: 1,
+        why: "La Marne, près de Paris. Ensuite vient la « course à la mer »."
+      },
+      {
+        q: "Pourquoi le Royaume-Uni entre-t-il en guerre en août 1914 ?",
+        choices: ["L’Allemagne envahit la Belgique neutre", "La Russie l’attaque", "Les États-Unis le lui demandent", "Le traité de Versailles l’y oblige"],
+        answer: 0,
+        why: "Le passage des armées allemandes par la Belgique décide le Royaume-Uni."
+      },
+      {
+        q: "Où les gaz de combat sont-ils utilisés à grande échelle pour la première fois, en 1915 ?",
+        choices: ["À Verdun", "Près d’Ypres, en Belgique", "À Sarajevo", "Sur la Marne"],
+        answer: 1,
+        why: "En avril 1915, près d’Ypres."
+      },
+      {
+        q: "Quelle offensive de 1916 est menée par les Français et les Britanniques ?",
+        choices: ["La Somme", "Verdun", "Brest-Litovsk", "Rethondes"],
+        answer: 0,
+        why: "La Somme, de juillet à novembre 1916. Les premiers chars y apparaissent."
+      },
+      {
+        q: "Quel échec de 1917 déclenche les mutineries ?",
+        choices: ["Le Chemin des Dames", "La Marne", "Le traité de Versailles", "La prise de Moscou"],
+        answer: 0,
+        why: "L’offensive Nivelle au Chemin des Dames, en avril 1917."
+      },
+      {
+        q: "Quel traité fait sortir la Russie de la guerre en 1918 ?",
+        choices: ["Versailles", "Brest-Litovsk", "Sèvres", "Rethondes"],
+        answer: 1,
+        why: "Brest-Litovsk, mars 1918 : la paix séparée voulue par Lénine."
+      },
+      {
+        q: "Comment appelle-t-on les ouvrières des usines d’obus ?",
+        choices: ["Les poilues", "Les munitionnettes", "Les spartakistes", "Les gueules cassées"],
+        answer: 1,
+        why: "Les munitionnettes."
+      },
+      {
+        q: "Qui sont les « gueules cassées » ?",
+        choices: ["Les soldats défigurés", "Les mutins fusillés", "Les généraux", "Les prisonniers russes"],
+        answer: 0,
+        why: "Les soldats gravement blessés au visage."
+      },
+      {
+        q: "Quelle organisation est créée en 1920 pour préserver la paix ?",
+        choices: ["L’ONU", "La Société des Nations", "L’Union européenne", "La Triple Entente"],
+        answer: 1,
+        why: "La SDN, proposée par le président américain Wilson. Les États-Unis n’y entrent pas."
+      },
+      {
+        q: "Quelle date sert de jour de commémoration du génocide arménien ?",
+        choices: ["11 novembre", "24 avril", "28 juin", "14 juillet"],
+        answer: 1,
+        why: "Le 24 avril 1915, les élites arméniennes sont arrêtées à Constantinople."
+      },
+      {
+        q: "Quelle épidémie tue des dizaines de millions de personnes en 1918-1919 ?",
+        choices: ["La peste", "La grippe « espagnole »", "Le choléra", "La variole"],
+        answer: 1,
+        why: "La grippe dite « espagnole »."
+      }
+    ];
   </script>
+  <script src="../cahier.js"></script>
 </body>
 </html>

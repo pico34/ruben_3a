@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../cahier.css" />
 </head>
-<body data-vue="synthese">
+<body data-vue="complet">
   <div class="wrap">
     <header class="top">
       <a class="back" href="../">Toutes les matières</a>
@@ -18,11 +18,13 @@
       <h1>Système nerveux et comportement responsable</h1>
       <p class="lede">
         Le premier chapitre de l’année ouvre le thème 3, « Le corps humain et la santé ».
-        La synthèse garde les idées à savoir dans l’ordre du cours. La lecture complète reprend les deux fiches d’activité, la fiche méthode et le programme.
+        La lecture complète reprend les deux fiches d’activité, la fiche méthode et le programme. La synthèse garde les idées à savoir dans l’ordre du cours.
+        L’extra va plus loin que le cahier, dans le même chapitre.
       </p>
-      <div class="toolbar" role="group" aria-label="Longueur de la lecture">
-        <button type="button" id="btnSynthese" aria-pressed="true">Synthèse</button>
-        <button type="button" id="btnComplet" aria-pressed="false">Complet</button>
+      <div class="toolbar" role="group" aria-label="Version de la lecture">
+        <button type="button" data-vue="complet" aria-pressed="true">Complet</button>
+        <button type="button" data-vue="synthese" aria-pressed="false">Synthèse</button>
+        <button type="button" data-vue="extra" aria-pressed="false">Extra</button>
       </div>
     </header>
 
@@ -49,11 +51,11 @@
             </li>
             <li>
               <time>Neurone</time>
-              <p>Le système nerveux est fait de neurones reliés en réseaux. Un neurone : un corps cellulaire, des dendrites qui reçoivent le message, un axone qui le transmet sous forme d’un signal électrique, l’influx nerveux.</p>
+              <p>Le système nerveux est fait de <span class="rouge">neurones</span> reliés en réseaux. Un neurone : un corps cellulaire, des <span class="rouge">dendrites</span> qui reçoivent le message, un <span class="rouge">axone</span> qui le transmet sous forme d’un signal électrique, l’<span class="rouge">influx nerveux</span>.</p>
             </li>
             <li>
               <time>Synapse</time>
-              <p>Zone de contact entre deux neurones. Le message y devient chimique : un neurotransmetteur est libéré, traverse l’espace synaptique et déclenche un nouveau message électrique dans le neurone suivant.</p>
+              <p><span class="rouge">Synapse</span> : zone de contact entre deux neurones. Le message y devient chimique : un neurotransmetteur est libéré, traverse l’espace synaptique et déclenche un nouveau message électrique dans le neurone suivant.</p>
             </li>
           </ol>
         </article>
@@ -131,10 +133,24 @@
           <p><strong>1.</strong> Le cerveau (partie de l’encéphale) est organisé en zones appelées <strong>aires cérébrales</strong>, chacune spécialisée dans une fonction précise (motricité, langage, vision, audition).</p>
           <p>L’imagerie médicale (IRM fonctionnelle) permet de visualiser l’activité de ces aires lors de la réalisation d’une tâche.</p>
           <p>Le cerveau conserve une capacité d’adaptation appelée <strong>plasticité cérébrale</strong> : les connexions entre neurones peuvent se modifier au cours de la vie, notamment lors des apprentissages.</p>
-          <p><strong>2.</strong> Le système nerveux est constitué de cellules appelées <strong>neurones</strong>, reliées entre elles en réseaux.</p>
-          <p>Un neurone est formé d’un corps cellulaire, de <strong>dendrites</strong> (qui reçoivent le message) et d’un <strong>axone</strong> (qui transmet le message sous forme d’un signal électrique appelé <strong>influx nerveux</strong>).</p>
-          <p>La zone de contact entre deux neurones est appelée <strong>synapse</strong>. Le message y change de nature : il devient chimique grâce à la libération d’une molécule, le <strong>neurotransmetteur</strong>, qui traverse l’espace synaptique et déclenche un nouveau message électrique dans le neurone suivant.</p>
+          <p><strong>2.</strong> Le système nerveux est constitué de cellules appelées <span class="rouge">neurones</span>, reliées entre elles en réseaux.</p>
+          <p>Un neurone est formé d’un corps cellulaire, de <span class="rouge">dendrites</span> (qui reçoivent le message) et d’un <span class="rouge">axone</span> (qui transmet le message sous forme d’un signal électrique appelé <span class="rouge">influx nerveux</span>).</p>
+          <p>La zone de contact entre deux neurones est appelée <span class="rouge">synapse</span>. Le message y change de nature : il devient chimique grâce à la libération d’une molécule, le <strong>neurotransmetteur</strong>, qui traverse l’espace synaptique et déclenche un nouveau message électrique dans le neurone suivant.</p>
           <p class="note">Numérotation : le cahier écrit « 1/ Rappels », puis « 2/ », puis « II/ ». La page la range en partie I (points 1 et 2) et partie II.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">À apprendre par cœur</span>
+          <h2>Les définitions écrites en rouge</h2>
+          <p class="note">D’après la fiche méthode, le rouge sert aux définitions à savoir par cœur. Dans le scan, Ruben a écrit ces cinq mots en rouge, tous dans le point 2 de la leçon. Les titres sont aussi en rouge.</p>
+          <div class="defs">
+            <article class="def"><h3>Neurones</h3><p>Cellules qui constituent le système nerveux. Elles sont reliées entre elles en réseaux.</p></article>
+            <article class="def"><h3>Dendrites</h3><p>Prolongements du neurone qui reçoivent le message.</p></article>
+            <article class="def"><h3>Axone</h3><p>Prolongement du neurone qui transmet le message sous forme d’un signal électrique.</p></article>
+            <article class="def"><h3>Influx nerveux</h3><p>Le signal électrique transmis par l’axone.</p></article>
+            <article class="def"><h3>Synapse</h3><p>Zone de contact entre deux neurones. Le message y devient chimique grâce au neurotransmetteur.</p></article>
+          </div>
+          <p class="note">« Aires cérébrales », « plasticité cérébrale » et « neurotransmetteur » ne sont pas écrits en rouge dans le cahier. Ils sont à comprendre, et ils reviennent souvent dans les questions.</p>
         </article>
 
         <article class="card">
@@ -172,19 +188,71 @@
         </article>
       </section>
 
-      <section id="quiz">
+    </div>
+
+    <div class="vue-extra">
+      <p class="avertissement">Cette partie n’est pas dans le cahier de Ruben. Ce sont des connaissances ajoutées, dans le périmètre du chapitre, pour aller plus loin. Ce qui compte pour le contrôle reste le cours et la fiche de révision de la professeure.</p>
+      <section>
         <article class="card">
-          <div class="quiz-head">
-            <div>
-              <h2>Quiz</h2>
-              <p class="note">Huit questions sur le chapitre 1.</p>
-            </div>
-            <p id="score">0 / 8</p>
-          </div>
-          <div id="quiz"></div>
+          <span class="tag">Extra · le cerveau</span>
+          <h2>Quelques chiffres et repères</h2>
+          <ul class="bullets">
+            <li>Le cerveau humain compte environ 86 milliards de neurones. Chacun peut être relié à des milliers d’autres.</li>
+            <li>La commande est croisée : l’hémisphère gauche commande le côté droit du corps, et inversement. Pour bouger l’index droit, c’est l’aire motrice de l’hémisphère gauche qui s’active.</li>
+            <li>Chaque grande fonction a sa région : la vision à l’arrière du cerveau, l’audition sur les côtés, la commande des mouvements dans une bande au sommet, à l’avant.</li>
+            <li>Une aire du langage porte le nom de Paul Broca, un médecin français qui l’a décrite en 1861 chez un patient qui ne pouvait plus parler.</li>
+            <li>L’IRM fonctionnelle ne voit pas directement les neurones : elle repère les zones où le sang apporte plus d’oxygène, parce que les neurones actifs en consomment davantage.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · le message nerveux</span>
+          <h2>Vitesse et réflexes</h2>
+          <ul class="bullets">
+            <li>La gaine de myéline entoure l’axone comme un isolant. Elle accélère l’influx nerveux, qui peut dépasser 100 m/s.</li>
+            <li>Retirer sa main d’une plaque chaude est un réflexe. Le message va jusqu’à la moelle épinière, qui renvoie directement l’ordre au muscle, sans attendre le cerveau. C’est plus rapide. La douleur est ressentie juste après, quand le message arrive au cerveau.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · la synapse</span>
+          <h2>Ce qui agit sur les synapses</h2>
+          <ul class="bullets">
+            <li>Quelques neurotransmetteurs : l’acétylcholine commande la contraction des muscles ; la dopamine joue un rôle dans le plaisir et la motivation.</li>
+            <li>Le curare, un poison de chasse d’Amérique du Sud, bloque les récepteurs des muscles : le message ne passe plus, les muscles sont paralysés. C’est la situation du document 3 de l’activité 2.</li>
+            <li>La nicotine du tabac ressemble à l’acétylcholine et se fixe sur certains de ses récepteurs. Le cannabis et l’alcool perturbent aussi la transmission dans les synapses. C’est pour cela qu’ils modifient l’attention, les réflexes et la mémoire, et qu’ils peuvent rendre dépendant.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · hygiène de vie</span>
+          <h2>Sommeil, écrans, apprentissage</h2>
+          <ul class="bullets">
+            <li>À l’adolescence, on conseille entre 8 et 10 heures de sommeil par nuit.</li>
+            <li>La lumière des écrans le soir retarde la fabrication de la mélatonine, l’hormone qui aide à s’endormir.</li>
+            <li>Pendant le sommeil, le cerveau trie et consolide ce qu’on a appris dans la journée. Relire la leçon le soir, puis dormir, aide vraiment à retenir.</li>
+            <li>La plasticité cérébrale explique aussi les progrès : s’entraîner à un instrument ou à un sport renforce les connexions des aires utilisées.</li>
+          </ul>
         </article>
       </section>
     </div>
+
+    <section>
+      <article class="card">
+        <div class="quiz-head">
+          <div>
+            <h2>Quiz</h2>
+            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions et l’ordre des réponses.</p>
+          </div>
+          <p id="score">0 / 10</p>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="quizNouveau">Nouveau quiz</button>
+          <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
+        </div>
+        <div id="quiz"></div>
+      </article>
+    </section>
 
     <footer>
       Source : un PDF du 30 septembre, le début du cahier de SVT, du titre à la fin de la partie II du chapitre 1.
@@ -193,19 +261,8 @@
   </div>
 
   <script>
-    const body = document.body;
-    const synthese = document.getElementById("btnSynthese");
-    const complet = document.getElementById("btnComplet");
-
-    function setVue(vue) {
-      body.dataset.vue = vue;
-      synthese.setAttribute("aria-pressed", vue === "synthese" ? "true" : "false");
-      complet.setAttribute("aria-pressed", vue === "complet" ? "true" : "false");
-    }
-    synthese.addEventListener("click", () => setVue("synthese"));
-    complet.addEventListener("click", () => setVue("complet"));
-
-    const questions = [
+    window.QUIZ = {};
+    QUIZ.cahier = [
       {
         q: "Dans quel ordre le message circule-t-il lors d’un mouvement ?",
         choices: [
@@ -268,42 +325,192 @@
         choices: ["Un sommeil suffisant", "Le sport régulier", "Les écrans le soir", "La relaxation"],
         answer: 2,
         why: "Écrans le soir, alcool, tabac, stress important et cannabis le perturbent."
+      },
+      {
+        q: "À quoi sert l’IRM fonctionnelle ?",
+        choices: ["À visualiser l’activité des aires cérébrales pendant une tâche", "À mesurer la taille des os", "À compter les neurones", "À soigner une lésion"],
+        answer: 0,
+        why: "L’imagerie médicale montre les aires actives lors de la réalisation d’une tâche."
+      },
+      {
+        q: "Le cerveau fait partie…",
+        choices: ["de la moelle épinière", "de l’encéphale", "du nerf moteur", "de l’organe récepteur"],
+        answer: 1,
+        why: "Le cerveau est une partie de l’encéphale."
+      },
+      {
+        q: "Dans le schéma de la commande du mouvement, quel est l’organe effecteur ?",
+        choices: ["L’œil", "Le muscle", "Le cerveau", "Le nerf sensitif"],
+        answer: 1,
+        why: "Le muscle réalise le mouvement, la réponse."
+      },
+      {
+        q: "Quel nerf transporte le message du centre nerveux vers le muscle ?",
+        choices: ["Le nerf sensitif", "Le nerf moteur", "Le nerf optique", "L’axone du récepteur"],
+        answer: 1,
+        why: "Nerf moteur : du centre nerveux à l’organe effecteur."
+      },
+      {
+        q: "Quel nerf transporte le message de l’organe récepteur vers le centre nerveux ?",
+        choices: ["Le nerf sensitif", "Le nerf moteur", "La moelle épinière", "La synapse"],
+        answer: 0,
+        why: "Nerf sensitif : du récepteur au centre nerveux."
+      },
+      {
+        q: "Quels organes forment les centres nerveux ?",
+        choices: ["Le cœur et les poumons", "Le cerveau et la moelle épinière", "Les yeux et les oreilles", "Les muscles"],
+        answer: 1,
+        why: "Centre nerveux : cerveau et moelle épinière."
+      },
+      {
+        q: "Le sujet entend un son de cloche. Quelle aire s’active ?",
+        choices: ["L’aire auditive", "L’aire motrice", "L’aire visuelle", "L’aire gustative"],
+        answer: 0,
+        why: "Situation A du tableau : aire auditive."
+      },
+      {
+        q: "Le sujet voit un flash lumineux. Quelle aire s’active ?",
+        choices: ["L’aire auditive", "L’aire visuelle primaire", "L’aire motrice primaire", "L’aire olfactive"],
+        answer: 1,
+        why: "Situation B du tableau : aire visuelle primaire."
+      },
+      {
+        q: "Comment Alain a-t-il pu remarcher après son accident ?",
+        choices: ["Son cerveau s’est adapté grâce à la rééducation", "Ses neurones ont disparu", "Il a changé de jambe", "Sans rien faire"],
+        answer: 0,
+        why: "Les zones activées ont changé : c’est la plasticité cérébrale."
+      },
+      {
+        q: "Quelle partie du neurone transmet le message ?",
+        choices: ["Les dendrites", "L’axone", "Le noyau", "La vésicule"],
+        answer: 1,
+        why: "L’axone transmet le message sous forme d’influx nerveux."
+      },
+      {
+        q: "Que traverse le neurotransmetteur ?",
+        choices: ["L’axone", "L’espace synaptique", "Le noyau", "La gaine de myéline"],
+        answer: 1,
+        why: "Il traverse l’espace synaptique et déclenche un message dans le neurone suivant."
+      },
+      {
+        q: "Les récepteurs du neurone postsynaptique sont bloqués. Que se passe-t-il ?",
+        choices: ["Le muscle se contracte plus fort", "Le message ne passe pas, pas de contraction", "Le message passe normalement", "Le neurone grandit"],
+        answer: 1,
+        why: "Document 3 : sans récepteurs fonctionnels, aucune contraction."
+      },
+      {
+        q: "Comment les neurones sont-ils organisés ?",
+        choices: ["Isolés les uns des autres", "Reliés entre eux en réseaux", "Rangés dans le muscle", "Collés à l’os"],
+        answer: 1,
+        why: "Les neurones sont reliés entre eux en réseaux."
+      },
+      {
+        q: "Lequel favorise le bon fonctionnement du système nerveux ?",
+        choices: ["Le tabac", "Un sommeil suffisant", "Le stress important", "L’alcool"],
+        answer: 1,
+        why: "Sommeil suffisant et sport régulier le favorisent."
+      },
+      {
+        q: "D’après l’exercice 2, à quoi sert la relaxation ?",
+        choices: ["À diminuer le stress et mieux se concentrer", "À courir plus vite", "À dormir en classe", "À rien"],
+        answer: 0,
+        why: "Réponse de Ruben : on se concentre plus et on diminue le stress."
+      },
+      {
+        q: "Fiche méthode : que signifie le rouge dans le cahier ?",
+        choices: ["Les activités", "Les leçons à comprendre", "Les définitions, titres et conclusions à apprendre par cœur", "Les erreurs"],
+        answer: 2,
+        why: "Rouge : à apprendre par cœur. Bleu : à comprendre. Noir : les activités."
+      },
+      {
+        q: "Fiche méthode : que signifie le bleu ?",
+        choices: ["Les leçons, à comprendre", "Les définitions", "Les corrections", "Les dates"],
+        answer: 0,
+        why: "Bleu : les leçons, à comprendre."
+      },
+      {
+        q: "Fiche méthode : tous les combien ont lieu les courtes évaluations ?",
+        choices: ["Chaque semaine", "Environ toutes les 3 semaines", "Une fois par trimestre", "Jamais"],
+        answer: 1,
+        why: "De courtes évaluations de connaissances environ toutes les 3 semaines."
+      },
+      {
+        q: "Quand relire la leçon, d’après la fiche méthode ?",
+        choices: ["Seulement la veille du contrôle", "Le soir même, puis la veille du cours suivant", "Pendant les vacances", "Jamais"],
+        answer: 1,
+        why: "Le soir même, puis la veille du cours suivant."
+      },
+      {
+        q: "Définition en rouge : qu’est-ce que la synapse ?",
+        choices: ["Une cellule du cerveau", "La zone de contact entre deux neurones", "Un muscle", "Une aire cérébrale"],
+        answer: 1,
+        why: "Synapse : zone de contact entre deux neurones."
       }
     ];
 
-    const root = document.getElementById("quiz");
-    const scoreEl = document.getElementById("score");
-    let score = 0;
-    questions.forEach((item, index) => {
-      const block = document.createElement("div");
-      block.className = "q";
-      const title = document.createElement("h3");
-      title.textContent = (index + 1) + ". " + item.q;
-      const choices = document.createElement("div");
-      choices.className = "choices";
-      const why = document.createElement("p");
-      why.className = "why";
-      why.hidden = true;
-      item.choices.forEach((label, choiceIndex) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = label;
-        button.addEventListener("click", () => {
-          if (block.dataset.done) return;
-          block.dataset.done = "1";
-          choices.querySelectorAll("button").forEach((candidate) => { candidate.disabled = true; });
-          choices.children[item.answer].classList.add("good");
-          if (choiceIndex === item.answer) score += 1;
-          else button.classList.add("bad");
-          why.hidden = false;
-          why.textContent = item.why;
-          scoreEl.textContent = score + " / " + questions.length;
-        });
-        choices.appendChild(button);
-      });
-      block.append(title, choices, why);
-      root.appendChild(block);
-    });
+    QUIZ.extra = [
+      {
+        q: "Combien de neurones compte environ le cerveau humain ?",
+        choices: ["86 000", "86 millions", "86 milliards", "86 000 milliards"],
+        answer: 2,
+        why: "Environ 86 milliards."
+      },
+      {
+        q: "Pour bouger l’index droit, quel hémisphère s’active ?",
+        choices: ["Le droit", "Le gauche", "Les deux autant", "Aucun"],
+        answer: 1,
+        why: "La commande est croisée : l’hémisphère gauche commande le côté droit."
+      },
+      {
+        q: "À quoi sert la gaine de myéline ?",
+        choices: ["À accélérer l’influx nerveux", "À fabriquer le neurotransmetteur", "À recevoir le message", "À nourrir le muscle"],
+        answer: 0,
+        why: "Elle isole l’axone et accélère le message."
+      },
+      {
+        q: "Lors du retrait de la main d’une plaque chaude, quel centre nerveux renvoie l’ordre le plus vite ?",
+        choices: ["Le cerveau", "La moelle épinière", "L’œil", "Le muscle"],
+        answer: 1,
+        why: "C’est un réflexe : la moelle épinière répond sans attendre le cerveau."
+      },
+      {
+        q: "Que fait le curare ?",
+        choices: ["Il bloque les récepteurs des muscles", "Il accélère l’influx nerveux", "Il soigne le cerveau", "Il favorise le sommeil"],
+        answer: 0,
+        why: "Le message ne passe plus : les muscles sont paralysés."
+      },
+      {
+        q: "Quel neurotransmetteur commande la contraction des muscles ?",
+        choices: ["La dopamine", "L’acétylcholine", "La mélatonine", "La nicotine"],
+        answer: 1,
+        why: "L’acétylcholine. La nicotine lui ressemble."
+      },
+      {
+        q: "Pourquoi les écrans le soir gênent-ils l’endormissement ?",
+        choices: ["Leur lumière retarde la mélatonine", "Ils refroidissent la pièce", "Ils font du bruit", "Ils bloquent les muscles"],
+        answer: 0,
+        why: "La mélatonine est l’hormone qui aide à s’endormir."
+      },
+      {
+        q: "Combien d’heures de sommeil conseille-t-on à l’adolescence ?",
+        choices: ["5 à 6 heures", "8 à 10 heures", "12 à 14 heures", "Peu importe"],
+        answer: 1,
+        why: "Entre 8 et 10 heures par nuit."
+      },
+      {
+        q: "Que détecte vraiment l’IRM fonctionnelle ?",
+        choices: ["Les neurones un par un", "Les zones où le sang apporte plus d’oxygène", "Les os du crâne", "Les pensées"],
+        answer: 1,
+        why: "Les neurones actifs consomment plus d’oxygène."
+      },
+      {
+        q: "Paul Broca a décrit en 1861 une aire du…",
+        choices: ["langage", "goût", "équilibre", "sommeil"],
+        answer: 0,
+        why: "L’aire de Broca, liée à la production du langage."
+      }
+    ];
   </script>
+  <script src="../cahier.js"></script>
 </body>
 </html>

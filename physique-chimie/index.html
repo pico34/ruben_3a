@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../cahier.css" />
 </head>
-<body data-vue="synthese">
+<body data-vue="complet">
   <div class="wrap">
     <header class="top">
       <a class="back" href="../">Toutes les matières</a>
@@ -18,11 +18,13 @@
       <h1>Organisation et transformation de la matière</h1>
       <p class="lede">
         Deux chapitres sont dans les scans : la masse volumique, puis l’atome.
-        La synthèse garde les formules et les résultats. La lecture complète reprend les expériences et les calculs du cahier.
+        La lecture complète reprend les expériences et les calculs du cahier. La synthèse garde les formules et les résultats.
+        L’extra va plus loin que le cahier, sur les mêmes notions.
       </p>
-      <div class="toolbar" role="group" aria-label="Longueur de la lecture">
-        <button type="button" id="btnSynthese" aria-pressed="true">Synthèse</button>
-        <button type="button" id="btnComplet" aria-pressed="false">Complet</button>
+      <div class="toolbar" role="group" aria-label="Version de la lecture">
+        <button type="button" data-vue="complet" aria-pressed="true">Complet</button>
+        <button type="button" data-vue="synthese" aria-pressed="false">Synthèse</button>
+        <button type="button" data-vue="extra" aria-pressed="false">Extra</button>
       </div>
     </header>
 
@@ -152,19 +154,86 @@
         </article>
       </section>
 
-      <section id="quiz">
+    </div>
+
+    <div class="vue-extra">
+      <p class="avertissement">Cette partie n’est pas dans le cahier de Ruben. Ce sont des connaissances ajoutées, sur les mêmes notions, pour aller plus loin. Ce qui compte pour le contrôle reste le cours du professeur.</p>
+      <section>
         <article class="card">
-          <div class="quiz-head">
-            <div>
-              <h2>Quiz</h2>
-              <p class="note">Huit questions, à partir des calculs et du cours.</p>
-            </div>
-            <p id="score">0 / 8</p>
+          <span class="tag">Extra · chapitre 1</span>
+          <h2>Les unités, sans se tromper</h2>
+          <ul class="bullets">
+            <li>1 mL = 1 cm³. 1 L = 1 dm³ = 1 000 mL. 1 m³ = 1 000 L.</li>
+            <li>Une même masse volumique s’écrit de plusieurs façons : 1 g/mL = 1 g/cm³ = 1 kg/L = 1 000 kg/m³. L’eau vaut donc aussi 1 kg/L : un litre d’eau pèse 1 kg.</li>
+            <li>Avant de calculer, on met la masse et le volume dans des unités qui vont ensemble : g avec mL, kg avec L.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · chapitre 1</span>
+          <h2>Flotter ou couler</h2>
+          <p>Un objet plein flotte sur un liquide si sa masse volumique est plus petite que celle du liquide. Il coule si elle est plus grande. C’est la même règle que pour l’huile au-dessus de l’eau.</p>
+          <div class="stats">
+            <div class="stat"><strong>0,92 g/cm³</strong><span>glace : elle flotte sur l’eau</span></div>
+            <div class="stat"><strong>2,7 g/cm³</strong><span>aluminium</span></div>
+            <div class="stat"><strong>7,9 g/cm³</strong><span>fer</span></div>
+            <div class="stat"><strong>13,5 g/cm³</strong><span>mercure, un métal liquide</span></div>
+            <div class="stat"><strong>19,3 g/cm³</strong><span>or</span></div>
+            <div class="stat"><strong>1,2 g/L</strong><span>air, environ 800 fois moins que l’eau</span></div>
           </div>
-          <div id="quiz"></div>
+          <p>L’eau de mer, salée, a une masse volumique d’environ 1,03 g/mL : on y flotte un peu mieux que dans l’eau douce.</p>
+          <p>Les masses volumiques servent à identifier une substance : on mesure ρ, puis on compare avec un tableau de valeurs.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · chapitre 2</span>
+          <h2>L’atome, à quelle échelle ?</h2>
+          <ul class="bullets">
+            <li>Un atome mesure environ 10<sup>−10</sup> m, soit un dixième de milliardième de mètre. Son noyau est environ 100 000 fois plus petit que l’atome.</li>
+            <li>Image : si le noyau avait la taille d’une bille au centre d’un stade, les électrons tourneraient aux tribunes. Tout le reste est vide : c’est la structure lacunaire.</li>
+            <li>Presque toute la masse de l’atome est dans le noyau : un électron est environ 1 800 fois plus léger qu’un proton ou un neutron.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · chapitre 2</span>
+          <h2>Comment on a découvert l’atome</h2>
+          <ol class="timeline">
+            <li><time>Antiquité</time><p>Le philosophe grec Démocrite imagine des grains insécables, les « atomos ».</p></li>
+            <li><time>1897</time><p>Joseph John Thomson découvre l’électron.</p></li>
+            <li><time>1911</time><p>Ernest Rutherford bombarde une très fine feuille d’or. Presque tout passe à travers : l’atome est surtout du vide, avec un petit noyau positif.</p></li>
+            <li><time>1932</time><p>James Chadwick découvre le neutron.</p></li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · chapitre 2</span>
+          <h2>Ions et isotopes</h2>
+          <ul class="bullets">
+            <li>Un atome qui perd ou gagne des électrons n’est plus neutre : c’est un ion. Il perd des électrons, il devient positif. Il en gagne, il devient négatif. Le noyau, lui, ne change pas.</li>
+            <li>Exemple : le fer <sup>56</sup><sub>26</sub>Fe a 26 protons et 56 − 26 = 30 neutrons.</li>
+            <li>Le carbone 14 est un isotope radioactif : il se transforme lentement. On s’en sert pour dater des restes très anciens, comme des os ou du bois.</li>
+          </ul>
         </article>
       </section>
     </div>
+
+    <section>
+      <article class="card">
+        <div class="quiz-head">
+          <div>
+            <h2>Quiz</h2>
+            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions et l’ordre des réponses.</p>
+          </div>
+          <p id="score">0 / 10</p>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="quizNouveau">Nouveau quiz</button>
+          <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
+        </div>
+        <div id="quiz"></div>
+      </article>
+    </section>
 
     <footer>
       Sources : deux PDF du 30 septembre, la fiche de masse volumique et le cahier jusqu’au cuivre.
@@ -173,19 +242,8 @@
   </div>
 
   <script>
-    const body = document.body;
-    const synthese = document.getElementById("btnSynthese");
-    const complet = document.getElementById("btnComplet");
-
-    function setVue(vue) {
-      body.dataset.vue = vue;
-      synthese.setAttribute("aria-pressed", vue === "synthese" ? "true" : "false");
-      complet.setAttribute("aria-pressed", vue === "complet" ? "true" : "false");
-    }
-    synthese.addEventListener("click", () => setVue("synthese"));
-    complet.addEventListener("click", () => setVue("complet"));
-
-    const questions = [
+    window.QUIZ = {};
+    QUIZ.cahier = [
       {
         q: "Quelle est la formule de la masse volumique ?",
         choices: ["ρ = m × V", "ρ = m / V", "ρ = V / m", "ρ = m + V"],
@@ -233,42 +291,198 @@
         choices: ["Trois éléments différents", "Des isotopes du carbone", "Trois molécules", "Des neutrons"],
         answer: 1,
         why: "Même élément, même nombre de protons, nombres de masse différents."
+      },
+      {
+        q: "Dans quelle unité le cours exprime-t-il la masse volumique ?",
+        choices: ["g/mL", "mL/g", "g × mL", "kg"],
+        answer: 0,
+        why: "Masse en g, volume en mL, donc ρ en g/mL."
+      },
+      {
+        q: "Quelle est la masse volumique de l’eau ?",
+        choices: ["0,918 g/mL", "1 g/mL", "6,71 g/mL", "13,5 g/mL"],
+        answer: 1,
+        why: "1 g/mL, soit 1 g/cm³. C’est une convention."
+      },
+      {
+        q: "Quelle masse pour 80 mL d’un liquide à 1,25 g/mL ?",
+        choices: ["64 g", "100 g", "81,25 g", "1 000 g"],
+        answer: 1,
+        why: "m = ρ × V = 1,25 × 80 = 100 g."
+      },
+      {
+        q: "Quel volume occupent 270 g d’un liquide à 13,5 g/mL ?",
+        choices: ["20 mL", "3 645 mL", "283,5 mL", "2 mL"],
+        answer: 0,
+        why: "V = m / ρ = 270 / 13,5 = 20 mL."
+      },
+      {
+        q: "20 g de liquide occupent 25 mL. Quelle est sa masse volumique ?",
+        choices: ["1,25 g/mL", "0,8 g/mL", "45 g/mL", "500 g/mL"],
+        answer: 1,
+        why: "ρ = 20 / 25 = 0,8 g/mL."
+      },
+      {
+        q: "Combien pèse un litre d’essence à 0,80 g/mL ?",
+        choices: ["80 g", "800 g", "8 g", "8 000 g"],
+        answer: 1,
+        why: "1 L = 1 000 mL, donc 0,80 × 1 000 = 800 g. Le cahier insiste : pas 80 g."
+      },
+      {
+        q: "Comment s’appelle le mélange eau + huile ?",
+        choices: ["Un mélange homogène", "Un mélange hétérogène", "Une molécule", "Un isotope"],
+        answer: 1,
+        why: "On voit deux couches : le mélange est hétérogène."
+      },
+      {
+        q: "Quelle masse volumique Ruben trouve-t-il pour le laiton ?",
+        choices: ["0,918 g/mL", "1 g/mL", "6,71 g/mL", "23,5 g/mL"],
+        answer: 2,
+        why: "23,5 g / 3,5 mL = 6,71 g/mL."
+      },
+      {
+        q: "Que fait-on avant de verser le liquide dans l’éprouvette posée sur la balance ?",
+        choices: ["On la chauffe", "On tare la balance", "On la remplit d’huile", "On la retourne"],
+        answer: 1,
+        why: "On tare pour ne peser que le liquide."
+      },
+      {
+        q: "Comment appelle-t-on les protons et les neutrons ensemble ?",
+        choices: ["Les électrons", "Les nucléons", "Les molécules", "Les ions"],
+        answer: 1,
+        why: "Les particules du noyau sont les nucléons."
+      },
+      {
+        q: "Que représente Z ?",
+        choices: ["Le nombre de neutrons", "Le nombre de protons", "Le nombre de nucléons", "La masse volumique"],
+        answer: 1,
+        why: "Z est le numéro atomique, le nombre de protons."
+      },
+      {
+        q: "Que représente A ?",
+        choices: ["Le nombre d’électrons", "Le nombre de masse, protons + neutrons", "Le nombre de molécules", "Le numéro de la ligne du tableau"],
+        answer: 1,
+        why: "A est le nombre de nucléons, appelé nombre de masse."
+      },
+      {
+        q: "Quelle formule donne le nombre de neutrons ?",
+        choices: ["N = A + Z", "N = A − Z", "N = Z − A", "N = A × Z"],
+        answer: 1,
+        why: "A = Z + N, donc N = A − Z."
+      },
+      {
+        q: "Quelle est la charge d’un électron ?",
+        choices: ["Positive", "Négative", "Nulle", "Ça dépend de l’atome"],
+        answer: 1,
+        why: "Chaque électron porte une charge négative."
+      },
+      {
+        q: "Quelle est la charge d’un neutron ?",
+        choices: ["Positive", "Négative", "Aucune", "Double"],
+        answer: 2,
+        why: "Le neutron n’a pas de charge électrique."
+      },
+      {
+        q: "Que veut dire « structure lacunaire » ?",
+        choices: ["L’atome est plein", "Il y a du vide entre le noyau et les électrons", "Le noyau est vide", "Les électrons sont dans le noyau"],
+        answer: 1,
+        why: "Entre les électrons et le noyau, il y a du vide."
+      },
+      {
+        q: "Qu’est-ce qu’une molécule ?",
+        choices: ["Un seul électron", "Des atomes liés ensemble", "Un noyau sans électrons", "Un mélange d’eau et d’huile"],
+        answer: 1,
+        why: "Quand des atomes sont liés ensemble, ils forment une molécule."
+      },
+      {
+        q: "Selon quoi les éléments sont-ils rangés dans la classification périodique ?",
+        choices: ["Leur couleur", "Leur numéro atomique Z", "Leur masse volumique", "Leur date de découverte"],
+        answer: 1,
+        why: "Ils sont classés selon Z."
+      },
+      {
+        q: "Méthode : que faut-il repérer en premier dans une consigne ?",
+        choices: ["Les verbes d’action", "Le nombre de lignes", "La couleur du texte", "Le nom du professeur"],
+        answer: 0,
+        why: "Décrire, démontrer, comparer, déduire, justifier, calculer…"
+      },
+      {
+        q: "Méthode : comment reformuler une consigne ?",
+        choices: ["En question", "En phrase affirmative : « Pour répondre, je dois… »", "En la recopiant", "En un seul mot"],
+        answer: 1,
+        why: "On reformule en phrase affirmative."
       }
     ];
 
-    const root = document.getElementById("quiz");
-    const scoreEl = document.getElementById("score");
-    let score = 0;
-    questions.forEach((item, index) => {
-      const block = document.createElement("div");
-      block.className = "q";
-      const title = document.createElement("h3");
-      title.textContent = (index + 1) + ". " + item.q;
-      const choices = document.createElement("div");
-      choices.className = "choices";
-      const why = document.createElement("p");
-      why.className = "why";
-      why.hidden = true;
-      item.choices.forEach((label, choiceIndex) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = label;
-        button.addEventListener("click", () => {
-          if (block.dataset.done) return;
-          block.dataset.done = "1";
-          choices.querySelectorAll("button").forEach((candidate) => { candidate.disabled = true; });
-          choices.children[item.answer].classList.add("good");
-          if (choiceIndex === item.answer) score += 1;
-          else button.classList.add("bad");
-          why.hidden = false;
-          why.textContent = item.why;
-          scoreEl.textContent = score + " / " + questions.length;
-        });
-        choices.appendChild(button);
-      });
-      block.append(title, choices, why);
-      root.appendChild(block);
-    });
+    QUIZ.extra = [
+      {
+        q: "1 mL est égal à…",
+        choices: ["1 cm³", "1 dm³", "1 m³", "10 cm³"],
+        answer: 0,
+        why: "1 mL = 1 cm³, et 1 L = 1 dm³."
+      },
+      {
+        q: "1 g/cm³ est égal à…",
+        choices: ["1 kg/m³", "10 kg/m³", "1 000 kg/m³", "1 g/L"],
+        answer: 2,
+        why: "1 g/cm³ = 1 kg/L = 1 000 kg/m³."
+      },
+      {
+        q: "Pourquoi un glaçon flotte-t-il sur l’eau ?",
+        choices: ["Il est froid", "Sa masse volumique (0,92 g/cm³) est plus petite que celle de l’eau", "Il contient de l’air chaud", "Il est plus lourd"],
+        answer: 1,
+        why: "Un objet flotte si sa masse volumique est plus petite que celle du liquide."
+      },
+      {
+        q: "Une bille d’acier (7,9 g/cm³) est posée sur du mercure (13,5 g/cm³). Que se passe-t-il ?",
+        choices: ["Elle coule", "Elle flotte", "Elle fond", "Elle se dissout"],
+        answer: 1,
+        why: "7,9 est plus petit que 13,5 : la bille flotte sur le mercure."
+      },
+      {
+        q: "Quel métal a la plus grande masse volumique parmi ceux-ci ?",
+        choices: ["Aluminium", "Fer", "Or", "Laiton"],
+        answer: 2,
+        why: "L’or : 19,3 g/cm³."
+      },
+      {
+        q: "Combien de fois le noyau est-il plus petit que l’atome, environ ?",
+        choices: ["2 fois", "100 fois", "100 000 fois", "Il a la même taille"],
+        answer: 2,
+        why: "Environ 100 000 fois : d’où la structure lacunaire."
+      },
+      {
+        q: "Où se trouve presque toute la masse d’un atome ?",
+        choices: ["Dans les électrons", "Dans le noyau", "Dans le vide", "Elle est répartie également"],
+        answer: 1,
+        why: "Un électron est environ 1 800 fois plus léger qu’un proton."
+      },
+      {
+        q: "Quelle expérience de 1911 montre que l’atome est surtout du vide ?",
+        choices: ["Celle de Rutherford avec une feuille d’or", "Celle de Démocrite", "Celle de l’éprouvette d’huile", "Celle de Chadwick"],
+        answer: 0,
+        why: "Presque toutes les particules envoyées traversent la feuille d’or."
+      },
+      {
+        q: "Qu’est-ce qu’un ion ?",
+        choices: ["Un atome qui a perdu ou gagné des électrons", "Un atome sans noyau", "Une molécule d’eau", "Un neutron seul"],
+        answer: 0,
+        why: "Le noyau ne change pas, seul le nombre d’électrons change."
+      },
+      {
+        q: "Combien de neutrons dans le fer 56 (Z = 26) ?",
+        choices: ["26", "30", "56", "82"],
+        answer: 1,
+        why: "N = A − Z = 56 − 26 = 30."
+      },
+      {
+        q: "À quoi sert le carbone 14 ?",
+        choices: ["À faire flotter les bateaux", "À dater des restes très anciens", "À mesurer une masse volumique", "À fabriquer de l’huile"],
+        answer: 1,
+        why: "C’est un isotope radioactif qui se transforme lentement."
+      }
+    ];
   </script>
+  <script src="../cahier.js"></script>
 </body>
 </html>
