@@ -10,15 +10,1074 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../cahier.css" />
 </head>
-<body>
+<body data-vue="complet">
   <div class="wrap">
     <header class="top">
       <a class="back" href="../">Toutes les matières</a>
-      <p class="kicker">Ruben · 3e A</p>
-      <h1>Mathématiques</h1>
-      <p class="lede">Aucun document de cette matière n’est encore dans le Drive. La page est prête pour le premier cours.</p>
+      <p class="kicker">Mathématiques · 3e · Mme Durand</p>
+      <h1>Fractions, racines carrées, Pythagore, fonctions</h1>
+      <p class="lede">
+        Le début de l’année en deux cahiers : le cahier de leçons (fractions, racines carrées, théorème de Pythagore, unités, fiches de mémorisation)
+        et le cahier d’exercices (questions du jour, droite numérique, notion de fonction, problèmes, calcul littéral).
+        La lecture complète suit les pages. La synthèse garde ce qu’il faut savoir. L’extra va plus loin, dans les mêmes notions.
+      </p>
+      <div class="toolbar" role="group" aria-label="Version de la lecture">
+        <button type="button" data-vue="complet" aria-pressed="true">Complet</button>
+        <button type="button" data-vue="synthese" aria-pressed="false">Synthèse</button>
+        <button type="button" data-vue="extra" aria-pressed="false">Extra</button>
+      </div>
     </header>
-    <footer>Les PDF déposés dans le dossier seront rangés ici, dans l’ordre du cours.</footer>
+
+    <div class="vue-synthese">
+      <section>
+        <article class="card">
+          <h2>Ce qu’il faut savoir, dans l’ordre du cahier</h2>
+          <ol class="timeline">
+            <li>
+              <time>Fractions</time>
+              <p>Une fraction exprime une proportion d’une unité et sert à graduer une droite. L’abscisse d’un point est le nombre qui correspond à sa place sur la droite graduée. Fractions égales : a/b = (a × k)/(b × k), avec b et k non nuls.</p>
+            </li>
+            <li>
+              <time>√a</time>
+              <p>√a est la longueur du côté d’un carré d’aire a. C’est le nombre positif dont le carré vaut a : (√a)² = a. Au collège, la racine carrée d’un nombre négatif n’est pas définie.</p>
+            </li>
+            <li>
+              <time>x² = a</time>
+              <p>Pour a positif, l’équation x² = a a deux solutions : √a et −√a.</p>
+            </li>
+            <li>
+              <time>Pythagore</time>
+              <p>Si un triangle est rectangle, alors le carré de l’hypoténuse est égal à la somme des carrés des deux autres côtés. <span class="rouge">Cette relation s’appelle l’égalité de Pythagore.</span> Il sert à calculer une longueur.</p>
+            </li>
+            <li>
+              <time>Réciproque</time>
+              <p>Si, dans un triangle, l’égalité de Pythagore est vérifiée, alors le triangle est rectangle, et le plus grand côté est l’hypoténuse.</p>
+            </li>
+            <li>
+              <time>Contraposée</time>
+              <p>Si l’égalité de Pythagore n’est pas vérifiée, le triangle n’est pas rectangle.</p>
+            </li>
+            <li>
+              <time>Unités</time>
+              <p>1 dm² = 100 cm². 1 dm³ = 1 000 cm³ = 1 L. 1 m³ = 1 000 L. 1 h = 60 min. 1,2 h = 1 h 12 min. 25 m/s = 90 km/h.</p>
+            </li>
+            <li>
+              <time>Fonction</time>
+              <p>Une machine de calcul transforme un nombre x (l’antécédent) en un nombre f(x) (son image). On écrit le calcul avec la lettre x, par exemple f(x) = 4x + 5.</p>
+            </li>
+          </ol>
+        </article>
+      </section>
+      <section>
+        <article class="card">
+          <h2>Méthodes à retenir</h2>
+          <ul class="bullets">
+            <li>Calculer une longueur avec Pythagore : nommer le triangle rectangle et l’angle droit, écrire l’égalité avec les lettres, remplacer par les valeurs, calculer le carré, prendre la racine carrée, donner l’unité.</li>
+            <li>Pour un côté de l’angle droit, on fait une soustraction : hypoténuse² − autre côté².</li>
+            <li>Savoir si un triangle est rectangle : repérer le plus grand côté, calculer séparément son carré et la somme des carrés des deux autres, comparer, conclure avec la réciproque ou la contraposée.</li>
+            <li>Additionner des fractions : les ramener au même dénominateur, ajouter les numérateurs, garder le dénominateur, simplifier.</li>
+            <li>Diviser par un nombre revient à multiplier par son inverse. L’inverse de a/b est b/a.</li>
+            <li>Marche arrière d’une machine de calcul : partir du résultat et faire les opérations contraires, dans l’ordre inverse.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+    <div class="vue-complet">
+      <section>
+        <article class="card">
+          <span class="tag">Cahier de leçons · page 5</span>
+          <h2>Retour sur les fractions (pense-bête)</h2>
+          <h3>I. Fractions et droites graduées</h3>
+          <ul class="bullets">
+            <li>Les fractions servent à exprimer la proportion d’une unité. Elles sont utiles pour graduer des droites. Sur la droite du cours, l’unité de référence est partagée en 7 : 1/7, 2/7… jusqu’à 7/7 = 1, puis 8/7.</li>
+            <li>Les fractions sont des nombres, puisqu’elles servent à compter et à calculer.</li>
+            <li>L’abscisse d’un point est le nombre correspondant à l’emplacement de ce point sur une droite graduée.</li>
+            <li>Exemple : O a pour abscisse 0, A a pour abscisse 5/6, B a pour abscisse 3/6 ou 1/2, C a pour abscisse 8/6.</li>
+          </ul>
+          <h3>II. Fractions égales</h3>
+          <p>Propriété : pour tous les nombres a, b et k (b et k non nuls), a/b = (a × k)/(b × k).</p>
+          <p>Exemple : 15/7 = (15 × 3)/(7 × 3) = 45/21.</p>
+          <figure class="figure">
+            <img src="../drive/files/1P8SsuaKp4is1-G8GhZaFoQIPsQJPdb7W/pages/page-01.png" alt="Pense-bête sur les fractions : droites graduées et fractions égales" />
+            <figcaption>Pense-bête « Retour sur les fractions ».</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · page 7</span>
+          <h2>Racines carrées et carrés parfaits</h2>
+          <h3>I. Définition géométrique</h3>
+          <p>√a est la longueur des côtés d’un carré d’aire a. Attention : a et √a sont des valeurs positives.</p>
+          <ul class="bullets">
+            <li>Un carré de côté √15 a pour aire √15 × √15 = 15.</li>
+            <li>Un carré d’aire 295,84 cm² a pour côté √295,84 = 17,2 cm.</li>
+            <li>Un carré d’aire a a pour côté √a, car √a × √a = a.</li>
+          </ul>
+          <h3>II. Définition algébrique</h3>
+          <p>Soit a un nombre positif. On définit √a comme le nombre positif dont le carré vaut a, c’est-à-dire (√a)² = a, avec √a positif.</p>
+          <div class="stats">
+            <div class="stat"><strong>√49 = 7</strong><span>car 7² = 49 et 7 est positif</span></div>
+            <div class="stat"><strong>√9 = 3</strong><span>car 3² = 9 et 3 est positif</span></div>
+            <div class="stat"><strong>√0,16 = 0,4</strong><span>car 0,4² = 0,16 et 0,4 est positif</span></div>
+          </div>
+          <p>Remarque : au collège, la racine carrée d’un nombre négatif n’est pas définie ; la calculatrice indique un message d’erreur. Certains nombres ne peuvent s’écrire en valeur exacte qu’avec le symbole √, car ils ne sont ni entiers ni décimaux.</p>
+          <p class="note">Le titre du cahier est écrit « Carrée parfaits » : c’est « carrés parfaits ».</p>
+          <figure class="figure">
+            <img src="../drive/files/1P8SsuaKp4is1-G8GhZaFoQIPsQJPdb7W/pages/page-04.png" alt="Leçon sur les racines carrées : définitions géométrique et algébrique" />
+            <figcaption>La leçon sur les racines carrées.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · à connaître par cœur</span>
+          <h2>La ligne des carrés</h2>
+          <p>Bande collée dans le cahier, remplie par Ruben, sans erreur :</p>
+          <div class="stats">
+            <div class="stat"><strong>1² = 1</strong><span>2² = 4 · 3² = 9</span></div>
+            <div class="stat"><strong>4² = 16</strong><span>5² = 25 · 6² = 36</span></div>
+            <div class="stat"><strong>7² = 49</strong><span>8² = 64 · 9² = 81</span></div>
+            <div class="stat"><strong>10² = 100</strong><span>11² = 121 · 12² = 144</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · fiche mémo</span>
+          <h2>Fiche de mémorisation : racines carrées</h2>
+          <p>Ce que Ruben a rempli sur la fiche des questions :</p>
+          <ul class="bullets">
+            <li>√16 ; √100 ; √1,96 ; √2500 : il a écrit 1 (?), 10, 1,4 et 50.</li>
+            <li>√9 + √16 = 7 et √(9 + 16) = 5.</li>
+            <li>√144 + √25 = 17 et √(144 + 25) = 13.</li>
+            <li>Solutions de x² = a : x = √a. Pour x² = 225 : x = √225. Pour x² = 2 : x = √2.</li>
+          </ul>
+          <p class="note">Retouches signalées : √16 vaut 4 ; le chiffre écrit ressemble à un 1, à relire. Pour x² = a, le corrigé donne deux solutions, √a et −√a : Ruben n’a écrit que la positive. Les autres questions de la fiche ne sont pas remplies : définition du carré, carrés de 1 à 15, de 0,1 à 1,1, de −3, −12 et −1,5, définitions, (√33,7)², x² = 0,49 et x² = 14, √(10,5² − 8,4²), √(16/25), √(16 + 9), √(1/100).</p>
+          <h3>Le corrigé de la fiche</h3>
+          <ul class="bullets">
+            <li>x² = x × x. Carrés : 1² = 1 ; 3² = 9 ; 6² = 36 ; 7² = 49 ; 8² = 64 ; 9² = 81 ; 11² = 121 ; 12² = 144 ; 13² = 169 ; 14² = 196 ; 15² = 225.</li>
+            <li>0,1² = 0,01 ; 0,2² = 0,04 ; 0,6² = 0,36 ; 1,1² = 1,21. (−3)² = 9 ; (−12)² = 144 ; (−1,5)² = 2,25.</li>
+            <li>Quand b est un nombre positif, √b est la longueur du côté du carré dont l’aire mesure b unités d’aire.</li>
+            <li>(√a)² = a, avec a &gt; 0 et √a &gt; 0.</li>
+            <li>√16 = 4 car 4² = 16 et 4 est positif ; √100 = 10 ; √1,96 = 1,4 ; √2500 = 50.</li>
+            <li>(√33,7)² = 33,7 ; (√5,02)² = 5,02 ; (√(4 + 9))² = 13.</li>
+            <li>x² = a a deux solutions : x = √a (positive) et x = −√a (négative). x² = 0,49 : 0,7 et −0,7. x² = 225 : 15 et −15. x² = 14 : √14 et −√14. x² = 2 : √2 et −√2.</li>
+            <li>√(10,5² − 8,4²) = 6,3. √(16/25) = 4/5 = 0,8. √(16 + 9) = √25 = 5. √(1/100) = 1/10 = 0,1.</li>
+          </ul>
+          <p class="note">À retenir : √9 + √16 n’est pas égal à √(9 + 16). On ne peut pas « couper » une racine carrée sur une somme.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · Pythagore</span>
+          <h2>Théorème de Pythagore : modèles de rédaction</h2>
+          <h3>Le théorème</h3>
+          <p>Si un triangle est rectangle, alors le carré de l’hypoténuse est égal à la somme des carrés des deux autres côtés. <span class="rouge">Cette relation s’appelle « l’égalité de Pythagore ».</span></p>
+          <p>Dans le triangle ARE rectangle en R, l’égalité de Pythagore s’écrit z² = x² + y², soit AE² = RE² + RA². Sur la figure, les trois carrés construits sur les côtés ont pour aires x², y² et z².</p>
+
+          <h3>1re utilisation : calculer la longueur du 3e côté</h3>
+          <p>On sait que le triangle est rectangle et on connaît deux longueurs.</p>
+          <p><strong>Énoncé 1.</strong> ARE est rectangle en R, AR = 2 cm, RE = 3 cm. Calculer AE.</p>
+          <ul class="bullets">
+            <li>Dans le triangle ARE rectangle en R, d’après le théorème de Pythagore :</li>
+            <li>AE² = ER² + AR² (on écrit l’égalité sans les valeurs) ;</li>
+            <li>AE² = 3² + 2² (on remplace par les valeurs) ;</li>
+            <li>AE² = 13 (le carré de la longueur cherchée) ;</li>
+            <li>AE = √13 (la valeur exacte) ; AE ≈ 3,6 cm (valeur approchée au dixième).</li>
+          </ul>
+          <p>À retenir : √13 × √13 = 13.</p>
+          <p><strong>Énoncé 2.</strong> LMN est rectangle en N, LN = 3 cm. Calculer NM.</p>
+          <ul class="bullets">
+            <li>Dans le triangle LMN rectangle en N, d’après le théorème de Pythagore : LM² = LN² + NM².</li>
+            <li>7,2² = 3² + NM², donc NM² = 7,2² − 3² = 42,84.</li>
+            <li>NM = √42,84 cm (valeur exacte), soit environ 6,5 cm.</li>
+          </ul>
+          <p>Remarque du cours : pour calculer la longueur d’un côté de l’angle droit, on utilise une <strong>soustraction</strong>.</p>
+          <p class="note">Retouche signalée : l’énoncé imprimé dit LM = 7 cm, mais la figure indique 7,2 cm et Ruben calcule avec 7,2. Avec 7 cm, on trouverait NM² = 40 et NM ≈ 6,3 cm. À vérifier avec le professeur.</p>
+
+          <h3>2e utilisation : savoir si un triangle est rectangle</h3>
+          <p>On connaît les longueurs des trois côtés.</p>
+          <ul class="bullets">
+            <li><strong>Réciproque</strong> : si, dans un triangle, l’égalité de Pythagore est vérifiée, alors ce triangle est rectangle et le plus long côté est l’hypoténuse.</li>
+            <li><strong>Contraposée</strong> : si, dans un triangle, l’égalité de Pythagore n’est pas vérifiée, alors ce triangle ne peut pas être rectangle.</li>
+          </ul>
+          <p>Méthode : citer le triangle et la méthode, repérer le plus grand côté, calculer séparément, comparer, conclure en citant le raisonnement.</p>
+          <p><strong>Triangle DHB</strong> (DH = 4,1 cm, DB = 5,7 cm, HB = 7 cm). HB² = 7² = 49. DH² + DB² = 4,1² + 5,7² = 49,3. On constate que HB² ≠ DH² + DB². L’égalité de Pythagore n’est pas vérifiée : d’après la contraposée du théorème, DHB n’est pas rectangle.</p>
+          <p><strong>Triangle PMR</strong> (PR = 4,8 cm, PM = 3,6 cm, MR = 6 cm). MR² = 6² = 36. PR² + PM² = 4,8² + 3,6² = 36. L’égalité est vérifiée : d’après la réciproque, PMR est rectangle, en P.</p>
+          <p class="note">La fiche renvoie aussi à deux vidéos (conjecture et démonstration du théorème), par QR code.</p>
+          <figure class="figure">
+            <img src="../drive/files/1P8SsuaKp4is1-G8GhZaFoQIPsQJPdb7W/pages/page-02.png" alt="Modèles de rédaction du théorème de Pythagore, énoncés 1 et 2" />
+            <figcaption>Modèles de rédaction, première utilisation.</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="../drive/files/1P8SsuaKp4is1-G8GhZaFoQIPsQJPdb7W/pages/page-03.png" alt="Réciproque et contraposée, triangles DHB et PMR" />
+            <figcaption>Réciproque, contraposée et deux triangles à tester.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · copie notée 5/5</span>
+          <h2>Problème de l’armoire</h2>
+          <p>On cherche à savoir si la diagonale de l’armoire passe sous le plafond, haut de 260 cm.</p>
+          <ul class="bullets">
+            <li>Croquis : armoire ABCD, AB = 80 cm, BC = 250 cm, angle droit en B.</li>
+            <li>Puisque le triangle ABC est rectangle en B, on utilise le théorème de Pythagore : AC² = AB² + BC².</li>
+            <li>AC² = 80² + 250² = 68 900, donc AC = √68 900 ≈ 262,5 cm.</li>
+            <li>La diagonale de l’armoire ne passe pas sous le plafond, car 262 &gt; 260.</li>
+          </ul>
+          <p class="note">Copie notée 5/5, avec « TB ». Elle porte le nom de Ruben : elle n’est pas affichée en image.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · fiche mémo</span>
+          <h2>Fiche de mémorisation : Pythagore</h2>
+          <p class="note">La fiche des questions n’est pas remplie. Voici le corrigé imprimé collé à côté.</p>
+          <ul class="bullets">
+            <li>Dans un triangle rectangle, l’aire du carré construit sur l’hypoténuse est égale à la somme des aires des carrés construits sur les deux autres côtés.</li>
+            <li>Dans le triangle BUS rectangle en U : BS² = UB² + US². On repère bien l’hypoténuse ; on n’oublie pas les carrés.</li>
+            <li>Le théorème sert à calculer une longueur quand on en connaît déjà deux, pas forcément l’hypoténuse. On l’utilise quand on a un triangle rectangle et qu’on connaît deux longueurs.</li>
+            <li>Exemple 1 : RAS rectangle en A, RA = 7,2 cm, RS = 9,7 cm. RS² = AR² + AS², donc AS² = 9,7² − 7,2² = 42,25 et AS = √42,25 = 6,5 cm.</li>
+            <li>Si MN² = 24,3, alors MN = √24,3 ≈ 4,93.</li>
+            <li>La réciproque sert à prouver qu’un triangle est rectangle. On l’utilise quand on connaît les trois côtés et que l’égalité est vérifiée. Si elle ne l’est pas, on conclut avec la contraposée que le triangle n’est pas rectangle.</li>
+            <li>Exemple 2 : AB = 8,1 cm, BC = 10,8 cm, AC = 13,5 cm. On le trace avec un compas et une règle graduée. AC² = 13,5² = 182,25 et BA² + BC² = 8,1² + 10,8² = 182,25. D’après la réciproque, ABC est rectangle en B.</li>
+            <li>L’étagère de Lou (MP = NL = 29,5 cm, NP = 11,5 cm, ML = 23,5 cm) : le mur est vertical, il faut savoir si l’étagère lui est perpendiculaire. MNL n’est pas rectangle, car LN² = 870,25 et MN² + ML² = 876,25. L’étagère n’est pas horizontale.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · fiche</span>
+          <h2>Grandeurs et unités</h2>
+          <ul class="bullets">
+            <li>Avec des mètres on mesure des longueurs, avec des m² des aires (surfaces), avec des m³ des volumes.</li>
+            <li>1 cm² est l’aire d’un carré de 1 cm de côté. 1 dm² est l’aire d’un carré de 10 cm de côté : il faut 100 cm² pour recouvrir 1 dm².</li>
+            <li>1 cm³ est le volume d’un cube de 1 cm de côté. 1 dm³ est le volume d’un cube de 10 cm de côté : il faut 1 000 cm³ pour remplir 1 dm³.</li>
+            <li>1 dm³ = 1 litre et 1 m³ = 1 000 litres. Exemple : 956,2 dm² = 95 620 cm² = 9,562 m².</li>
+          </ul>
+          <p class="note">La fiche imprimée écrit « 1 dm³ est le volume d’un cube de 1 dm de côté, c’est-à-dire un carré de 10 cm de côté » : il faut lire « un cube ».</p>
+          <h3>Durées</h3>
+          <div class="stats">
+            <div class="stat"><strong>0,1 h = 6 min</strong><span>0,25 h = 15 min</span></div>
+            <div class="stat"><strong>0,5 h = 30 min</strong><span>0,75 h = 45 min</span></div>
+            <div class="stat"><strong>1,2 h = 1 h 12 min</strong><span>1,2 h = 1 h + 0,2 h</span></div>
+            <div class="stat"><strong>2 h 30 = 2,5 h</strong><span>45 min = 0,75 h</span></div>
+          </div>
+          <ul class="bullets">
+            <li>0,25 min = 15 s ; 1,5 min = 90 s ; 0,1 min = 6 s. 30 s = 0,5 min ; 45 s = 0,75 min ; 12 s = 0,2 min ; 66 s = 1,1 min.</li>
+            <li>127,3 min = 120 min + 7 min + 0,3 min = 2 h 7 min 18 s.</li>
+          </ul>
+          <h3>Vitesses</h3>
+          <ul class="bullets">
+            <li>25 m × 3 600 = 90 000 m = 90 km, donc 25 m/s = 90 km/h.</li>
+            <li>Avec un tableau de proportionnalité : 30 m en 48 s, c’est 2 250 m en 3 600 s, soit 2,25 km/h.</li>
+            <li>Distances et durées : 240 km en 1 h ; 600 km en 2,5 h ; 180 km en 0,75 h ; 288 km en 1,2 h.</li>
+          </ul>
+          <figure class="figure">
+            <img src="../drive/files/1P8SsuaKp4is1-G8GhZaFoQIPsQJPdb7W/pages/page-06.png" alt="Fiche sur les unités d’aire, de volume, les durées et les vitesses" />
+            <figcaption>La fiche des unités.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · fiche mémo</span>
+          <h2>Fiche de mémorisation : les fractions</h2>
+          <p>Ce que Ruben a rempli :</p>
+          <ul class="bullets">
+            <li>Q3 : 5/7 = 15/21 ; 15/35 = 3/7.</li>
+            <li>Q4 : 12/20 = 3/5 ; −18/45 = −2/5.</li>
+            <li>Q5 : (12/17) × 17 = 12 ; (37/9) × 9 = 37 ; (1/6) × 6 = 1.</li>
+            <li>Q8 et Q9 : calculs commencés (mise au même dénominateur), sans résultat final.</li>
+          </ul>
+          <p class="note">Retouches signalées, question 6 (calcul de tête) : Ruben a écrit « −15/366 » pour (−15/11) × 33, alors que le corrigé donne −45 ; et « 9 × 3 : 6 = 4,5 » pour (6/9) × 3, alors que le corrigé donne 2. La question 6 c n’est pas faite. Les questions 1, 2 et 7 ne sont pas remplies.</p>
+          <h3>Le corrigé de la fiche</h3>
+          <ul class="bullets">
+            <li>Une fraction est supérieure à l’unité quand le numérateur est supérieur au dénominateur. Exemple : une partie hachurée qui représente 4/3 du rectangle de référence.</li>
+            <li>On obtient une fraction égale en multipliant ou en divisant le numérateur ET le dénominateur par un même nombre différent de 0.</li>
+            <li>5/7 = (5 × 3)/(7 × 3) = 15/21 ; 15/35 = (15 ÷ 5)/(35 ÷ 5) = 3/7 ; 12/20 = 3/5 ; −18/45 = −2/5.</li>
+            <li>Calcul de tête : (−15/11) × 33 = −15 × 3 = −45 ; (6/9) × 3 = 18 : 9 = 2 ; −15 × (−28/7) = −15 × (−4) = 60.</li>
+            <li>Ajouter ou soustraire des fractions : 1. les ramener au même dénominateur ; 2. ajouter les numérateurs ; 3. conserver le dénominateur ; 4. simplifier.</li>
+            <li>3/4 + 2/3 = 9/12 + 8/12 = 17/12 ; −5/14 + 7/6 = −15/42 + 49/42 = 34/42.</li>
+            <li>7/8 − 3/2 = 7/8 − 12/8 = −5/8 ; −6/15 − 7/10 = −12/30 − 21/30 = −33/30.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <article class="card">
+          <span class="tag">Cahier d’exercices · Mme Durand · 2026-2027</span>
+          <h2>Questions du jour : conversions</h2>
+          <h3>Q1. Unités de temps</h3>
+          <p>Réponses de Ruben, justes : 1 jour = 24 h ; 1 h = 3 600 s ; 1 jour = 86 400 s ; 1 min = 60 s ; 1 h = 60 min ; 1 semaine = 7 jours ; 1 mois ≈ 4 semaines ; 1 année non bissextile = 12 mois = 52 semaines (environ) = 365 jours.</p>
+          <h3>Q2. Longueurs</h3>
+          <p>Ruben a complété le tableau des unités (mm, cm, dm, m, dam, hm, km) et noté : Castelnau–Palavas ≈ 15 km, sa taille 1,63 m, la longueur de la feuille 29,5 cm, l’altitude du Mont-Blanc 4 100 m.</p>
+          <p class="note">Retouche signalée : le Mont-Blanc mesure environ 4 805 m. Le tableau des masses n’est que partiellement rempli (mg, g, dg, hg, kg).</p>
+          <h3>Q3. Aires</h3>
+          <ul class="bullets">
+            <li>2,5 m² = 250 dm² ; 550 000 cm² = 55 m² ; 567 m² = 0,0567 hm² : justes.</li>
+          </ul>
+          <p class="note">Retouches signalées : « combien de carrés de 1 cm² dans un carré de 1 dm² ? » Ruben a écrit 10 ; la réponse est 100 (10 rangées de 10). Il a écrit 0,0324 dm² = 0,00000324 mm² : c’est 324 mm², car on passe aux unités plus petites, donc on multiplie par 10 000. Le tableau des unités d’aire n’est pas rempli.</p>
+          <h3>Q4. Volumes et capacités</h3>
+          <ul class="bullets">
+            <li>Dans un cube de 1 dm de côté, on met 1 000 cubes de 1 cm. Dans un cube de 1 m, 1 000 000.</li>
+            <li>À retenir : 1 L = 1 dm³.</li>
+            <li>25,6 dm³ = 25 600 cm³ ; 25 L = 25 000 cm³ ; 25,6 dm³ = 0,0256 m³ ; 7,5 m³ = 7 500 L.</li>
+          </ul>
+          <h3>Q5. Durées</h3>
+          <ul class="bullets">
+            <li>Lignes de temps : 0,1 h = 6 min ; 0,25 h = 15 min ; 0,5 h = 30 min ; 0,6 h = 36 min ; 0,75 h = 45 min ; 0,9 h = 54 min.</li>
+            <li>Tableau de proportionnalité, coefficient × 60 : 0,5 h = 30 min ; 0,25 h = 15 min ; 0,75 h = 45 min ; 0,1 h = 6 min ; 1,2 h = 72 min.</li>
+          </ul>
+          <p class="note">Pour 1,2 h, l’écriture du cahier ressemble à « 672 min » : c’est 72 min (1 h 12 min), comme dans la fiche des unités.</p>
+          <h3>Q6. Calculs de durées et d’horaires</h3>
+          <ul class="bullets">
+            <li>Avion Berlin 19 h 50 → Londres, vol de 1 h 50 : 19 h 50 + 10 min = 20 h 00, il reste 1 h 40, donc arrivée à 21 h 40.</li>
+            <li>Train Paris 6 h 47 → Montpellier 9 h 18 : 6 h 47 + 13 min = 7 h 00, 7 h 00 + 2 h 18 = 9 h 18, donc durée 2 h 18 + 13 min = 2 h 31.</li>
+          </ul>
+          <p class="note">Les phrases « Prépare quelques phrases pour expliquer ta méthode » ne sont pas écrites.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier d’exercices · page 5</span>
+          <h2>Tout sur les nombres, droite numérique</h2>
+          <p>Notes de Ruben : chiffres, nombres entiers, décimaux, négatifs ; multiplications, divisions, additions, soustractions. « Les nombres sont des outils mathématiques qui servent à compter, mesurer, calculer avec une unité de référence. » Sur la droite numérique, 1/3 est placé entre 0 et 1 : c’est un nombre rationnel non décimal.</p>
+          <h3>Exercice 1 (visa du professeur : « Bien »)</h3>
+          <ul class="bullets">
+            <li>a) Graduations complétées, justes : de 2,75 à 5,25 de 0,25 en 0,25 ; de −8,4 à −6,4 de 0,2 en 0,2 ; de 1 à 5,9 de 0,7 en 0,7.</li>
+            <li>b) Abscisses : A = 2,92 ; B = 2,96 ; C = 3,01 ; D = 2,88. Les premières réponses ont été barrées et corrigées.</li>
+          </ul>
+          <h3>Exercice 2</h3>
+          <p>1) Les nombres 5/12, 1/2, 1/4, 0,75, 1,25 puis 16/12, 1/3, 2/3, 7/6 sont placés sur deux droites graduées.</p>
+          <p class="note">2) « Écris ces nombres sous la forme d’une fraction de dénominateur 12 » : pas fait sur cette page.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier d’exercices · fiche</span>
+          <h2>Notion de fonction</h2>
+          <p>Une machine effectue une suite de calculs à partir de n’importe quel nombre. Le nombre d’entrée x est l’<strong>antécédent</strong> ; le résultat f(x) est l’<strong>image</strong> (notes de Ruben sur la fiche).</p>
+          <h3>Q1. Multiplier par 4, puis ajouter 5</h3>
+          <p>f(0) = 0 × 4 + 5 = 5 ; f(3) = 12 + 5 = 17 ; f(2,5) = 10 + 5 = 15. Donc f(x) = x × 4 + 5.</p>
+          <h3>Q2. Ajouter 7, multiplier par 3, soustraire 1</h3>
+          <p>f(2) = 9 × 3 − 1 = 26 ; f(−1) = 6 × 3 − 1 = 17 ; f(10/3) = 30. Donc f(x) = (x + 7) × 3 − 1.</p>
+          <h3>Q3. Diviser par 10, ajouter 1,2, multiplier par 3</h3>
+          <p>f(−30) = −5,4 ; f(18) = 9. Ruben écrit f(x) = ((x : 10) + 1,2) × 3.</p>
+          <p class="note">Retouche signalée : Ruben a écrit f(13,8) = 5,74. Le calcul donne 13,8 : 10 = 1,38 ; 1,38 + 1,2 = 2,58 ; 2,58 × 3 = 7,74.</p>
+          <h3>Q4. Construire la machine de f(x) = (x + 7) × x − 5</h3>
+          <p>Ruben a dessiné : ajouter 7, puis multiplier par x, puis soustraire 5.</p>
+          <h3>Q5. Marche arrière : multiplier par 3, ajouter 6, multiplier par 2</h3>
+          <ul class="bullets">
+            <li>f(x) = −42 : −42 : 2 = −21 ; −21 − 6 = −27 ; −27 : 3 = −9.</li>
+            <li>f(x) = 21 : 10,5 ; 4,5 ; 1,5.</li>
+            <li>f(x) = 40 : 20 ; 14 ; 14 : 3 ≈ 4,6667 (valeur exacte 14/3).</li>
+            <li>Ruben écrit f(x) = 2(3x + 6).</li>
+          </ul>
+          <h3>Q6. Multiplier par x, soustraire 20, diviser par 10</h3>
+          <p>f(5) = (25 − 20) : 10 = 0,5 ; f(9) = (81 − 20) : 10 = 6,1 ; f(−3) = (9 − 20) : 10 = −1,1.</p>
+          <p class="note">Retouche signalée : Ruben a écrit f(x) = 10 : (x² − 20). L’ordre est inversé : c’est f(x) = (x² − 20) : 10.</p>
+          <h3>Q7. Marche arrière : multiplier par x, soustraire 5, multiplier par 3</h3>
+          <ul class="bullets">
+            <li>f(x) = 33 : 33 : 3 = 11 ; 11 + 5 = 16 ; x = √16 = 4, ou −4.</li>
+            <li>f(x) = 660 : 220 ; 225 ; x = √225 = 15, ou −15.</li>
+            <li>f(x) = 54 : 18 ; 23 ; x = √23, ou −√23.</li>
+          </ul>
+          <p class="note">Dans le tableau, la troisième colonne et l’expression de f(x) ne sont pas remplies.</p>
+          <figure class="figure">
+            <img src="../drive/files/1Kb9R-3YRocsOsZ1TBUOIMrOthgbubxBg/pages/page-06.png" alt="Fiche Notion de fonction, questions 1 à 3" />
+            <figcaption>Notion de fonction, questions 1 à 3.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier d’exercices · problèmes</span>
+          <h2>Quelques problèmes numériques</h2>
+          <p><strong>Problème 1.</strong> Un basketteur réussit 8 tirs sur 10, un autre 16 sur 20. Réponse de Ruben : les deux ont la même réussite, car en multipliant par 2 pour le premier, on obtient 16 sur 20.</p>
+          <p><strong>Problème 2.</strong> La fraction est-elle un nombre décimal ?</p>
+          <ul class="bullets">
+            <li>a) 30/60 : oui, 30/60 = 1/2 = 0,5.</li>
+            <li>b) 5/15 : non (1/3 n’est pas décimal). Ruben a coché puis rayé, et barré l’écriture décimale.</li>
+            <li>c) 34/20 : oui, 34/20 = 17/10 = 1,7.</li>
+          </ul>
+          <p><strong>Problème 3.</strong> Axe gradué de −4 à 2, de 0,6 en 0,6 (graduations écrites par Ruben). a) « L’abscisse de A est positive » : faux. b) « L’abscisse de C est −2,8 » : vrai. c) « Le milieu de [AB] a une abscisse entière » : vrai.</p>
+          <p><strong>Problème 4.</strong> 25 élèves : 15 filles (60 %) et 10 garçons (40 %).</p>
+          <ul class="bullets">
+            <li>a) « Si une fille et un garçon arrivent, les proportions restent les mêmes » : faux. Ruben note que la proportion de garçons n’est plus 40 %.</li>
+            <li>b) « La proportion de filles varie si un garçon arrive et une fille part » : Ruben explique qu’il y aura une fille de moins et un garçon de plus, donc la proportion de garçons augmente et celle des filles diminue.</li>
+          </ul>
+          <p class="note">Retouche signalée, problème 4 b : les deux cases sont marquées (l’une noircie, l’autre cochée), et la case cochée semble être « Faux ». Or l’explication de Ruben conduit à « Vrai ». À vérifier avec le corrigé. Dans le problème 4 a, ses calculs (11 × 2, 11 : 2) sont difficiles à suivre.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier d’exercices · page 8</span>
+          <h2>Approche 1 : calculs avec des fractions</h2>
+          <ul class="bullets">
+            <li>Propriété 1 : dans un calcul en ligne, la multiplication est prioritaire devant les additions et soustractions.</li>
+            <li>Propriété 2 : a/b = (k × a)/(k × b), avec b ≠ 0 et k ≠ 0.</li>
+            <li>Propriété 3 : g/p + h/p = (g + h)/p, avec p ≠ 0.</li>
+            <li>Propriété 4 : un multiple commun de deux entiers m et n est un nombre qui est à la fois dans la table de m et dans celle de n.</li>
+            <li>Propriété 5 : (a/b) × (c/d) = (a × c)/(b × d), avec b ≠ 0 et d ≠ 0.</li>
+            <li>Propriété 6 : le nombre a/b a pour inverse b/a (a et b non nuls).</li>
+            <li>Propriété 7 : diviser par un nombre équivaut à multiplier par son inverse.</li>
+            <li>Rappel : a/b = a : b.</li>
+          </ul>
+          <p class="note">Travail à faire : calculer A = (5/6 + 5/2 × 1/4) / (2/3 × 7/3) en indiquant la propriété utilisée à chaque étape. Pas encore fait dans le cahier.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier d’exercices · automatismes</span>
+          <h2>Calculer une longueur avec Pythagore</h2>
+          <h3>Exercice 1 : tout est juste</h3>
+          <ul class="bullets">
+            <li>Exemple : ?² = 8² + 6² = 100, ? = 10.</li>
+            <li>Hypoténuse 15, côté 12 : ?² = 15² − 12² = 81, ? = 9.</li>
+            <li>Côtés 5,6 et 4,2 : ?² = 5,6² + 4,2² = 49, ? = 7.</li>
+            <li>Hypoténuse 17, côté 15 : ?² = 17² − 15² = 64, ? = 8.</li>
+            <li>Hypoténuse 14,3, côté 13,2 : ?² = 30,25, ? = 5,5.</li>
+            <li>Hypoténuse 36,25, côté 26,25 : ?² = 625, ? = 25.</li>
+          </ul>
+          <h3>Exercice 2</h3>
+          <p>Figure à deux triangles rectangles (longueurs 1,92 ; 1 ; 2,6). Ruben calcule la diagonale : ?² = 2,6² − 1² = 5,76, ? = 2,4.</p>
+          <p class="note">La seconde longueur manquante n’est pas calculée.</p>
+          <h3>Exercice 3 : valeurs exactes</h3>
+          <ul class="bullets">
+            <li>Côtés 3 et 2 : ?² = 13, ? = √13 ≈ 3,6.</li>
+            <li>Côtés 7 et 10 : ?² = 149, ? = √149 ≈ 12,2.</li>
+            <li>Hypoténuse 9, côté 6 : ?² = 81 − 36 = 45, ? = √45 ≈ 6,7.</li>
+          </ul>
+          <p class="note">La consigne demande la valeur exacte : la réponse est √13, √149, √45 ; les arrondis ne suffisent pas. Retouche signalée, dernier triangle : l’angle droit est entre 1,6 et ?, donc 3,5 est l’hypoténuse. Ruben a additionné (3,5² + 1,6² = 14,81). Il fallait soustraire : ?² = 3,5² − 1,6² = 9,69, ? = √9,69 ≈ 3,1.</p>
+          <figure class="figure">
+            <img src="../drive/files/1Kb9R-3YRocsOsZ1TBUOIMrOthgbubxBg/pages/page-11.png" alt="Automatismes Pythagore, exercice 1" />
+            <figcaption>Automatismes, exercice 1.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier d’exercices · questions du jour</span>
+          <h2>Vers le calcul littéral</h2>
+          <p>Programme A : choisir un nombre, lui ajouter 8, élever le résultat au carré. C’est la fonction f. Programme B : choisir un nombre, lui soustraire 7, élever au carré. C’est la fonction g.</p>
+          <ul class="bullets">
+            <li>Image de 5 : f(5) = 13² = 169 ; g(5) = (−2)² = 4.</li>
+            <li>Image de −2 : f(−2) = 6² = 36 ; g(−2) = (−9)² = 81.</li>
+            <li>Image de −0,5 : f(−0,5) = 7,5² = 56,25 ; g(−0,5) = (−7,5)² = 56,25.</li>
+            <li>f(x) = (x + 8)² et g(x) = (x − 7)².</li>
+            <li>Antécédent de 0 par f : −8, car −8 + 8 = 0 et 0² = 0.</li>
+            <li>Deux antécédents de 9 par g : 4 et 10, car g(4) = 9 et g(10) = 9.</li>
+          </ul>
+          <h3>Réduire des expressions (Q6)</h3>
+          <ul class="bullets">
+            <li>C = 5x − 3x = 2x : juste.</li>
+          </ul>
+          <p class="note">Retouches signalées : Ruben a écrit A = 5x × 3x = 15x, mais x × x = x², donc A = 15x². Il a écrit B = 5x² + 3x² = 8x⁴ : on additionne des x², donc B = 8x² (les exposants ne s’ajoutent pas dans une somme).</p>
+          <h3>Calcul de tête (Q8)</h3>
+          <p>99 × 54 : 99 + 1 = 100, 100 × 54 = 5 400, 5 400 − 54 = 5 346.</p>
+          <p class="note">Pas encore faits : Q3 et Q4 (aires sur quadrillage), Q5 (représenter 2x, x², 4x, 3x², 3x ; réduire 3x² + x² et 4x + 3x), la suite de Q6 (D à I), Q7 (le train, les coquillages), Q8 (43 × 12, 34 × 101) et Q9.</p>
+        </article>
+      </section>
+    </div>
+
+    <div class="vue-extra">
+      <p class="avertissement">Cette partie n’est pas dans le cahier de Ruben. Ce sont des connaissances ajoutées pour aller plus loin, dans les notions déjà vues. Les exercices non faits du cahier n’y sont pas corrigés.</p>
+      <section>
+        <article class="card">
+          <span class="tag">Extra · Pythagore</span>
+          <h2>Un théorème très ancien</h2>
+          <ul class="bullets">
+            <li>Pythagore est un savant grec du VIe siècle avant J.-C. Mais la relation était connue bien avant lui : une tablette babylonienne d’environ 1800 avant J.-C., appelée Plimpton 322, contient des listes de nombres qui la vérifient.</li>
+            <li>Triplets pythagoriciens : trois entiers qui vérifient l’égalité. Les plus connus : 3, 4, 5 (9 + 16 = 25) ; 5, 12, 13 ; 8, 15, 17. En multipliant un triplet par un même nombre, on en obtient un autre : 6, 8, 10.</li>
+            <li>La corde à 13 nœuds : une corde avec 12 intervalles égaux, tendue en triangle 3-4-5, donne un angle droit. On raconte que les arpenteurs de l’Égypte ancienne l’utilisaient ; c’est une tradition plus qu’un fait prouvé.</li>
+            <li>Les maçons s’en servent encore : 60 cm sur un mur, 80 cm sur l’autre, et la diagonale doit faire 1 m pour que l’angle soit droit.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · racines carrées</span>
+          <h2>Règles utiles et nombres irrationnels</h2>
+          <ul class="bullets">
+            <li>Pour a et b positifs : √(a × b) = √a × √b. Exemple : √(4 × 9) = √36 = 6 = 2 × 3.</li>
+            <li>Mais pas pour une somme : √(a + b) n’est en général pas égal à √a + √b, comme le montre la fiche avec 9 et 16.</li>
+            <li>Carrés parfaits à connaître aussi : 13² = 169, 14² = 196, 15² = 225, 20² = 400, 25² = 625.</li>
+            <li>√2 ≈ 1,414 n’est ni entier, ni décimal, ni même une fraction : c’est un nombre irrationnel. Ses chiffres après la virgule ne s’arrêtent jamais et ne se répètent pas. Les Grecs l’ont découvert en cherchant la diagonale d’un carré de côté 1.</li>
+            <li>Encadrer une racine : 6² = 36 et 7² = 49, donc √40 est entre 6 et 7.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · nombres</span>
+          <h2>Les familles de nombres</h2>
+          <ul class="bullets">
+            <li>Entiers naturels (0, 1, 2…), entiers relatifs (… −2, −1, 0, 1…), décimaux (2,75 ; −0,4), rationnels (les fractions, comme 1/3), puis irrationnels (√2, π).</li>
+            <li>Chaque famille contient la précédente : un entier est aussi un décimal, un décimal est aussi une fraction (2,75 = 275/100).</li>
+            <li>Une fraction irréductible est un nombre décimal si son dénominateur ne contient que des facteurs 2 et 5. Exemples : 3/8 = 0,375 (8 = 2 × 2 × 2) ; 7/25 = 0,28. Mais 2/7 n’est pas décimal.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · fonctions et calcul littéral</span>
+          <h2>Écrire et réduire</h2>
+          <ul class="bullets">
+            <li>On note aussi une fonction f : x ↦ 4x + 5, qui se lit « f est la fonction qui à x associe 4x + 5 ».</li>
+            <li>Un nombre a une seule image, mais une image peut avoir plusieurs antécédents, comme 9 avec la fonction g du cahier.</li>
+            <li>Dans une expression, on n’écrit pas le signe × devant une lettre ou une parenthèse : 4 × x s’écrit 4x, 2 × (3x + 6) s’écrit 2(3x + 6).</li>
+            <li>Distributivité : k(a + b) = ka + kb. Exemple : 2(3x + 6) = 6x + 12.</li>
+            <li>Réduire une somme : on ne regroupe que les termes de même nature. 7a + 2a = 9a ; a² + 4a² = 5a² ; mais a² + a ne se réduit pas.</li>
+            <li>Produit : a × a = a², et 2a × 4a = 8a².</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · unités</span>
+          <h2>Raccourcis de conversion</h2>
+          <div class="stats">
+            <div class="stat"><strong>× 3,6</strong><span>m/s → km/h</span></div>
+            <div class="stat"><strong>× 100</strong><span>d’une unité d’aire à la suivante</span></div>
+            <div class="stat"><strong>× 1 000</strong><span>d’une unité de volume à la suivante</span></div>
+            <div class="stat"><strong>1 ha = 1 hm²</strong><span>= 10 000 m²</span></div>
+          </div>
+          <ul class="bullets">
+            <li>1 mL = 1 cm³ ; 1 cL = 10 cm³ ; 1 m³ = 1 000 L.</li>
+            <li>Une heure décimale n’est pas une heure « à la virgule » : 1,5 h = 1 h 30, pas 1 h 50.</li>
+            <li>Le Mont-Blanc mesure environ 4 805 m ; la hauteur exacte varie de quelques mètres selon la neige du sommet.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+    <section>
+      <article class="card">
+        <div class="quiz-head">
+          <div>
+            <h2>Quiz</h2>
+            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions et l’ordre des réponses.</p>
+          </div>
+          <p id="score">0 / 10</p>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="quizNouveau">Nouveau quiz</button>
+          <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
+        </div>
+        <div id="quiz"></div>
+      </article>
+    </section>
+
+    <footer>
+      Sources : deux PDF du 4 octobre, des pages du cahier de leçons (fractions, racines carrées, Pythagore, unités, fiches de mémorisation) et du cahier d’exercices (questions du jour, nombres, fonctions, problèmes, calcul littéral).
+      L’orthographe est corrigée. Les erreurs relevées sont signalées, et les exercices non faits restent indiqués comme tels.
+    </footer>
   </div>
+
+  <script>
+    window.QUIZ = {};
+    QUIZ.cahier = [
+      {
+        q: "Qu’est-ce que l’abscisse d’un point ?",
+        choices: ["Le nombre qui correspond à sa place sur une droite graduée", "La longueur de la droite", "Le nom du point", "L’unité de référence"],
+        answer: 0,
+        why: "L’abscisse est le nombre correspondant à l’emplacement du point sur la droite graduée."
+      },
+      {
+        q: "Quelle égalité est toujours vraie (b et k non nuls) ?",
+        choices: ["a/b = (a + k)/(b + k)", "a/b = (a × k)/(b × k)", "a/b = (a × k)/b", "a/b = a/(b × k)"],
+        answer: 1,
+        why: "On multiplie le numérateur ET le dénominateur par le même nombre non nul."
+      },
+      {
+        q: "15/7 est égal à…",
+        choices: ["45/21", "45/7", "18/10", "15/21"],
+        answer: 0,
+        why: "15/7 = (15 × 3)/(7 × 3) = 45/21."
+      },
+      {
+        q: "Sur une droite où l’unité est partagée en 6, le point B est à 3 graduations de 0. Son abscisse est…",
+        choices: ["3", "1/3", "3/6, soit 1/2", "6/3"],
+        answer: 2,
+        why: "Exemple du cours : B a pour abscisse 3/6 ou 1/2."
+      },
+      {
+        q: "Simplifie 12/20 au maximum.",
+        choices: ["6/10", "3/5", "2/4", "4/5"],
+        answer: 1,
+        why: "12/20 = (3 × 4)/(5 × 4) = 3/5."
+      },
+      {
+        q: "Combien vaut (−15/11) × 33 ?",
+        choices: ["−45", "−15/366", "45", "−5"],
+        answer: 0,
+        why: "33 : 11 = 3, puis 3 × (−15) = −45."
+      },
+      {
+        q: "Combien vaut (6/9) × 3 ?",
+        choices: ["4,5", "18", "2", "6/27"],
+        answer: 2,
+        why: "6 × 3 = 18, et 18 : 9 = 2."
+      },
+      {
+        q: "Pour additionner deux fractions, que fait-on en premier ?",
+        choices: ["On ajoute les dénominateurs", "On les ramène au même dénominateur", "On multiplie les numérateurs", "On simplifie"],
+        answer: 1,
+        why: "Puis on ajoute les numérateurs, on garde le dénominateur et on simplifie."
+      },
+      {
+        q: "3/4 + 2/3 = ?",
+        choices: ["5/7", "17/12", "5/12", "6/12"],
+        answer: 1,
+        why: "9/12 + 8/12 = 17/12."
+      },
+      {
+        q: "Quel est l’inverse de 2/3 ?",
+        choices: ["−2/3", "3/2", "2/3", "1/3"],
+        answer: 1,
+        why: "L’inverse de a/b est b/a."
+      },
+      {
+        q: "Diviser par un nombre revient à…",
+        choices: ["multiplier par son inverse", "soustraire ce nombre", "multiplier par son opposé", "ajouter son inverse"],
+        answer: 0,
+        why: "Propriété 7 du cahier d’exercices."
+      },
+      {
+        q: "Une fraction est supérieure à l’unité quand…",
+        choices: ["le numérateur est supérieur au dénominateur", "le dénominateur est supérieur au numérateur", "elle est négative", "le numérateur vaut 1"],
+        answer: 0,
+        why: "Exemple : 4/3 est plus grand que 1."
+      },
+      {
+        q: "Définition géométrique : √a est…",
+        choices: ["l’aire d’un carré de côté a", "la longueur du côté d’un carré d’aire a", "la moitié de a", "le périmètre d’un carré d’aire a"],
+        answer: 1,
+        why: "√a est la longueur des côtés d’un carré d’aire a."
+      },
+      {
+        q: "Combien vaut √0,16 ?",
+        choices: ["0,04", "0,4", "0,8", "4"],
+        answer: 1,
+        why: "0,4² = 0,16 et 0,4 est positif."
+      },
+      {
+        q: "Combien vaut √16 ?",
+        choices: ["8", "4", "1", "256"],
+        answer: 1,
+        why: "4² = 16 et 4 est positif."
+      },
+      {
+        q: "Un carré a une aire de 295,84 cm². Son côté mesure…",
+        choices: ["17,2 cm", "147,92 cm", "73,96 cm", "29,58 cm"],
+        answer: 0,
+        why: "√295,84 = 17,2."
+      },
+      {
+        q: "Combien vaut √9 + √16 ?",
+        choices: ["5", "7", "25", "√25"],
+        answer: 1,
+        why: "3 + 4 = 7. Attention, √(9 + 16) = 5 : ce n’est pas pareil."
+      },
+      {
+        q: "Combien vaut √(144 + 25) ?",
+        choices: ["17", "13", "169", "12,5"],
+        answer: 1,
+        why: "√169 = 13."
+      },
+      {
+        q: "Combien vaut (√33,7)² ?",
+        choices: ["33,7", "5,8", "1 135,69", "√33,7"],
+        answer: 0,
+        why: "(√a)² = a pour a positif."
+      },
+      {
+        q: "Quelles sont les solutions de x² = 225 ?",
+        choices: ["15 seulement", "15 et −15", "112,5", "Aucune"],
+        answer: 1,
+        why: "x² = a a deux solutions : √a et −√a."
+      },
+      {
+        q: "Quelles sont les solutions de x² = 0,49 ?",
+        choices: ["0,7 et −0,7", "0,07 et −0,07", "0,245", "7 et −7"],
+        answer: 0,
+        why: "√0,49 = 0,7."
+      },
+      {
+        q: "Au collège, la racine carrée d’un nombre négatif…",
+        choices: ["est négative", "n’est pas définie", "vaut 0", "est égale au nombre"],
+        answer: 1,
+        why: "La calculatrice affiche un message d’erreur."
+      },
+      {
+        q: "Combien vaut 12² ?",
+        choices: ["24", "122", "144", "124"],
+        answer: 2,
+        why: "12 × 12 = 144 : la ligne des carrés à connaître par cœur."
+      },
+      {
+        q: "Combien vaut (−12)² ?",
+        choices: ["−144", "144", "−24", "24"],
+        answer: 1,
+        why: "(−12) × (−12) = 144 : un carré est toujours positif."
+      },
+      {
+        q: "Combien vaut 0,6² ?",
+        choices: ["3,6", "0,36", "1,2", "0,036"],
+        answer: 1,
+        why: "0,6 × 0,6 = 0,36."
+      },
+      {
+        q: "Dans un triangle rectangle, comment s’appelle le côté opposé à l’angle droit ?",
+        choices: ["La médiane", "L’hypoténuse", "La hauteur", "La diagonale"],
+        answer: 1,
+        why: "C’est aussi le plus grand côté."
+      },
+      {
+        q: "Dans le triangle ARE rectangle en R, l’égalité de Pythagore s’écrit…",
+        choices: ["AR² = AE² + RE²", "AE² = RE² + RA²", "RE² = AR² + AE²", "AE = RE + RA"],
+        answer: 1,
+        why: "AE est l’hypoténuse, car l’angle droit est en R."
+      },
+      {
+        q: "AR = 2 cm et RE = 3 cm, ARE rectangle en R. AE vaut…",
+        choices: ["5 cm", "√13 cm, soit environ 3,6 cm", "13 cm", "√5 cm"],
+        answer: 1,
+        why: "AE² = 9 + 4 = 13."
+      },
+      {
+        q: "Pour calculer un côté de l’angle droit, on fait…",
+        choices: ["une addition des carrés", "une soustraction : hypoténuse² − autre côté²", "une multiplication", "une division par 2"],
+        answer: 1,
+        why: "Remarque du cours : on utilise une soustraction."
+      },
+      {
+        q: "Comment s’appelle la relation « carré de l’hypoténuse = somme des carrés des deux autres côtés » ?",
+        choices: ["La réciproque", "L’égalité de Pythagore", "La propriété de Thalès", "La contraposée"],
+        answer: 1,
+        why: "En rouge dans le cahier : cette relation s’appelle l’égalité de Pythagore."
+      },
+      {
+        q: "À quoi sert la réciproque du théorème de Pythagore ?",
+        choices: ["À calculer une aire", "À prouver qu’un triangle est rectangle", "À calculer un angle", "À prouver qu’un triangle n’est pas rectangle"],
+        answer: 1,
+        why: "On l’utilise quand l’égalité est vérifiée."
+      },
+      {
+        q: "L’égalité de Pythagore n’est pas vérifiée. On conclut avec…",
+        choices: ["la réciproque : le triangle est rectangle", "la contraposée : le triangle n’est pas rectangle", "le théorème : on calcule une longueur", "rien du tout"],
+        answer: 1,
+        why: "Contraposée : si l’égalité n’est pas vérifiée, le triangle ne peut pas être rectangle."
+      },
+      {
+        q: "Triangle DHB : HB = 7 cm, DH = 4,1 cm, DB = 5,7 cm. Est-il rectangle ?",
+        choices: ["Oui, en D", "Non, car 49 ≠ 49,3", "Oui, en H", "On ne peut pas savoir"],
+        answer: 1,
+        why: "HB² = 49 et DH² + DB² = 49,3."
+      },
+      {
+        q: "Triangle PMR : MR = 6 cm, PR = 4,8 cm, PM = 3,6 cm. Il est…",
+        choices: ["rectangle en P", "rectangle en M", "rectangle en R", "non rectangle"],
+        answer: 0,
+        why: "36 = 23,04 + 12,96 : l’angle droit est opposé au plus grand côté, MR."
+      },
+      {
+        q: "Avant de tester un triangle, quel côté repère-t-on ?",
+        choices: ["Le plus petit", "Le plus grand", "N’importe lequel", "Le côté horizontal"],
+        answer: 1,
+        why: "Le plus grand côté serait l’hypoténuse."
+      },
+      {
+        q: "L’armoire : 80 cm de large, 250 cm de haut, plafond à 260 cm. Peut-on la redresser ?",
+        choices: ["Oui, la diagonale fait 250 cm", "Non, la diagonale fait environ 262,5 cm", "Oui, la diagonale fait 255 cm", "Non, la diagonale fait 330 cm"],
+        answer: 1,
+        why: "AC² = 80² + 250² = 68 900, AC ≈ 262,5 cm, plus que 260."
+      },
+      {
+        q: "RAS rectangle en A, RA = 7,2 cm, RS = 9,7 cm. AS mesure…",
+        choices: ["2,5 cm", "6,5 cm", "12,1 cm", "42,25 cm"],
+        answer: 1,
+        why: "AS² = 9,7² − 7,2² = 42,25, et √42,25 = 6,5."
+      },
+      {
+        q: "Hypoténuse 17, un côté 15 : l’autre côté mesure…",
+        choices: ["2", "8", "√514", "32"],
+        answer: 1,
+        why: "17² − 15² = 289 − 225 = 64, √64 = 8."
+      },
+      {
+        q: "La valeur exacte de l’hypoténuse d’un triangle rectangle de côtés 7 et 10 est…",
+        choices: ["12,2", "√149", "17", "149"],
+        answer: 1,
+        why: "7² + 10² = 149. 12,2 n’est qu’une valeur approchée."
+      },
+      {
+        q: "Combien de carrés de 1 cm² peut-on tracer dans un carré de 1 dm² ?",
+        choices: ["10", "100", "1 000", "10 000"],
+        answer: 1,
+        why: "1 dm = 10 cm : 10 rangées de 10 carrés."
+      },
+      {
+        q: "Combien de cubes de 1 cm de côté dans un cube de 1 dm de côté ?",
+        choices: ["10", "100", "1 000", "1 000 000"],
+        answer: 2,
+        why: "10 × 10 × 10 = 1 000. Dans un cube de 1 m, 1 000 000."
+      },
+      {
+        q: "1 litre est égal à…",
+        choices: ["1 cm³", "1 dm³", "1 m³", "10 dm³"],
+        answer: 1,
+        why: "À retenir : 1 L = 1 dm³."
+      },
+      {
+        q: "7,5 m³ = …",
+        choices: ["75 L", "750 L", "7 500 L", "0,0075 L"],
+        answer: 2,
+        why: "1 m³ = 1 000 L."
+      },
+      {
+        q: "2,5 m² = …",
+        choices: ["25 dm²", "250 dm²", "2 500 dm²", "0,25 dm²"],
+        answer: 1,
+        why: "1 m² = 100 dm²."
+      },
+      {
+        q: "0,0324 dm² = …",
+        choices: ["324 mm²", "3,24 mm²", "0,00000324 mm²", "32,4 mm²"],
+        answer: 0,
+        why: "1 dm² = 10 000 mm², donc on multiplie par 10 000."
+      },
+      {
+        q: "Combien de secondes dans une journée ?",
+        choices: ["3 600", "86 400", "1 440", "8 640"],
+        answer: 1,
+        why: "24 × 3 600 = 86 400."
+      },
+      {
+        q: "0,75 h = …",
+        choices: ["75 min", "45 min", "7 min 30 s", "30 min"],
+        answer: 1,
+        why: "0,75 × 60 = 45."
+      },
+      {
+        q: "1,2 h = …",
+        choices: ["1 h 20 min", "1 h 12 min", "1 h 02 min", "120 min"],
+        answer: 1,
+        why: "0,2 h = 0,2 × 60 = 12 min."
+      },
+      {
+        q: "25 m/s, c’est…",
+        choices: ["25 km/h", "90 km/h", "250 km/h", "9 km/h"],
+        answer: 1,
+        why: "25 m × 3 600 = 90 000 m = 90 km en une heure."
+      },
+      {
+        q: "Un avion part à 19 h 50 pour un vol de 1 h 50. Il arrive à…",
+        choices: ["20 h 40", "21 h 40", "21 h 00", "21 h 50"],
+        answer: 1,
+        why: "19 h 50 + 10 min = 20 h, puis + 1 h 40."
+      },
+      {
+        q: "Un train part à 6 h 47 et arrive à 9 h 18. Le voyage dure…",
+        choices: ["2 h 31", "3 h 31", "2 h 71", "3 h 29"],
+        answer: 0,
+        why: "13 min pour arriver à 7 h, puis 2 h 18."
+      },
+      {
+        q: "Dans une machine de calcul, le nombre de départ x s’appelle…",
+        choices: ["l’image", "l’antécédent", "la sortie", "la fonction"],
+        answer: 1,
+        why: "x est l’antécédent, f(x) son image."
+      },
+      {
+        q: "Machine : multiplier par 4, puis ajouter 5. f(3) = ?",
+        choices: ["32", "17", "12", "27"],
+        answer: 1,
+        why: "3 × 4 = 12, 12 + 5 = 17."
+      },
+      {
+        q: "Machine : ajouter 7, multiplier par 3, soustraire 1. Quelle écriture convient ?",
+        choices: ["f(x) = x + 7 × 3 − 1", "f(x) = (x + 7) × 3 − 1", "f(x) = x × 3 + 7 − 1", "f(x) = (x − 1) × 3 + 7"],
+        answer: 1,
+        why: "Les parenthèses imposent d’ajouter 7 avant de multiplier."
+      },
+      {
+        q: "Machine : diviser par 10, ajouter 1,2, multiplier par 3. f(13,8) = ?",
+        choices: ["5,74", "7,74", "45", "4,98"],
+        answer: 1,
+        why: "1,38 + 1,2 = 2,58, puis 2,58 × 3 = 7,74."
+      },
+      {
+        q: "Machine : multiplier par x, soustraire 20, diviser par 10. Quelle écriture convient ?",
+        choices: ["f(x) = 10 : (x² − 20)", "f(x) = (x² − 20) : 10", "f(x) = x − 20 : 10", "f(x) = (2x − 20) : 10"],
+        answer: 1,
+        why: "x × x = x², puis − 20, puis : 10."
+      },
+      {
+        q: "Marche arrière : multiplier par 3, ajouter 6, multiplier par 2 donne −42. Le nombre de départ est…",
+        choices: ["−9", "−21", "−27", "−4"],
+        answer: 0,
+        why: "−42 : 2 = −21, −21 − 6 = −27, −27 : 3 = −9."
+      },
+      {
+        q: "Pour faire une « marche arrière » dans une machine de calcul, on…",
+        choices: ["refait les mêmes opérations", "fait les opérations contraires, en partant de la fin", "change l’ordre au hasard", "ajoute 1"],
+        answer: 1,
+        why: "Une division défait une multiplication, une soustraction défait une addition."
+      },
+      {
+        q: "Programme A : ajouter 8, puis élever au carré. Image de 5 ?",
+        choices: ["21", "169", "33", "64"],
+        answer: 1,
+        why: "5 + 8 = 13, 13² = 169."
+      },
+      {
+        q: "g(x) = (x − 7)². Quels nombres ont pour image 9 ?",
+        choices: ["4 et 10", "16 seulement", "3 et −3", "−4 et −10"],
+        answer: 0,
+        why: "4 − 7 = −3 et 10 − 7 = 3 : leurs carrés valent 9."
+      },
+      {
+        q: "Quel est l’antécédent de 0 par f(x) = (x + 8)² ?",
+        choices: ["8", "−8", "0", "64"],
+        answer: 1,
+        why: "−8 + 8 = 0 et 0² = 0."
+      },
+      {
+        q: "5x × 3x = ?",
+        choices: ["15x", "15x²", "8x", "8x²"],
+        answer: 1,
+        why: "5 × 3 = 15 et x × x = x²."
+      },
+      {
+        q: "5x² + 3x² = ?",
+        choices: ["8x⁴", "8x²", "15x²", "8x"],
+        answer: 1,
+        why: "On ajoute des x² : 5 + 3 = 8, et on garde x²."
+      },
+      {
+        q: "5x − 3x = ?",
+        choices: ["2", "2x", "2x²", "8x"],
+        answer: 1,
+        why: "5 − 3 = 2, on garde x."
+      },
+      {
+        q: "Un basketteur réussit 8 tirs sur 10, un autre 16 sur 20. Qui est le plus performant ?",
+        choices: ["Le premier", "Le second", "Ils sont aussi performants", "On ne peut pas savoir"],
+        answer: 2,
+        why: "8/10 = 16/20 = 80 %."
+      },
+      {
+        q: "34/20 est-il un nombre décimal ?",
+        choices: ["Oui, 1,7", "Non", "Oui, 3,42", "Oui, 0,58"],
+        answer: 0,
+        why: "34/20 = 17/10 = 1,7."
+      },
+      {
+        q: "5/15 est-il un nombre décimal ?",
+        choices: ["Oui, 0,3", "Non, c’est 1/3", "Oui, 0,33", "Oui, 3"],
+        answer: 1,
+        why: "1/3 = 0,333… ne s’arrête jamais : c’est un rationnel non décimal."
+      },
+      {
+        q: "Une classe de 25 élèves compte 15 filles. Quelle est la proportion de filles ?",
+        choices: ["15 %", "40 %", "60 %", "75 %"],
+        answer: 2,
+        why: "15/25 = 60/100."
+      },
+      {
+        q: "99 × 54 de tête : quelle méthode ?",
+        choices: ["100 × 54 − 54", "100 × 54 + 54", "99 × 50 + 4", "90 × 54 + 9"],
+        answer: 0,
+        why: "99 = 100 − 1, donc 5 400 − 54 = 5 346."
+      }
+    ];
+
+    QUIZ.extra = [
+      {
+        q: "Lequel est un triplet pythagoricien ?",
+        choices: ["2, 3, 4", "3, 4, 5", "4, 5, 6", "5, 6, 7"],
+        answer: 1,
+        why: "9 + 16 = 25."
+      },
+      {
+        q: "Lequel est aussi un triplet pythagoricien ?",
+        choices: ["5, 12, 13", "5, 10, 15", "6, 7, 8", "1, 2, 3"],
+        answer: 0,
+        why: "25 + 144 = 169."
+      },
+      {
+        q: "Une tablette babylonienne prouve que la relation était connue vers…",
+        choices: ["1800 avant J.-C.", "500 après J.-C.", "1492", "1789"],
+        answer: 0,
+        why: "La tablette Plimpton 322, bien avant Pythagore."
+      },
+      {
+        q: "Pour vérifier un angle droit, un maçon mesure 60 cm et 80 cm. La diagonale doit faire…",
+        choices: ["1,40 m", "1 m", "70 cm", "1,20 m"],
+        answer: 1,
+        why: "Triplet 6, 8, 10 : 3600 + 6400 = 10 000, √10 000 = 100 cm."
+      },
+      {
+        q: "√(4 × 9) = ?",
+        choices: ["√4 × √9 = 6", "4 × 9 = 36", "√13", "13"],
+        answer: 0,
+        why: "Pour un produit, √(a × b) = √a × √b."
+      },
+      {
+        q: "Entre quels entiers se trouve √40 ?",
+        choices: ["4 et 5", "6 et 7", "19 et 21", "7 et 8"],
+        answer: 1,
+        why: "6² = 36 et 7² = 49."
+      },
+      {
+        q: "√2 est un nombre…",
+        choices: ["entier", "décimal", "irrationnel", "négatif"],
+        answer: 2,
+        why: "Ce n’est même pas une fraction : ses décimales ne s’arrêtent jamais."
+      },
+      {
+        q: "Combien vaut 15² ?",
+        choices: ["150", "225", "215", "125"],
+        answer: 1,
+        why: "15 × 15 = 225."
+      },
+      {
+        q: "Laquelle de ces fractions est un nombre décimal ?",
+        choices: ["2/7", "3/8", "1/3", "5/6"],
+        answer: 1,
+        why: "8 = 2 × 2 × 2 : 3/8 = 0,375."
+      },
+      {
+        q: "f : x ↦ 4x + 5 se lit…",
+        choices: ["f est égale à x", "f est la fonction qui à x associe 4x + 5", "f vaut 9x", "x est l’image de f"],
+        answer: 1,
+        why: "La flèche ↦ se lit « associe »."
+      },
+      {
+        q: "Développe 2(3x + 6).",
+        choices: ["6x + 6", "6x + 12", "5x + 8", "3x + 12"],
+        answer: 1,
+        why: "k(a + b) = ka + kb."
+      },
+      {
+        q: "a² + 4a² = ?",
+        choices: ["5a⁴", "5a²", "4a⁴", "5a"],
+        answer: 1,
+        why: "On ajoute des termes de même nature."
+      },
+      {
+        q: "Pour passer de m/s à km/h, on multiplie par…",
+        choices: ["3,6", "60", "1 000", "36"],
+        answer: 0,
+        why: "3 600 s dans une heure, 1 000 m dans un km : 3 600 : 1 000 = 3,6."
+      },
+      {
+        q: "1,5 h = …",
+        choices: ["1 h 50", "1 h 30", "1 h 05", "150 min"],
+        answer: 1,
+        why: "0,5 h = 30 min."
+      },
+      {
+        q: "1 hectare = …",
+        choices: ["100 m²", "1 000 m²", "10 000 m²", "1 km²"],
+        answer: 2,
+        why: "1 ha = 1 hm² = 100 m × 100 m."
+      },
+      {
+        q: "Environ quelle est l’altitude du Mont-Blanc ?",
+        choices: ["4 100 m", "4 805 m", "3 500 m", "8 848 m"],
+        answer: 1,
+        why: "Environ 4 805 m, selon la neige au sommet. 8 848 m, c’est l’Everest."
+      }
+    ];
+  </script>
+  <script src="../cahier.js"></script>
 </body>
 </html>

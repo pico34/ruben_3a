@@ -10,15 +10,386 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../cahier.css" />
 </head>
-<body>
+<body data-vue="complet">
   <div class="wrap">
     <header class="top">
       <a class="back" href="../">Toutes les matières</a>
-      <p class="kicker">Ruben · 3e A</p>
-      <h1>Anglais</h1>
-      <p class="lede">Aucun document de cette matière n’est encore dans le Drive. La page est prête pour le premier cours.</p>
+      <p class="kicker">Anglais · 3e A · Mrs Puslecki</p>
+      <h1>Séquence Nine Eleven</h1>
+      <p class="lede">
+        Première séquence de l’année : le 11 septembre 2001, à travers le dessin de la statue de la Liberté
+        et le témoignage de Jessica, « Survival on 9/11 ». Grammaire : le prétérit simple (Grammarbox n° 1).
+        La lecture complète reprend le cahier. La synthèse garde l’essentiel. L’extra va plus loin.
+      </p>
+      <div class="toolbar" role="group" aria-label="Version de la lecture">
+        <button type="button" data-vue="complet" aria-pressed="true">Complet</button>
+        <button type="button" data-vue="synthese" aria-pressed="false">Synthèse</button>
+        <button type="button" data-vue="extra" aria-pressed="false">Extra</button>
+      </div>
     </header>
-    <footer>Les PDF déposés dans le dossier seront rangés ici, dans l’ordre du cours.</footer>
+
+    <section>
+      <article class="card">
+        <h2>Les séances, dans l’ordre du cahier</h2>
+        <ol class="timeline">
+          <li><time>Monday, September 7th</time><p>Début de la séquence. Dessin de la statue de la Liberté qui pleure, wordbox.</p></li>
+          <li><time>Thursday, September 10th</time><p>Écoute « Survival on 9/11: Listen to Jessica » : fiche à compléter.</p></li>
+          <li><time>Monday, September 14th</time><p>Questions sur Jack et Jessica, puis le texte du témoignage.</p></li>
+          <li><time>Thursday, September 17th</time><p>Résumé « Survival on nine eleven » écrit par Ruben.</p></li>
+          <li><time>Monday, September 28th</time><p>Questions au prétérit, mots interrogatifs, Grammarbox n° 1, exercices.</p></li>
+        </ol>
+      </article>
+    </section>
+
+    <div class="vue-synthese">
+      <section>
+        <article class="card">
+          <h2>L’histoire de Jack et Jessica, en heures</h2>
+          <p class="note">Jessica et son mari Jack vivent à Staten Island. Jack travaille au 55e étage de la tour Nord des Twin Towers et prend le ferry pour y aller.</p>
+          <ol class="timeline">
+            <li><time>7.30 am</time><p>Jack left home.</p></li>
+            <li><time>8.30 am</time><p>He arrived at his office.</p></li>
+            <li><time>8.46 am</time><p>The first plane crashed into the North Tower. Jack was having a cup of coffee and looking out of the window. He heard a terrible explosion. He walked down the stairs and called Jessica.</p></li>
+            <li><time>9.00 am</time><p>Heure de la réunion de Jack (he had a meeting at 9 am).</p></li>
+            <li><time>9.03 am</time><p>The second plane hit the South Tower. Jessica : « It was a nightmare. »</p></li>
+            <li><time>9.59 am</time><p>The South Tower collapsed.</p></li>
+            <li><time>10.28 am</time><p>The North Tower collapsed.</p></li>
+          </ol>
+        </article>
+      </section>
+
+      <section>
+        <article class="card">
+          <h2>À retenir : le prétérit simple</h2>
+          <ul class="bullets">
+            <li><strong>Emploi</strong> : une action dans un <strong>passé révolu</strong>, clairement daté, sans lien avec le présent. Souvent avec un marqueur de temps : <em>yesterday, in 2001, last week, two years ago</em>.</li>
+            <li><strong>Affirmatif</strong> : verbe régulier = base verbale + <strong>ED</strong> (<em>work → worked</em>), ou + D si la base finit par E (<em>dance → danced</em>). Verbe irrégulier = 2e colonne de la liste (<em>take → took, hit → hit, drink → drank</em>).</li>
+            <li><strong>Négatif</strong> : sujet + <strong>didn’t</strong> + base verbale. <em>He didn’t work in the South Tower.</em></li>
+            <li><strong>Question</strong> : (mot interrogatif) + <strong>did</strong> + sujet + base verbale ? <em>Did Jessica call Jack? Why did Jessica scream?</em></li>
+            <li>Après <em>did</em> ou <em>didn’t</em>, le verbe reste à la base verbale : jamais de -ed.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <article class="card">
+          <h2>Mots à savoir</h2>
+          <div class="defs">
+            <article class="def"><h3>freedom</h3><p>la liberté</p></article>
+            <article class="def"><h3>to cry / a tear</h3><p>pleurer / une larme</p></article>
+            <article class="def"><h3>storey / floor</h3><p>l’étage</p></article>
+            <article class="def"><h3>elevator (US) / lift (GB)</h3><p>l’ascenseur</p></article>
+            <article class="def"><h3>firefighter</h3><p>le pompier</p></article>
+            <article class="def"><h3>to sway</h3><p>osciller</p></article>
+            <article class="def"><h3>to shout / to scream / to yell</h3><p>crier / hurler</p></article>
+            <article class="def"><h3>to collapse</h3><p>s’effondrer</p></article>
+            <article class="def"><h3>to be frantic</h3><p>être dans tous ses états, paniquer</p></article>
+            <article class="def"><h3>a nightmare</h3><p>un cauchemar</p></article>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <div class="vue-complet">
+      <section>
+        <article class="card">
+          <span class="tag">Début d’année</span>
+          <h2>La lettre de rentrée de Mrs Puslecki</h2>
+          <ul class="bullets">
+            <li>Trois heures d’anglais par semaine : deux heures en classe entière, une heure d’AP (accompagnement personnalisé, en demi-groupe).</li>
+            <li>En AP, environ 15 heures dans l’année avec Labopractice, un laboratoire de langues, en salle informatique.</li>
+            <li>Le cahier est nécessaire à chaque cours. Le porte-vues reste à la maison pour ranger les évaluations. Les cahiers sont vérifiés et notés régulièrement.</li>
+            <li>Des devoirs pour chaque heure de classe entière, souvent aussi pour l’AP : vocabulaire, verbes irréguliers, leçons, préparation de prises de parole en continu, tâches finales. Ils sont sur Pronote, mais il faut aussi les noter dans l’agenda.</li>
+            <li>Un devoir commun d’anglais a lieu au deuxième semestre.</li>
+            <li>Conseil : rester « en contact » avec l’anglais. Séries et films en version originale, livres et magazines niveau A2/B1 (au CDI ou en classe), chansons.</li>
+          </ul>
+          <p class="note">La couverture du cahier montre cinq images : la statue de la Liberté qui pleure, une petite fille escortée par des policiers, une scène du film <em>The Devil Wears Prada</em>, le titre « I love series » et un couple d’un film romantique. Seule la première a déjà une leçon. La couverture et la lettre portent le nom et les signatures, elles ne sont pas affichées ici.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Monday, September 7th</span>
+          <h2>Le dessin : la statue de la Liberté qui pleure</h2>
+          <figure class="figure">
+            <img src="../drive/files/1S40t0vDjexg51zl4HYuwPdWVgr_jqLtX/pages/page-3.png" alt="Page du cahier : dessin de la statue de la Liberté en pleurs, texte de description et wordbox" />
+            <figcaption>Document collé dans le cahier, avec sa description et la wordbox.</figcaption>
+          </figure>
+          <p><strong>Description du document</strong> :</p>
+          <p lang="en"><em>This document is a drawing. We can see the head of the Statue of Liberty. The Statue of Liberty is situated on Liberty Island, near Manhattan in New York City. The Statue of Liberty is America’s greatest symbol of freedom. In her eyes, we can see buildings and planes. The Statue is crying, because the terrorist attack on September 11th 2001 destroyed the Twin Towers.</em></p>
+          <p><strong>Wordbox</strong> : <em>near</em> : proche ; <em>freedom</em> : liberté ; <em>to cry</em> : pleurer ; <em>a tear</em> : une larme.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Thursday, September 10th · écoute</span>
+          <h2>Survival on 9/11 : listen to Jessica</h2>
+          <figure class="figure">
+            <img src="../drive/files/1S40t0vDjexg51zl4HYuwPdWVgr_jqLtX/pages/page-4.png" alt="Fiche d’écoute Survival on 9/11 complétée par Ruben" />
+            <figcaption>Fiche d’écoute complétée à la main.</figcaption>
+          </figure>
+          <p><strong>Jessica and her husband before 9/11</strong></p>
+          <ul class="bullets">
+            <li>Place of residence : Staten Island.</li>
+            <li>Jack’s place of work : Twin Towers, North Tower, 55th storey.</li>
+            <li>Means of transport to get there : ferry.</li>
+            <li>Transport time : 1 hour.</li>
+          </ul>
+          <p><strong>9/11 timeline</strong>, avec les réponses de Ruben :</p>
+          <ul class="bullets">
+            <li>7.30 am : Jack left home. 8.30 am : he arrived at his office.</li>
+            <li>8.46 am, the first plane crashed into the North Tower. At that time, Jack was looking out of the window, he was having a cup of coffee. He heard a terrible explosion.</li>
+            <li>His actions : he walked down the stairs, he called Jessica.</li>
+            <li>Jessica’s reactions : she screamed and she yelled.</li>
+            <li>9.03 am, the second plane hit the South Tower. Jessica’s feelings : it was a nightmare.</li>
+            <li>9.59 am, the South Tower collapsed. 10.28 am, the North Tower collapsed.</li>
+          </ul>
+          <p class="note">Lecture incertaine : « 1 hour » pour le temps de trajet, écrit très vite sur la fiche.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Monday, September 14th · texte</span>
+          <h2>Le témoignage de Jessica</h2>
+          <p><strong>Questions du cahier, réponses de Ruben</strong> :</p>
+          <ul class="bullets">
+            <li><em>Where did they live?</em> They lived on Staten Island.</li>
+            <li><em>Where did Jack work?</em> Jack worked in the Twin Towers, on the 55th storey of the North Tower.</li>
+            <li><em>How did Jack go to work?</em> He took the ferry.</li>
+          </ul>
+          <figure class="figure">
+            <img src="../drive/files/1S40t0vDjexg51zl4HYuwPdWVgr_jqLtX/pages/page-5.png" alt="Texte du témoignage de Jessica, verbes au prétérit surlignés en bleu" />
+            <figcaption>Ruben surligne en bleu tous les verbes conjugués au passé : was, had, left, arrived, felt, shouted, started, met, called, knew, told, screamed, yelled, tried, promised, saw, waited…</figcaption>
+          </figure>
+          <p><strong>Glossaire du texte</strong> :</p>
+          <ul class="bullets">
+            <li><em>storey</em> : floor (l’étage).</li>
+            <li><em>to sway</em> : osciller (dessin d’une tour qui penche).</li>
+            <li><em>to shout</em> : to talk very loudly ≠ <em>to whisper</em> (chuchoter).</li>
+            <li><em>to reach</em> : to get to (atteindre).</li>
+            <li><em>to be frantic</em> : to panic.</li>
+            <li><em>a scream</em> : a loud, high cry. <em>A yell</em> : a loud shout.</li>
+            <li><em>a nightmare</em> : a very bad dream.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Fiche · Text Survival on 9/11</span>
+          <h2>Exercices sur le texte</h2>
+          <p><strong>A. Listen and fill in the blanks</strong> : <span class="note">exercice non rempli dans le cahier.</span></p>
+          <p><strong>B. Find the translation in the text</strong> (réponses de Ruben, orthographe corrigée) :</p>
+          <div class="defs">
+            <article class="def"><h3>l’époux</h3><p>the husband</p></article>
+            <article class="def"><h3>le bureau</h3><p>the office</p></article>
+            <article class="def"><h3>l’étage</h3><p>the storey / the floor</p></article>
+            <article class="def"><h3>l’ascenseur</h3><p>the elevator (USA) / the lift (GB)</p></article>
+            <article class="def"><h3>la réunion</h3><p>the meeting</p></article>
+            <article class="def"><h3>la fenêtre</h3><p>the window</p></article>
+            <article class="def"><h3>osciller</h3><p>to sway</p></article>
+            <article class="def"><h3>crier</h3><p>to shout</p></article>
+            <article class="def"><h3>dans le noir</h3><p>in the dark</p></article>
+            <article class="def"><h3>atteindre</h3><p>to reach</p></article>
+            <article class="def"><h3>le pompier</h3><p>the firefighter</p></article>
+            <article class="def"><h3>téléphoner</h3><p>to call</p></article>
+            <article class="def"><h3>le téléphone portable</h3><p>the mobile (phone)</p></article>
+            <article class="def"><h3>hurler</h3><p>to scream / to yell</p></article>
+            <article class="def"><h3>essayer</h3><p>to try</p></article>
+            <article class="def"><h3>le cauchemar</h3><p>the nightmare</p></article>
+            <article class="def"><h3>sans fin</h3><p>endless</p></article>
+            <article class="def"><h3>s’effondrer</h3><p>to collapse</p></article>
+            <article class="def"><h3>être dans tous ses états</h3><p>to be frantic</p></article>
+            <article class="def"><h3>se disputer</h3><p>to argue</p></article>
+          </div>
+          <p class="note">Retouches : Ruben a écrit « the phone mobile » (on dit <em>the mobile phone</em>, ou <em>the mobile</em>) et « to collapsed » (après <em>to</em>, base verbale : <em>to collapse</em>). Pour l’étage, la fiche demande un mot USA et un mot GB ; Ruben met <em>storey</em> côté USA et <em>floor</em> côté GB. En réalité, <em>storey</em> est l’orthographe britannique (<em>story</em> en américain) et <em>floor</em> s’emploie des deux côtés. À vérifier avec la correction en classe.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Thursday, September 17th · résumé de Ruben</span>
+          <h2>Survival on nine eleven</h2>
+          <p lang="en"><em>Jack and Jessica lived on Staten Island. Jack worked in the Twin Towers, in the North Tower, on the 55th storey. He took the ferry to go to work. He left home at 7.30. He arrived at his office at 8.30. He was having a cup of coffee and looking out of the window, when he heard a terrible explosion. He walked down the stairs and he called Jessica. He saw firefighters. The first plane hit the North Tower at 8.46 am. The second plane hit the South Tower at 9.03 am. The towers collapsed.</em></p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Monday, September 28th · questions</span>
+          <h2>Poser des questions au prétérit</h2>
+          <ul class="bullets" lang="en">
+            <li>Where did they live?</li>
+            <li>Where did Jack work?</li>
+            <li>How did he go to work?</li>
+            <li>When did Jack arrive at his office?</li>
+            <li>What did he do when he heard a terrible explosion?</li>
+            <li>When did he leave home?</li>
+            <li>Who did he see when he walked down the stairs?</li>
+            <li>What did Jessica do?</li>
+            <li>How many planes did they see? How many cups of coffee did he drink? <span class="note" lang="fr">(écrites dans la marge de la Grammarbox)</span></li>
+          </ul>
+          <p>Schéma noté sous la dernière question : <strong>mot interrogatif → auxiliaire (did) → sujet → base verbale</strong>.</p>
+          <p class="note">Retouche : Ruben a écrit « When did Jack arrived at his office? ». Après <em>did</em>, le verbe reste à la base verbale : <em>When did Jack arrive…?</em></p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Grammarbox n° 1</span>
+          <h2>The simple past – le prétérit simple</h2>
+          <figure class="figure">
+            <img src="../drive/files/1S40t0vDjexg51zl4HYuwPdWVgr_jqLtX/pages/page-8.png" alt="Grammarbox n° 1 : le prétérit simple, emploi et formation" />
+            <figcaption>Fiche de grammaire collée dans le cahier.</figcaption>
+          </figure>
+          <p lang="en"><em>Jack <u>worked</u> in the North Tower. He <u>lived</u> on Staten Island and he <u>took</u> the ferry to go to Manhattan. The first plane <u>hit</u> the North Tower at 8.46.</em></p>
+          <p><strong>Emploi</strong> : le prétérit s’utilise pour parler d’une action dans un <strong>passé révolu</strong>, c’est-à-dire quand l’action est clairement définie dans le passé et qu’il n’y a pas de lien avec le présent. Souvent, il y a une date ou un marqueur de temps comme <em>yesterday, in 2001, last week, two years ago</em>.</p>
+          <p><strong>Formation</strong> :</p>
+          <ul class="bullets">
+            <li><strong>Forme affirmative.</strong> Verbes réguliers : base verbale + ED (<em>work – worked, watch – watched</em>), ou + D si la base verbale se termine en E (<em>dance – danced</em>). Verbes irréguliers : forme irrégulière, deuxième colonne de la liste des verbes irréguliers (<em>take – took, hit – hit, drink – drank</em>).</li>
+            <li><strong>Forme négative.</strong> Sujet – Aux – NOT – base verbale, pour tous les verbes. <em>He didn’t work in the South Tower. He didn’t take the stairs.</em></li>
+            <li><strong>Forme interrogative.</strong> Aux – Sujet – Base verbale ? <em>Did Jessica call Jack? Did he meet the firefighters?</em></li>
+            <li><strong>Questions.</strong> MI (mot interrogatif) – Aux – Sujet – Base verbale ? <em>Why did Jessica scream? Who did he see?</em></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Fiche · Séquence 9/11</span>
+          <h2>Exercices de prétérit</h2>
+          <p><strong>A. True or false? Justify each answer.</strong></p>
+          <ol class="bullets">
+            <li><em>The first plane hit during the meeting.</em> False : the first plane hit at 8.46 and the meeting was at 9.00.</li>
+            <li><em>Jack felt the tower moving terribly.</em> True. <span class="note">Justification non écrite. Dans le texte : « he felt the tower swaying ».</span></li>
+            <li><em>Jack called Jessica when he was in his office.</em> False : Jack called Jessica when he walked down the stairs. <span class="note">Ruben a écrit « when he was walked » : il faut <em>when he walked</em> ou <em>when he was walking</em>.</span></li>
+            <li><em>Jack took the elevators to evacuate.</em> False : Jack took the stairs.</li>
+            <li><em>Jack left his office because he knew about the plane.</em> False : Ruben écrit « because he heard a plane ». <span class="note">Retouche douteuse : le texte dit qu’il a entendu une explosion, senti la tour osciller, et que quelqu’un a crié « Evacuate! ». « He didn’t know about the plane. »</span></li>
+          </ol>
+          <p><strong>B. Conjugue au prétérit simple</strong> (réponses de Ruben, puis correction) :</p>
+          <ul class="bullets">
+            <li>They (WAIT) : <em>they waited</em> ✓ ; <em>they didn’t wait</em> ✓ ; Ruben « Waited they? » → <strong>Did they wait?</strong> ; Ruben « Yes, they waited » → <strong>Yes, they did.</strong> ; « No, they didn’t wait » → <strong>No, they didn’t.</strong></li>
+            <li>He (HAVE) : <em>he had</em> ✓ ; <em>he didn’t have</em> ✓ ; Ruben « Had he? » → <strong>Did he have?</strong> ; réponse brève affirmative peu lisible → <strong>Yes, he did.</strong> ; Ruben « No, he not had » → <strong>No, he didn’t.</strong></li>
+          </ul>
+          <p class="note">Retouche : la forme interrogative et les réponses brèves se font avec l’auxiliaire <em>did</em>, comme dans la Grammarbox. Ruben a inversé sujet et verbe, comme en français.</p>
+          <p><strong>C. Mets les verbes au prétérit simple</strong> :</p>
+          <p lang="en"><em>On September 11th, Jack <strong>didn’t leave</strong> home very early. He <strong>had</strong> breakfast and he <strong>began</strong> a book. He <strong>took</strong> the ferry and he <strong>didn’t arrive</strong> late at work.</em></p>
+          <p class="note">Retouches : Ruben a écrit « didn’t leave » puis « left » en surcharge (la bonne forme est <em>didn’t leave</em>) et « didn’t arrived » (il faut <em>didn’t arrive</em>). had, began et took sont justes.</p>
+          <p><strong>D. Pose la question sur le(s) mot(s) souligné(s)</strong> : <span class="note">exercice non rempli dans le cahier.</span></p>
+        </article>
+      </section>
+    </div>
+
+    <div class="vue-extra">
+      <p class="avertissement">Cette partie n’est pas dans le cahier de Ruben. Ce sont des connaissances ajoutées, dans le périmètre de la séquence, pour aller plus loin. Ce qui compte pour l’évaluation reste le cours de Mrs Puslecki.</p>
+      <section>
+        <article class="card">
+          <span class="tag">Extra · culture</span>
+          <h2>September 11th, 2001</h2>
+          <ul class="bullets">
+            <li>Ce matin-là, 19 terroristes d’Al-Qaïda détournent quatre avions de ligne. Deux frappent les tours du World Trade Center à New York, un troisième le Pentagone près de Washington. Le quatrième s’écrase en Pennsylvanie, après la révolte des passagers.</li>
+            <li>Près de 3&nbsp;000 personnes sont tuées, dont plus de 340 pompiers de New York.</li>
+            <li>À l’emplacement des tours, on trouve aujourd’hui le <em>9/11 Memorial</em> (deux bassins à la place des tours) et le <em>One World Trade Center</em>, haut de 1&nbsp;776 pieds, en référence à l’année de l’indépendance américaine.</li>
+            <li>Les Américains écrivent la date mois/jour : <em>9/11</em> se lit <em>nine eleven</em>. Les Britanniques écriraient 11/9.</li>
+            <li>La statue de la Liberté, <em>Lady Liberty</em>, a été offerte par la France aux États-Unis et inaugurée en 1886. Elle a été conçue par Bartholdi, avec une structure de Gustave Eiffel.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · grammaire</span>
+          <h2>Pièges du prétérit</h2>
+          <ul class="bullets">
+            <li><strong>Prononciation de -ed</strong> : /t/ après un son sourd (<em>worked, watched</em>), /d/ après un son sonore (<em>lived, called</em>), /ɪd/ après t ou d (<em>waited, started</em>).</li>
+            <li><strong>Orthographe</strong> : consonne + y → -ied (<em>try → tried, cry → cried</em>) ; voyelle + y → -yed (<em>play → played</em>) ; une voyelle courte + une consonne finale accentuée → on double (<em>stop → stopped</em>).</li>
+            <li><strong>Be</strong> n’utilise pas <em>did</em> : <em>I was, you were</em> ; <em>He wasn’t at home</em> ; <em>Were they in the tower?</em></li>
+            <li><strong>Prétérit en be + -ing</strong>, vu dans le texte : <em>he was having a cup of coffee</em>. Il décrit une action en cours dans le passé, souvent interrompue par une action au prétérit simple : <em>He was looking out of the window when the plane hit.</em></li>
+            <li><strong>Used to</strong>, vu dans le texte : <em>My husband used to work in the Twin Towers</em> = une habitude passée qui n’existe plus.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · verbes irréguliers du texte</span>
+          <h2>À connaître par cœur</h2>
+          <div class="defs">
+            <article class="def"><h3>be – was/were – been</h3><p>être</p></article>
+            <article class="def"><h3>have – had – had</h3><p>avoir</p></article>
+            <article class="def"><h3>leave – left – left</h3><p>partir, quitter</p></article>
+            <article class="def"><h3>feel – felt – felt</h3><p>sentir, ressentir</p></article>
+            <article class="def"><h3>meet – met – met</h3><p>rencontrer</p></article>
+            <article class="def"><h3>know – knew – known</h3><p>savoir, connaître</p></article>
+            <article class="def"><h3>tell – told – told</h3><p>dire, raconter</p></article>
+            <article class="def"><h3>see – saw – seen</h3><p>voir</p></article>
+            <article class="def"><h3>take – took – taken</h3><p>prendre</p></article>
+            <article class="def"><h3>hit – hit – hit</h3><p>frapper</p></article>
+            <article class="def"><h3>drink – drank – drunk</h3><p>boire</p></article>
+            <article class="def"><h3>begin – began – begun</h3><p>commencer</p></article>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <section>
+      <article class="card">
+        <div class="quiz-head">
+          <div>
+            <h2>Quiz</h2>
+            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions et l’ordre des réponses.</p>
+          </div>
+          <p id="score">0 / 10</p>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="quizNouveau">Nouveau quiz</button>
+          <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
+        </div>
+        <div id="quiz"></div>
+      </article>
+    </section>
+
+    <footer>
+      Source : cahier d’anglais numérisé le 4 octobre (9 pages : couverture, lettre de rentrée, séquence Nine Eleven).
+      L’orthographe des parties manuscrites est corrigée et les erreurs d’anglais sont signalées comme retouches.
+    </footer>
   </div>
+
+  <script>
+    window.QUIZ = {};
+    QUIZ.cahier = [
+      { q: "Where did Jack and Jessica live?", choices: ["In Manhattan", "On Staten Island", "On Liberty Island", "In Washington"], answer: 1, why: "They lived on Staten Island." },
+      { q: "Where did Jack work?", choices: ["On the 55th storey of the North Tower", "On the 30th floor of the South Tower", "At the Statue of Liberty", "On a ferry"], answer: 0, why: "Jack worked in the Twin Towers, on the 55th storey of the North Tower." },
+      { q: "How did Jack go to work?", choices: ["By car", "By bus", "He took the ferry", "He walked"], answer: 2, why: "He took the ferry." },
+      { q: "At what time did Jack leave home?", choices: ["7.30", "8.30", "8.46", "9.00"], answer: 0, why: "He left home at 7.30." },
+      { q: "What was Jack doing when the first plane hit?", choices: ["He was sleeping", "He was having a cup of coffee and looking out of the window", "He was in a meeting", "He was taking the ferry"], answer: 1, why: "He was having a cup of coffee and looking out of the window." },
+      { q: "At what time did the first plane hit the North Tower?", choices: ["7.30 am", "8.46 am", "9.03 am", "10.28 am"], answer: 1, why: "8.46 am. The second plane hit the South Tower at 9.03 am." },
+      { q: "Which tower collapsed first?", choices: ["The North Tower", "The South Tower", "They collapsed at the same time", "None"], answer: 1, why: "The South Tower at 9.59 am, then the North Tower at 10.28 am." },
+      { q: "How did Jack evacuate?", choices: ["He took the elevators", "He walked down the stairs", "He jumped", "He took a helicopter"], answer: 1, why: "The elevators were no longer working: he took the stairs." },
+      { q: "Que veut dire « freedom » ?", choices: ["La peur", "La liberté", "Une larme", "Le bureau"], answer: 1, why: "Freedom : la liberté. La statue est le symbole de la liberté américaine." },
+      { q: "Que veut dire « a tear » dans la wordbox ?", choices: ["Une larme", "Une tour", "Un avion", "Un cri"], answer: 0, why: "A tear : une larme. To cry : pleurer." },
+      { q: "Pourquoi la statue de la Liberté pleure-t-elle sur le dessin ?", choices: ["Parce qu’il pleut", "Parce que l’attentat du 11 septembre 2001 a détruit les Twin Towers", "Parce qu’elle est malade", "Parce qu’elle quitte New York"], answer: 1, why: "In her eyes, we can see buildings and planes." },
+      { q: "Comment dit-on « l’ascenseur » en anglais américain ?", choices: ["The lift", "The elevator", "The stairs", "The storey"], answer: 1, why: "Elevator (USA), lift (GB)." },
+      { q: "Que veut dire « to collapse » ?", choices: ["S’effondrer", "Osciller", "Crier", "Atteindre"], answer: 0, why: "The towers collapsed : les tours se sont effondrées." },
+      { q: "Que veut dire « to sway » ?", choices: ["Hurler", "Osciller", "Essayer", "Téléphoner"], answer: 1, why: "He felt the tower swaying : il a senti la tour osciller." },
+      { q: "« A nightmare » est…", choices: ["a very bad dream", "a loud shout", "a firefighter", "a meeting"], answer: 0, why: "A nightmare : a very bad dream, un cauchemar." },
+      { q: "Le contraire de « to shout », d’après le glossaire ?", choices: ["to scream", "to yell", "to whisper", "to call"], answer: 2, why: "To shout : to talk very loudly ≠ to whisper (chuchoter)." },
+      { q: "Que veut dire « to be frantic » ?", choices: ["Être calme", "Être dans tous ses états", "Être en retard", "Être pompier"], answer: 1, why: "To be frantic : to panic." },
+      { q: "Comment dit-on « le pompier » ?", choices: ["The fireman’s office", "The firefighter", "The husband", "The meeting"], answer: 1, why: "The firefighter. Jack met the first firefighters on the 30th floor." },
+      { q: "Quand utilise-t-on le prétérit simple ?", choices: ["Pour une action en cours maintenant", "Pour une action dans un passé révolu, sans lien avec le présent", "Pour le futur", "Pour donner un ordre"], answer: 1, why: "Action clairement définie dans le passé, souvent avec un marqueur de temps." },
+      { q: "Lequel de ces mots est un marqueur du prétérit ?", choices: ["now", "tomorrow", "yesterday", "always"], answer: 2, why: "Yesterday, in 2001, last week, two years ago…" },
+      { q: "Prétérit de « work » ?", choices: ["worked", "workd", "wrought", "works"], answer: 0, why: "Verbe régulier : base verbale + ED." },
+      { q: "Prétérit de « dance » ?", choices: ["danceed", "danced", "dancing", "danse"], answer: 1, why: "Base verbale terminée par E : + D seulement." },
+      { q: "Prétérit de « take » ?", choices: ["taked", "took", "taken", "takes"], answer: 1, why: "Verbe irrégulier : take – took – taken." },
+      { q: "Prétérit de « hit » ?", choices: ["hitted", "hat", "hit", "hut"], answer: 2, why: "Hit – hit – hit : la forme ne change pas." },
+      { q: "Prétérit de « drink » ?", choices: ["drinked", "drunk", "drank", "drinks"], answer: 2, why: "Drink – drank – drunk." },
+      { q: "Quelle est la bonne forme négative ?", choices: ["He didn’t worked in the South Tower.", "He didn’t work in the South Tower.", "He not worked in the South Tower.", "He workedn’t in the South Tower."], answer: 1, why: "Sujet – didn’t – base verbale." },
+      { q: "Quelle est la bonne question ?", choices: ["Called Jessica Jack?", "Did Jessica called Jack?", "Did Jessica call Jack?", "Jessica did call Jack?"], answer: 2, why: "Aux – Sujet – Base verbale ?" },
+      { q: "Quelle question est correcte ?", choices: ["When did Jack arrived at his office?", "When did Jack arrive at his office?", "When Jack arrived at his office?", "When arrived Jack at his office?"], answer: 1, why: "Après did, base verbale : arrive." },
+      { q: "Ordre d’une question avec mot interrogatif ?", choices: ["Sujet – Aux – MI – Base verbale", "MI – Aux – Sujet – Base verbale", "Aux – MI – Base verbale – Sujet", "MI – Sujet – Base verbale – Aux"], answer: 1, why: "Why did Jessica scream? Who did he see?" },
+      { q: "Forme interrogative de « they waited » ?", choices: ["Waited they?", "Did they waited?", "Did they wait?", "They did wait?"], answer: 2, why: "On utilise l’auxiliaire did + base verbale." },
+      { q: "Réponse brève à « Did he have breakfast? » (non) ?", choices: ["No, he not had.", "No, he didn’t.", "No, he hadn’t breakfast.", "No, didn’t he."], answer: 1, why: "Réponse brève avec l’auxiliaire : No, he didn’t." },
+      { q: "Complète : « He ____ (NOT/ARRIVE) late at work. »", choices: ["didn’t arrived", "didn’t arrive", "not arrived", "arrivedn’t"], answer: 1, why: "Didn’t + base verbale." },
+      { q: "Complète : « He ____ (BEGIN) a book. »", choices: ["beginned", "begun", "began", "begin"], answer: 2, why: "Begin – began – begun." },
+      { q: "True or false : « The first plane hit during the meeting. »", choices: ["True", "False : the plane hit at 8.46 and the meeting was at 9.00"], answer: 1, why: "He had a meeting at 9 am. The first plane hit at 8.46." },
+      { q: "Combien d’heures d’anglais par semaine en 3e, d’après la lettre de rentrée ?", choices: ["Deux", "Trois", "Quatre", "Une"], answer: 1, why: "Deux heures en classe entière et une heure d’AP en demi-groupe." }
+    ];
+
+    QUIZ.extra = [
+      { q: "Combien d’avions ont été détournés le 11 septembre 2001 ?", choices: ["Deux", "Trois", "Quatre", "Six"], answer: 2, why: "Deux sur le World Trade Center, un sur le Pentagone, un en Pennsylvanie." },
+      { q: "Quel pays a offert la statue de la Liberté aux États-Unis ?", choices: ["Le Royaume-Uni", "La France", "L’Espagne", "Le Canada"], answer: 1, why: "Inaugurée en 1886, conçue par Bartholdi, structure de Gustave Eiffel." },
+      { q: "Pourquoi les Américains écrivent-ils « 9/11 » ?", choices: ["Ils écrivent le mois avant le jour", "C’est un numéro de téléphone", "Il y avait 9 avions", "C’est l’heure de l’attentat"], answer: 0, why: "Mois/jour : September 11th." },
+      { q: "Comment se prononce -ed dans « waited » ?", choices: ["/t/", "/d/", "/ɪd/", "Il ne se prononce pas"], answer: 2, why: "Après t ou d, -ed se prononce /ɪd/." },
+      { q: "Prétérit de « try » ?", choices: ["tryed", "tried", "trid", "tryied"], answer: 1, why: "Consonne + y → -ied." },
+      { q: "Prétérit de « stop » ?", choices: ["stoped", "stopped", "stopt", "stopes"], answer: 1, why: "Voyelle courte + consonne : on double la consonne." },
+      { q: "Que décrit « he was having a cup of coffee » ?", choices: ["Une habitude", "Une action en cours dans le passé", "Le futur", "Un ordre"], answer: 1, why: "Prétérit en be + -ing : action en cours, interrompue par le choc de l’avion." },
+      { q: "Que signifie « My husband used to work in the Twin Towers » ?", choices: ["Il y travaille encore", "C’était une habitude passée qui n’existe plus", "Il va y travailler", "Il n’y a jamais travaillé"], answer: 1, why: "Used to : habitude passée révolue." },
+      { q: "Question correcte avec « be » ?", choices: ["Did they were in the tower?", "Were they in the tower?", "Did they be in the tower?", "Was they in the tower?"], answer: 1, why: "Be ne prend pas did : on inverse sujet et verbe." },
+      { q: "Participe passé de « see » ?", choices: ["saw", "seen", "seed", "sawn"], answer: 1, why: "See – saw – seen." }
+    ];
+  </script>
+  <script src="../cahier.js"></script>
 </body>
 </html>

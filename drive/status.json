@@ -1,7 +1,7 @@
 {
   "folderName": "ruben_college_3a",
   "folderUrl": "https://drive.google.com/drive/folders/1Hf0Bhup5K98DuPfMqAYCZ0nri-MregCO?usp=sharing",
-  "syncedAt": "2026-10-02T08:56+02:00",
+  "syncedAt": "2026-10-04T17:29+02:00",
   "files": [
     {
       "id": "1_40MBlcMEt7XO-RCcXIgd5kcU0hRbcX1",
@@ -51,6 +51,41 @@
       "pages": 5,
       "status": "intégré",
       "fiche": "Physique-chimie — manuel chapitre 9, cours, essentiel et exercices 1 à 15"
+    },
+    {
+      "id": "1P8SsuaKp4is1-G8GhZaFoQIPsQJPdb7W",
+      "name": "numérisé_20261004-1637.pdf",
+      "pages": 13,
+      "status": "intégré",
+      "fiche": "Mathématiques — cahier de leçons : fractions, racines carrées, Pythagore, unités, fiches mémo"
+    },
+    {
+      "id": "1Kb9R-3YRocsOsZ1TBUOIMrOthgbubxBg",
+      "name": "numérisé_20261004-1639.pdf",
+      "pages": 14,
+      "status": "intégré",
+      "fiche": "Mathématiques — cahier d’exercices : conversions, droite numérique, fonctions, problèmes, calcul littéral"
+    },
+    {
+      "id": "1BYU0r8E-8_QzipW5Eh0rFzsrzJ-3gAzb",
+      "name": "numérisé_20261004-1645.pdf",
+      "pages": 27,
+      "status": "nouveau",
+      "fiche": ""
+    },
+    {
+      "id": "1S40t0vDjexg51zl4HYuwPdWVgr_jqLtX",
+      "name": "numérisé_20261004-1647.pdf",
+      "pages": 9,
+      "status": "intégré",
+      "fiche": "Anglais — séquence Nine Eleven, témoignage de Jessica, prétérit simple"
+    },
+    {
+      "id": "1Xlje0DKb2Q6Wm6hEIOupmguxxGKXvvup",
+      "name": "numérisé_20261004-1648.pdf",
+      "pages": 8,
+      "status": "intégré",
+      "fiche": "Histoire-géographie — thème 1 chapitre 2, l’URSS de Staline"
     }
   ]
 }
