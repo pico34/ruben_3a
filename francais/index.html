@@ -10,15 +10,631 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../cahier.css" />
 </head>
-<body>
+<body data-vue="complet">
   <div class="wrap">
     <header class="top">
       <a class="back" href="../">Toutes les matières</a>
-      <p class="kicker">Ruben · 3e A</p>
-      <h1>Français</h1>
-      <p class="lede">Aucun document de cette matière n’est encore dans le Drive. La page est prête pour le premier cours.</p>
+      <p class="kicker">Français · 3e A · M. Larribau</p>
+      <h1>Se raconter, se représenter</h1>
+      <p class="lede">
+        Projet n° 1 : les différentes formes de l’écriture de soi et de l’autobiographie. Autoportrait aux vanités de Bailly,
+        récits de naissance (Pagnol, Chateaubriand, Yourcenar), Frida Kahlo, Perec, Rousseau, George Sand, Nathalie Sarraute.
+        Grammaire : pronoms relatifs, sujet du verbe, modalisateurs, pronom « il », pronoms. Vocabulaire : racines latines et grecques, mémoire, couleurs.
+        La lecture complète reprend le cahier. La synthèse garde l’essentiel. L’extra va plus loin.
+      </p>
+      <div class="toolbar" role="group" aria-label="Version de la lecture">
+        <button type="button" data-vue="complet" aria-pressed="true">Complet</button>
+        <button type="button" data-vue="synthese" aria-pressed="false">Synthèse</button>
+        <button type="button" data-vue="extra" aria-pressed="false">Extra</button>
+      </div>
     </header>
-    <footer>Les PDF déposés dans le dossier seront rangés ici, dans l’ordre du cours.</footer>
+
+    <section>
+      <article class="card">
+        <h2>Les activités, dans l’ordre du cahier</h2>
+        <p class="note">Le cahier ne porte pas de dates : les activités sont numérotées par le professeur.</p>
+        <ol class="timeline">
+          <li><time>Début d’année</time><p>Vocabulaire et étymologie (omni-, chrono-, thermo-, phon-…), programme de l’année, évaluation d’étymologie.</p></li>
+          <li><time>Activité 1</time><p>Histoire des arts, oral : David Bailly, <em>Autoportrait aux vanités</em> (1651).</p></li>
+          <li><time>Activités 2 et 3</time><p>Comment parler de sa naissance ? Pagnol, Chateaubriand, Yourcenar. Grammaire : les pronoms relatifs. Travail sur Frida Kahlo.</p></li>
+          <li><time>Activité 4</time><p>Expression écrite : « Le jour de ma naissance », en exploitant ses lectures.</p></li>
+          <li><time>Activité 5</time><p>Histoire des arts, oral : <em>Autoportrait à la frontière entre le Mexique et les États-Unis</em> de Frida Kahlo.</p></li>
+          <li><time>Activité 6</time><p>Grammaire : identifier le sujet et sa nature.</p></li>
+          <li><time>Activité 7</time><p>Vocabulaire : les racines latines et grecques des mots français.</p></li>
+          <li><time>Activité 8</time><p>Lecture et grammaire : les modalisateurs (Perec, <em>W ou le souvenir d’enfance</em>), le pronom « il ». Écrit : mon premier voyage.</p></li>
+          <li><time>Activité 9</time><p>Le pacte autobiographique : préambule des <em>Confessions</em> de Rousseau.</p></li>
+          <li><time>Orthographe</time><p>Accorder les adjectifs de couleur, dictée à trous (un portrait).</p></li>
+          <li><time>Activité 11</time><p>Lexique de la mémoire, souvenirs douloureux.</p></li>
+          <li><time>Fin de séquence</time><p>Pourquoi écrire sur soi ? George Sand. Les pronoms dans un texte autobiographique (Nathalie Sarraute, <em>Enfance</em>).</p></li>
+        </ol>
+      </article>
+    </section>
+
+    <div class="vue-synthese">
+      <section>
+        <article class="card">
+          <h2>Les œuvres de la séquence, dans l’ordre chronologique</h2>
+          <ol class="timeline">
+            <li><time>1651</time><p>David Bailly, <em>Autoportrait aux vanités</em> (peinture). Message : la vie est brève, les plaisirs sont vains, la mort est certaine (<em>memento mori</em>).</p></li>
+            <li><time>1782</time><p>Jean-Jacques Rousseau, <em>Les Confessions</em> : le préambule fonde le pacte autobiographique (tout dire, avec franchise).</p></li>
+            <li><time>1848</time><p>Chateaubriand, <em>Mémoires d’outre-tombe</em> : une naissance dans la tempête, vision pessimiste.</p></li>
+            <li><time>1855</time><p>George Sand, <em>Histoire de ma vie</em> : écrire sur soi est un devoir, pour aider les autres.</p></li>
+            <li><time>1932</time><p>Frida Kahlo, <em>Autoportrait à la frontière entre le Mexique et les États-Unis</em> : une double appartenance.</p></li>
+            <li><time>1957</time><p>Marcel Pagnol, <em>La Gloire de mon père</em> : une naissance sous le ciel de Provence, vision optimiste.</p></li>
+            <li><time>1975</time><p>Georges Perec, <em>W ou le souvenir d’enfance</em> : une mémoire incertaine, pleine de modalisateurs.</p></li>
+            <li><time>1977</time><p>Marguerite Yourcenar, <em>Archives du Nord</em> : la naissance d’un « être que j’appelle moi », racontée à partir de documents.</p></li>
+            <li><time>1983</time><p>Nathalie Sarraute, <em>Enfance</em> : l’autrice dialogue avec son double, qui la tutoie.</p></li>
+          </ol>
+        </article>
+      </section>
+
+      <section>
+        <article class="card">
+          <h2>À retenir : l’écriture de soi</h2>
+          <ul class="bullets">
+            <li>Une <strong>autobiographie</strong> est le récit de sa propre vie. Elle commence souvent par la naissance : c’est l’<strong>incipit</strong> (le début du texte).</li>
+            <li>Raconter sa naissance est <strong>paradoxal</strong> : on ne peut pas s’en souvenir. L’auteur s’appuie sur des <strong>récits familiaux</strong> (« on m’a souvent conté ces détails », Chateaubriand) ou des <strong>recherches documentaires</strong> (Yourcenar).</li>
+            <li>Le lieu et les circonstances de la naissance semblent <strong>déterminer</strong> la personnalité : optimisme de Pagnol, pessimisme de Chateaubriand (« prédestiné au malheur »), héritage familial chez Yourcenar.</li>
+            <li>Le <strong>pacte autobiographique</strong> : l’auteur promet au lecteur de dire la vérité. Rousseau : « J’ai dit le bien et le mal avec la même franchise. »</li>
+            <li><strong>Pourquoi écrire sur soi ?</strong> Pour soi-même : un <strong>exutoire</strong>, se libérer de ses souffrances en les écrivant. Pour les autres : les aider à se connaître, à traverser leurs difficultés, en s’offrant en exemple de <strong>résilience</strong>. Le narcissisme (se trouver intéressant) n’est pas une bonne raison.</li>
+            <li>Une <strong>vanité</strong> est un tableau qui rappelle que la vie est brève et que les plaisirs terrestres sont vains : crâne, bougie, sablier, fleurs fanées, bulles de savon. Son message est <em>memento mori</em> (« souviens-toi que tu vas mourir »), et non « profite de la vie ».</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <article class="card">
+          <h2>À retenir : la grammaire</h2>
+          <ul class="bullets">
+            <li><strong>Pronoms relatifs</strong> : ils introduisent une proposition subordonnée relative, qui complète le nom qu’elle suit, l’<strong>antécédent</strong>. Le pronom relatif remplace l’antécédent. Simples (invariables) : <em>qui, que, quoi, dont, où</em>. Composés (variables) : <em>lequel, laquelle, lesquels, lesquelles, duquel, auquel…</em></li>
+            <li><strong>Sujet</strong> : on le trouve avec « qu’est-ce qui + verbe ? » ou « qui est-ce qui + verbe ? ». Sa nature : un groupe nominal, un infinitif, un pronom (personnel, relatif, indéfini…) ou une proposition subordonnée.</li>
+            <li><strong>Modalisateurs</strong> : mots qui marquent la certitude ou le doute du narrateur. Tournures impersonnelles (<em>il semble que</em>), adverbes ou locutions adverbiales (<em>sans doute, peut-être</em>), tournures à la première personne (<em>je crois que</em>). Fréquents en autobiographie, par honnêteté quand la mémoire fait défaut.</li>
+            <li><strong>« Il »</strong> est <strong>personnel</strong> quand il désigne quelqu’un ou quelque chose. Il est <strong>impersonnel</strong> quand il ne désigne rien : c’est un <strong>sujet apparent</strong>, parfois suivi d’un <strong>sujet réel</strong> (« Il passe beaucoup de trains » = beaucoup de trains passent).</li>
+            <li><strong>Adjectifs de couleur</strong> : un seul adjectif de couleur s’accorde (<em>des robes bleues</em>). Deux adjectifs ensemble ne s’accordent pas (<em>des pulls jaune pâle</em>). Un nom employé comme couleur est invariable (<em>des chaussures marron</em>), sauf <em>rose, écarlate, mauve, pourpre, fauve</em>.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <article class="card">
+          <h2>Racines et préfixes à savoir</h2>
+          <div class="defs">
+            <article class="def"><h3>omni- (latin)</h3><p>tout : omniscient, omnivore, omnipotent</p></article>
+            <article class="def"><h3>chrono- (grec)</h3><p>temps : chronomètre, anachronisme</p></article>
+            <article class="def"><h3>thermo- (grec)</h3><p>chaleur : thermomètre, géothermie</p></article>
+            <article class="def"><h3>phon- (grec)</h3><p>son, voix : téléphone, aphone</p></article>
+            <article class="def"><h3>-cide (latin)</h3><p>tuer : fratricide, régicide, insecticide</p></article>
+            <article class="def"><h3>-ite (grec)</h3><p>inflammation : otite, arthrite, rhinite</p></article>
+            <article class="def"><h3>-fère (latin)</h3><p>porter : mammifère, conifère, somnifère</p></article>
+            <article class="def"><h3>a- (grec)</h3><p>sans, privé de : asymétrique, athée, aphone</p></article>
+            <article class="def"><h3>tri- (latin et grec)</h3><p>trois : tricycle, trimestre, trilingue</p></article>
+            <article class="def"><h3>hypo- ≠ hyper-</h3><p>en dessous ≠ au-dessus de la normale</p></article>
+            <article class="def"><h3>kardia / cor</h3><p>cœur : cardiologue</p></article>
+            <article class="def"><h3>rhinos / nasus</h3><p>nez : rhinocéros, rhinoplastie</p></article>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <div class="vue-complet">
+      <section>
+        <article class="card">
+          <span class="tag">Début d’année</span>
+          <h2>Le programme de l’année</h2>
+          <ol class="bullets">
+            <li>« Se raconter, se représenter ».</li>
+            <li>Dénoncer les travers de la société de consommation.</li>
+            <li>Visions poétiques du monde (la guerre).</li>
+            <li>Agir dans la cité : individu et pouvoir (théâtre).</li>
+            <li>Questionnement complémentaire : progrès et rêves scientifiques.</li>
+          </ol>
+          <p><strong>Évaluation des compétences</strong> : TS = 20, S = 16, PM = 13, F = 10, DM = 7, I = 4.</p>
+          <p class="note">TS : très satisfaisant ; S : satisfaisant ; PM : partiellement maîtrisé. Les autres sigles ne sont pas expliqués dans le cahier (probablement F : fragile, I : insuffisant).</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Vocabulaire</span>
+          <h2>Familles de mots et étymologie</h2>
+          <p>Première page du cahier, mots surlignés en bleu, avec les définitions de Ruben (orthographe corrigée) :</p>
+          <ul class="bullets">
+            <li><strong>omni-</strong> : omniscient = qui sait tout ; omnipotent = qui a tous les pouvoirs ; omnivore = qui mange tout ; omnisport = tous les sports.</li>
+            <li><strong>chrono-</strong> : chronomètre = instrument pour mesurer le temps ; chronologie = ordre (« sens ») du temps ; anachronisme = erreur dans le temps. <em>Croque-mort</em> (personne qui enterre les morts) est l’intrus.</li>
+            <li><strong>thermo-</strong> : géothermie = chaleur de la Terre (Ruben : « étude de la chaleur ») ; thermomètre = instrument qui mesure la chaleur ; thermostat = instrument qui règle la chaleur. <em>Termite</em> (insecte xylophage) est l’intrus.</li>
+            <li><strong>phon-</strong> : téléphone = instrument qui sert à parler à distance. Homophone, orthophoniste, phonétique : laissés sans définition.</li>
+            <li><strong>-cide</strong> : fratricide = tuer son frère ; régicide = tuer son roi. <strong>-fère</strong> : conifère = arbre qui porte des fruits en forme de cône ; calorifère = radiateur (qui porte la chaleur).</li>
+            <li><strong>a-</strong> : apolitique = sans idée politique. <strong>tri-</strong> : triennal = qui dure trois ans.</li>
+          </ul>
+          <p><strong>Étymologie du français</strong> (fiche recopiée) : <em>sol</em> (latin) = soleil ; <em>omni</em> (latin) = tout ; <em>chrono</em> (grec) = temps ; <em>thermo</em> (grec) = chaleur ; <em>phon</em> (grec) = son, voix.</p>
+          <div class="defs">
+            <article class="def"><h3>cœur</h3><p>latin <em>cor</em> · grec <em>kardia</em></p></article>
+            <article class="def"><h3>manger</h3><p>latin <em>voro</em> · grec <em>phago</em></p></article>
+            <article class="def"><h3>langue</h3><p>latin <em>lingua</em> · grec <em>glotta</em></p></article>
+            <article class="def"><h3>parler</h3><p>latin <em>loquor</em> · grec <em>lego</em></p></article>
+            <article class="def"><h3>plusieurs</h3><p>latin <em>multi</em> · grec <em>polus</em></p></article>
+            <article class="def"><h3>œil</h3><p>latin <em>oculus</em> · grec <em>ophtalmos</em></p></article>
+            <article class="def"><h3>nez</h3><p>latin <em>nasus</em> · grec <em>rhinos</em></p></article>
+          </div>
+          <p>Le suffixe latin <strong>-cide</strong> signifie <em>tuer</em> ; le suffixe grec <strong>-ite</strong>, <em>inflammation</em> ; le suffixe latin <strong>-fère</strong>, <em>porter, apporter</em> ; le préfixe grec <strong>a-</strong>, <em>sans, privé de</em>.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Évaluation · 9,5/10 · TS</span>
+          <h2>Questions d’étymologie</h2>
+          <ul class="bullets">
+            <li><em>xylo</em> = le bois → un insecte <strong>xylophage</strong> mange du bois. ✓</li>
+            <li><em>pestis</em> = la maladie → un <strong>pesticide</strong> : Ruben écrit « un produit qui tue les maladies ». Demi-point retiré : en agriculture, un pesticide tue les <strong>parasites et nuisibles</strong> (insectes, champignons, mauvaises herbes) qui causent les maladies des plantes.</li>
+            <li><em>scient</em> = sachant → une personne <strong>omnisciente</strong> sait tout. ✓</li>
+            <li><em>arthr</em> = l’articulation → l’<strong>arthrite</strong> est une inflammation de l’articulation. ✓</li>
+            <li><em>hyper</em> = au-dessus de la normale → l’<strong>hyperthermie</strong> : Ruben avait écrit « en dessous de la normale », corrigé en « au-dessus de la normale » : la température du corps est trop élevée.</li>
+            <li><em>mono</em> = un seul → un tableau <strong>monochrome</strong> n’a qu’une seule couleur. ✓</li>
+            <li><em>fructi</em> = le fruit → un animal <strong>fructivore</strong> mange des fruits. ✓</li>
+            <li><em>tachy</em> = rapide → avec la <strong>tachycardie</strong>, on ressent que le cœur bat plus vite. ✓</li>
+            <li><em>sthenos</em> = la force → une personne <strong>asthénique</strong> est sans force. ✓</li>
+            <li><em>plastie</em> = réparation, façonnage → une <strong>rhinoplastie</strong> est une opération qui répare le nez. ✓</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Activité 1 · histoire des arts · oral</span>
+          <h2>David Bailly, Autoportrait aux vanités (1651)</h2>
+          <figure class="figure">
+            <img src="../drive/files/1BYU0r8E-8_QzipW5Eh0rFzsrzJ-3gAzb/pages/page-06.png" alt="Page du cahier : reproduction du tableau de David Bailly et réponses de Ruben" />
+            <figcaption>Huile sur bois, 90 × 122 cm, musée de Leyde (Pays-Bas). Le jeune homme tient une baguette de professeur.</figcaption>
+          </figure>
+          <p><strong>Projet n° 1</strong> : les différentes formes de l’écriture de soi et de l’autobiographie.</p>
+          <p><strong>Leçon</strong> : le tableau de Bailly est un autoportrait sans narcissisme. Le peintre apporte un enseignement sur la brièveté de l’existence humaine, sur le caractère éphémère de la vie, sur sa fragilité.</p>
+          <ol class="bullets">
+            <li><strong>La ligne parallèle à la baguette</strong> rejoint la tête du jeune homme, le portrait qu’il tient et le crâne posé sur la table : c’est peut-être la ligne du temps, de l’existence humaine (de la jeunesse à la mort).</li>
+            <li><strong>Les plaisirs de la vie</strong> : la musique (une flûte), la littérature (un livre), la boisson (une flûte de vin), le tabac (la pipe en ivoire), la séduction, la richesse (des pièces d’or).</li>
+            <li><strong>Leur caractère limité, fragile, éphémère</strong> : les bulles qui peuvent éclater à tout moment, le sablier dont le temps finit, les fleurs fanées qui vont mourir, la bougie dont la cire s’envole petit à petit (la fumée).</li>
+            <li><strong>Le portrait ovale de femme</strong> : peut-être son épouse, car elle a le même âge que l’homme à gauche. Le visage fantomatique derrière la bougie : peut-être un repentir (une trace d’un dessin effacé) dans un de ses tableaux.</li>
+            <li><strong>Le rideau dans l’angle droit</strong> peut être décroché à tout moment : la vie peut s’arrêter à tout moment.</li>
+            <li><strong>Conclusion de Ruben</strong> : « le message mélancolique est que la vie est courte et fragile, donc il faut en profiter ».</li>
+          </ol>
+          <p class="note">Retouche : le professeur a écrit « non, à corriger » à côté de la conclusion. « Il faut en profiter », c’est l’idée du <em>carpe diem</em>. Une vanité dit l’inverse : les plaisirs terrestres sont vains, car tout disparaît et la mort est certaine. C’est le <em>memento mori</em> : « souviens-toi que tu vas mourir ».</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Lecture · extraits d’autobiographie</span>
+          <h2>Comment parler de sa naissance ?</h2>
+          <figure class="figure">
+            <img src="../drive/files/1BYU0r8E-8_QzipW5Eh0rFzsrzJ-3gAzb/pages/page-08.png" alt="Fiche de lecture : extraits de Pagnol, Chateaubriand et Yourcenar, surlignés" />
+            <figcaption>Les trois extraits, surlignés par Ruben. Consigne : préparer une lecture expressive, dans la peau de chaque auteur.</figcaption>
+          </figure>
+          <ul class="bullets">
+            <li><strong>Marcel Pagnol, <em>La Gloire de mon père</em> (1957)</strong> : « Je suis né dans la ville d’Aubagne, sous le Garlaban couronné de chèvres, au temps des derniers chevriers. » Paysage de Provence, ciel bleu, le mois de juillet.</li>
+            <li><strong>Chateaubriand, <em>Mémoires d’outre-tombe</em> (1848)</strong> : « J’étais presque mort quand je vins au jour. Le mugissement des vagues, soulevées par une bourrasque annonçant l’équinoxe d’automne, empêchait d’entendre mes cris. » Le rocher, la tempête, le frère infortuné « qui me donna un nom que j’ai presque toujours traîné dans le malheur ».</li>
+            <li><strong>Marguerite Yourcenar, <em>Archives du Nord</em> (1977)</strong> : « L’être que j’appelle moi vint au monde un certain lundi 8 juin 1903, vers les huit heures du matin, à Bruxelles. » La maison, au numéro 193 de l’avenue Louise, a été « dévorée par un building ».</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Corrigé · texte à trous</span>
+          <h2>Pagnol, Chateaubriand, Yourcenar</h2>
+          <p><strong>Le point commun des trois textes</strong> : ce sont des débuts d’autobiographie (<strong>incipits</strong>) qui évoquent la naissance de l’auteur. Ils insistent sur le lieu, l’<strong>environnement</strong> qui a entouré leur naissance, suggérant que cela a <strong>influencé</strong> le reste de leur existence.</p>
+          <p><strong>Pourquoi ce récit est-il paradoxal ?</strong> Une autobiographie est constituée de souvenirs du passé : on se rappelle des <strong>expériences</strong> vécues. Or un souvenir est conservé dans la <strong>conscience</strong>, et on ne peut pas se souvenir de sa propre naissance. Ces informations viennent de recherches documentaires ou de récits <strong>familiaux</strong> (Chateaubriand : « on m’a souvent conté ces détails »). Yourcenar précise « l’être que j’appelle moi » : à sa naissance, elle n’avait pas accès à la conscience, au <strong>langage</strong>. La Marguerite Yourcenar de 1977 n’est pas la même <strong>personne</strong> que la <strong>créature</strong> née en 1903.</p>
+          <p><strong>L’importance de l’environnement</strong> : il a <strong>déterminé</strong> leur personnalité et leur existence.</p>
+          <ul class="bullets">
+            <li><strong>Pagnol</strong> : un paysage naturel, rural, un vaste <strong>panorama</strong> à la fois minéral et coloré. Le mois de juillet, un ciel pur, une <strong>atmosphère</strong> apaisante : une vision positive, <strong>optimiste</strong>.</li>
+            <li><strong>Chateaubriand</strong> : né en automne, près de l’océan, un soir de tempête, marqué par le <strong>déchaînement</strong> du vent et des vagues. Une vision <strong>pessimiste</strong> : il naît fragile, dans la souffrance, comme <strong>prédestiné</strong> au malheur.</li>
+            <li><strong>Yourcenar</strong> : son lieu de naissance est lié à ses racines <strong>généalogiques</strong> : les ascendants de sa mère, l’ancienneté de la famille de son père, sa double <strong>appartenance</strong> nationale (Belgique et France). Un <strong>héritage</strong> familial qui déterminera sa personnalité.</li>
+          </ul>
+          <p><strong>Le point commun du projet autobiographique</strong> : Chateaubriand est né sous l’Ancien Régime ; sa famille noble souffrira de la Révolution, et son frère « infortuné » sera <strong>guillotiné</strong> (c’est l’<strong>allusion</strong> du texte). Il a connu deux mondes : l’ancienne société <strong>révolue</strong>, puis la société <strong>post-révolutionnaire</strong>. Pagnol et Yourcenar sont aussi les <strong>survivants</strong> d’une époque enterrée par la <strong>modernité</strong> : <strong>nostalgie</strong> du « temps des derniers chevriers » chez Pagnol, maison « dévorée par un building » chez Yourcenar. Leur projet est peut-être de <strong>témoigner</strong> du changement d’époque dont ils ont fait l’<strong>expérience</strong>.</p>
+          <p class="note">Retouche : dans la dernière partie, Ruben avait placé les mots dans le désordre (la société « révolue » et la société « post-révolutionnaire » inversées). L’ordre juste est : d’abord l’ancien monde, révolu, puis le nouveau monde, post-révolutionnaire.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Grammaire · leçon à apprendre</span>
+          <h2>Les pronoms relatifs</h2>
+          <figure class="figure">
+            <img src="../drive/files/1BYU0r8E-8_QzipW5Eh0rFzsrzJ-3gAzb/pages/page-10.png" alt="Leçon sur les pronoms relatifs et exercice complété" />
+            <figcaption>Leçon et exercices, avec l’exemple tiré de Chateaubriand.</figcaption>
+          </figure>
+          <ol class="bullets">
+            <li>Les pronoms relatifs sont des mots <strong>subordonnants</strong>.</li>
+            <li>Le pronom relatif introduit une <strong>proposition subordonnée relative</strong>.</li>
+            <li>La plupart du temps, la proposition subordonnée relative a pour fonction de <strong>compléter le nom</strong> qu’elle suit, appelé « <strong>antécédent</strong> ».</li>
+            <li>Le pronom relatif <strong>remplace l’antécédent</strong>.</li>
+            <li>Les différents pronoms relatifs : <strong>simples</strong> (invariables) : <em>qui, que, quoi, dont, où</em> ; <strong>composés</strong> (variables, ils s’accordent avec l’antécédent) : <em>lequel (laquelle, lesquels, lesquelles), duquel (de laquelle, desquels, desquelles), auquel (à laquelle, auxquels, auxquelles)</em>.</li>
+          </ol>
+          <p><strong>Exemple</strong> (Chateaubriand) : « je ne revois en pensée le rocher <u>sur lequel je suis né</u>, la chambre <u>où ma mère m’infligea la vie</u>, la tempête <u>dont le bruit berça mon premier sommeil</u>, le frère infortuné <u>qui me donna un nom</u> <u>que j’ai presque toujours traîné dans le malheur</u>. »</p>
+          <p>Pour voir le rôle du pronom, on transforme chaque relative en proposition indépendante en remplaçant le pronom par son antécédent :</p>
+          <ul class="bullets">
+            <li>[sur lequel je suis né] = je suis né <em>sur un rocher</em> (complément circonstanciel de lieu introduit par « sur »).</li>
+            <li>[où ma mère m’infligea la vie] = ma mère m’infligea la vie <em>dans une chambre</em>.</li>
+            <li>[dont le bruit berça mon premier sommeil] = le bruit <em>de la tempête</em> berça mon premier sommeil.</li>
+            <li>[qui me donna un nom] = <em>mon frère</em> me donna un nom.</li>
+            <li>[que j’ai presque toujours traîné dans le malheur] = j’ai presque toujours traîné <em>ce nom</em> dans le malheur.</li>
+          </ul>
+          <p><strong>Exercice : compléter avec le bon pronom relatif</strong> (corrigé) :</p>
+          <p><em>J’ai toujours vécu dans des lieux animés <strong>où</strong> les gens allaient et venaient dans la bonne humeur et <strong>dont</strong> l’atmosphère était toujours joyeuse. Petit, j’étais entouré de la troupe de mes frères et sœurs <strong>qui</strong> virevoltaient autour de moi. Nous étions des enfants turbulents et joyeux <strong>que</strong> nos parents grondaient souvent et sur <strong>lesquels</strong> s’abattaient parfois des punitions <strong>qui</strong>, par leur prétendue sévérité, étaient censées nous remettre dans le droit chemin, mais <strong>dont</strong> nos parents ne s’inquiétaient guère de vérifier si nous les accomplissions vraiment. L’indulgence et la douceur avec <strong>lesquelles</strong> nos parents nous éduquaient furent une chance et une faille : nous ne manquâmes jamais de l’amour sans <strong>lequel</strong> on a du mal à se construire une personnalité équilibrée, mais ce qui nous fit défaut, c’est l’habitude de se voir imposer des limites strictes <strong>auxquelles</strong> nos vies d’adolescents allaient bientôt nous confronter douloureusement.</em></p>
+          <p class="note">Retouches : Ruben a mis « sans qui » au lieu de <em>sans lequel</em> (antécédent : l’amour, une chose) et « où » puis « que » à la fin au lieu de <em>auxquelles</em> (on est confronté <strong>à</strong> des limites : à + lesquelles = auxquelles).</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Travail sur Frida Kahlo</span>
+          <h2>Raconter la naissance de quelqu’un d’autre, à la première personne</h2>
+          <p>Ruben imagine le récit de naissance de Frida Kahlo, à la manière des incipits étudiés : le 6 juillet à Coyoacán, sous une chaleur écrasante, Matilde Calderón donne vie à Frida dans une maison bleue ; le ciel est magnifique, sans un nuage, et les premiers sons entendus sont ceux d’une musique espagnole.</p>
+          <p class="note">Remarques du professeur : un point d’interrogation et « Ne laisse pas tous ces espaces » (le texte est court, la page reste presque vide).</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Activité 4 · expression écrite</span>
+          <h2>« Le jour de ma naissance »</h2>
+          <p><strong>Consigne</strong> : en 15 lignes, raconter les circonstances de sa naissance en insistant sur ce qui a pu déterminer sa personnalité, en exploitant ses lectures.</p>
+          <p>Ruben a écrit son propre récit de naissance. Ce texte personnel n’est pas reproduit ici.</p>
+          <p class="note">Remarques du professeur : « confus » en marge d’un passage, évaluation <strong>PM</strong> (partiellement maîtrisé), et « lignes ? » : le texte est plus court que les 15 lignes demandées. Pour progresser : faire des phrases plus courtes, respecter la longueur, et s’inspirer des auteurs (le lieu, la saison, le temps qu’il fait, ce que cela annonce de la personnalité).</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Activité 5 · histoire des arts · oral</span>
+          <h2>Frida Kahlo, Autoportrait à la frontière entre le Mexique et les États-Unis (1932)</h2>
+          <p class="note">Huile sur métal, 30 × 34 cm, collection Manuel Reyero, New York. Consigne : se renseigner sur la vie de Frida Kahlo et interpréter l’autoportrait. Que nous dit-elle sur l’importance des racines ou sur le déracinement ?</p>
+          <p>Frida Kahlo définit son identité par une <strong>double appartenance</strong> :</p>
+          <div class="defs">
+            <article class="def"><h3>Mexique</h3><p>Civilisation ancestrale, profondeur de l’enracinement.</p></article>
+            <article class="def"><h3>États-Unis</h3><p>Modernité industrielle, émancipation, absence de racines naturelles.</p></article>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Activité 6 · grammaire</span>
+          <h2>Identifier le sujet d’un verbe et sa nature</h2>
+          <p><em>Petit, j’<u>étais</u> toujours seul dans la cour de l’école. Rire avec les autres, jouer au ballon avec eux, et même me disputer avec eux m’<u>aurait rempli</u> de bonheur. Mais, persuadés que ma fragilité physique me <u>mettrait</u> en danger, tous les adultes me <u>tenaient</u> à l’écart de mes semblables. Que les autres <u>viennent</u> à moi et m’<u>invitent</u> à partager leurs jeux <u>était</u> mon rêve secret. Mais ils <u>semblaient</u> respecter scrupuleusement les protections qu’on <u>avait érigées</u> autour de moi. Aussi <u>restais</u>-je seul, désespérément seul, pendant que <u>s’étiraient</u> les longues minutes de la récréation, et jusqu’à ce que <u>résonne</u> le signal qui nous <u>autoriserait</u> à retourner en classe, où compter, lire, apprendre <u>viendraient</u> combler le vide de mon existence.</em></p>
+          <ul class="bullets">
+            <li><strong>étais</strong> : je (j’), pronom personnel. ✓</li>
+            <li><strong>aurait rempli</strong> : « Rire avec les autres, jouer au ballon avec eux, et même me disputer avec eux », groupes infinitifs. <span class="note">Ruben a écrit « les jeux » comme sujet, mais la nature (infinitif) est juste.</span></li>
+            <li><strong>mettrait</strong> : ma fragilité physique, groupe nominal. ✓</li>
+            <li><strong>tenaient</strong> : tous les adultes, groupe nominal. ✓</li>
+            <li><strong>viennent</strong>, <strong>invitent</strong> : les autres, pronom indéfini. ✓</li>
+            <li><strong>était</strong> : « Que les autres viennent à moi et m’invitent à partager leurs jeux », proposition subordonnée. ✓</li>
+            <li>La suite du tableau n’est pas remplie dans le cahier. Corrigé : <strong>semblaient</strong> : ils, pronom personnel ; <strong>avait érigées</strong> : on, pronom indéfini ; <strong>restais</strong> : je, pronom personnel (sujet inversé) ; <strong>s’étiraient</strong> : les longues minutes de la récréation, GN (sujet inversé) ; <strong>résonne</strong> : le signal qui nous autoriserait à retourner en classe, GN (sujet inversé) ; <strong>autoriserait</strong> : qui, pronom relatif ; <strong>viendraient</strong> : compter, lire, apprendre, infinitifs.</li>
+          </ul>
+          <p><strong>Leçon</strong> : la question « qu’est-ce qui + verbe ? » ou « qui est-ce qui + verbe ? » permet de trouver le sujet du verbe, qui peut être : un <strong>groupe nominal</strong>, un <strong>infinitif</strong>, un <strong>pronom</strong> (relatif, personnel, indéfini…) ou une <strong>proposition subordonnée</strong>. C’est la classe grammaticale (ou nature) du sujet.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Activité 7 · vocabulaire</span>
+          <h2>Les racines latines et grecques des mots français</h2>
+          <p><strong>AUTO – BIO – GRAPHIE</strong> : soi-même – la vie – écriture. L’autobiographie, c’est l’écriture de sa propre vie.</p>
+          <p><strong>A. Les intrus</strong> :</p>
+          <ul class="bullets">
+            <li>solaire, solarium, <strong>solitaire</strong>, soleil, solstice, tournesol, parasol.</li>
+            <li>omnipotent, <strong>omicron</strong>, omnivore, omnisport, omniscient.</li>
+            <li>chronomètre, chronologie, chronique, <strong>croque-mort</strong>, anachronisme.</li>
+            <li>géothermie, thermomètre, <strong>termite</strong>, thermostat.</li>
+            <li>téléphone, homophone, orthophoniste, <strong>faunique</strong>, phonétique.</li>
+          </ul>
+          <p><strong>D. Suffixe ou préfixe : quel sens ?</strong></p>
+          <div class="defs">
+            <article class="def"><h3>-cide (latin) : tuer</h3><p>insecticide, suicide, fratricide, régicide</p></article>
+            <article class="def"><h3>-ite (grec) : inflammation</h3><p>otite, pharyngite, tendinite, arthrite</p></article>
+            <article class="def"><h3>-fère (latin) : porter, apporter</h3><p>somnifère, mammifère, conifère, calorifère</p></article>
+            <article class="def"><h3>a- (grec) : sans, privé de</h3><p>asymétrique, anormal, athée, apolitique</p></article>
+            <article class="def"><h3>tri- (latin et grec) : trois</h3><p>tricycle, triennal, trimestre, triangle</p></article>
+          </div>
+          <p><strong>E. Étymologie commune</strong> : téléphone, télévision, téléphérique, télétravail, télescope → <em>à distance</em> ; potentiel, potentat, impotent, omnipotent → <em>puissant, fort</em> ; polythéisme, polyvalent, polymorphe, polysémie → <em>plusieurs</em> ; chromatique, chromosome, chrome → <em>couleur</em> ; éventré, ventru, ventriloque → <em>ventre</em>.</p>
+          <p><strong>F. Préfixes antonymes</strong> : <strong>in ≠ ex</strong> (intérieur, extérieur ; interne, externe ; importer, exporter). Le préfixe latin « in » peut être négatif (impoli, inutile) ou signifier « dans, dedans », par opposition à « ex », « hors de ». <strong>hypo ≠ hyper</strong> (hypoglycémie, hyperglycémie ; hypocalorique, hypercalorique) : « hypo » = en dessous, pas assez ; « hyper » = au-dessus, trop.</p>
+          <p><strong>G. Le texte de Sophie</strong> : retrouver le sens des mots en gras. Définitions de Ruben :</p>
+          <div class="defs">
+            <article class="def"><h3>multinationale</h3><p>entreprise présente dans plusieurs nations</p></article>
+            <article class="def"><h3>trilingue</h3><p>capable de parler trois langues</p></article>
+            <article class="def"><h3>ventripotent</h3><p>qui en impose par son gros ventre</p></article>
+            <article class="def"><h3>hyperactif</h3><p>actif de façon excessive</p></article>
+            <article class="def"><h3>omniprésent</h3><p>présent partout</p></article>
+            <article class="def"><h3>réunionite</h3><p>maladie de la réunion, manie</p></article>
+            <article class="def"><h3>chronophage</h3><p>qui mange, prend trop de temps</p></article>
+            <article class="def"><h3>mortifère</h3><p>qui est porteur de mort, ennuyeux</p></article>
+            <article class="def"><h3>hypothermie</h3><p>température du corps en dessous de la normale</p></article>
+            <article class="def"><h3>homicide</h3><p>fait de tuer un être humain</p></article>
+            <article class="def"><h3>polyglotte</h3><p>qui parle plusieurs langues</p></article>
+            <article class="def"><h3>aphone</h3><p>sans voix</p></article>
+            <article class="def"><h3>rhinite</h3><p>inflammation du nez, rhume</p></article>
+            <article class="def"><h3>cardiologue</h3><p>médecin spécialiste du cœur</p></article>
+            <article class="def"><h3>polychromes</h3><p>de plusieurs couleurs</p></article>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Activité 8 · lecture et grammaire</span>
+          <h2>La modalisation : Georges Perec, W ou le souvenir d’enfance</h2>
+          <figure class="figure">
+            <img src="../drive/files/1BYU0r8E-8_QzipW5Eh0rFzsrzJ-3gAzb/pages/page-20.png" alt="Extrait de Perec surligné et leçon sur les modalisateurs" />
+            <figcaption>Georges Perec (1936-1982), chapitre 23 : la promenade en forêt au printemps ou à l’été 1944, la rencontre des maquisards.</figcaption>
+          </figure>
+          <p><strong>Comment reconnaître une autobiographie plutôt qu’un roman à la première personne ?</strong> Le narrateur doute, corrige, signale ce dont il ne se souvient pas : « printemps ou été 1944 », « sans doute », « je me souviens », « je crois qu’ils étaient une douzaine », « je pense maintenant », « je sais aujourd’hui », « je ne me rappelle pas si ».</p>
+          <p><strong>Leçon : les modalisateurs.</strong> Dans un récit en point de vue interne ou omniscient, le narrateur manifeste sa présence. On appelle modalisateurs les mots ou expressions qui marquent la <strong>subjectivité</strong> du narrateur et introduisent des jugements ou des doutes sur la réalité de ce qu’il raconte. Ils sont fréquents dans le récit autobiographique, où la mémoire de l’auteur est parfois défaillante, ce que, par <strong>honnêteté</strong>, il tient à signaler au lecteur pour respecter le <strong>pacte autobiographique</strong>.</p>
+          <p><strong>Exercice 1 : classer les modalisateurs</strong></p>
+          <div class="defs">
+            <article class="def"><h3>Tournures impersonnelles</h3><p>il semble que, il est possible que, il se peut que, il est certain que, semble-t-il</p></article>
+            <article class="def"><h3>Adverbes ou locutions adverbiales</h3><p>probablement, peut-être, apparemment, sans aucun doute, certainement, à mon avis</p></article>
+            <article class="def"><h3>Tournures à la 1re personne</h3><p>je crois que, je doute que, je suppose que, je suis sûr que</p></article>
+          </div>
+          <p class="note">Le tableau de Ruben est juste mais incomplet : « certainement », « à mon avis », « je suis sûr que » et « semble-t-il » n’y figurent pas.</p>
+          <p><strong>Exercice 2 : souvenirs précis et imprécis</strong> (le premier concert) :</p>
+          <ul class="bullets">
+            <li><strong>Imprécision</strong> : je pense, vers la fin de l’année, en 2000 ou 2001, je ne saurais dire aujourd’hui si…, qui était-ce ?, impossible de me rappeler son visage ni son nom.</li>
+            <li><strong>Exactitude</strong> : je me souviens parfaitement, à 19 h 36, les places D1, D2 et D3 au quatrième rang, je me revois toute tremblante, les yeux grands ouverts, son costume noir et blanc.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Grammaire</span>
+          <h2>Le pronom « il »</h2>
+          <ul class="bullets">
+            <li>« Il » peut être un <strong>pronom personnel</strong> de troisième personne : il désigne une personne ou un objet masculin singulier. « Où est-il ? – Qui cela, ton fils ? – Mais non, voyons, mon sac ! »</li>
+            <li>« Il » peut aussi être un <strong>pronom impersonnel</strong> : il ne désigne rien ni personne, il commande seulement l’accord du verbe. « Il faut que je parte. » Il peut alors y avoir un <strong>sujet réel</strong> dans la phrase, « il » étant le <strong>sujet apparent</strong> : « Il passe beaucoup de trains par ici » = beaucoup de trains passent par ici.</li>
+          </ul>
+          <div class="defs">
+            <article class="def"><h3>Il s’est vendu beaucoup de livres.</h3><p>impersonnel · sujet réel : beaucoup de livres</p></article>
+            <article class="def"><h3>Il a bien fait de refuser.</h3><p>personnel</p></article>
+            <article class="def"><h3>Il pleut des cordes.</h3><p>impersonnel · « des cordes » peut être analysé comme sujet réel (Ruben a mis un point d’interrogation)</p></article>
+            <article class="def"><h3>Il peut tout faire.</h3><p>personnel</p></article>
+            <article class="def"><h3>Il se peut que cela se produise.</h3><p>impersonnel · sujet réel : que cela se produise</p></article>
+            <article class="def"><h3>Il meurt des millions de gens.</h3><p>impersonnel · sujet réel : des millions de gens</p></article>
+            <article class="def"><h3>Il neige depuis des jours.</h3><p>impersonnel · pas de sujet réel</p></article>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Expression écrite</span>
+          <h2>Employer des modalisateurs pour raconter mon premier voyage</h2>
+          <p>Ruben raconte un voyage à Cadaqués, quand il avait quatre ou cinq ans, au printemps : le grand hôtel bleu, une glace vers 16 heures, les maisons toutes bleues, « pour apparemment éloigner les moustiques et les mouches », la mer l’après-midi et une méduse énorme « grosse comme une assiette ».</p>
+          <p>Les modalisateurs qu’il emploie : <em>je me souviens très bien</em>, <em>je crois</em>, <em>apparemment</em>, <em>vers 16 h</em>, <em>environ</em>, <em>4 ou 5 ans</em>.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Activité 9 · lecture</span>
+          <h2>Le pacte autobiographique : Rousseau, Les Confessions (1782)</h2>
+          <p>Préambule de Rousseau : « Je forme une entreprise qui n’eut jamais d’exemple et dont l’exécution n’aura point d’imitateur. Je veux montrer à mes semblables un homme dans toute la vérité de la nature ; et cet homme sera moi. […] Si je ne vaux pas mieux, au moins je suis autre. »</p>
+          <p>Ruben surligne les passages où Rousseau s’engage à dire la vérité : « J’ai dit le bien et le mal avec la même franchise. Je n’ai rien tu de mauvais », « j’ai pu supposer vrai ce que je savais avoir pu l’être, jamais ce que je savais être faux ».</p>
+          <p><strong>À retenir</strong> : le pacte autobiographique, c’est l’engagement de l’auteur envers le lecteur : dire la vérité sur lui-même, le bien comme le mal, et reconnaître les défauts de sa mémoire.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Orthographe</span>
+          <h2>Comment accorder les adjectifs de couleur ?</h2>
+          <figure class="figure">
+            <img src="../drive/files/1BYU0r8E-8_QzipW5Eh0rFzsrzJ-3gAzb/pages/page-23.png" alt="Leçon d’orthographe sur les adjectifs de couleur et dictée à trous" />
+            <figcaption>Leçon et dictée à trous complétée par Ruben.</figcaption>
+          </figure>
+          <p><strong>I. Adjectifs de couleur qui ne désignent pas une chose à l’origine</strong></p>
+          <ul class="bullets">
+            <li><strong>Un seul adjectif</strong> : il s’accorde en genre et en nombre. <em>Des chats noirs, des robes bleues, une chemise blanche à pois rouges.</em></li>
+            <li><strong>Deux adjectifs</strong> (pour nuancer la couleur) : aucun ne s’accorde. <em>Des manteaux vert foncé, des pulls jaune pâle, des jupes bleu vif.</em></li>
+          </ul>
+          <p><strong>II. Noms de choses utilisés comme adjectifs</strong> : ils sont <strong>invariables</strong>. <em>Des chemisiers cerise, des chaussures marron, des chaussettes orange.</em></p>
+          <p><strong>Attention</strong> : cinq mots sont devenus de vrais adjectifs et s’accordent : <strong>rose, écarlate, mauve, pourpre, fauve</strong>. <em>Des robes roses, leurs joues écarlates, des pantalons mauves, des foulards pourpres, mes chaussons fauves.</em></p>
+          <p><strong>La dictée à trous</strong> applique ces règles dans un portrait : un visage ovale, des traits fins, des cheveux <em>brun foncé</em> et bouclés, des reflets <em>auburn</em>, une casquette <em>bleu foncé</em>, de petits boutons <em>roses</em>, des yeux <em>noisette</em>, des yeux <em>bleu clair</em>, des sourcils foncés, l’intérieur des narines <em>rose saumon</em>, une crème <em>rouge cerise</em>, des dents ni jaunes ni <em>jaune citron</em>, mais <em>blanc cassé</em>, de petits poils blonds.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Activité 11 · lexique</span>
+          <h2>La mémoire en question</h2>
+          <p><strong>Compléter avec</strong> : mémoire, mémorable, réminiscence, mémoriser, mnémotechnique, commémoration, amnésie, mémorial, remémorer.</p>
+          <ol class="bullets">
+            <li>Le discours du maire pour la <strong>commémoration</strong> de l’abolition de l’esclavage était convaincant.</li>
+            <li>Depuis son accident de voiture, il a perdu la <strong>mémoire</strong> et souffre d’<strong>amnésie</strong>. Mais il a parfois de vagues <strong>réminiscences</strong> de sa vie d’avant.</li>
+            <li>En feuilletant l’album de photos, nous nous sommes <strong>remémoré</strong> les moments que nous avions passés ensemble.</li>
+            <li>Nous avons marqué d’une pierre blanche ce jour <strong>mémorable</strong>.</li>
+            <li>Avec l’école, nous avons fait une sortie au <strong>mémorial</strong> de Caen.</li>
+            <li>La meilleure méthode pour <strong>mémoriser</strong> une leçon est de la réciter par écrit. Il existe aussi des moyens <strong>mnémotechniques</strong> qui peuvent être utiles.</li>
+          </ol>
+          <p><strong>Perpétuer, raviver, rafraîchir, rejaillir</strong> : revoir celui qui l’avait toujours vaincu <strong>raviva</strong> une douleur ancienne ; une punition pour te <strong>rafraîchir</strong> la mémoire ; cette musique fait <strong>rejaillir</strong> en moi des souvenirs heureux ; quand j’apprends une poésie, je <strong>perpétue</strong> la mémoire des grands auteurs.</p>
+          <p><strong>Souvenirs douloureux</strong> (relié juste par Ruben) :</p>
+          <div class="defs">
+            <article class="def"><h3>le repentir</h3><p>regret d’une faute accompagné d’un désir de réparation</p></article>
+            <article class="def"><h3>la nostalgie</h3><p>état de tristesse causé par le regret obsédant du passé</p></article>
+            <article class="def"><h3>le remords</h3><p>angoisse accompagnée de honte que cause la conscience d’avoir mal agi</p></article>
+            <article class="def"><h3>le regret</h3><p>chagrin causé par la perte d’un bien ou d’un fait passé</p></article>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Lecture · les motivations de l’écriture autobiographique</span>
+          <h2>George Sand, Histoire de ma vie (1855) : pourquoi écrire sur soi ?</h2>
+          <p>Passages surlignés : il n’y a pas d’orgueil ni d’impertinence à écrire l’histoire de sa vie, à choisir les souvenirs « qui nous paraissent valoir la peine d’être conservés » ; « j’ai pris la plume pour épancher quelque vive souffrance qui me débordait » ; beaucoup d’êtres humains « végètent sans se connaître » ; raconter sa vie peut être « un conseil pour les autres esprits engagés dans le labyrinthe de la vie » : « J’ai souffert les mêmes maux, j’ai traversé les mêmes écueils, et j’en suis sorti ; donc tu peux guérir et vaincre. »</p>
+          <div class="defs">
+            <article class="def"><h3>Pour soi-même</h3><p><strong>Exutoire</strong> : se libérer de ses souffrances en les extériorisant par l’écriture.</p></article>
+            <article class="def"><h3>Pour les autres</h3><p>Les aider à se connaître, les entraîner dans une introspection ; les aider à traverser des difficultés, des impasses apparentes, en leur montrant le bout du tunnel, en s’offrant en exemple de résilience.</p></article>
+          </div>
+          <p class="note">Dans la colonne « pour les autres », Ruben a écrit « narcissisme = se trouver intéressant » puis l’a barré d’une croix : ce n’est pas une bonne raison d’écrire sur soi.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Grammaire</span>
+          <h2>Les pronoms dans un texte autobiographique</h2>
+          <p><strong>Rappel</strong> : les pronoms remplacent un groupe nominal, par exemple pour éviter une répétition.</p>
+          <ul class="bullets">
+            <li><strong>Personnels</strong> (je, tu…) : ils correspondent aux personnes de la conjugaison. Je désigne le locuteur, tu l’interlocuteur, il ce dont on parle.</li>
+            <li><strong>Démonstratifs</strong> (ceci, celui-là) : désigner quelque chose ou quelqu’un.</li>
+            <li><strong>Possessifs</strong> (le mien, les nôtres) : exprimer la possession.</li>
+            <li><strong>Relatifs</strong> (qui…) : remplacer l’antécédent dans une subordonnée relative.</li>
+            <li><strong>Interrogatifs</strong> (qui ?, que ?) : interroger sur des personnes ou des choses.</li>
+            <li><strong>Indéfinis</strong> (certains, les uns… les autres, tous) : exprimer l’indétermination.</li>
+            <li><strong>Numéraux</strong> (le cinquième, le huitième, tous les trois).</li>
+          </ul>
+          <p><strong>Application</strong> : Nathalie Sarraute, <em>Enfance</em> : « Alors, tu vas vraiment faire ça ? “Évoquer tes souvenirs d’enfance”… Comme ces mots te gênent, tu ne les aimes pas. Mais reconnais que ce sont les seuls mots qui te conviennent. Tu veux “évoquer tes souvenirs”… il n’y a pas à tortiller, c’est bien ça. »</p>
+          <div class="defs">
+            <article class="def"><h3>tu, te</h3><p>pronoms personnels · l’interlocutrice (l’autrice, à qui son double s’adresse)</p></article>
+            <article class="def"><h3>ça (1er)</h3><p>pronom démonstratif · « évoquer tes souvenirs d’enfance »</p></article>
+            <article class="def"><h3>les</h3><p>pronom personnel · ces mots</p></article>
+            <article class="def"><h3>ce</h3><p>pronom démonstratif · ces mots</p></article>
+            <article class="def"><h3>qui</h3><p>pronom relatif · antécédent : les seuls mots</p></article>
+            <article class="def"><h3>il</h3><p>pronom impersonnel · ne représente rien</p></article>
+            <article class="def"><h3>ça (dernier)</h3><p>pronom démonstratif · « tu veux évoquer tes souvenirs »</p></article>
+          </div>
+          <p class="note">Les exercices 3 a et 3 b (remplacer par un pronom personnel, puis par un pronom possessif) ne sont pas remplis dans le cahier. Exemples de réponses : « Ne nous y fions pas », « Je la lui ai prêtée », « Nous en sommes satisfaits », « Je le comprends parfaitement », « Donne-le-leur » ; « As-tu pensé à prendre les tiens ? », « La sienne est difficile à croire », « … ne connaissent pas les nôtres », « Je trouve les leurs bien mauvaises », « Les miens m’ont coûté très cher ».</p>
+        </article>
+      </section>
+    </div>
+
+    <div class="vue-extra">
+      <p class="avertissement">Cette partie n’est pas dans le cahier de Ruben. Ce sont des connaissances ajoutées, dans le périmètre de la séquence, pour aller plus loin. Ce qui compte pour l’évaluation reste le cours de M. Larribau.</p>
+      <section>
+        <article class="card">
+          <span class="tag">Extra · les genres de l’écriture de soi</span>
+          <h2>Autobiographie, mémoires, journal, autofiction</h2>
+          <ul class="bullets">
+            <li><strong>Autobiographie</strong> : récit rétrospectif de sa propre vie, centré sur l’histoire de sa personnalité. Le critique Philippe Lejeune (<em>Le Pacte autobiographique</em>, 1975) la définit par l’identité <strong>auteur = narrateur = personnage</strong>.</li>
+            <li><strong>Mémoires</strong> : l’auteur raconte sa vie en lien avec les grands événements de son temps (Chateaubriand a vécu la Révolution, l’Empire et la Restauration). Les <em>Mémoires d’outre-tombe</em> devaient être publiés après sa mort, d’où le titre.</li>
+            <li><strong>Journal intime</strong> : écrit au jour le jour, sans recul (Anne Frank).</li>
+            <li><strong>Roman autobiographique</strong> : inspiré de la vie de l’auteur, mais avec des personnages aux noms changés ; le pacte de vérité n’est pas promis.</li>
+            <li><strong>Autofiction</strong> : mot inventé par Serge Doubrovsky en 1977 pour un récit qui mêle faits réels et fiction, sous le vrai nom de l’auteur.</li>
+            <li><strong>Autoportrait</strong> : en peinture ou en photographie, l’équivalent visuel de l’autobiographie (Rembrandt, Van Gogh, Frida Kahlo, qui en a peint plus de cinquante).</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · auteurs</span>
+          <h2>Ce qu’il faut savoir sur les auteurs de la séquence</h2>
+          <ul class="bullets">
+            <li><strong>Rousseau</strong> (1712-1778) : philosophe des Lumières. <em>Les Confessions</em> sont publiées après sa mort ; il y avoue ses fautes, comme le vol d’un ruban dont il accuse une servante.</li>
+            <li><strong>Chateaubriand</strong> (1768-1848) : né à Saint-Malo, en Bretagne, face à la mer. C’est l’un des fondateurs du romantisme.</li>
+            <li><strong>George Sand</strong> (1804-1876) : pseudonyme masculin d’Aurore Dupin, romancière qui s’habillait parfois en homme pour être libre.</li>
+            <li><strong>Pagnol</strong> (1895-1974) : écrivain et cinéaste provençal. <em>La Gloire de mon père</em> ouvre les <em>Souvenirs d’enfance</em>, suivis du <em>Château de ma mère</em>.</li>
+            <li><strong>Yourcenar</strong> (1903-1987) : première femme élue à l’Académie française, en 1980. Son nom est l’anagramme imparfaite de son vrai nom, Crayencour.</li>
+            <li><strong>Perec</strong> (1936-1982) : son père est mort à la guerre en 1940, sa mère a été déportée à Auschwitz en 1943. <em>W ou le souvenir d’enfance</em> (1975) alterne ses souvenirs et un récit imaginaire.</li>
+            <li><strong>Nathalie Sarraute</strong> (1900-1999) : dans <em>Enfance</em> (1983), elle dialogue avec un double critique qui met en doute ses souvenirs.</li>
+            <li><strong>Frida Kahlo</strong> (1907-1954) : peintre mexicaine, née à Coyoacán dans la « Maison bleue ». Elle disait être née en 1910, l’année de la Révolution mexicaine, pour lier sa vie à celle du pays.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · histoire des arts</span>
+          <h2>Les vanités</h2>
+          <ul class="bullets">
+            <li>Le mot vient du livre de l’Ecclésiaste : « Vanité des vanités, tout est vanité » (en latin, <em>vanitas</em> = le vide, ce qui est vain).</li>
+            <li>Le genre est très populaire aux Pays-Bas au XVIIe siècle, notamment à Leyde, la ville de David Bailly.</li>
+            <li><em>Memento mori</em> (« souviens-toi que tu vas mourir ») est le message des vanités. <em>Carpe diem</em> (« cueille le jour », Horace) invite au contraire à profiter du présent : ce sont deux idées différentes, souvent confondues.</li>
+            <li>Un <strong>repentir</strong>, en peinture, est une correction faite par l’artiste, qui réapparaît parfois avec le temps sous la couche de peinture.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · étymologie</span>
+          <h2>D’autres racines utiles</h2>
+          <div class="defs">
+            <article class="def"><h3>bio- (grec)</h3><p>la vie : biologie, biographie</p></article>
+            <article class="def"><h3>graph- (grec)</h3><p>écrire : orthographe, calligraphie</p></article>
+            <article class="def"><h3>-logie (grec)</h3><p>science, discours : géologie, cardiologie</p></article>
+            <article class="def"><h3>philo- / -phobe (grec)</h3><p>qui aime / qui craint : philosophe, claustrophobe</p></article>
+            <article class="def"><h3>mnémo- (grec)</h3><p>mémoire : mnémotechnique, amnésie</p></article>
+            <article class="def"><h3>-vore (latin)</h3><p>qui mange : herbivore, carnivore</p></article>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Extra · orthographe</span>
+          <h2>Pièges des couleurs</h2>
+          <ul class="bullets">
+            <li><strong>Châtain</strong> s’accorde au pluriel (<em>des cheveux châtains</em>) ; au féminin, l’usage hésite (<em>châtain</em> ou <em>châtaine</em>).</li>
+            <li><strong>Marron, orange, noisette, auburn, kaki</strong> restent invariables.</li>
+            <li>Avec deux couleurs distinctes pour un même objet, on met un trait d’union et on n’accorde pas : <em>des drapeaux bleu-blanc-rouge</em>.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+    <section>
+      <article class="card">
+        <div class="quiz-head">
+          <div>
+            <h2>Quiz</h2>
+            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions et l’ordre des réponses.</p>
+          </div>
+          <p id="score">0 / 10</p>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="quizNouveau">Nouveau quiz</button>
+          <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
+        </div>
+        <div id="quiz"></div>
+      </article>
+    </section>
+
+    <footer>
+      Source : cahier de français numérisé le 4 octobre (27 pages, projet n° 1 « Se raconter, se représenter »).
+      L’orthographe des parties manuscrites est corrigée. Les textes personnels de Ruben (récit de sa naissance) ne sont pas reproduits.
+    </footer>
   </div>
+
+  <script>
+    window.QUIZ = {};
+    QUIZ.cahier = [
+      { q: "Que signifie la racine latine « omni » ?", choices: ["Soleil", "Tout", "Temps", "Seul"], answer: 1, why: "Omniscient, omnivore, omnipotent : qui sait, mange, peut tout." },
+      { q: "Que signifie la racine grecque « chrono » ?", choices: ["La chaleur", "Le son", "Le temps", "La couleur"], answer: 2, why: "Chronomètre, chronologie, anachronisme." },
+      { q: "Que signifie la racine grecque « thermo » ?", choices: ["La chaleur", "La terre", "Le froid", "L’eau"], answer: 0, why: "Thermomètre, thermostat, géothermie." },
+      { q: "Que signifie la racine grecque « phon » ?", choices: ["La lumière", "Le son, la voix", "La distance", "L’écriture"], answer: 1, why: "Téléphone, phonétique, aphone." },
+      { q: "Quel est l’intrus ?", choices: ["chronomètre", "anachronisme", "croque-mort", "chronique"], answer: 2, why: "Croque-mort n’a rien à voir avec chrono (le temps)." },
+      { q: "Quel est l’intrus ?", choices: ["thermomètre", "termite", "thermostat", "géothermie"], answer: 1, why: "La termite (ou le termite) est un insecte xylophage, sans lien avec thermo." },
+      { q: "Le suffixe latin « -cide » signifie…", choices: ["porter", "tuer", "trois", "inflammation"], answer: 1, why: "Insecticide, fratricide, régicide." },
+      { q: "Le suffixe grec « -ite » signifie…", choices: ["inflammation", "sans", "mesure", "plusieurs"], answer: 0, why: "Otite, arthrite, rhinite, tendinite." },
+      { q: "Le suffixe latin « -fère » signifie…", choices: ["manger", "porter, apporter", "tuer", "couleur"], answer: 1, why: "Mammifère, conifère, somnifère, calorifère." },
+      { q: "Le préfixe grec « a- » dans « aphone » signifie…", choices: ["très", "sans, privé de", "à distance", "au-dessus"], answer: 1, why: "Aphone : sans voix. Athée, apolitique, asymétrique." },
+      { q: "Qu’est-ce que l’hyperthermie ?", choices: ["Une température du corps en dessous de la normale", "Une température du corps au-dessus de la normale", "Une inflammation", "Un instrument de mesure"], answer: 1, why: "Hyper = au-dessus. C’est l’erreur de Ruben corrigée dans l’évaluation." },
+      { q: "Un insecte xylophage…", choices: ["mange du bois", "mange des fruits", "vit dans l’eau", "pique les humains"], answer: 0, why: "Xylo = le bois, phage = manger." },
+      { q: "Que veut dire « chronophage » ?", choices: ["Qui mesure le temps", "Qui prend, « mange », trop de temps", "Qui est en retard", "Qui raconte dans l’ordre"], answer: 1, why: "Chrono = temps, phage = manger." },
+      { q: "Que veut dire « ventripotent » ?", choices: ["Qui parle du ventre", "Qui en impose par son gros ventre", "Qui a mal au ventre", "Qui mange beaucoup"], answer: 1, why: "Ventr- (ventre) + potent (puissant)." },
+      { q: "Un cardiologue est un spécialiste…", choices: ["du nez", "de l’œil", "du cœur", "de la langue"], answer: 2, why: "Kardia (grec) = le cœur." },
+      { q: "Quel mot grec correspond au latin « oculus » (l’œil) ?", choices: ["rhinos", "glotta", "ophtalmos", "kardia"], answer: 2, why: "Ophtalmologue : médecin des yeux." },
+      { q: "Que signifie AUTO-BIO-GRAPHIE ?", choices: ["voiture – vie – dessin", "soi-même – la vie – écriture", "soi-même – la mort – lecture", "seul – le temps – écriture"], answer: 1, why: "Écrire sa propre vie." },
+      { q: "Dans le tableau de Bailly, qu’est-ce qui symbolise le caractère éphémère de la vie ?", choices: ["Le livre et la flûte", "Les bulles, le sablier, les fleurs fanées, la bougie", "Les pièces d’or", "La baguette de professeur"], answer: 1, why: "Les bulles peuvent éclater, le sablier s’écoule, les fleurs fanent, la bougie se consume." },
+      { q: "Quel est le message d’une vanité comme celle de Bailly ?", choices: ["Carpe diem : profite de la vie", "Memento mori : souviens-toi que tu vas mourir, les plaisirs sont vains", "La richesse rend heureux", "La peinture est éternelle"], answer: 1, why: "Le professeur a corrigé la conclusion « il faut en profiter » : ce n’est pas le sens d’une vanité." },
+      { q: "En quelle année Bailly peint-il son autoportrait aux vanités ?", choices: ["1561", "1651", "1751", "1851"], answer: 1, why: "1651, musée de Leyde (Pays-Bas)." },
+      { q: "Pourquoi raconter sa naissance est-il paradoxal ?", choices: ["Parce qu’on ne peut pas s’en souvenir", "Parce que c’est interdit", "Parce que c’est toujours triste", "Parce qu’on ne connaît pas sa date de naissance"], answer: 0, why: "L’auteur s’appuie sur des récits familiaux ou des documents." },
+      { q: "Quel auteur naît « sous le Garlaban couronné de chèvres » ?", choices: ["Chateaubriand", "Yourcenar", "Pagnol", "Perec"], answer: 2, why: "Marcel Pagnol, La Gloire de mon père (1957), né à Aubagne." },
+      { q: "Quel auteur naît pendant une tempête, « presque mort » ?", choices: ["Pagnol", "Chateaubriand", "Rousseau", "Sarraute"], answer: 1, why: "Mémoires d’outre-tombe (1848) : une vision pessimiste, prédestiné au malheur." },
+      { q: "Qui écrit « L’être que j’appelle moi vint au monde un certain lundi 8 juin 1903 » ?", choices: ["George Sand", "Marguerite Yourcenar", "Nathalie Sarraute", "Frida Kahlo"], answer: 1, why: "Archives du Nord (1977), née à Bruxelles." },
+      { q: "Quelle vision de sa naissance donne Pagnol ?", choices: ["Pessimiste", "Optimiste", "Tragique", "Indifférente"], answer: 1, why: "Ciel de juillet, paysage de Provence, atmosphère apaisante." },
+      { q: "Comment Frida Kahlo définit-elle son identité dans l’autoportrait de 1932 ?", choices: ["Par une double appartenance : Mexique et États-Unis", "Par son seul pays, le Mexique", "Par la richesse", "Par son métier"], answer: 0, why: "Mexique : civilisation ancestrale, racines ; États-Unis : modernité industrielle, absence de racines." },
+      { q: "Un pronom relatif introduit…", choices: ["une proposition indépendante", "une proposition subordonnée relative", "un complément d’objet", "une question"], answer: 1, why: "Et il remplace l’antécédent." },
+      { q: "Comment appelle-t-on le nom que complète une proposition relative ?", choices: ["Le sujet", "L’antécédent", "L’attribut", "Le complément"], answer: 1, why: "« la tempête dont le bruit berça… » : tempête est l’antécédent." },
+      { q: "Lequel est un pronom relatif composé ?", choices: ["dont", "où", "auquel", "que"], answer: 2, why: "Composés (variables) : lequel, duquel, auquel… Simples : qui, que, quoi, dont, où." },
+      { q: "Complète : « l’amour sans ____ on a du mal à se construire »", choices: ["qui", "lequel", "dont", "que"], answer: 1, why: "Après une préposition, pour une chose : lequel." },
+      { q: "Complète : « des limites strictes ____ nos vies allaient nous confronter »", choices: ["que", "où", "auxquelles", "dont"], answer: 2, why: "Confronter à des limites : à + lesquelles = auxquelles." },
+      { q: "Quelle question permet de trouver le sujet d’un verbe ?", choices: ["« Quoi ? » après le verbe", "« Qu’est-ce qui ? » ou « Qui est-ce qui ? » + verbe", "« Où ? »", "« Comment ? »"], answer: 1, why: "C’est la règle notée dans le cahier." },
+      { q: "Dans « Rire avec les autres m’aurait rempli de bonheur », quelle est la nature du sujet ?", choices: ["Groupe nominal", "Infinitif (groupe infinitif)", "Pronom", "Proposition subordonnée"], answer: 1, why: "Rire avec les autres : un groupe infinitif." },
+      { q: "Dans « Que les autres viennent à moi était mon rêve », quelle est la nature du sujet de « était » ?", choices: ["Un pronom indéfini", "Un groupe nominal", "Une proposition subordonnée", "Un infinitif"], answer: 2, why: "Le sujet est toute la proposition « Que les autres viennent à moi… »." },
+      { q: "Qu’est-ce qu’un modalisateur ?", choices: ["Un mot qui marque le doute ou la certitude du narrateur", "Un mot de liaison", "Un temps du passé", "Un synonyme"], answer: 0, why: "Il marque la subjectivité du narrateur, fréquent en autobiographie." },
+      { q: "« Il semble que » est un modalisateur de type…", choices: ["adverbe", "tournure impersonnelle", "tournure à la 1re personne", "pronom relatif"], answer: 1, why: "Tournures impersonnelles : il semble que, il est possible que, il se peut que." },
+      { q: "Pourquoi l’autobiographe emploie-t-il des modalisateurs ?", choices: ["Pour faire joli", "Par honnêteté, quand sa mémoire est défaillante, pour respecter le pacte autobiographique", "Pour mentir", "Pour allonger le texte"], answer: 1, why: "C’est la leçon sur Perec, W ou le souvenir d’enfance." },
+      { q: "Dans « Il pleut des cordes », « il » est…", choices: ["personnel", "impersonnel", "relatif", "démonstratif"], answer: 1, why: "Il ne désigne rien : c’est un sujet apparent." },
+      { q: "Dans « Il passe beaucoup de trains », le sujet réel est…", choices: ["il", "passe", "beaucoup de trains", "par ici"], answer: 2, why: "Beaucoup de trains passent : « il » est le sujet apparent." },
+      { q: "Dans « Il a bien fait de refuser », « il » est…", choices: ["personnel", "impersonnel"], answer: 0, why: "Il désigne une personne." },
+      { q: "Qu’est-ce que le pacte autobiographique ?", choices: ["Un contrat d’édition", "L’engagement de l’auteur à dire la vérité sur lui-même", "Un accord entre deux auteurs", "La préface d’un roman"], answer: 1, why: "Rousseau : « J’ai dit le bien et le mal avec la même franchise. »" },
+      { q: "Quelle œuvre commence par « Je forme une entreprise qui n’eut jamais d’exemple » ?", choices: ["Histoire de ma vie", "Les Confessions de Rousseau", "Enfance", "Mémoires d’outre-tombe"], answer: 1, why: "Le préambule des Confessions (1782)." },
+      { q: "Écrire sur soi comme « exutoire », c’est…", choices: ["se trouver intéressant", "se libérer de ses souffrances en les écrivant", "devenir célèbre", "inventer sa vie"], answer: 1, why: "C’est la raison « pour soi-même » notée dans le cahier." },
+      { q: "Selon George Sand, pourquoi raconter sa vie aux autres ?", choices: ["Pour s’en vanter", "Pour leur montrer qu’on peut traverser les mêmes épreuves et s’en sortir", "Pour gagner de l’argent", "Par orgueil"], answer: 1, why: "« J’ai souffert les mêmes maux […] donc tu peux guérir et vaincre. »" },
+      { q: "Accord correct ?", choices: ["des pulls jaunes pâles", "des pulls jaune pâle", "des pulls jaune pâles", "des pulls jaunes pâle"], answer: 1, why: "Deux adjectifs de couleur ensemble : aucun ne s’accorde." },
+      { q: "Accord correct ?", choices: ["des chaussures marrons", "des chaussures marron", "des chaussures marronnes", "des chaussures marronnées"], answer: 1, why: "Marron est un nom de chose : invariable." },
+      { q: "Lequel de ces noms de couleur s’accorde ?", choices: ["orange", "cerise", "rose", "noisette"], answer: 2, why: "Exceptions : rose, écarlate, mauve, pourpre, fauve." },
+      { q: "Accord correct ?", choices: ["des yeux noisettes", "des yeux noisette", "des yeux noisets", "des yeux noisettés"], answer: 1, why: "Noisette est un nom de chose : invariable." },
+      { q: "Le remords est…", choices: ["un chagrin dû à une perte", "une angoisse accompagnée de honte d’avoir mal agi", "la tristesse du passé", "un désir de réparation"], answer: 1, why: "Le repentir ajoute le désir de réparer la faute." },
+      { q: "La nostalgie est…", choices: ["un état de tristesse causé par le regret obsédant du passé", "la honte d’avoir mal agi", "une perte de mémoire", "un souvenir heureux"], answer: 0, why: "Pagnol a la nostalgie du « temps des derniers chevriers »." },
+      { q: "Perdre la mémoire, c’est souffrir…", choices: ["de réminiscence", "d’amnésie", "de commémoration", "de nostalgie"], answer: 1, why: "A- (sans) + mnésie (mémoire)." },
+      { q: "Un moyen pour retenir une leçon est un moyen…", choices: ["mémorable", "mnémotechnique", "mémorial", "commémoratif"], answer: 1, why: "Mnémotechnique : technique pour la mémoire." },
+      { q: "Dans Enfance de Sarraute, « tu » désigne…", choices: ["le lecteur", "l’autrice elle-même, à qui son double s’adresse", "sa mère", "un ami"], answer: 1, why: "C’est un pronom personnel : l’interlocutrice." },
+      { q: "Dans « ce sont les seuls mots qui te conviennent », « qui » est un pronom…", choices: ["interrogatif", "relatif", "personnel", "indéfini"], answer: 1, why: "Son antécédent est « les seuls mots »." }
+    ];
+
+    QUIZ.extra = [
+      { q: "Selon Philippe Lejeune, une autobiographie suppose l’identité…", choices: ["auteur = narrateur = personnage", "auteur = lecteur", "narrateur = héros inventé", "auteur = éditeur"], answer: 0, why: "Le Pacte autobiographique, 1975." },
+      { q: "Quelle est la différence entre mémoires et autobiographie ?", choices: ["Aucune", "Les mémoires lient la vie de l’auteur aux grands événements de son temps", "Les mémoires sont inventés", "L’autobiographie est écrite au jour le jour"], answer: 1, why: "Chateaubriand raconte sa vie et la Révolution, l’Empire…" },
+      { q: "Qui a inventé le mot « autofiction » ?", choices: ["Rousseau", "Serge Doubrovsky", "Georges Perec", "George Sand"], answer: 1, why: "En 1977 : un récit qui mêle faits réels et fiction." },
+      { q: "Que signifie « carpe diem » ?", choices: ["Souviens-toi que tu vas mourir", "Cueille le jour (profite du présent)", "Tout est vanité", "Connais-toi toi-même"], answer: 1, why: "Formule du poète latin Horace, à ne pas confondre avec memento mori." },
+      { q: "D’où vient le mot « vanité » ?", choices: ["Du latin vanitas, le vide, ce qui est vain", "Du grec vanos, la peinture", "D’un peintre nommé Vanit", "Du mot vent"], answer: 0, why: "« Vanité des vanités, tout est vanité » (l’Ecclésiaste)." },
+      { q: "Qu’est-ce qu’un repentir en peinture ?", choices: ["Un tableau religieux", "Une correction de l’artiste qui réapparaît parfois", "Un cadre", "Une signature"], answer: 1, why: "Le visage fantomatique chez Bailly pourrait en être un." },
+      { q: "Quel est le vrai nom de George Sand ?", choices: ["Aurore Dupin", "Marie Sand", "Georgette Lefèvre", "Amandine Sarraute"], answer: 0, why: "Elle a choisi un pseudonyme masculin." },
+      { q: "Quelle est la première femme élue à l’Académie française ?", choices: ["George Sand", "Nathalie Sarraute", "Marguerite Yourcenar", "Simone de Beauvoir"], answer: 2, why: "En 1980." },
+      { q: "Dans quelle ville est né Chateaubriand, face à la mer ?", choices: ["Brest", "Saint-Malo", "Marseille", "Nantes"], answer: 1, why: "D’où la tempête et l’océan dans son récit de naissance." },
+      { q: "Pourquoi Frida Kahlo disait-elle être née en 1910 ?", choices: ["Pour paraître plus jeune seulement", "Pour lier sa naissance à la Révolution mexicaine", "Par erreur", "Pour un concours"], answer: 1, why: "Elle est en réalité née en 1907." },
+      { q: "Quel livre fait suite à La Gloire de mon père ?", choices: ["Le Château de ma mère", "Jean de Florette", "Manon des sources", "Topaze"], answer: 0, why: "Les deux forment les Souvenirs d’enfance de Pagnol." },
+      { q: "Que signifie la racine « graph- » ?", choices: ["La vie", "Écrire", "Le temps", "Aimer"], answer: 1, why: "Biographie, orthographe, calligraphie." },
+      { q: "Accord correct ?", choices: ["des cheveux châtain", "des cheveux châtains", "des cheveux châtaigne", "des cheveux châtainés"], answer: 1, why: "Châtain est un vrai adjectif : il s’accorde au pluriel." },
+      { q: "Accord correct ?", choices: ["des drapeaux bleus-blancs-rouges", "des drapeaux bleu-blanc-rouge", "des drapeaux bleus blancs rouges", "des drapeaux bleu blanc rouges"], answer: 1, why: "Plusieurs couleurs distinctes sur un même objet : trait d’union, pas d’accord." }
+    ];
+  </script>
+  <script src="../cahier.js"></script>
 </body>
 </html>
