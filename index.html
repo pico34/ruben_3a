@@ -10,14 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="cahier.css" />
 </head>
-<body>
+<body data-page="accueil">
   <div class="wrap">
     <header class="top">
       <p class="kicker">Ruben Barberet · 3e A · 2026-2027</p>
       <h1>Le cahier</h1>
       <p class="lede">
-        Une entrée par matière. Les documents du Drive sont lus, puis rangés
-        dans l’ordre du cours. Histoire-géographie, mathématiques, physique-chimie, SVT et anglais ont déjà des chapitres.
+        Une entrée par matière. Les documents du Drive sont lus, puis rangés dans l’ordre du cours.
+        D’abord le cours, ensuite les quiz.
       </p>
     </header>
 
@@ -52,16 +52,21 @@
         <span>Séquence Nine Eleven : le témoignage de Jessica et le prétérit simple.</span>
         <em>1 séquence</em>
       </a>
-      <a class="matiere vide" href="espagnol/"><strong>Espagnol</strong><span>En attente d’un document.</span><em>Vide</em></a>
-      <a class="matiere vide" href="arts-plastiques/"><strong>Arts plastiques</strong><span>En attente d’un document.</span><em>Vide</em></a>
-      <a class="matiere vide" href="musique/"><strong>Musique</strong><span>En attente d’un document.</span><em>Vide</em></a>
-      <a class="matiere vide" href="sport/"><strong>Sport</strong><span>EPS.</span><em>Vide</em></a>
     </nav>
+
+    <section>
+      <a class="card entree-quiz" href="quiz/">
+        <span class="tag">Après les cours</span>
+        <h2>S’entraîner avec les quiz</h2>
+        <p class="note">Une matière ou toutes mélangées. À faire une fois le cours lu et relu.</p>
+      </a>
+    </section>
 
     <footer>
       Dossier Drive <a href="https://drive.google.com/drive/folders/1Hf0Bhup5K98DuPfMqAYCZ0nri-MregCO?usp=sharing">ruben_college_3a</a>,
-      synchronisé le 4 octobre 2026 à 16:56. Histoire-géographie, mathématiques, physique-chimie, SVT et anglais.
+      synchronisé le 4 octobre 2026. Histoire-géographie, français, mathématiques, physique-chimie, SVT et anglais.
     </footer>
   </div>
+  <script src="cahier.js"></script>
 </body>
 </html>

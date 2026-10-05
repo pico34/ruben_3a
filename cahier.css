@@ -233,7 +233,144 @@ body[data-vue="extra"] .vue-extra { display: block; }
 
 footer { padding: 8px 0 40px; color: var(--muted); font-size: 13px; }
 
+.barre {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(244, 241, 234, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.barre-ligne {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 8px 0;
+}
+.barre-ligne + .barre-ligne { border-top: 1px solid var(--line); padding: 6px 0; }
+.barre-accueil {
+  flex: none;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 18px;
+  font-weight: 680;
+  text-decoration: none;
+  color: var(--red);
+}
+.barre-puces {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.barre-puces::-webkit-scrollbar { display: none; }
+.puce {
+  flex: none;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 999px;
+  padding: 5px 11px;
+}
+.puce[aria-current="page"] { background: var(--blue); border-color: var(--blue); color: white; }
+.puce-quiz { border-color: #c9b98f; background: #fffaf0; color: #7a5a12; }
+.puce-quiz[aria-current="page"] { background: #7a5a12; border-color: #7a5a12; color: white; }
+.toolbar.barre-vues { margin: 0; gap: 6px; flex-wrap: nowrap; }
+.barre-vues button, .barre-sommaire { padding: 5px 12px; font-size: 13px; }
+.barre-sommaire {
+  margin-left: auto;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+}
+.barre-sommaire[aria-expanded="true"] { background: var(--ink); border-color: var(--ink); color: white; }
+.sommaire {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto 10px;
+  max-height: min(60vh, 460px);
+  overflow-y: auto;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.sommaire ol { list-style: none; margin: 0; padding: 6px; }
+.sommaire a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.sommaire a:hover, .sommaire a:focus { background: var(--blue-soft); }
+.sommaire li:first-child a { color: var(--muted); font-size: 13px; }
+.card, section, .card h2 { scroll-margin-top: calc(var(--barre-h, 100px) + 12px); }
+
+.suite-quiz { border-color: #c9b98f; background: #fffaf0; }
+.bouton {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 650;
+  text-decoration: none;
+  background: var(--blue);
+  color: white;
+  border-radius: 999px;
+  padding: 10px 18px;
+}
+.entree-quiz { display: block; text-decoration: none; border-color: #c9b98f; background: #fffaf0; }
+.entree-quiz:hover { border-color: #7a5a12; }
+.entree-quiz .tag { color: #7a5a12; background: #f5ebd3; }
+.choix-matieres { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-top: 10px; }
+.choix-matieres button {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: var(--ink);
+}
+.choix-matieres button span { font-size: 13px; color: var(--muted); }
+.choix-matieres button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: white; }
+.choix-matieres button[aria-pressed="true"] span { color: #dbe7f5; }
+.rappel {
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--blue-soft);
+  font-size: 14px;
+}
+.rappel a { font-weight: 650; color: var(--blue); }
+.badge-matiere {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-radius: 999px;
+  padding: 2px 7px;
+  vertical-align: middle;
+}
+
 @media (max-width: 720px) {
   .timeline li, .defs, .stats { grid-template-columns: 1fr; }
   .quiz-head { flex-direction: column; align-items: start; }
+  .barre-ligne { width: calc(100% - 20px); }
+  .barre-accueil { font-size: 16px; }
+  header.top { padding-top: 18px; }
 }

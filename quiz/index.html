@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow, noarchive, noimageindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz — Cahier de Ruben</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../cahier.css" />
+</head>
+<body data-page="quiz">
+  <div class="wrap">
+    <header class="top">
+      <p class="kicker">Quiz · 3e A</p>
+      <h1>S’entraîner</h1>
+      <p class="lede">
+        Le quiz vient après le cours : il sert à vérifier ce que tu as retenu. Si tu rates beaucoup de questions,
+        retourne lire le cours avant de recommencer.
+      </p>
+    </header>
+
+    <section>
+      <article class="card">
+        <h2>Choisis une matière</h2>
+        <div class="choix-matieres" id="choix" role="group" aria-label="Matière du quiz"></div>
+      </article>
+    </section>
+
+    <section id="zone" hidden>
+      <p class="rappel" id="rappel"></p>
+      <article class="card">
+        <div class="quiz-head">
+          <div>
+            <h2 id="quizTitre">Quiz</h2>
+            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions et l’ordre des réponses.</p>
+          </div>
+          <p id="score">0 / 10</p>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="quizNouveau">Nouveau quiz</button>
+          <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
+        </div>
+        <div id="quiz"></div>
+      </article>
+    </section>
+
+    <footer>Les questions reprennent le cahier de Ruben. Les questions « Extra » vont au-delà du cours.</footer>
+  </div>
+
+  <script src="../cahier.js"></script>
+  <script>
+    (() => {
+      const banques = {};
+      const choix = document.getElementById("choix");
+      const zone = document.getElementById("zone");
+      const rappel = document.getElementById("rappel");
+      const titre = document.getElementById("quizTitre");
+
+      function charger(slug) {
+        return new Promise((resolve) => {
+          const script = document.createElement("script");
+          script.src = "../" + slug + "/quiz.js";
+          script.onload = () => { banques[slug] = window.QUIZ; resolve(); };
+          script.onerror = resolve;
+          document.body.appendChild(script);
+        });
+      }
+
+      function banqueMelangee() {
+        const cahier = [];
+        const extra = [];
+        MATIERES.forEach((m) => {
+          const b = banques[m.slug];
+          if (!b) return;
+          b.cahier.forEach((q) => cahier.push({ ...q, matiere: m.nom }));
+          (b.extra || []).forEach((q) => extra.push({ ...q, matiere: m.nom }));
+        });
+        return { cahier, extra };
+      }
+
+      function choisir(slug) {
+        const m = MATIERES.find((x) => x.slug === slug);
+        if (!m && slug !== "tout") return;
+        choix.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.slug === slug ? "true" : "false"));
+        history.replaceState(null, "", "?m=" + slug);
+        zone.hidden = false;
+        if (m) {
+          titre.textContent = "Quiz · " + m.nom;
+          rappel.innerHTML = "";
+          rappel.append("As-tu relu le cours avant de te tester ? ");
+          const lien = document.createElement("a");
+          lien.href = "../" + m.slug + "/";
+          lien.textContent = "Relire le cours de " + m.nom;
+          rappel.appendChild(lien);
+          Cahier.lancerQuiz(banques[slug]);
+        } else {
+          titre.textContent = "Quiz · toutes les matières";
+          rappel.textContent = "Questions mélangées de toutes les matières : idéal pour une révision générale, une fois les cours relus.";
+          Cahier.lancerQuiz(banqueMelangee());
+        }
+      }
+
+      MATIERES.reduce((suite, m) => suite.then(() => charger(m.slug)), Promise.resolve()).then(() => {
+        const options = MATIERES.filter((m) => banques[m.slug]).map((m) => ({ slug: m.slug, nom: m.nom, n: banques[m.slug].cahier.length }));
+        options.push({ slug: "tout", nom: "Toutes les matières", n: options.reduce((t, o) => t + o.n, 0) });
+        options.forEach((o) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.dataset.slug = o.slug;
+          b.setAttribute("aria-pressed", "false");
+          const nom = document.createElement("strong");
+          nom.textContent = o.nom;
+          const n = document.createElement("span");
+          n.textContent = o.n + " questions";
+          b.append(nom, n);
+          b.addEventListener("click", () => {
+            choisir(o.slug);
+            zone.scrollIntoView();
+          });
+          choix.appendChild(b);
+        });
+        const demande = new URLSearchParams(location.search).get("m");
+        if (demande) choisir(demande);
+      });
+    })();
+  </script>
+</body>
+</html>
