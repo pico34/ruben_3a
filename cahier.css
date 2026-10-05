@@ -230,6 +230,54 @@ body[data-vue="extra"] .vue-extra { display: block; }
 .q h3 { font-size: 16px; }
 #score { font-weight: 700; color: var(--blue); }
 .quiz-head { display: flex; justify-content: space-between; gap: 12px; align-items: end; }
+.quiz-actions button.secondaire { background: #fff; color: var(--blue); }
+.quiz-actions button.ok { background: var(--ok); border-color: var(--ok); }
+.quiz-actions button.revoir { background: #fff; color: #8d2b2b; border-color: #8d2b2b; }
+
+.quiz-modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 14px; }
+.quiz-modes label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+}
+.quiz-modes label:has(input:checked) { border-color: var(--blue); background: var(--blue-soft); }
+.quiz-modes input { grid-row: span 2; margin: 0; }
+.quiz-modes span { font-size: 13px; color: var(--muted); }
+
+.consigne-cartes { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+.carte {
+  margin-top: 12px;
+  padding: 18px 18px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(160deg, #fff 0%, var(--blue-soft) 100%);
+}
+.carte-progression { margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--blue); }
+.carte h3 { font-size: 19px; margin: 0 0 10px; }
+.carte-reponse { margin: 12px 0 4px; padding: 12px 14px; border-radius: 12px; background: #fff; border: 1px solid #c8dfd2; }
+.bonne { margin: 0; font-weight: 650; color: var(--ok); }
+.carte-reponse .why, .bilan .why { margin-top: 6px; }
+.carte-actions { margin-top: 12px; }
+
+.bilan { margin-top: 20px; padding: 16px 18px; border-radius: 16px; background: #fffaf0; border: 1px solid #c9b98f; }
+.bilan h3 { margin: 0 0 6px; font-size: 18px; }
+.bilan > p { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
+.bilan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.bilan li { padding: 10px 12px; border-radius: 12px; background: #fff; border: 1px solid var(--line); }
+.bilan li strong { display: block; font-size: 15px; }
+.bilan li .bonne { margin-top: 4px; }
+.a-faire { margin: 10px 0 0; padding: 10px 14px; border-radius: 12px; background: #fffaf0; border: 1px solid #c9b98f; font-size: 14px; }
+.a-faire summary { cursor: pointer; font-weight: 650; color: #7a5a12; }
+.a-faire p { margin: 8px 0 0; color: var(--muted); }
+.suite-quiz .bouton + .bouton { margin-left: 8px; }
+.suite-quiz .bouton.secondaire { background: #fff; color: var(--blue); border: 1px solid var(--blue); }
+.lien-cours { display: inline-block; margin-top: 8px; font-size: 14px; font-weight: 650; color: var(--blue); }
 
 footer { padding: 8px 0 40px; color: var(--muted); font-size: 13px; }
 

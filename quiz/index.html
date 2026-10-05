@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../cahier.css?v=10" />
+  <link rel="stylesheet" href="../cahier.css?v=11" />
 </head>
 <body data-page="quiz">
   <div class="wrap">
@@ -16,8 +16,9 @@
       <p class="kicker">Quiz · 3e A</p>
       <h1>S’entraîner</h1>
       <p class="lede">
-        Le quiz vient après le cours : il sert à vérifier ce que tu as retenu. Si tu rates beaucoup de questions,
-        retourne lire le cours avant de recommencer.
+        Le quiz vient après le cours : il sert à vérifier ce que tu as retenu. Deux façons de s’entraîner :
+        le <strong>QCM</strong> pour reconnaître la bonne réponse, les <strong>cartes</strong> pour la retrouver
+        sans aide, comme en contrôle. Si tu rates beaucoup, retourne lire le cours avant de recommencer.
       </p>
     </header>
 
@@ -34,22 +35,26 @@
         <div class="quiz-head">
           <div>
             <h2 id="quizTitre">Quiz</h2>
-            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions et l’ordre des réponses.</p>
+            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions. À la fin, un bilan reprend ce qui est à revoir.</p>
           </div>
           <p id="score">0 / 10</p>
         </div>
+        <div class="quiz-modes" role="group" aria-label="Mode d’entraînement">
+          <label><input type="radio" name="quizMode" value="qcm" checked /> <strong>QCM</strong><span>4 réponses, une seule juste</span></label>
+          <label><input type="radio" name="quizMode" value="cartes" /> <strong>Cartes à retourner</strong><span>la question seule, puis la réponse</span></label>
+        </div>
         <div class="quiz-actions">
-          <button type="button" id="quizNouveau">Nouveau quiz</button>
+          <button type="button" id="quizNouveau">Nouveau tirage</button>
           <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
         </div>
         <div id="quiz"></div>
       </article>
     </section>
 
-    <footer>Les questions reprennent le cahier de Ruben. Les questions « Extra » vont au-delà du cours.</footer>
+    <footer>Les questions reprennent ton cahier. Les questions « Extra » vont au-delà du cours.</footer>
   </div>
 
-  <script src="../cahier.js?v=10"></script>
+  <script src="../cahier.js?v=11"></script>
   <script>
     (() => {
       const banques = {};
@@ -74,8 +79,8 @@
         MATIERES.forEach((m) => {
           const b = banques[m.slug];
           if (!b) return;
-          b.cahier.forEach((q) => cahier.push({ ...q, matiere: m.nom }));
-          (b.extra || []).forEach((q) => extra.push({ ...q, matiere: m.nom }));
+          b.cahier.forEach((q) => cahier.push({ ...q, matiere: m.nom, slug: m.slug }));
+          (b.extra || []).forEach((q) => extra.push({ ...q, matiere: m.nom, slug: m.slug }));
         });
         return { cahier, extra };
       }
@@ -84,7 +89,8 @@
         const m = MATIERES.find((x) => x.slug === slug);
         if (!m && slug !== "tout") return;
         choix.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.slug === slug ? "true" : "false"));
-        history.replaceState(null, "", "?m=" + slug);
+        const mode = document.querySelector('input[name="quizMode"]:checked');
+        history.replaceState(null, "", "?m=" + slug + (mode && mode.value !== "qcm" ? "&mode=" + mode.value : ""));
         zone.hidden = false;
         if (m) {
           titre.textContent = "Quiz · " + m.nom;
@@ -94,7 +100,7 @@
           lien.href = "../" + m.slug + "/";
           lien.textContent = "Relire le cours de " + m.nom;
           rappel.appendChild(lien);
-          Cahier.lancerQuiz(banques[slug]);
+          Cahier.lancerQuiz({ ...banques[slug], slug: m.slug });
         } else {
           titre.textContent = "Quiz · toutes les matières";
           rappel.textContent = "Questions mélangées de toutes les matières : idéal pour une révision générale, une fois les cours relus.";
@@ -121,7 +127,16 @@
           });
           choix.appendChild(b);
         });
-        const demande = new URLSearchParams(location.search).get("m");
+        document.querySelectorAll('input[name="quizMode"]').forEach((input) => {
+          input.addEventListener("change", () => {
+            const m = new URLSearchParams(location.search).get("m");
+            if (m) history.replaceState(null, "", "?m=" + m + (input.value !== "qcm" ? "&mode=" + input.value : ""));
+          });
+        });
+        const params = new URLSearchParams(location.search);
+        const modeDemande = document.querySelector('input[name="quizMode"][value="' + params.get("mode") + '"]');
+        if (modeDemande) modeDemande.checked = true;
+        const demande = params.get("m");
         if (demande) choisir(demande);
       });
     })();

@@ -2,7 +2,7 @@ window.QUIZ = {};
 QUIZ.cahier = [
   {
     q: "Qu’est-ce que l’abscisse d’un point ?",
-    choices: ["Le nombre qui correspond à sa place sur une droite graduée", "La longueur de la droite", "Le nom du point", "L’unité de référence"],
+    choices: ["Le nombre qui correspond à sa place sur une droite graduée", "La distance entre deux graduations voisines", "Le nombre de graduations de la droite", "L’unité de référence"],
     answer: 0,
     why: "L’abscisse est le nombre correspondant à l’emplacement du point sur la droite graduée."
   },
@@ -56,19 +56,19 @@ QUIZ.cahier = [
   },
   {
     q: "Quel est l’inverse de 2/3 ?",
-    choices: ["−2/3", "3/2", "2/3", "1/3"],
+    choices: ["−2/3", "3/2", "−3/2", "1/3"],
     answer: 1,
     why: "L’inverse de a/b est b/a."
   },
   {
     q: "Diviser par un nombre revient à…",
-    choices: ["multiplier par son inverse", "soustraire ce nombre", "multiplier par son opposé", "ajouter son inverse"],
+    choices: ["multiplier par son inverse", "diviser par son inverse", "multiplier par son opposé", "diviser par son opposé"],
     answer: 0,
     why: "Propriété 7 du cahier d’exercices."
   },
   {
     q: "Une fraction est supérieure à l’unité quand…",
-    choices: ["le numérateur est supérieur au dénominateur", "le dénominateur est supérieur au numérateur", "elle est négative", "le numérateur vaut 1"],
+    choices: ["le numérateur est supérieur au dénominateur", "le dénominateur est supérieur au numérateur", "le numérateur est égal au dénominateur", "le dénominateur est supérieur à 1"],
     answer: 0,
     why: "Exemple : 4/3 est plus grand que 1."
   },
@@ -80,13 +80,13 @@ QUIZ.cahier = [
   },
   {
     q: "Combien vaut √0,16 ?",
-    choices: ["0,04", "0,4", "0,8", "4"],
+    choices: ["0,04", "0,4", "0,8", "0,0256"],
     answer: 1,
     why: "0,4² = 0,16 et 0,4 est positif."
   },
   {
     q: "Combien vaut √16 ?",
-    choices: ["8", "4", "1", "256"],
+    choices: ["8", "4", "−4", "256"],
     answer: 1,
     why: "4² = 16 et 4 est positif."
   },
@@ -128,13 +128,13 @@ QUIZ.cahier = [
   },
   {
     q: "Au collège, la racine carrée d’un nombre négatif…",
-    choices: ["est négative", "n’est pas définie", "vaut 0", "est égale au nombre"],
+    choices: ["est négative", "n’est pas définie", "est l’opposé de la racine carrée de son opposé", "vaut 0"],
     answer: 1,
     why: "La calculatrice affiche un message d’erreur."
   },
   {
     q: "Combien vaut 12² ?",
-    choices: ["24", "122", "144", "124"],
+    choices: ["24", "121", "144", "169"],
     answer: 2,
     why: "12 × 12 = 144 : la ligne des carrés à connaître par cœur."
   },
@@ -170,7 +170,7 @@ QUIZ.cahier = [
   },
   {
     q: "Pour calculer un côté de l’angle droit, on fait…",
-    choices: ["une addition des carrés", "une soustraction : hypoténuse² − autre côté²", "une multiplication", "une division par 2"],
+    choices: ["une addition des carrés", "une soustraction : hypoténuse² − autre côté²", "une soustraction : autre côté² − hypoténuse²", "une soustraction : hypoténuse − autre côté"],
     answer: 1,
     why: "Remarque du cours : on utilise une soustraction."
   },
@@ -188,7 +188,7 @@ QUIZ.cahier = [
   },
   {
     q: "L’égalité de Pythagore n’est pas vérifiée. On conclut avec…",
-    choices: ["la réciproque : le triangle est rectangle", "la contraposée : le triangle n’est pas rectangle", "le théorème : on calcule une longueur", "rien du tout"],
+    choices: ["la réciproque : le triangle est rectangle", "la contraposée : le triangle n’est pas rectangle", "le théorème : on calcule une longueur", "la réciproque : le triangle n’est pas rectangle"],
     answer: 1,
     why: "Contraposée : si l’égalité n’est pas vérifiée, le triangle ne peut pas être rectangle."
   },
@@ -206,7 +206,7 @@ QUIZ.cahier = [
   },
   {
     q: "Avant de tester un triangle, quel côté repère-t-on ?",
-    choices: ["Le plus petit", "Le plus grand", "N’importe lequel", "Le côté horizontal"],
+    choices: ["Le plus petit", "Le plus grand", "N’importe lequel", "Les deux plus petits"],
     answer: 1,
     why: "Le plus grand côté serait l’hypoténuse."
   },
@@ -224,7 +224,7 @@ QUIZ.cahier = [
   },
   {
     q: "Hypoténuse 17, un côté 15 : l’autre côté mesure…",
-    choices: ["2", "8", "√514", "32"],
+    choices: ["2", "8", "√514", "64"],
     answer: 1,
     why: "17² − 15² = 289 − 225 = 64, √64 = 8."
   },
@@ -290,7 +290,7 @@ QUIZ.cahier = [
   },
   {
     q: "25 m/s, c’est…",
-    choices: ["25 km/h", "90 km/h", "250 km/h", "9 km/h"],
+    choices: ["25 km/h", "90 km/h", "250 km/h", "6,9 km/h"],
     answer: 1,
     why: "25 m × 3 600 = 90 000 m = 90 km en une heure."
   },
@@ -338,13 +338,13 @@ QUIZ.cahier = [
   },
   {
     q: "Marche arrière : multiplier par 3, ajouter 6, multiplier par 2 donne −42. Le nombre de départ est…",
-    choices: ["−9", "−21", "−27", "−4"],
+    choices: ["−9", "−21", "−27", "−10"],
     answer: 0,
     why: "−42 : 2 = −21, −21 − 6 = −27, −27 : 3 = −9."
   },
   {
     q: "Pour faire une « marche arrière » dans une machine de calcul, on…",
-    choices: ["refait les mêmes opérations", "fait les opérations contraires, en partant de la fin", "change l’ordre au hasard", "ajoute 1"],
+    choices: ["refait les mêmes opérations", "fait les opérations contraires, en partant de la fin", "fait les opérations contraires, dans le même ordre", "refait les mêmes opérations, en partant de la fin"],
     answer: 1,
     why: "Une division défait une multiplication, une soustraction défait une addition."
   },
@@ -392,7 +392,7 @@ QUIZ.cahier = [
   },
   {
     q: "34/20 est-il un nombre décimal ?",
-    choices: ["Oui, 1,7", "Non", "Oui, 3,42", "Oui, 0,58"],
+    choices: ["Oui, 1,7", "Non", "Oui, 0,17", "Oui, 0,58"],
     answer: 0,
     why: "34/20 = 17/10 = 1,7."
   },
@@ -431,7 +431,7 @@ QUIZ.extra = [
   },
   {
     q: "Une tablette babylonienne prouve que la relation était connue vers…",
-    choices: ["1800 avant J.-C.", "500 après J.-C.", "1492", "1789"],
+    choices: ["1800 avant J.-C.", "600 avant J.-C.", "500 après J.-C.", "1500 après J.-C."],
     answer: 0,
     why: "La tablette Plimpton 322, bien avant Pythagore."
   },
@@ -449,7 +449,7 @@ QUIZ.extra = [
   },
   {
     q: "Entre quels entiers se trouve √40 ?",
-    choices: ["4 et 5", "6 et 7", "19 et 21", "7 et 8"],
+    choices: ["4 et 5", "6 et 7", "5 et 6", "7 et 8"],
     answer: 1,
     why: "6² = 36 et 7² = 49."
   },
@@ -473,7 +473,7 @@ QUIZ.extra = [
   },
   {
     q: "f : x ↦ 4x + 5 se lit…",
-    choices: ["f est égale à x", "f est la fonction qui à x associe 4x + 5", "f vaut 9x", "x est l’image de f"],
+    choices: ["f est l’image de 4x + 5", "f est la fonction qui à x associe 4x + 5", "f vaut 9x", "x est l’image de f"],
     answer: 1,
     why: "La flèche ↦ se lit « associe »."
   },

@@ -6,14 +6,14 @@ QUIZ.cahier = [
       "Organe effecteur → nerf sensitif → cerveau → organe récepteur",
       "Organe récepteur → nerf sensitif → centre nerveux → nerf moteur → organe effecteur",
       "Centre nerveux → organe récepteur → nerf moteur → muscle",
-      "Nerf moteur → organe récepteur → nerf sensitif → muscle"
+      "Organe récepteur → nerf moteur → centre nerveux → nerf sensitif → muscle"
     ],
     answer: 1,
     why: "Le récepteur capte le stimulus, le nerf sensitif amène le message au centre nerveux, le nerf moteur l’envoie au muscle."
   },
   {
     q: "Comment s’appellent les zones spécialisées du cerveau ?",
-    choices: ["Les synapses", "Les aires cérébrales", "Les dendrites", "Les vésicules"],
+    choices: ["Les réseaux de neurones", "Les aires cérébrales", "Les gaines de myéline", "Les centres nerveux"],
     answer: 1,
     why: "Aires cérébrales : motricité, langage, vision, audition."
   },
@@ -26,10 +26,10 @@ QUIZ.cahier = [
   {
     q: "Qu’est-ce que la plasticité cérébrale ?",
     choices: [
-      "La capacité du cerveau à se modifier et à s’adapter",
-      "La couleur du cerveau à l’IRM",
-      "Le blocage des récepteurs",
-      "La vitesse de l’influx nerveux"
+      "La capacité du cerveau à se modifier et s’adapter",
+      "La capacité des neurones à se diviser pour se multiplier",
+      "Le blocage des récepteurs du neurone postsynaptique",
+      "La vitesse de circulation de l’influx nerveux dans l’axone"
     ],
     answer: 0,
     why: "Les connexions entre neurones se modifient au cours de la vie, comme pour Alain après sa rééducation."
@@ -49,10 +49,10 @@ QUIZ.cahier = [
   {
     q: "Que se passe-t-il au niveau de la synapse ?",
     choices: [
-      "Le message reste électrique",
+      "Le message reste électrique et saute d’un neurone à l’autre",
       "Le message devient chimique grâce au neurotransmetteur",
-      "Le message s’arrête toujours",
-      "Le neurone se divise"
+      "Le message repart en sens inverse vers le neurone précédent",
+      "Le message électrique est amplifié par la gaine de myéline"
     ],
     answer: 1,
     why: "Le neurotransmetteur traverse l’espace synaptique et déclenche un nouveau message électrique."
@@ -65,7 +65,7 @@ QUIZ.cahier = [
   },
   {
     q: "À quoi sert l’IRM fonctionnelle ?",
-    choices: ["À visualiser l’activité des aires cérébrales pendant une tâche", "À mesurer la taille des os", "À compter les neurones", "À soigner une lésion"],
+    choices: ["À voir les aires cérébrales actives pendant une tâche", "À compter le nombre de neurones dans chaque aire cérébrale", "À mesurer la vitesse de l’influx nerveux dans les nerfs", "À observer la forme des neurones et de leurs synapses"],
     answer: 0,
     why: "L’imagerie médicale montre les aires actives lors de la réalisation d’une tâche."
   },
@@ -95,7 +95,7 @@ QUIZ.cahier = [
   },
   {
     q: "Quels organes forment les centres nerveux ?",
-    choices: ["Le cœur et les poumons", "Le cerveau et la moelle épinière", "Les yeux et les oreilles", "Les muscles"],
+    choices: ["Les nerfs sensitifs et les nerfs moteurs", "Le cerveau et la moelle épinière", "Les organes récepteurs et les organes effecteurs", "Le cerveau et les nerfs"],
     answer: 1,
     why: "Centre nerveux : cerveau et moelle épinière."
   },
@@ -113,7 +113,7 @@ QUIZ.cahier = [
   },
   {
     q: "Comment Alain a-t-il pu remarcher après son accident ?",
-    choices: ["Son cerveau s’est adapté grâce à la rééducation", "Ses neurones ont disparu", "Il a changé de jambe", "Sans rien faire"],
+    choices: ["Son cerveau s’est adapté grâce à la rééducation", "Ses neurones détruits ont repoussé", "Sa moelle épinière a remplacé son cerveau", "Ses muscles ont guéri sans le cerveau"],
     answer: 0,
     why: "Les zones activées ont changé : c’est la plasticité cérébrale."
   },
@@ -131,13 +131,13 @@ QUIZ.cahier = [
   },
   {
     q: "Les récepteurs du neurone postsynaptique sont bloqués. Que se passe-t-il ?",
-    choices: ["Le muscle se contracte plus fort", "Le message ne passe pas, pas de contraction", "Le message passe normalement", "Le neurone grandit"],
+    choices: ["Le muscle se contracte plus fort", "Le message ne passe pas, pas de contraction", "Le message passe, le muscle se contracte", "Le message repart vers le premier neurone"],
     answer: 1,
     why: "Document 3 : sans récepteurs fonctionnels, aucune contraction."
   },
   {
     q: "Comment les neurones sont-ils organisés ?",
-    choices: ["Isolés les uns des autres", "Reliés entre eux en réseaux", "Rangés dans le muscle", "Collés à l’os"],
+    choices: ["Isolés les uns des autres, sans contact", "Reliés entre eux en réseaux", "Alignés en une seule chaîne, bout à bout", "Collés entre eux, sans espace synaptique"],
     answer: 1,
     why: "Les neurones sont reliés entre eux en réseaux."
   },
@@ -149,31 +149,31 @@ QUIZ.cahier = [
   },
   {
     q: "D’après l’exercice 2, à quoi sert la relaxation ?",
-    choices: ["À diminuer le stress et mieux se concentrer", "À courir plus vite", "À dormir en classe", "À rien"],
+    choices: ["À diminuer le stress et mieux se concentrer", "À s’endormir plus vite le soir après les écrans", "À accélérer la circulation de l’influx nerveux", "À remplacer les heures de sommeil manquantes"],
     answer: 0,
-    why: "Réponse de Ruben : on se concentre plus et on diminue le stress."
+    why: "Réponse du cahier : on se concentre plus et on diminue le stress."
   },
   {
     q: "Fiche méthode : que signifie le rouge dans le cahier ?",
-    choices: ["Les activités", "Les leçons à comprendre", "Les définitions, titres et conclusions à apprendre par cœur", "Les erreurs"],
+    choices: ["Les activités et exercices faits en classe", "Les leçons à comprendre, sans les apprendre par cœur", "Les définitions et conclusions à apprendre par cœur", "Les corrections d’erreurs notées par la professeure"],
     answer: 2,
     why: "Rouge : à apprendre par cœur. Bleu : à comprendre. Noir : les activités."
   },
   {
     q: "Fiche méthode : que signifie le bleu ?",
-    choices: ["Les leçons, à comprendre", "Les définitions", "Les corrections", "Les dates"],
+    choices: ["Les leçons, à comprendre", "Les définitions à apprendre par cœur", "Les corrections des exercices", "Les activités faites en classe"],
     answer: 0,
     why: "Bleu : les leçons, à comprendre."
   },
   {
     q: "Quand relire la leçon, d’après la fiche méthode ?",
-    choices: ["Seulement la veille du contrôle", "Le soir même, puis la veille du cours suivant", "Pendant les vacances", "Jamais"],
+    choices: ["Seulement la veille du contrôle", "Le soir même, puis la veille du cours suivant", "Uniquement pendant le cours suivant", "Le week-end, quand on a plus de temps"],
     answer: 1,
     why: "Le soir même, puis la veille du cours suivant."
   },
   {
     q: "Définition en rouge : qu’est-ce que la synapse ?",
-    choices: ["Une cellule du cerveau", "La zone de contact entre deux neurones", "Un muscle", "Une aire cérébrale"],
+    choices: ["La cellule nerveuse qui transmet l’influx nerveux", "La zone de contact entre deux neurones", "Le prolongement du neurone qui conduit le message", "La zone du cerveau spécialisée dans une fonction"],
     answer: 1,
     why: "Synapse : zone de contact entre deux neurones."
   }
@@ -188,49 +188,49 @@ QUIZ.extra = [
   },
   {
     q: "Pour bouger l’index droit, quel hémisphère s’active ?",
-    choices: ["Le droit", "Le gauche", "Les deux autant", "Aucun"],
+    choices: ["L’hémisphère droit", "L’hémisphère gauche", "Les deux hémisphères autant", "La moelle épinière seule"],
     answer: 1,
     why: "La commande est croisée : l’hémisphère gauche commande le côté droit."
   },
   {
     q: "À quoi sert la gaine de myéline ?",
-    choices: ["À accélérer l’influx nerveux", "À fabriquer le neurotransmetteur", "À recevoir le message", "À nourrir le muscle"],
+    choices: ["À accélérer l’influx nerveux", "À fabriquer le neurotransmetteur", "À recevoir le message", "À relier deux neurones entre eux"],
     answer: 0,
     why: "Elle isole l’axone et accélère le message."
   },
   {
     q: "Lors du retrait de la main d’une plaque chaude, quel centre nerveux renvoie l’ordre le plus vite ?",
-    choices: ["Le cerveau", "La moelle épinière", "L’œil", "Le muscle"],
+    choices: ["Le cerveau", "La moelle épinière", "Le récepteur de la peau", "Le muscle du bras"],
     answer: 1,
     why: "C’est un réflexe : la moelle épinière répond sans attendre le cerveau."
   },
   {
     q: "Que fait le curare ?",
-    choices: ["Il bloque les récepteurs des muscles", "Il accélère l’influx nerveux", "Il soigne le cerveau", "Il favorise le sommeil"],
+    choices: ["Il bloque les récepteurs des muscles", "Il accélère l’influx nerveux", "Il libère plus d’acétylcholine", "Il favorise l’endormissement"],
     answer: 0,
     why: "Le message ne passe plus : les muscles sont paralysés."
   },
   {
     q: "Quel neurotransmetteur commande la contraction des muscles ?",
-    choices: ["La dopamine", "L’acétylcholine", "La mélatonine", "La nicotine"],
+    choices: ["La noradrénaline", "L’acétylcholine", "La mélatonine", "La nicotine"],
     answer: 1,
     why: "L’acétylcholine. La nicotine lui ressemble."
   },
   {
     q: "Pourquoi les écrans le soir gênent-ils l’endormissement ?",
-    choices: ["Leur lumière retarde la mélatonine", "Ils refroidissent la pièce", "Ils font du bruit", "Ils bloquent les muscles"],
+    choices: ["Leur lumière retarde la mélatonine", "Leur lumière accélère l’influx nerveux", "Ils fatiguent les muscles des yeux", "Ils bloquent les récepteurs des neurones"],
     answer: 0,
     why: "La mélatonine est l’hormone qui aide à s’endormir."
   },
   {
     q: "Combien d’heures de sommeil conseille-t-on à l’adolescence ?",
-    choices: ["5 à 6 heures", "8 à 10 heures", "12 à 14 heures", "Peu importe"],
+    choices: ["5 à 6 heures", "8 à 10 heures", "12 à 14 heures", "6 à 7 heures"],
     answer: 1,
     why: "Entre 8 et 10 heures par nuit."
   },
   {
     q: "Que détecte vraiment l’IRM fonctionnelle ?",
-    choices: ["Les neurones un par un", "Les zones où le sang apporte plus d’oxygène", "Les os du crâne", "Les pensées"],
+    choices: ["Les messages électriques de chaque neurone", "Les zones où le sang apporte plus d’oxygène", "Les neurotransmetteurs libérés dans les synapses", "La forme et la taille des aires cérébrales"],
     answer: 1,
     why: "Les neurones actifs consomment plus d’oxygène."
   },

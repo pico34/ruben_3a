@@ -150,7 +150,9 @@
     return copy;
   }
 
-  // bank : { cahier: [...], extra: [...] } ; chaque question peut porter « matiere » (affiché en mode mélangé).
+  // bank : { cahier: [...], extra: [...], slug? } ; chaque question peut porter « matiere » et « slug »
+  // (mode mélangé). Deux modes : « qcm » (4 choix) et « cartes » (question seule, réponse cachée,
+  // auto-évaluation), choisis par les boutons radio name="quizMode" s'ils existent.
   function lancerQuiz(bank) {
     const root = document.getElementById("quiz");
     if (!bank || !root) return;
@@ -158,23 +160,79 @@
     const scoreEl = document.getElementById("score");
     const nouveau = document.getElementById("quizNouveau");
     const avecExtra = document.getElementById("quizExtra");
+    const total = document.getElementById("quizTotal");
+    const modes = Array.from(document.querySelectorAll('input[name="quizMode"]'));
 
-    function tirage() {
+    function modeActif() {
+      const coche = modes.find((input) => input.checked);
+      return coche ? coche.value : "qcm";
+    }
+
+    function reserve() {
       const pool = bank.cahier.map((item) => ({ ...item, extra: false }));
       if (avecExtra && avecExtra.checked && bank.extra) {
         bank.extra.forEach((item) => pool.push({ ...item, extra: true }));
       }
-      const questions = shuffle(pool).slice(0, Math.min(size, pool.length));
+      return pool;
+    }
+
+    function titreDe(item, numero) {
+      const title = el("h3", {}, (numero ? numero + ". " : "") + item.q);
+      if (item.matiere) title.append(" ", el("span", { class: "badge-matiere" }, item.matiere));
+      if (item.extra) title.append(" ", el("span", { class: "badge-extra" }, "Extra"));
+      return title;
+    }
+
+    function lienCours(item) {
+      const cible = item.slug || bank.slug;
+      if (!cible) return null;
+      const nom = item.matiere || (MATIERES.find((m) => m.slug === cible) || {}).nom || "";
+      return el("a", { class: "lien-cours", href: base + cible + "/" }, "Relire le cours" + (nom ? " de " + nom : ""));
+    }
+
+    // Bilan de fin : les questions ratées, leur bonne réponse, et le lien vers le cours.
+    function bilan(questions, ratees, libelle) {
+      const bloc = el("div", { class: "bilan" });
+      const reussies = questions.length - ratees.length;
+      bloc.appendChild(el("h3", {}, "Bilan : " + reussies + " / " + questions.length));
+      if (!ratees.length) {
+        bloc.appendChild(el("p", {}, "Tout juste. Tu peux ajouter les questions Extra, changer de matière ou passer aux cartes."));
+      } else {
+        bloc.appendChild(el("p", {}, libelle + " Relis la carte du cours correspondante avant de recommencer."));
+        const liste = el("ul");
+        ratees.forEach((item) => {
+          const li = el("li");
+          li.appendChild(el("strong", {}, item.q));
+          li.appendChild(el("p", { class: "bonne" }, item.choices[item.answer]));
+          if (item.why) li.appendChild(el("p", { class: "why" }, item.why));
+          const lien = lienCours(item);
+          if (lien) li.appendChild(lien);
+          liste.appendChild(li);
+        });
+        bloc.appendChild(liste);
+      }
+      const actions = el("div", { class: "quiz-actions" });
+      if (ratees.length) {
+        const refaire = el("button", { type: "button" }, ratees.length > 1 ? "Refaire ces " + ratees.length + " questions" : "Refaire cette question");
+        refaire.addEventListener("click", () => tirage(shuffle(ratees)));
+        actions.appendChild(refaire);
+      }
+      const autre = el("button", { type: "button", class: "secondaire" }, "Nouveau tirage");
+      autre.addEventListener("click", () => tirage());
+      actions.appendChild(autre);
+      bloc.appendChild(actions);
+      root.appendChild(bloc);
+      bloc.scrollIntoView({ block: "nearest" });
+    }
+
+    function qcm(questions) {
       let score = 0;
       let faites = 0;
-      root.innerHTML = "";
+      const ratees = [];
       scoreEl.textContent = "0 / " + questions.length;
 
       questions.forEach((item, index) => {
         const block = el("div", { class: "q" });
-        const title = el("h3", {}, (index + 1) + ". " + item.q);
-        if (item.matiere) title.append(" ", el("span", { class: "badge-matiere" }, item.matiere));
-        if (item.extra) title.append(" ", el("span", { class: "badge-extra" }, "Extra"));
         const choices = el("div", { class: "choices" });
         const why = el("p", { class: "why" });
         why.hidden = true;
@@ -192,24 +250,85 @@
               if (candidate.dataset.good) candidate.classList.add("good");
             });
             if (choice.good) score += 1;
-            else button.classList.add("bad");
+            else {
+              button.classList.add("bad");
+              ratees.push(item);
+            }
             why.hidden = false;
             why.textContent = item.why;
             scoreEl.textContent = score + " / " + questions.length;
-            if (faites === questions.length && nouveau) nouveau.focus({ preventScroll: true });
+            if (faites === questions.length) bilan(questions, ratees, "Les questions ratées :");
           });
           choices.appendChild(button);
         });
-        block.append(title, choices, why);
+        block.append(titreDe(item, index + 1), choices, why);
         root.appendChild(block);
       });
-
-      const total = document.getElementById("quizTotal");
-      if (total) total.textContent = pool.length;
     }
 
-    if (nouveau) nouveau.onclick = tirage;
-    if (avecExtra) avecExtra.onchange = tirage;
+    function cartes(questions) {
+      let position = 0;
+      let sues = 0;
+      const aRevoir = [];
+      scoreEl.textContent = "0 / " + questions.length;
+      root.appendChild(el("p", { class: "consigne-cartes" },
+        "Lis la question, réponds dans ta tête ou à l’écrit, puis retourne la carte. Sois honnête : « À revoir » est une bonne réponse."));
+      const scene = el("div");
+      root.appendChild(scene);
+
+      function montrer() {
+        scene.innerHTML = "";
+        if (position >= questions.length) {
+          bilan(questions, aRevoir, "Les cartes à revoir :");
+          return;
+        }
+        const item = questions[position];
+        const carte = el("div", { class: "carte" });
+        carte.appendChild(el("p", { class: "carte-progression" }, "Carte " + (position + 1) + " / " + questions.length));
+        carte.appendChild(titreDe(item));
+        const reponse = el("div", { class: "carte-reponse" });
+        reponse.hidden = true;
+        reponse.appendChild(el("p", { class: "bonne" }, item.choices[item.answer]));
+        if (item.why) reponse.appendChild(el("p", { class: "why" }, item.why));
+        const actions = el("div", { class: "quiz-actions carte-actions" });
+        const voir = el("button", { type: "button" }, "Retourner la carte");
+        voir.addEventListener("click", () => {
+          reponse.hidden = false;
+          actions.innerHTML = "";
+          const su = el("button", { type: "button", class: "ok" }, "Je savais");
+          const revoir = el("button", { type: "button", class: "revoir" }, "À revoir");
+          su.addEventListener("click", () => { sues += 1; suivant(); });
+          revoir.addEventListener("click", () => { aRevoir.push(item); suivant(); });
+          actions.append(su, revoir);
+          su.focus({ preventScroll: true });
+        });
+        actions.appendChild(voir);
+        carte.append(reponse, actions);
+        scene.appendChild(carte);
+      }
+
+      function suivant() {
+        position += 1;
+        scoreEl.textContent = sues + " / " + questions.length;
+        montrer();
+      }
+
+      montrer();
+    }
+
+    function tirage(forcees) {
+      const pool = reserve();
+      if (total) total.textContent = pool.length;
+      const questions = forcees || shuffle(pool).slice(0, Math.min(size, pool.length));
+      root.innerHTML = "";
+      root.dataset.mode = modeActif();
+      if (modeActif() === "cartes") cartes(questions);
+      else qcm(questions);
+    }
+
+    if (nouveau) nouveau.onclick = () => tirage();
+    if (avecExtra) avecExtra.onchange = () => tirage();
+    modes.forEach((input) => { input.onchange = () => tirage(); });
     tirage();
   }
 
