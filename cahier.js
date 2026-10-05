@@ -31,11 +31,15 @@
     if (m.slug === slug) lien.setAttribute("aria-current", "page");
     puces.appendChild(lien);
   });
+  const lienReussir = el("a", { class: "puce puce-reussir", href: base + "comment-reussir/" }, "Comment réussir");
+  if (page === "methodes") lienReussir.setAttribute("aria-current", "page");
+  puces.appendChild(lienReussir);
   const quizHref = base + "quiz/" + (slug ? "?m=" + slug : "");
   const lienQuiz = el("a", { class: "puce puce-quiz", href: quizHref }, "Quiz");
   if (page === "quiz") lienQuiz.setAttribute("aria-current", "page");
   puces.appendChild(lienQuiz);
-  const actuel = (MATIERES.find((m) => m.slug === slug) || {}).nom || (page === "quiz" ? "Quiz" : "Matières");
+  const actuel = (MATIERES.find((m) => m.slug === slug) || {}).nom
+    || (page === "quiz" ? "Quiz" : page === "methodes" ? "Réussir" : "Matières");
   const menu = el("button", { type: "button", class: "barre-menu", "aria-expanded": "false" }, actuel + " ▾");
   menu.addEventListener("click", () => {
     const ouvert = barre.classList.toggle("menu-ouvert");
