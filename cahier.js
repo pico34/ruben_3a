@@ -31,7 +31,7 @@
     if (m.slug === slug) lien.setAttribute("aria-current", "page");
     puces.appendChild(lien);
   });
-  const lienReussir = el("a", { class: "puce puce-reussir", href: base + "comment-reussir/" }, "Comment réussir");
+  const lienReussir = el("a", { class: "puce puce-reussir", href: base + "comment-reussir/" }, "Réussir au brevet");
   if (page === "methodes") lienReussir.setAttribute("aria-current", "page");
   puces.appendChild(lienReussir);
   const quizHref = base + "quiz/" + (slug ? "?m=" + slug : "");
