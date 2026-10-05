@@ -23,7 +23,7 @@
 
   const barre = el("nav", { class: "barre", "aria-label": "Navigation du site" });
   const ligne = el("div", { class: "barre-ligne" });
-  const accueil = el("a", { class: "barre-accueil", href: base || "./" }, "Objectif brevet");
+  const accueil = el("a", { class: "barre-accueil", href: base || "./" }, "Révisions 3e A");
   if (page === "accueil") accueil.setAttribute("aria-current", "page");
   const puces = el("div", { class: "barre-puces" });
   MATIERES.forEach((m) => {
