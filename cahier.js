@@ -21,9 +21,9 @@
     return node;
   }
 
-  const barre = el("nav", { class: "barre", "aria-label": "Navigation du cahier" });
+  const barre = el("nav", { class: "barre", "aria-label": "Navigation du site" });
   const ligne = el("div", { class: "barre-ligne" });
-  const accueil = el("a", { class: "barre-accueil", href: base || "./" }, "Cahier");
+  const accueil = el("a", { class: "barre-accueil", href: base || "./" }, "Objectif brevet");
   if (page === "accueil") accueil.setAttribute("aria-current", "page");
   const puces = el("div", { class: "barre-puces" });
   MATIERES.forEach((m) => {
@@ -35,12 +35,22 @@
   const lienQuiz = el("a", { class: "puce puce-quiz", href: quizHref }, "Quiz");
   if (page === "quiz") lienQuiz.setAttribute("aria-current", "page");
   puces.appendChild(lienQuiz);
-  ligne.append(accueil, puces);
+  const actuel = (MATIERES.find((m) => m.slug === slug) || {}).nom || (page === "quiz" ? "Quiz" : "Matières");
+  const menu = el("button", { type: "button", class: "barre-menu", "aria-expanded": "false" }, actuel + " ▾");
+  menu.addEventListener("click", () => {
+    const ouvert = barre.classList.toggle("menu-ouvert");
+    menu.setAttribute("aria-expanded", ouvert ? "true" : "false");
+  });
+  puces.addEventListener("click", () => barre.classList.remove("menu-ouvert"));
+  document.addEventListener("click", (event) => {
+    if (!barre.contains(event.target)) {
+      barre.classList.remove("menu-ouvert");
+      menu.setAttribute("aria-expanded", "false");
+    }
+  });
+  ligne.append(accueil, menu, puces);
   barre.appendChild(ligne);
   body.prepend(barre);
-
-  const courante = puces.querySelector('[aria-current="page"]');
-  if (courante) puces.scrollLeft = courante.offsetLeft - puces.offsetWidth / 2 + courante.offsetWidth / 2;
 
   const toolbar = document.querySelector(".toolbar");
   const VUES = ["complet", "synthese", "extra"];

@@ -267,6 +267,19 @@ footer { padding: 8px 0 40px; color: var(--muted); font-size: 13px; }
   -webkit-overflow-scrolling: touch;
 }
 .barre-puces::-webkit-scrollbar { display: none; }
+.barre-menu {
+  display: none;
+  margin-left: auto;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  color: white;
+  padding: 6px 12px;
+}
 .puce {
   flex: none;
   font-size: 13px;
@@ -371,6 +384,26 @@ footer { padding: 8px 0 40px; color: var(--muted); font-size: 13px; }
   .timeline li, .defs, .stats { grid-template-columns: 1fr; }
   .quiz-head { flex-direction: column; align-items: start; }
   .barre-ligne { width: calc(100% - 20px); }
+  .barre-menu { display: inline-block; }
+  .barre-puces {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    right: 10px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    overflow: visible;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
+  .barre.menu-ouvert .barre-puces { display: flex; }
+  .puce { font-size: 14px; padding: 8px 14px; }
+  .barre-sommaire, .barre-vues button { padding: 6px 11px; }
   .barre-accueil { font-size: 16px; }
   header.top { padding-top: 18px; }
 }

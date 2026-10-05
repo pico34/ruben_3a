@@ -157,7 +157,7 @@ QUIZ.cahier = [
     why: "Ils sont classés selon Z."
   },
   {
-    q: "Méthode : que faut-il repérer en premier dans une consigne ?",
+    q: "Méthode : que faut-il repérer dans une consigne ?",
     choices: ["Les verbes d’action", "Le nombre de lignes", "La couleur du texte", "Le nom du professeur"],
     answer: 0,
     why: "Décrire, démontrer, comparer, déduire, justifier, calculer…"

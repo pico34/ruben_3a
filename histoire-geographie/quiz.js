@@ -100,7 +100,7 @@ QUIZ.cahier = [
     q: "Combien de morts le cours donne-t-il pour le génocide arménien ?",
     choices: ["300 000", "1,5 million", "10 millions", "70 millions"],
     answer: 1,
-    why: "1,5 million, soit environ les deux tiers de la communauté arménienne de Turquie."
+    why: "1,5 million, soit environ les deux tiers de la communauté arménienne de l’Empire ottoman."
   },
   {
     q: "Où les Arméniens sont-ils déportés ?",
@@ -116,7 +116,7 @@ QUIZ.cahier = [
   },
   {
     q: "Qui dirige les bolcheviks en octobre 1917 ?",
-    choices: ["Le tsar", "Lénine et Trotski", "Les spartakistes", "Le gouvernement turc"],
+    choices: ["Le tsar", "Lénine et Trotski", "Les spartakistes", "Le gouvernement ottoman"],
     answer: 1,
     why: "Les bolcheviks, menés par Lénine et Trotski, prennent le pouvoir les 24 et 25 octobre 1917."
   },
@@ -130,13 +130,13 @@ QUIZ.cahier = [
     q: "Combien l’Allemagne doit-elle payer d’après le traité de Versailles ?",
     choices: ["1,5 million de francs", "132 milliards de marks", "10 millions de dollars", "Rien"],
     answer: 1,
-    why: "Elle est jugée responsable et doit payer 132 milliards de marks."
+    why: "Elle est jugée responsable et doit payer des réparations, fixées en 1921 à 132 milliards de marks-or."
   },
   {
     q: "Quelle région l’Allemagne rend-elle à la France ?",
     choices: ["La Rhénanie", "L’Alsace-Lorraine", "La Belgique", "Le couloir de Dantzig"],
     answer: 1,
-    why: "L’Alsace-Lorraine, prise par la Prusse en 1870."
+    why: "L’Alsace-Lorraine, annexée par l’Allemagne en 1871."
   },
   {
     q: "À quel pays est donné le couloir de Dantzig ?",
@@ -286,7 +286,7 @@ QUIZ.cahier = [
     q: "Quelle famine le cours attribue-t-il à Staline ?",
     choices: ["En Ukraine, en 1933", "En Allemagne, en 1919", "En France, en 1916", "En Sibérie, en 1953"],
     answer: 0,
-    why: "Staline orchestre une famine en Ukraine : 6 millions de morts en 1933, d’après le cours."
+    why: "Staline orchestre une famine en Ukraine : 6 millions de morts en 1932-1933, d’après le cours."
   },
   {
     q: "Combien de déportés entre 1929 et 1953, d’après le cours ?",

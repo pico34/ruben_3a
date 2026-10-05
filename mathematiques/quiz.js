@@ -118,7 +118,7 @@ QUIZ.cahier = [
     q: "Quelles sont les solutions de x² = 225 ?",
     choices: ["15 seulement", "15 et −15", "112,5", "Aucune"],
     answer: 1,
-    why: "x² = a a deux solutions : √a et −√a."
+    why: "Pour a > 0, x² = a a deux solutions : √a et −√a."
   },
   {
     q: "Quelles sont les solutions de x² = 0,49 ?",

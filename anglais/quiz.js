@@ -43,7 +43,7 @@ QUIZ.extra = [
   { q: "Pourquoi les Américains écrivent-ils « 9/11 » ?", choices: ["Ils écrivent le mois avant le jour", "C’est un numéro de téléphone", "Il y avait 9 avions", "C’est l’heure de l’attentat"], answer: 0, why: "Mois/jour : September 11th." },
   { q: "Comment se prononce -ed dans « waited » ?", choices: ["/t/", "/d/", "/ɪd/", "Il ne se prononce pas"], answer: 2, why: "Après t ou d, -ed se prononce /ɪd/." },
   { q: "Prétérit de « try » ?", choices: ["tryed", "tried", "trid", "tryied"], answer: 1, why: "Consonne + y → -ied." },
-  { q: "Prétérit de « stop » ?", choices: ["stoped", "stopped", "stopt", "stopes"], answer: 1, why: "Voyelle courte + consonne : on double la consonne." },
+  { q: "Prétérit de « stop » ?", choices: ["stoped", "stopped", "stopt", "stopes"], answer: 1, why: "Une seule voyelle + une seule consonne, syllabe accentuée : on double (stop → stopped, mais visit → visited)." },
   { q: "Que décrit « he was having a cup of coffee » ?", choices: ["Une habitude", "Une action en cours dans le passé", "Le futur", "Un ordre"], answer: 1, why: "Prétérit en be + -ing : action en cours, interrompue par le choc de l’avion." },
   { q: "Que signifie « My husband used to work in the Twin Towers » ?", choices: ["Il y travaille encore", "C’était une habitude passée qui n’existe plus", "Il va y travailler", "Il n’y a jamais travaillé"], answer: 1, why: "Used to : habitude passée révolue." },
   { q: "Question correcte avec « be » ?", choices: ["Did they were in the tower?", "Were they in the tower?", "Did they be in the tower?", "Was they in the tower?"], answer: 1, why: "Be ne prend pas did : on inverse sujet et verbe." },
