@@ -33,8 +33,7 @@ QUIZ.cahier = [
   { q: "Réponse brève à « Did he have breakfast? » (non) ?", choices: ["No, he not had.", "No, he didn’t.", "No, he hadn’t breakfast.", "No, didn’t he."], answer: 1, why: "Réponse brève avec l’auxiliaire : No, he didn’t." },
   { q: "Complète : « He ____ (NOT/ARRIVE) late at work. »", choices: ["didn’t arrived", "didn’t arrive", "not arrived", "arrivedn’t"], answer: 1, why: "Didn’t + base verbale." },
   { q: "Complète : « He ____ (BEGIN) a book. »", choices: ["beginned", "begun", "began", "begin"], answer: 2, why: "Begin – began – begun." },
-  { q: "True or false : « The first plane hit during the meeting. »", choices: ["True", "False : the plane hit at 8.46 and the meeting was at 9.00"], answer: 1, why: "He had a meeting at 9 am. The first plane hit at 8.46." },
-  { q: "Combien d’heures d’anglais par semaine en 3e, d’après la lettre de rentrée ?", choices: ["Deux", "Trois", "Quatre", "Une"], answer: 1, why: "Deux heures en classe entière et une heure d’AP en demi-groupe." }
+  { q: "True or false : « The first plane hit during the meeting. »", choices: ["True, at 9.00", "False, it hit before the meeting", "True, at 8.46", "False, it hit after the meeting"], answer: 1, why: "He had a meeting at 9 am. The first plane hit at 8.46, before the meeting." }
 ];
 
 QUIZ.extra = [

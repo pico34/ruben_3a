@@ -313,7 +313,7 @@ QUIZ.cahier = [
     why: "Écrit en rouge : le contrôle de l’économie est total."
   },
   {
-    q: "Que subissent les koulaks, d’après l’exercice de Ruben ?",
+    q: "Que subissent les koulaks sous Staline ?",
     choices: ["Ils reçoivent des terres", "Déportation massive au goulag, les plus actifs sont fusillés", "Ils deviennent des héros", "Ils partent en Allemagne"],
     answer: 1,
     why: "Liquidation des « contre-révolutionnaires », déportation massive au goulag, rations de famine."

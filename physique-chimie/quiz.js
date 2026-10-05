@@ -91,10 +91,10 @@ QUIZ.cahier = [
     why: "On voit deux couches : le mélange est hétérogène."
   },
   {
-    q: "Quelle masse volumique Ruben trouve-t-il pour le laiton ?",
-    choices: ["0,918 g/mL", "1 g/mL", "6,71 g/mL", "23,5 g/mL"],
-    answer: 2,
-    why: "23,5 g / 3,5 mL = 6,71 g/mL."
+    q: "Un objet de 23,5 g fait monter l’eau de 12,5 mL à 16 mL. Quelle est sa masse volumique ?",
+    choices: ["23,5 / 16 ≈ 1,47 g/mL", "23,5 / 3,5 ≈ 6,71 g/mL", "3,5 / 23,5 ≈ 0,15 g/mL", "23,5 × 3,5 ≈ 82 g/mL"],
+    answer: 1,
+    why: "Le volume de l’objet est le volume d’eau déplacé : 16 − 12,5 = 3,5 mL. Puis ρ = m / V = 23,5 / 3,5 ≈ 6,71 g/mL."
   },
   {
     q: "Que fait-on avant de verser le liquide dans l’éprouvette posée sur la balance ?",

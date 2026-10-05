@@ -166,12 +166,6 @@ QUIZ.cahier = [
     why: "Bleu : les leçons, à comprendre."
   },
   {
-    q: "Fiche méthode : tous les combien ont lieu les courtes évaluations ?",
-    choices: ["Chaque semaine", "Environ toutes les 3 semaines", "Une fois par trimestre", "Jamais"],
-    answer: 1,
-    why: "De courtes évaluations de connaissances environ toutes les 3 semaines."
-  },
-  {
     q: "Quand relire la leçon, d’après la fiche méthode ?",
     choices: ["Seulement la veille du contrôle", "Le soir même, puis la veille du cours suivant", "Pendant les vacances", "Jamais"],
     answer: 1,
