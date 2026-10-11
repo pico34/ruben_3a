@@ -150,14 +150,14 @@
     return copy;
   }
 
-  // bank : { cahier: [...], extra: [...], slug? } ; chaque question peut porter « matiere » et « slug »
-  // (mode mélangé). Deux modes : « qcm » (4 choix) et « cartes » (question seule, réponse cachée,
-  // auto-évaluation), choisis par les boutons radio name="quizMode" s'ils existent.
+  // bank : { cahier: [...], extra: [...], expliquer: [...], slug? } ; chaque question peut porter
+  // « matiere » et « slug » (mode mélangé). Trois modes, choisis par les radios name="quizMode" :
+  // « qcm » (4 choix), « cartes » (question seule, réponse cachée, auto-évaluation) et « expliquer »
+  // (réponse orale, puis explication de quelques lignes { q, reponse, cles } avec mots-clés surlignés).
   function lancerQuiz(bank) {
     const root = document.getElementById("quiz");
     if (!bank || !root) return;
     const size = bank.taille || 10;
-    const scoreEl = document.getElementById("score");
     const nouveau = document.getElementById("quizNouveau");
     const avecExtra = document.getElementById("quizExtra");
     const total = document.getElementById("quizTotal");
@@ -168,12 +168,103 @@
       return coche ? coche.value : "qcm";
     }
 
+    // Jauge de progression : une barre qui se remplit en vert (réussites) et en rouge clair
+    // (à revoir), avec un mot d'encouragement. Remplace le compteur chiffré.
+    let jaugeEl = null;
+    function jauge(ok, mauvais, total, unite) {
+      if (!jaugeEl) return;
+      const faits = ok + mauvais;
+      const base = total || faits || 1;
+      jaugeEl.querySelector(".jauge-ok").style.width = Math.round((100 * ok) / base) + "%";
+      jaugeEl.querySelector(".jauge-mauvais").style.width = Math.round((100 * mauvais) / base) + "%";
+      const texte = jaugeEl.querySelector(".jauge-texte");
+      texte.innerHTML = "";
+      let mot;
+      if (!faits) mot = "C’est parti !";
+      else if (ok === faits && faits >= 3) mot = "Sans faute, impressionnant.";
+      else if (ok / faits >= 0.8) mot = "Excellent, tu maîtrises.";
+      else if (ok / faits >= 0.6) mot = "Bien, continue.";
+      else if (faits < 3) mot = "Ça démarre.";
+      else mot = "Ce qui est à revoir reviendra : c’est comme ça qu’on progresse.";
+      texte.append(el("strong", {}, ok + (ok > 1 ? " réussies" : " réussie")), " sur " + faits + " " + unite + (faits > 1 ? "s" : "") + (total ? " (" + total + " au total)" : "") + " · " + mot);
+    }
+    // Série de bonnes réponses d'affilée : des flammes qui s'accumulent et une mascotte qui évolue.
+    const PALIERS = [
+      [0, "🐛", "chenille"], [1, "🐢", "tortue"], [3, "🐇", "lapin"], [5, "🦊", "renard"],
+      [7, "🐺", "loup"], [10, "🦁", "lion"], [15, "🐉", "dragon"],
+    ];
+    const cleRecord = "serie-record-" + (bank.slug || "tout");
+    let serieCourante = 0;
+    let record = Number(localStorage.getItem(cleRecord) || 0);
+    function serie(bonne) {
+      const avant = serieCourante;
+      serieCourante = bonne ? serieCourante + 1 : 0;
+      if (serieCourante > record) {
+        record = serieCourante;
+        localStorage.setItem(cleRecord, String(record));
+      }
+      if (!jaugeEl) return;
+      const zone = jaugeEl.querySelector(".serie");
+      zone.innerHTML = "";
+      const palier = PALIERS.filter((p) => serieCourante >= p[0]).pop();
+      const flammes = serieCourante <= 12 ? "🔥".repeat(serieCourante) : "🔥".repeat(12) + " ×" + serieCourante;
+      zone.append(el("span", { class: "serie-mascotte", title: palier[2] }, palier[1]));
+      let texte;
+      if (!bonne && avant >= 3) texte = "Série de " + avant + " terminée. On repart !";
+      else if (serieCourante === 0) texte = "Enchaîne des bonnes réponses pour allumer la série.";
+      else if (serieCourante === 1) texte = "Première flamme.";
+      else texte = "Série de " + serieCourante + " ! " + (serieCourante >= 10 ? "Champion." : serieCourante >= 5 ? "Tu décolles." : "Continue.");
+      zone.append(el("span", { class: "serie-flammes" }, flammes), el("span", { class: "serie-texte" }, texte));
+      if (record >= 3) zone.append(el("span", { class: "serie-record" }, "Record : " + record));
+      if (bonne && PALIERS.some((p) => p[0] === serieCourante && p[0] > 0)) {
+        zone.classList.add("palier");
+        setTimeout(() => zone.classList.remove("palier"), 900);
+      }
+    }
+    function poserJauge() {
+      jaugeEl = el("div", { class: "jauge", "aria-live": "polite" });
+      const barre = el("div", { class: "jauge-barre" });
+      barre.append(el("div", { class: "jauge-ok" }), el("div", { class: "jauge-mauvais" }));
+      jaugeEl.append(barre, el("p", { class: "jauge-texte" }), el("p", { class: "serie" }));
+      root.appendChild(jaugeEl);
+      serieCourante = 0;
+      serie(false);
+    }
+
     function reserve() {
       const pool = bank.cahier.map((item) => ({ ...item, extra: false }));
       if (avecExtra && avecExtra.checked && bank.extra) {
         bank.extra.forEach((item) => pool.push({ ...item, extra: true }));
       }
       return pool;
+    }
+
+    // Met en évidence les mots-clés attendus dans une explication.
+    function surligner(texte, cles) {
+      const frag = document.createDocumentFragment();
+      if (!cles || !cles.length) {
+        frag.append(texte);
+        return frag;
+      }
+      const motif = new RegExp("(" + cles.map((c) => c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")", "gi");
+      texte.split(motif).forEach((part, i) => {
+        if (!part) return;
+        if (i % 2) frag.appendChild(el("mark", {}, part));
+        else frag.append(part);
+      });
+      return frag;
+    }
+
+    // La « bonne réponse » d'une question : le choix juste d'un QCM, ou l'explication complète.
+    function blocReponse(item) {
+      const bonne = el("p", { class: "bonne" });
+      if (item.reponse) {
+        bonne.classList.add("explication");
+        bonne.appendChild(surligner(item.reponse, item.cles));
+      } else {
+        bonne.textContent = item.choices[item.answer];
+      }
+      return bonne;
     }
 
     function titreDe(item, numero) {
@@ -196,14 +287,14 @@
       const reussies = questions.length - ratees.length;
       bloc.appendChild(el("h3", {}, "Bilan : " + reussies + " / " + questions.length));
       if (!ratees.length) {
-        bloc.appendChild(el("p", {}, "Tout juste. Tu peux ajouter les questions Extra, changer de matière ou passer aux cartes."));
+        bloc.appendChild(el("p", {}, "Tout juste. Tu peux changer de mode, ajouter les questions Extra ou changer de matière."));
       } else {
         bloc.appendChild(el("p", {}, libelle + " Relis la carte du cours correspondante avant de recommencer."));
         const liste = el("ul");
         ratees.forEach((item) => {
           const li = el("li");
           li.appendChild(el("strong", {}, item.q));
-          li.appendChild(el("p", { class: "bonne" }, item.choices[item.answer]));
+          li.appendChild(blocReponse(item));
           if (item.why) li.appendChild(el("p", { class: "why" }, item.why));
           const lien = lienCours(item);
           if (lien) li.appendChild(lien);
@@ -229,7 +320,8 @@
       let score = 0;
       let faites = 0;
       const ratees = [];
-      scoreEl.textContent = "0 / " + questions.length;
+      poserJauge();
+      jauge(0, 0, questions.length, "question");
 
       questions.forEach((item, index) => {
         const block = el("div", { class: "q" });
@@ -256,7 +348,8 @@
             }
             why.hidden = false;
             why.textContent = item.why;
-            scoreEl.textContent = score + " / " + questions.length;
+            jauge(score, faites - score, questions.length, "question");
+            serie(choice.good);
             if (faites === questions.length) bilan(questions, ratees, "Les questions ratées :");
           });
           choices.appendChild(button);
@@ -266,39 +359,80 @@
       });
     }
 
-    function cartes(questions) {
-      let position = 0;
+    // Flux de cartes sans fin : on parcourt la réserve mélangée, puis on recommence en
+    // présentant d'abord les cartes marquées « À revoir ». Compteur « justes / vues » en direct.
+    function cartes(pool, mode) {
+      let file = shuffle(pool);
+      let vues = 0;
       let sues = 0;
       const aRevoir = [];
-      scoreEl.textContent = "0 / " + questions.length;
-      root.appendChild(el("p", { class: "consigne-cartes" },
-        "Lis la question, réponds dans ta tête ou à l’écrit, puis retourne la carte. Sois honnête : « À revoir » est une bonne réponse."));
+      const oral = mode === "expliquer";
+      poserJauge();
+      jauge(0, 0, 0, "carte");
+      root.appendChild(el("p", { class: "consigne-cartes" }, oral
+        ? "Explique à voix haute, en quelques phrases, comme si tu répondais au professeur. Retourne ensuite la carte : les mots surlignés sont ceux qu’il attend. Tu t’arrêtes quand tu veux."
+        : "Lis la question, réponds dans ta tête ou à l’écrit, puis retourne la carte. Sois honnête : « À revoir » est une bonne réponse. Tu t’arrêtes quand tu veux."));
       const scene = el("div");
-      root.appendChild(scene);
+      const revoirBloc = el("details", { class: "a-revoir" });
+      const revoirTitre = el("summary", {}, "À revoir (0)");
+      const revoirListe = el("ul");
+      revoirBloc.append(revoirTitre, revoirListe);
+      revoirBloc.hidden = true;
+      root.append(scene, revoirBloc);
+
+      function ajouterARevoir(item) {
+        if (aRevoir.includes(item)) return;
+        aRevoir.push(item);
+        const li = el("li");
+        li.appendChild(el("strong", {}, item.q));
+        li.appendChild(blocReponse(item));
+        const lien = lienCours(item);
+        if (lien) li.appendChild(lien);
+        revoirListe.appendChild(li);
+        revoirBloc.hidden = false;
+        revoirTitre.textContent = "À revoir (" + aRevoir.length + ")";
+      }
+
+      function prochaine() {
+        if (!file.length) {
+          // Nouveau tour : d'abord ce qui reste à revoir, puis le reste mélangé.
+          const reste = shuffle(pool.filter((item) => !aRevoir.includes(item)));
+          file = shuffle(aRevoir.slice()).concat(reste);
+        }
+        return file.shift();
+      }
 
       function montrer() {
         scene.innerHTML = "";
-        if (position >= questions.length) {
-          bilan(questions, aRevoir, "Les cartes à revoir :");
-          return;
-        }
-        const item = questions[position];
+        const item = prochaine();
         const carte = el("div", { class: "carte" });
-        carte.appendChild(el("p", { class: "carte-progression" }, "Carte " + (position + 1) + " / " + questions.length));
+        carte.appendChild(el("p", { class: "carte-progression" },
+          "Carte " + (vues + 1) + (aRevoir.includes(item) ? " · déjà marquée à revoir" : "")));
         carte.appendChild(titreDe(item));
         const reponse = el("div", { class: "carte-reponse" });
         reponse.hidden = true;
-        reponse.appendChild(el("p", { class: "bonne" }, item.choices[item.answer]));
+        reponse.appendChild(blocReponse(item));
         if (item.why) reponse.appendChild(el("p", { class: "why" }, item.why));
         const actions = el("div", { class: "quiz-actions carte-actions" });
         const voir = el("button", { type: "button" }, "Retourner la carte");
         voir.addEventListener("click", () => {
           reponse.hidden = false;
           actions.innerHTML = "";
-          const su = el("button", { type: "button", class: "ok" }, "Je savais");
+          const su = el("button", { type: "button", class: "ok" }, oral ? "Je l’ai expliqué" : "Je savais");
           const revoir = el("button", { type: "button", class: "revoir" }, "À revoir");
-          su.addEventListener("click", () => { sues += 1; suivant(); });
-          revoir.addEventListener("click", () => { aRevoir.push(item); suivant(); });
+          su.addEventListener("click", () => {
+            sues += 1;
+            serie(true);
+            const i = aRevoir.indexOf(item);
+            if (i >= 0) {
+              aRevoir.splice(i, 1);
+              revoirListe.children[i].remove();
+              revoirTitre.textContent = "À revoir (" + aRevoir.length + ")";
+              revoirBloc.hidden = !aRevoir.length;
+            }
+            suivant();
+          });
+          revoir.addEventListener("click", () => { serie(false); ajouterARevoir(item); suivant(); });
           actions.append(su, revoir);
           su.focus({ preventScroll: true });
         });
@@ -308,8 +442,8 @@
       }
 
       function suivant() {
-        position += 1;
-        scoreEl.textContent = sues + " / " + questions.length;
+        vues += 1;
+        jauge(sues, vues - sues, 0, "carte");
         montrer();
       }
 
@@ -317,13 +451,18 @@
     }
 
     function tirage(forcees) {
-      const pool = reserve();
+      const mode = modeActif();
+      const pool = mode === "expliquer" ? (bank.expliquer || []) : reserve();
       if (total) total.textContent = pool.length;
-      const questions = forcees || shuffle(pool).slice(0, Math.min(size, pool.length));
       root.innerHTML = "";
-      root.dataset.mode = modeActif();
-      if (modeActif() === "cartes") cartes(questions);
-      else qcm(questions);
+      root.dataset.mode = mode;
+      if (nouveau) nouveau.textContent = mode === "qcm" ? "Nouveau tirage" : "Recommencer à zéro";
+      if (!pool.length) {
+        root.appendChild(el("p", { class: "note" }, "Pas encore de questions « Expliquer » pour cette matière."));
+        return;
+      }
+      if (mode === "qcm") qcm(forcees || shuffle(pool).slice(0, Math.min(size, pool.length)));
+      else cartes(pool, mode);
     }
 
     if (nouveau) nouveau.onclick = () => tirage();

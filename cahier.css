@@ -250,6 +250,19 @@ body[data-vue="extra"] .vue-extra { display: block; }
 .quiz-modes input { grid-row: span 2; margin: 0; }
 .quiz-modes span { font-size: 13px; color: var(--muted); }
 
+.jauge { margin: 16px 0 4px; }
+.jauge-barre { display: flex; height: 14px; border-radius: 999px; background: #e9e4d8; overflow: hidden; }
+.jauge-ok { background: linear-gradient(90deg, #3e9a6a, var(--ok)); transition: width 0.4s ease; }
+.jauge-mauvais { background: #f1c7c7; transition: width 0.4s ease; }
+.jauge-texte { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+.jauge-texte strong { color: var(--ok); font-size: 15px; }
+.serie { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+.serie-mascotte { font-size: 26px; line-height: 1; transition: transform 0.3s ease; }
+.serie-flammes { font-size: 16px; letter-spacing: -2px; }
+.serie-texte { font-weight: 600; color: var(--ink); }
+.serie-record { margin-left: auto; font-size: 12px; font-weight: 700; color: #7a5a12; background: #f5ebd3; border-radius: 999px; padding: 2px 8px; }
+.serie.palier .serie-mascotte { animation: saut 0.9s ease; }
+@keyframes saut { 0% { transform: scale(1); } 30% { transform: scale(1.6) rotate(-10deg); } 60% { transform: scale(1.3) rotate(8deg); } 100% { transform: scale(1); } }
 .consigne-cartes { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
 .carte {
   margin-top: 12px;
@@ -262,9 +275,17 @@ body[data-vue="extra"] .vue-extra { display: block; }
 .carte h3 { font-size: 19px; margin: 0 0 10px; }
 .carte-reponse { margin: 12px 0 4px; padding: 12px 14px; border-radius: 12px; background: #fff; border: 1px solid #c8dfd2; }
 .bonne { margin: 0; font-weight: 650; color: var(--ok); }
+.bonne.explication { font-weight: 450; color: var(--ink); line-height: 1.55; font-size: 15px; }
+.bonne.explication mark { background: #fff1b8; color: inherit; padding: 0 3px; border-radius: 4px; font-weight: 650; }
 .carte-reponse .why, .bilan .why { margin-top: 6px; }
 .carte-actions { margin-top: 12px; }
 
+.a-revoir { margin-top: 16px; padding: 10px 14px; border-radius: 14px; background: #fffaf0; border: 1px solid #c9b98f; }
+.a-revoir summary { cursor: pointer; font-weight: 700; color: #7a5a12; }
+.a-revoir ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+.a-revoir li { padding: 10px 12px; border-radius: 12px; background: #fff; border: 1px solid var(--line); }
+.a-revoir li strong { display: block; font-size: 15px; }
+.a-revoir li .bonne { margin-top: 4px; }
 .bilan { margin-top: 20px; padding: 16px 18px; border-radius: 16px; background: #fffaf0; border: 1px solid #c9b98f; }
 .bilan h3 { margin: 0 0 6px; font-size: 18px; }
 .bilan > p { margin: 0 0 10px; font-size: 14px; color: var(--muted); }

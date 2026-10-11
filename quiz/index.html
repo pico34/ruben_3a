@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../cahier.css?v=11" />
+  <link rel="stylesheet" href="../cahier.css?v=14" />
 </head>
 <body data-page="quiz">
   <div class="wrap">
@@ -16,9 +16,10 @@
       <p class="kicker">Quiz · 3e A</p>
       <h1>S’entraîner</h1>
       <p class="lede">
-        Le quiz vient après le cours : il sert à vérifier ce que tu as retenu. Deux façons de s’entraîner :
+        Le quiz vient après le cours : il sert à vérifier ce que tu as retenu. Trois façons de s’entraîner :
         le <strong>QCM</strong> pour reconnaître la bonne réponse, les <strong>cartes</strong> pour la retrouver
-        sans aide, comme en contrôle. Si tu rates beaucoup, retourne lire le cours avant de recommencer.
+        sans aide, et <strong>Expliquer à l’oral</strong> pour redire une définition ou un point de cours en
+        quelques phrases, comme face au professeur. Si tu rates beaucoup, retourne lire le cours avant de recommencer.
       </p>
     </header>
 
@@ -35,13 +36,13 @@
         <div class="quiz-head">
           <div>
             <h2 id="quizTitre">Quiz</h2>
-            <p class="note">10 questions tirées au hasard parmi <span id="quizTotal"></span>. Chaque tirage change les questions. À la fin, un bilan reprend ce qui est à revoir.</p>
+            <p class="note"><span id="quizTotal"></span> questions dans cette banque. QCM : 10 questions puis un bilan. Cartes et oral : sans fin, le compteur suit tes réponses, et ce que tu marques « À revoir » revient en priorité.</p>
           </div>
-          <p id="score">0 / 10</p>
         </div>
         <div class="quiz-modes" role="group" aria-label="Mode d’entraînement">
           <label><input type="radio" name="quizMode" value="qcm" checked /> <strong>QCM</strong><span>4 réponses, une seule juste</span></label>
           <label><input type="radio" name="quizMode" value="cartes" /> <strong>Cartes à retourner</strong><span>la question seule, puis la réponse</span></label>
+          <label><input type="radio" name="quizMode" value="expliquer" /> <strong>Expliquer à l’oral</strong><span>définitions et points de cours, à dire en quelques phrases</span></label>
         </div>
         <div class="quiz-actions">
           <button type="button" id="quizNouveau">Nouveau tirage</button>
@@ -54,7 +55,7 @@
     <footer>Les questions reprennent ton cahier. Les questions « Extra » vont au-delà du cours.</footer>
   </div>
 
-  <script src="../cahier.js?v=11"></script>
+  <script src="../cahier.js?v=14"></script>
   <script>
     (() => {
       const banques = {};
@@ -63,26 +64,36 @@
       const rappel = document.getElementById("rappel");
       const titre = document.getElementById("quizTitre");
 
-      function charger(slug) {
+      function script(src) {
         return new Promise((resolve) => {
-          const script = document.createElement("script");
-          script.src = "../" + slug + "/quiz.js";
-          script.onload = () => { banques[slug] = window.QUIZ; resolve(); };
-          script.onerror = resolve;
-          document.body.appendChild(script);
+          const s = document.createElement("script");
+          s.src = src;
+          s.onload = resolve;
+          s.onerror = resolve;
+          document.body.appendChild(s);
         });
+      }
+
+      // quiz.js crée window.QUIZ (cahier, extra) ; explications.js y ajoute QUIZ.expliquer.
+      function charger(slug) {
+        window.QUIZ = null;
+        return script("../" + slug + "/quiz.js")
+          .then(() => script("../" + slug + "/explications.js"))
+          .then(() => { if (window.QUIZ) banques[slug] = window.QUIZ; });
       }
 
       function banqueMelangee() {
         const cahier = [];
         const extra = [];
+        const expliquer = [];
         MATIERES.forEach((m) => {
           const b = banques[m.slug];
           if (!b) return;
           b.cahier.forEach((q) => cahier.push({ ...q, matiere: m.nom, slug: m.slug }));
           (b.extra || []).forEach((q) => extra.push({ ...q, matiere: m.nom, slug: m.slug }));
+          (b.expliquer || []).forEach((q) => expliquer.push({ ...q, matiere: m.nom, slug: m.slug }));
         });
-        return { cahier, extra };
+        return { cahier, extra, expliquer };
       }
 
       function choisir(slug) {
