@@ -189,10 +189,13 @@
       texte.append(el("strong", {}, ok + (ok > 1 ? " réussies" : " réussie")), " sur " + faits + " " + unite + (faits > 1 ? "s" : "") + (total ? " (" + total + " au total)" : "") + " · " + mot);
     }
     // Série de bonnes réponses d'affilée : des flammes qui s'accumulent et une mascotte qui évolue.
+    // Un nouvel animal à chaque bonne réponse d'affilée, de plus en plus fort, 25 paliers.
     const PALIERS = [
-      [0, "🐛", "chenille"], [1, "🐢", "tortue"], [3, "🐇", "lapin"], [5, "🦊", "renard"],
-      [7, "🐺", "loup"], [10, "🦁", "lion"], [15, "🐉", "dragon"],
-    ];
+      "🐛 chenille", "🐜 fourmi", "🐌 escargot", "🐸 grenouille", "🐭 souris", "🐢 tortue", "🐇 lapin",
+      "🐈 chat", "🦊 renard", "🐕 chien", "🐺 loup", "🐗 sanglier", "🦌 cerf", "🐆 léopard", "🐅 tigre",
+      "🦁 lion", "🐻 ours", "🦍 gorille", "🐊 crocodile", "🦈 requin", "🐘 éléphant", "🦏 rhinocéros",
+      "🦣 mammouth", "🦖 T. rex", "🐉 dragon", "👑 légende vivante",
+    ].map((s, i) => [i, s.slice(0, s.indexOf(" ")), s.slice(s.indexOf(" ") + 1)]);
     const cleRecord = "serie-record-" + (bank.slug || "tout");
     let serieCourante = 0;
     let record = Number(localStorage.getItem(cleRecord) || 0);
@@ -207,16 +210,20 @@
       const zone = jaugeEl.querySelector(".serie");
       zone.innerHTML = "";
       const palier = PALIERS.filter((p) => serieCourante >= p[0]).pop();
-      const flammes = serieCourante <= 12 ? "🔥".repeat(serieCourante) : "🔥".repeat(12) + " ×" + serieCourante;
+      const suivant = PALIERS.find((p) => p[0] > serieCourante);
+      const flammes = serieCourante <= 10 ? "🔥".repeat(serieCourante) : "🔥".repeat(10) + " ×" + serieCourante;
       zone.append(el("span", { class: "serie-mascotte", title: palier[2] }, palier[1]));
       let texte;
-      if (!bonne && avant >= 3) texte = "Série de " + avant + " terminée. On repart !";
-      else if (serieCourante === 0) texte = "Enchaîne des bonnes réponses pour allumer la série.";
-      else if (serieCourante === 1) texte = "Première flamme.";
-      else texte = "Série de " + serieCourante + " ! " + (serieCourante >= 10 ? "Champion." : serieCourante >= 5 ? "Tu décolles." : "Continue.");
+      if (!bonne && avant >= 3) texte = "Série de " + avant + " terminée (" + PALIERS.filter((p) => avant >= p[0]).pop()[2] + "). On repart !";
+      else if (serieCourante === 0) texte = "Chaque bonne réponse d’affilée te fait grandir. Prochain : " + suivant[1] + " " + suivant[2];
+      else if (!suivant) texte = "Série de " + serieCourante + " : " + palier[2] + ", le sommet !";
+      else texte = "Série de " + serieCourante + " : tu es " + palier[2] + " ! Prochain : " + suivant[1] + " " + suivant[2];
       zone.append(el("span", { class: "serie-flammes" }, flammes), el("span", { class: "serie-texte" }, texte));
-      if (record >= 3) zone.append(el("span", { class: "serie-record" }, "Record : " + record));
-      if (bonne && PALIERS.some((p) => p[0] === serieCourante && p[0] > 0)) {
+      if (record >= 3) {
+        const meilleur = PALIERS.filter((p) => record >= p[0]).pop();
+        zone.append(el("span", { class: "serie-record", title: "Meilleure série" }, "Record : " + record + " " + meilleur[1]));
+      }
+      if (bonne && serieCourante === palier[0] && palier[0] > 0) {
         zone.classList.add("palier");
         setTimeout(() => zone.classList.remove("palier"), 900);
       }
