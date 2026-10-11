@@ -221,12 +221,20 @@
         setTimeout(() => zone.classList.remove("palier"), 900);
       }
     }
+    // La jauge est une barre fixe en bas de l'écran, créée une fois et réutilisée à chaque tirage.
     function poserJauge() {
-      jaugeEl = el("div", { class: "jauge", "aria-live": "polite" });
-      const barre = el("div", { class: "jauge-barre" });
-      barre.append(el("div", { class: "jauge-ok" }), el("div", { class: "jauge-mauvais" }));
-      jaugeEl.append(barre, el("p", { class: "jauge-texte" }), el("p", { class: "serie" }));
-      root.appendChild(jaugeEl);
+      if (!jaugeEl) {
+        jaugeEl = el("div", { class: "jauge", "aria-live": "polite" });
+        const inner = el("div", { class: "jauge-inner" });
+        const barreJauge = el("div", { class: "jauge-barre" });
+        barreJauge.append(el("div", { class: "jauge-ok" }), el("div", { class: "jauge-mauvais" }));
+        inner.append(barreJauge, el("p", { class: "jauge-texte" }), el("p", { class: "serie" }));
+        jaugeEl.appendChild(inner);
+        document.body.appendChild(jaugeEl);
+        const mesurerJauge = () => document.documentElement.style.setProperty("--jauge-h", jaugeEl.offsetHeight + "px");
+        mesurerJauge();
+        if (window.ResizeObserver) new ResizeObserver(mesurerJauge).observe(jaugeEl);
+      }
       serieCourante = 0;
       serie(false);
     }
@@ -439,6 +447,8 @@
         actions.appendChild(voir);
         carte.append(reponse, actions);
         scene.appendChild(carte);
+        // Si on avait défilé pour lire la réponse précédente, remonter à la question.
+        if (vues && carte.getBoundingClientRect().top < barre.offsetHeight + 10) carte.scrollIntoView();
       }
 
       function suivant() {
