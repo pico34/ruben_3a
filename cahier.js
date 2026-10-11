@@ -196,12 +196,12 @@
       "🦁 lion", "🐻 ours", "🦍 gorille", "🐊 crocodile", "🦈 requin", "🐘 éléphant", "🦏 rhinocéros",
       "🦣 mammouth", "🦖 T. rex", "🐉 dragon", "👑 légende vivante",
     ].map((s, i) => [i, s.slice(0, s.indexOf(" ")), s.slice(s.indexOf(" ") + 1)]);
-    const cleRecord = "serie-record-" + (bank.slug || "tout");
+    // Une mauvaise réponse ne fait pas reculer : on reste au même animal, et on repart à la bonne suivante.
+    const cleRecord = "progression-record-" + (bank.slug || "tout");
     let serieCourante = 0;
     let record = Number(localStorage.getItem(cleRecord) || 0);
     function serie(bonne) {
-      const avant = serieCourante;
-      serieCourante = bonne ? serieCourante + 1 : 0;
+      if (bonne) serieCourante += 1;
       if (serieCourante > record) {
         record = serieCourante;
         localStorage.setItem(cleRecord, String(record));
@@ -214,14 +214,14 @@
       const flammes = serieCourante <= 10 ? "🔥".repeat(serieCourante) : "🔥".repeat(10) + " ×" + serieCourante;
       zone.append(el("span", { class: "serie-mascotte", title: palier[2] }, palier[1]));
       let texte;
-      if (!bonne && avant >= 3) texte = "Série de " + avant + " terminée (" + PALIERS.filter((p) => avant >= p[0]).pop()[2] + "). On repart !";
-      else if (serieCourante === 0) texte = "Chaque bonne réponse d’affilée te fait grandir. Prochain : " + suivant[1] + " " + suivant[2];
-      else if (!suivant) texte = "Série de " + serieCourante + " : " + palier[2] + ", le sommet !";
-      else texte = "Série de " + serieCourante + " : tu es " + palier[2] + " ! Prochain : " + suivant[1] + " " + suivant[2];
+      if (serieCourante === 0) texte = "Chaque bonne réponse te fait grandir. Prochain : " + suivant[1] + " " + suivant[2];
+      else if (!bonne && suivant) texte = "Tu restes " + palier[2] + ". Une bonne réponse et tu deviens " + suivant[1] + " " + suivant[2];
+      else if (!suivant) texte = serieCourante + " bonnes réponses : " + palier[2] + ", le sommet !";
+      else texte = serieCourante + (serieCourante > 1 ? " bonnes réponses" : " bonne réponse") + " : tu es " + palier[2] + " ! Prochain : " + suivant[1] + " " + suivant[2];
       zone.append(el("span", { class: "serie-flammes" }, flammes), el("span", { class: "serie-texte" }, texte));
       if (record >= 3) {
         const meilleur = PALIERS.filter((p) => record >= p[0]).pop();
-        zone.append(el("span", { class: "serie-record", title: "Meilleure série" }, "Record : " + record + " " + meilleur[1]));
+        zone.append(el("span", { class: "serie-record", title: "Meilleur score en une session" }, "Record : " + record + " " + meilleur[1]));
       }
       if (bonne && serieCourante === palier[0] && palier[0] > 0) {
         zone.classList.add("palier");
