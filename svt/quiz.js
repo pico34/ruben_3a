@@ -176,6 +176,78 @@ QUIZ.cahier = [
     choices: ["La cellule nerveuse qui transmet l’influx nerveux", "La zone de contact entre deux neurones", "Le prolongement du neurone qui conduit le message", "La zone du cerveau spécialisée dans une fonction"],
     answer: 1,
     why: "Synapse : zone de contact entre deux neurones."
+  },
+  {
+    q: "Chapitre 2 : quel micro-organisme transforme le lait de brebis en roquefort ?",
+    choices: ["Une bactérie en forme de bâtonnet, un bacille", "Un protozoaire qui vit dans le lait stagnant", "Un champignon microscopique, Penicillium roqueforti", "Une paramécie recouverte de cils"],
+    answer: 2,
+    why: "Les moisissures du roquefort sont des champignons microscopiques, comme Penicillium roqueforti."
+  },
+  {
+    q: "Que produisent les moisissures du roquefort, visibles au microscope ?",
+    choices: ["Des spores en forme de sphères", "De l’acide lactique qui fait coaguler le lait de brebis", "Des cils qui leur permettent de se déplacer dans le fromage", "Des bacilles en forme de bâtonnets qui veinent le fromage"],
+    answer: 0,
+    why: "Les moisissures produisent des spores, en forme de sphères. Elles donnent au fromage son aspect veiné et son goût."
+  },
+  {
+    q: "Dans un yaourt, que font les bactéries ?",
+    choices: ["Elles produisent des spores qui donnent le goût du yaourt", "Elles transforment le sucre du lait en acide lactique", "Elles mangent les moisissures présentes dans le lait", "Elles se déplacent dans le lait grâce à leurs cils"],
+    answer: 1,
+    why: "Le sucre du lait devient de l’acide lactique, ce qui fait coaguler le lait."
+  },
+  {
+    q: "Pourquoi le lait coagule-t-il quand il devient yaourt ?",
+    choices: ["Parce que les bactéries le chauffent en se multipliant", "Parce que les moisissures y tissent des filaments", "Parce que les spores des champignons l’épaississent", "À cause de l’acide lactique produit par les bactéries"],
+    answer: 3,
+    why: "C’est l’acide lactique produit par les bactéries qui fait coaguler le lait."
+  },
+  {
+    q: "Comment appelle-t-on les bactéries en forme de sphères ?",
+    choices: ["Les bacilles", "Les spores", "Les coques", "Les paramécies"],
+    answer: 2,
+    why: "Sphères : coques. Bâtons : bacilles."
+  },
+  {
+    q: "Comment appelle-t-on les bactéries en forme de bâtons ?",
+    choices: ["Les bacilles", "Les coques", "Les protozoaires", "Les moisissures"],
+    answer: 0,
+    why: "Bâtons : bacilles. Sphères : coques."
+  },
+  {
+    q: "Où trouve-t-on en abondance les protozoaires comme les paramécies ?",
+    choices: ["Dans le lait de brebis qui devient fromage", "Dans l’eau stagnante", "Dans l’air que l’on respire en classe", "Dans le sucre du lait des yaourts"],
+    answer: 1,
+    why: "Les protozoaires sont abondants dans l’eau stagnante."
+  },
+  {
+    q: "À quoi reconnaît-on une paramécie et comment se déplace-t-elle ?",
+    choices: ["Forme en bâtonnet, elle se déplace en flottant dans l’air", "Forme de sphère, elle se déplace en roulant", "Forme allongée, elle se déplace grâce à ses cils", "Forme de filament, elle ne se déplace pas"],
+    answer: 2,
+    why: "La paramécie est allongée et ses cils lui permettent de se déplacer."
+  },
+  {
+    q: "Dans le TP, les protozoaires sont présentés comme…",
+    choices: ["des champignons microscopiques en filaments", "des animaux unicellulaires", "des bactéries en forme de sphères", "des spores produites par les moisissures"],
+    answer: 1,
+    why: "Formulation du cours : « protozoaires, animaux unicellulaires ». Aujourd’hui on les classe parmi les eucaryotes unicellulaires."
+  },
+  {
+    q: "Quel est le bilan écrit sous l’activité 1 du chapitre 2 ?",
+    choices: ["Les microbes sont tous dangereux pour la santé", "Les microbes sont des êtres vivants invisibles", "Les microbes ne vivent que dans les aliments", "Les microbes ne sont pas vivants"],
+    answer: 1,
+    why: "Invisibles à l’œil nu, visibles au microscope : ce sont bien des êtres vivants."
+  },
+  {
+    q: "Que signifie « ubiquité » dans le titre « L’ubiquité des micro-organismes » ?",
+    choices: ["Leur très petite taille, visible seulement au microscope", "Le fait d’être présents partout", "Leur capacité à transformer le lait en fromage ou en yaourt", "Leur reproduction rapide grâce aux spores"],
+    answer: 1,
+    why: "Ubiquité : être présent partout. Les micro-organismes sont dans l’air, l’eau, le sol, les aliments et sur notre corps."
+  },
+  {
+    q: "Quel grossissement a servi à photographier les bactéries dans le TP ?",
+    choices: ["×40", "×400", "×1200", "×10"],
+    answer: 2,
+    why: "Bactéries ×1200, paramécie ×400, moisissures ×40 : plus c’est petit, plus il faut grossir."
   }
 ];
 
@@ -239,5 +311,29 @@ QUIZ.extra = [
     choices: ["langage", "goût", "équilibre", "sommeil"],
     answer: 0,
     why: "L’aire de Broca, liée à la production du langage."
+  },
+  {
+    q: "Quelle est la taille approximative d’une bactérie ?",
+    choices: ["1 µm, un millième de millimètre", "0,2 mm, presque visible à l’œil nu", "1 mm, comme un grain de sable", "1 cm"],
+    answer: 0,
+    why: "Environ 1 µm. La paramécie, elle, mesure environ 0,2 mm."
+  },
+  {
+    q: "Pourquoi dit-on qu’un virus n’est pas un être vivant au sens strict ?",
+    choices: ["Parce qu’il est trop petit pour être vu au microscope optique", "Parce qu’il ne vit que dans l’eau stagnante", "Il n’est pas fait de cellules et se multiplie seulement dans une cellule infectée", "Parce qu’il ne produit pas d’acide lactique"],
+    answer: 2,
+    why: "Un virus n’est pas une cellule et dépend d’une cellule hôte pour se multiplier."
+  },
+  {
+    q: "Qu’est-ce que la pasteurisation ?",
+    choices: ["Ajouter des bactéries lactiques au lait pour le faire coaguler", "Chauffer un liquide pour détruire la plupart des microbes, puis le refroidir", "Filtrer l’eau stagnante pour enlever les paramécies", "Laisser moisir le lait pour qu’il devienne fromage"],
+    answer: 1,
+    why: "Technique mise au point par Louis Pasteur au XIXe siècle."
+  },
+  {
+    q: "Que désigne le microbiote intestinal ?",
+    choices: ["Les virus qui provoquent les gastro-entérites", "Les moisissures du fromage une fois digérées", "Les milliers de milliards de bactéries qui vivent dans notre intestin", "Les cils qui tapissent la paroi de l’intestin"],
+    answer: 2,
+    why: "Il aide à digérer, fabrique des vitamines et protège contre les microbes dangereux."
   }
 ];

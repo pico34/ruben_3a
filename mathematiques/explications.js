@@ -79,4 +79,34 @@ QUIZ.expliquer = [
     reponse: "Une aire se mesure en unités carrées. 1 dm² est l’aire d’un carré de 10 cm de côté : il faut 100 cm² pour le recouvrir, soit 10 rangées de 10 petits carrés. Pour passer à l’unité d’aire juste plus petite, on multiplie par 100, et non par 10. Quand on passe à une unité plus petite, le nombre devient plus grand : 0,0324 dm² = 3,24 cm² = 324 mm², car on a multiplié par 10 000. Autre exemple : 2,5 m² = 250 dm².",
     cles: ["100 cm²", "multiplie par 100", "plus petite", "324 mm²", "10 000"]
   },
+  {
+    q: "Que signifie un exposant négatif ? Explique avec 2⁻¹ et 5⁻².",
+    reponse: "Un exposant négatif ne rend pas le nombre négatif : il indique un inverse. Pour a non nul, a⁻ⁿ = 1/aⁿ. Sur l’échelle de la fiche, chaque pas vers la gauche divise par a : après a⁰ = 1, on obtient 1/a, puis 1/a², puis 1/a³. Par exemple, 2⁻¹ = 1/2 = 0,5 et 5⁻² = 1/25 = 0,04. De même, 10⁻² = 0,01, et surtout pas −100.",
+    cles: ["inverse", "a⁻ⁿ = 1/aⁿ", "divise par a", "0,5", "0,04"]
+  },
+  {
+    q: "Pourquoi a⁰ = 1 pour tout nombre a non nul ?",
+    reponse: "Sur l’échelle des exposants, on passe d’une case à la suivante en multipliant par a vers la droite, et on revient en arrière en divisant par a vers la gauche. Partons de a¹ = a : un pas vers la gauche donne a : a = 1, donc a⁰ = 1. Cela marche quelle que soit la base, pourvu qu’elle ne soit pas nulle : 2035⁰ = 1, (−1)⁰ = 1, 2,7⁰ = 1. Et si on continue vers la gauche, on obtient les exposants négatifs.",
+    cles: ["divisant par a", "a : a = 1", "a⁰ = 1", "2035⁰ = 1"]
+  },
+  {
+    q: "Énonce les trois règles de calcul sur les puissances, avec un exemple pour chacune.",
+    reponse: "Elles ne s’appliquent qu’avec la même base. Produit : on ajoute les exposants, aᵐ × aᵖ = aᵐ⁺ᵖ ; par exemple 7³ × 7² = 7⁵, car on compte cinq facteurs 7. Quotient : on soustrait les exposants, aʳ / aˢ = aʳ⁻ˢ ; par exemple 3⁵/3³ = 3², et 9³/9⁵ = 9⁻². Puissance de puissance : on multiplie les exposants, (aᵏ)ⁿ = aᵏˣⁿ ; par exemple (2³)² = 2⁶ = 64. Attention : dans un produit, 7³ × 7² n’est pas 7⁶.",
+    cles: ["même base", "ajoute les exposants", "soustrait les exposants", "multiplie les exposants", "7³ × 7² = 7⁵"]
+  },
+  {
+    q: "Qu’est-ce que l’écriture scientifique d’un nombre, et comment la trouve-t-on ?",
+    reponse: "C’est l’écriture a × 10ᵏ, avec 1 ≤ a < 10 et k un entier relatif : un seul chiffre non nul avant la virgule, puis une puissance de dix. Pour la trouver, on place la virgule juste après le premier chiffre non nul, puis on compte de combien de rangs on l’a déplacée. Pour 149 597 870 km, la virgule recule de 8 rangs : 1,49 × 10⁸ km. Pour 0,000 000 000 126 m, elle avance de 10 rangs : 1,26 × 10⁻¹⁰ m, exposant négatif.",
+    cles: ["a × 10ᵏ", "1 ≤ a < 10", "premier chiffre non nul", "rangs", "1,49 × 10⁸"]
+  },
+  {
+    q: "À quoi servent les préfixes comme giga ou nano ? Donne un exemple de chaque.",
+    reponse: "Les préfixes remplacent une puissance de dix devant une unité, pour éviter d’écrire de très longs nombres. Giga (G) signifie 10⁹, un milliard : 1 Go = 1 gigaoctet = 10⁹ octets = 1 000 000 000 octets. Nano (n) signifie 10⁻⁹, un milliardième : 1 ng = 1 nanogramme = 10⁻⁹ g = 0,000 000 001 g, l’ordre de grandeur de la masse d’une cellule. Les autres préfixes suivent la même logique : kilo 10³, méga 10⁶, téra 10¹² ; milli 10⁻³, micro 10⁻⁶.",
+    cles: ["puissance de dix", "10⁹", "1 000 000 000 octets", "10⁻⁹", "0,000 000 001 g"]
+  },
+  {
+    q: "Explique l’erreur : « 10⁻² = −100 » et « 7³ × 7² = 7⁶ ».",
+    reponse: "Un exposant négatif n’est pas un signe moins devant le résultat : il indique un inverse. 10⁻² = 1/10² = 1/100 = 0,01, un nombre positif plus petit que 1. Pour le produit, on écrit les facteurs : 7³ × 7² = 7 × 7 × 7 × 7 × 7, soit cinq facteurs 7, donc 7⁵. On ajoute les exposants (3 + 2 = 5), on ne les multiplie pas. On ne multiplie les exposants que pour une puissance de puissance, comme (7³)² = 7⁶.",
+    cles: ["inverse", "0,01", "cinq facteurs 7", "ajoute les exposants", "puissance de puissance"]
+  },
 ];

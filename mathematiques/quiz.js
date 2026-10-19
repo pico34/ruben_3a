@@ -413,6 +413,108 @@ QUIZ.cahier = [
     choices: ["100 × 54 − 54", "100 × 54 + 54", "99 × 50 + 4", "90 × 54 + 9"],
     answer: 0,
     why: "99 = 100 − 1, donc 5 400 − 54 = 5 346."
+  },
+  {
+    q: "Pour a ≠ 0, a⁻ⁿ est égal à…",
+    choices: ["−aⁿ", "−1/aⁿ", "a × (−n)", "1/aⁿ"],
+    answer: 3,
+    why: "Un exposant négatif indique un inverse, pas un nombre négatif : a⁻ⁿ = 1/aⁿ."
+  },
+  {
+    q: "Combien vaut 2⁻¹ ?",
+    choices: ["−2", "0,5", "−0,5", "1"],
+    answer: 1,
+    why: "2⁻¹ = 1/2 = 0,5."
+  },
+  {
+    q: "Combien vaut 5⁻² ?",
+    choices: ["−25", "0,4", "0,04", "−0,04"],
+    answer: 2,
+    why: "5⁻² = 1/5² = 1/25 = 0,04."
+  },
+  {
+    q: "Combien vaut 10⁰ ?",
+    choices: ["0", "10", "On ne peut pas le calculer", "1"],
+    answer: 3,
+    why: "Tout nombre non nul à la puissance 0 vaut 1 : 10⁰ = 2035⁰ = (−1)⁰ = 1."
+  },
+  {
+    q: "Combien vaut (−3)³ ?",
+    choices: ["−9", "−27", "27", "−81"],
+    answer: 1,
+    why: "(−3) × (−3) × (−3) = 9 × (−3) = −27. Exposant impair : le résultat est négatif."
+  },
+  {
+    q: "Combien vaut (−2)⁴ ?",
+    choices: ["−16", "−8", "16", "8"],
+    answer: 2,
+    why: "(−2) × (−2) × (−2) × (−2) = 4 × 4 = 16. Exposant pair : le résultat est positif."
+  },
+  {
+    q: "7³ × 7² = ?",
+    choices: ["7⁶", "49⁵", "14⁵", "7⁵"],
+    answer: 3,
+    why: "Même base : on ajoute les exposants, 3 + 2 = 5. On compte cinq facteurs 7."
+  },
+  {
+    q: "3⁵ / 3³ = ?",
+    choices: ["3²", "3⁸", "1²", "3¹⁵"],
+    answer: 0,
+    why: "Même base : on soustrait les exposants, 5 − 3 = 2. Trois facteurs 3 se simplifient."
+  },
+  {
+    q: "(2³)² = ?",
+    choices: ["2⁵", "2⁹", "2⁶", "4⁶"],
+    answer: 2,
+    why: "(aᵏ)ⁿ = aᵏˣⁿ : 2³ × 2³ = 2⁶ = 64."
+  },
+  {
+    q: "10⁻³ = ?",
+    choices: ["−1 000", "0,001", "−0,001", "0,0001"],
+    answer: 1,
+    why: "10⁻³ = 1/1 000 = 0,001 : le chiffre 1 au 3e rang après la virgule."
+  },
+  {
+    q: "Le préfixe giga (G) correspond à…",
+    choices: ["10⁶", "10³", "10¹²", "10⁹"],
+    answer: 3,
+    why: "giga = 10⁹, soit un milliard. 10⁶ est méga, 10¹² est téra, 10³ est kilo."
+  },
+  {
+    q: "Le préfixe nano (n) correspond à…",
+    choices: ["10⁻⁶", "10⁻⁹", "10⁻³", "10⁹"],
+    answer: 1,
+    why: "nano = 10⁻⁹, un milliardième. 10⁻⁶ est micro, 10⁻³ est milli."
+  },
+  {
+    q: "1 Go (gigaoctet), c’est combien d’octets ?",
+    choices: ["1 000 000", "1 000", "1 000 000 000", "1 000 000 000 000"],
+    answer: 2,
+    why: "1 Go = 10⁹ octets = 1 000 000 000 octets, soit un milliard."
+  },
+  {
+    q: "Mille milliards, c’est…",
+    choices: ["10⁹", "10¹⁵", "10⁶", "10¹²"],
+    answer: 3,
+    why: "10³ × 10⁹ = 10¹². « Mille milliards de mille sabords » : 10³ × 10⁹ × 10³ = 10¹⁵."
+  },
+  {
+    q: "Dans l’écriture scientifique a × 10ᵏ, le nombre a vérifie…",
+    choices: ["0 ≤ a < 1", "1 ≤ a < 10", "1 < a ≤ 10", "0 < a < 100"],
+    answer: 1,
+    why: "a a un seul chiffre non nul avant la virgule : 1 ≤ a < 10, et k est un entier relatif."
+  },
+  {
+    q: "La distance Terre-Soleil, 149 597 870 km, s’écrit en écriture scientifique (arrondie)…",
+    choices: ["1,49 × 10³ km", "1,49 × 10⁹ km", "1,49 × 10⁸ km", "149 × 10⁶ km"],
+    answer: 2,
+    why: "La virgule recule de 8 rangs : 1,49 × 10⁸ = 149 000 000. Le 10³ barré sur la fiche ne ferait que 1 490 km."
+  },
+  {
+    q: "Le rayon d’un atome de fer, 0,000 000 000 126 m, s’écrit…",
+    choices: ["1,26 × 10⁻¹⁰ m", "1,26 × 10⁻¹² m", "1,26 × 10¹⁰ m", "126 × 10⁻¹² m"],
+    answer: 0,
+    why: "La virgule avance de 10 rangs vers la droite : exposant −10. 126 × 10⁻¹² a la bonne valeur, mais 126 n’est pas entre 1 et 10."
   }
 ];
 
@@ -512,5 +614,35 @@ QUIZ.extra = [
     choices: ["4 100 m", "4 805 m", "3 500 m", "8 848 m"],
     answer: 1,
     why: "Environ 4 805 m, selon la neige au sommet. 8 848 m, c’est l’Everest."
+  },
+  {
+    q: "(−3)² et −3² valent respectivement…",
+    choices: ["9 et 9", "−9 et −9", "−9 et 9", "9 et −9"],
+    answer: 3,
+    why: "Avec parenthèses, (−3) × (−3) = 9. Sans parenthèses, l’exposant ne porte que sur 3 : −(3 × 3) = −9."
+  },
+  {
+    q: "Une puissance d’un nombre négatif est négative quand l’exposant est…",
+    choices: ["pair", "négatif", "impair", "nul"],
+    answer: 2,
+    why: "Les signes moins vont par paires : il en reste un seul si l’exposant est impair, comme (−3)³ = −27."
+  },
+  {
+    q: "2¹⁰ = ?",
+    choices: ["1 000", "20", "512", "1 024"],
+    answer: 3,
+    why: "2¹⁰ = 1 024, juste un peu plus que 1 000. 512 = 2⁹."
+  },
+  {
+    q: "Pourquoi dit-on parfois que 1 Ko vaut 1 024 octets ?",
+    choices: ["Parce que 2¹⁰ = 1 024, proche de 1 000", "Parce que 10³ = 1 024", "Parce qu’un octet contient 1 024 bits, et non 8", "Parce que les disques durs sont vendus en octets"],
+    answer: 0,
+    why: "Les ordinateurs comptent en puissances de 2, et 2¹⁰ = 1 024 ≈ 1 000. Officiellement, 1 024 octets, c’est un kibioctet."
+  },
+  {
+    q: "Quel est l’ordre de grandeur de la distance Terre-Soleil, 1,49 × 10⁸ km ?",
+    choices: ["10⁶ km", "10⁸ km", "10¹⁰ km", "10⁹ km"],
+    answer: 1,
+    why: "L’ordre de grandeur se lit sur l’exposant de l’écriture scientifique : 10⁸ km."
   }
 ];

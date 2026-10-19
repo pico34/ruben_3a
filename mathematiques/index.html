@@ -8,15 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../cahier.css?v=19" />
+  <link rel="stylesheet" href="../cahier.css?v=20" />
 </head>
 <body data-vue="complet" data-matiere="mathematiques">
   <div class="wrap">
     <header class="top">
       <p class="kicker">Mathématiques · 3e · Mme Durand</p>
-      <h1>Fractions, racines carrées, Pythagore, fonctions</h1>
+      <h1>Fractions, racines carrées, Pythagore, fonctions, puissances</h1>
       <p class="lede">
-        Le début de l’année en deux cahiers : le cahier de leçons (fractions, racines carrées, théorème de Pythagore, unités, fiches de mémorisation)
+        Le début de l’année en deux cahiers : le cahier de leçons (fractions, racines carrées, théorème de Pythagore, unités, fiches de mémorisation, puissances d’un nombre relatif et puissances de dix)
         et le cahier d’exercices (questions du jour, droite numérique, notion de fonction, problèmes, calcul littéral).
         La lecture complète suit les pages. La synthèse garde ce qu’il faut savoir. L’extra va plus loin, dans les mêmes notions.
       </p>
@@ -64,7 +64,29 @@
               <time>Fonction</time>
               <p>Une machine de calcul transforme un nombre x (l’antécédent) en un nombre f(x) (son image). On écrit le calcul avec la lettre x, par exemple f(x) = 4x + 5.</p>
             </li>
+            <li>
+              <time>a<sup>n</sup></time>
+              <p>a<sup>n</sup>, c’est a multiplié n fois par lui-même : 2<sup>4</sup> = 2 × 2 × 2 × 2 = 16. Pour a ≠ 0 : a<sup>0</sup> = 1 et a<sup>−n</sup> = 1/a<sup>n</sup>. Exemple : 2<sup>−1</sup> = 1/2 = 0,5.</p>
+            </li>
+            <li>
+              <time>10<sup>k</sup></time>
+              <p>10<sup>3</sup> = 1 000, 10<sup>−3</sup> = 0,001. Écriture scientifique : a × 10<sup>k</sup>, avec 1 ≤ a &lt; 10. Distance Terre-Soleil : 149 597 870 km ≈ 1,49 × 10<sup>8</sup> km.</p>
+            </li>
           </ol>
+        </article>
+      </section>
+      <section>
+        <article class="card">
+          <h2>Puissances : l’essentiel</h2>
+          <ul class="bullets">
+            <li>Définition : pour n entier positif, a<sup>n</sup> = a × a × … × a (n facteurs). On passe d’un exposant au suivant en multipliant par a ; on revient en arrière en divisant par a.</li>
+            <li>a<sup>1</sup> = a ; a<sup>0</sup> = 1 (pour tout a ≠ 0) ; a<sup>−n</sup> = 1/a<sup>n</sup>. Exemples : 7<sup>−2</sup> = 1/49 ; 5<sup>−2</sup> = 0,04 ; 2035<sup>0</sup> = 1.</li>
+            <li>Signe : (−3)³ = −27 mais (−2)<sup>4</sup> = 16. Une puissance d’un nombre négatif est négative si l’exposant est impair, positive s’il est pair.</li>
+            <li>Trois propriétés : a<sup>m</sup> × a<sup>p</sup> = a<sup>m + p</sup> ; a<sup>r</sup> / a<sup>s</sup> = a<sup>r − s</sup> ; (a<sup>k</sup>)<sup>n</sup> = a<sup>k × n</sup>. Exemples : 7³ × 7² = 7<sup>5</sup> ; 3<sup>5</sup>/3³ = 3² ; 9³/9<sup>5</sup> = 9<sup>−2</sup>.</li>
+            <li>Puissances de dix : 10<sup>n</sup> s’écrit 1 suivi de n zéros (10<sup>4</sup> = 10 000) ; 10<sup>−n</sup> a le chiffre 1 au n-ième rang après la virgule (10<sup>−4</sup> = 0,0001).</li>
+            <li>Préfixes : kilo 10³, méga 10<sup>6</sup>, giga 10<sup>9</sup>, téra 10<sup>12</sup> ; milli 10<sup>−3</sup>, micro 10<sup>−6</sup>, nano 10<sup>−9</sup>. 1 Go = 10<sup>9</sup> octets ; 1 ng = 10<sup>−9</sup> g.</li>
+            <li>Écriture scientifique : a × 10<sup>k</sup>, avec 1 ≤ a &lt; 10 et k entier relatif. 149 597 870 km ≈ 1,49 × 10<sup>8</sup> km ; 0,000 000 000 126 m = 1,26 × 10<sup>−10</sup> m.</li>
+          </ul>
         </article>
       </section>
       <section>
@@ -77,6 +99,7 @@
             <li>Additionner des fractions : les ramener au même dénominateur, ajouter les numérateurs, garder le dénominateur, simplifier.</li>
             <li>Diviser par un nombre revient à multiplier par son inverse. L’inverse de a/b est b/a.</li>
             <li>Marche arrière d’une machine de calcul : partir du résultat et faire les opérations contraires, dans l’ordre inverse.</li>
+            <li>Trouver une écriture scientifique : placer la virgule juste après le premier chiffre non nul, puis compter de combien de rangs on l’a déplacée. Vers la gauche (grand nombre) : exposant positif ; vers la droite (petit nombre) : exposant négatif.</li>
           </ul>
         </article>
       </section>
@@ -299,6 +322,102 @@
             <li>3/4 + 2/3 = 9/12 + 8/12 = 17/12 ; −5/14 + 7/6 = −15/42 + 49/42 = 34/42 = 17/21.</li>
             <li>7/8 − 3/2 = 7/8 − 12/8 = −5/8 ; −6/15 − 7/10 = −12/30 − 21/30 = −33/30 = −11/10.</li>
           </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · fiche Puissances · page 1</span>
+          <h2>Puissances d’un nombre relatif : a<sup>n</sup></h2>
+          <h3>Définition</h3>
+          <p>Pour un nombre relatif a et un entier n positif, a<sup>n</sup> est le produit de n facteurs égaux à a : a<sup>n</sup> = a × a × … × a. Le nombre n est l’<strong>exposant</strong>. La fiche présente une échelle d’exposants, de −3 à 3 : on passe d’une case à la suivante en <strong>multipliant par a</strong> (vers la droite, × a) ou en <strong>divisant par a</strong> (vers la gauche, : a).</p>
+          <div class="stats">
+            <div class="stat"><strong>a³ = a × a × a</strong><span>a² = a × a · a<sup>1</sup> = a</span></div>
+            <div class="stat"><strong>a<sup>0</sup> = 1</strong><span>la case du milieu, encadrée en rouge</span></div>
+            <div class="stat"><strong>a<sup>−1</sup> = 1/a</strong><span>a<sup>−2</sup> = 1/(a × a) = 1/a² · a<sup>−3</sup> = 1/(a × a × a) = 1/a³</span></div>
+          </div>
+          <p>Exposants positifs à droite de a<sup>0</sup>, exposants négatifs à gauche. Un exposant négatif ne rend pas le nombre négatif : il indique un <strong>inverse</strong>.</p>
+          <p class="note">Les cadres « À retenir » et « Propriété » sont restés vides sur la fiche. À y écrire : a<sup>−n</sup> = 1/a<sup>n</sup> (a ≠ 0), et a<sup>0</sup> = 1 pour tout nombre a ≠ 0.</p>
+          <h3>Les exemples que tu as complétés</h3>
+          <ul class="bullets">
+            <li>Exposants négatifs : 7<sup>−2</sup> = 1/7² = 1/49 ; 2<sup>−1</sup> = 1/2 = 0,5 ; 5<sup>−2</sup> = 1/25 = 0,04 ; (−12)<sup>−1</sup> = 1/(−12) ; (−3)<sup>−4</sup> = 1/(−3)<sup>4</sup> = 1/81.</li>
+            <li>Exposant zéro : 2035<sup>0</sup> = 1 ; (−1)<sup>0</sup> = 1 ; 10<sup>0</sup> = 1 ; 2,7<sup>0</sup> = 1. Quel que soit le nombre (non nul), sa puissance 0 vaut 1.</li>
+            <li>Exposants positifs : 2<sup>4</sup> = 16 ; 5³ = 125 ; (−3)³ = −27 ; 1<sup>2020</sup> = 1 ; (−2)<sup>4</sup> = 16 ; 0,3² = 0,09.</li>
+          </ul>
+          <p class="note">Retouche signalée : la case 0,6² est restée vide. 0,6 × 0,6 = 0,36, comme sur ta fiche de mémorisation des racines carrées. Remarque aussi le signe : (−3)³ = −27 est négatif, mais (−2)<sup>4</sup> = 16 et (−3)<sup>−4</sup> = 1/81 sont positifs.</p>
+          <figure class="figure">
+            <img src="../drive/files/1BaDIlzFVppsWoThIZvhqIEHEz5NHGW4v/pages/page-1.png" alt="Fiche Puissances d’un nombre relatif : échelle des exposants, exemples, propriétés et la rumeur" />
+            <figcaption>Fiche « Puissances d’un nombre relatif », version élève, page 1.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · fiche Puissances · page 1</span>
+          <h2>Manipuler les puissances</h2>
+          <p>Les trois propriétés encadrées sur la fiche, valables pour a ≠ 0 et des exposants entiers relatifs :</p>
+          <div class="stats">
+            <div class="stat"><strong>a<sup>m</sup> × a<sup>p</sup> = a<sup>m + p</sup></strong><span>un produit : on ajoute les exposants</span></div>
+            <div class="stat"><strong>a<sup>r</sup> / a<sup>s</sup> = a<sup>r − s</sup></strong><span>un quotient : on soustrait les exposants</span></div>
+            <div class="stat"><strong>(a<sup>k</sup>)<sup>n</sup> = a<sup>k × n</sup></strong><span>une puissance de puissance : on multiplie les exposants</span></div>
+          </div>
+          <h3>Les calculs détaillés de la fiche</h3>
+          <ul class="bullets">
+            <li>7³ × 7² = 7 × 7 × 7 × 7 × 7 = 7<sup>3 + 2</sup> = 7<sup>5</sup>. On compte simplement les facteurs 7.</li>
+            <li>4<sup>−5</sup> × 4³ = 1/(4 × 4 × 4 × 4 × 4) × 4 × 4 × 4 = 1/(4 × 4) = 4<sup>−5 + 3</sup> = 4<sup>−2</sup>. Trois des cinq 4 du dénominateur se simplifient.</li>
+            <li>3<sup>5</sup>/3³ = (3 × 3 × 3 × 3 × 3)/(3 × 3 × 3) = 3<sup>5 − 3</sup> = 3².</li>
+            <li>9³/9<sup>5</sup> = (9 × 9 × 9)/(9 × 9 × 9 × 9 × 9) = 9<sup>3 − 5</sup> = 9<sup>−2</sup>. Un exposant négatif apparaît quand le dénominateur a plus de facteurs.</li>
+          </ul>
+          <p>Attention : ces règles ne marchent qu’avec la <strong>même base</strong>. 7³ × 7² = 7<sup>5</sup>, mais on ne simplifie pas 7³ × 2² de la même façon. Et on ajoute les exposants, on ne les multiplie pas : 7³ × 7² n’est pas 7<sup>6</sup>.</p>
+          <h3>Exemple : la rumeur</h3>
+          <p>Chaque personne répète la rumeur à 2 autres personnes. Les nouveaux informés sont 2<sup>1</sup> = 2, puis 2² = 4, 2³ = 8, 2<sup>4</sup> = 16, 2<sup>5</sup> = 32 : le nombre double à chaque étape, c’est une puissance de 2.</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Cahier de leçons · fiche Puissances · page 2</span>
+          <h2>Puissances de dix, préfixes et écriture scientifique</h2>
+          <h3>Cas particulier : les puissances de dix</h3>
+          <div class="stats">
+            <div class="stat"><strong>10<sup>1</sup> = 10</strong><span>10² = 100 · 10³ = 1 000 · 10<sup>4</sup> = 10 000</span></div>
+            <div class="stat"><strong>10<sup>−1</sup> = 0,1</strong><span>10<sup>−2</sup> = 0,01 · 10<sup>−3</sup> = 0,001 · 10<sup>−4</sup> = 0,0001</span></div>
+            <div class="stat"><strong>10<sup>15</sup></strong><span>« Mille milliards de mille sabords » : 10³ × 10<sup>9</sup> × 10³ = 10<sup>15</sup> = 1 000 000 000 000 000</span></div>
+          </div>
+          <p>10<sup>n</sup> s’écrit 1 suivi de n zéros. 10<sup>−n</sup> s’écrit 0, puis le chiffre 1 au n-ième rang après la virgule. Le capitaine Haddock illustre la propriété du produit : on ajoute les exposants, 3 + 9 + 3 = 15.</p>
+          <h3>Les préfixes des unités</h3>
+          <div class="defs">
+            <article class="def">
+              <h3>Multiples (exposants positifs)</h3>
+              <ul class="bullets">
+                <li>exa (E) : 10<sup>18</sup> · péta (P) : 10<sup>15</sup> · téra (T) : 10<sup>12</sup></li>
+                <li>giga (G) : 10<sup>9</sup> · méga (M) : 10<sup>6</sup> · kilo (k) : 10³</li>
+                <li>hecto (h) : 10² · déca (da) : 10<sup>1</sup></li>
+              </ul>
+            </article>
+            <article class="def">
+              <h3>Sous-multiples (exposants négatifs)</h3>
+              <ul class="bullets">
+                <li>déci (d) : 10<sup>−1</sup> · centi (c) : 10<sup>−2</sup> · milli (m) : 10<sup>−3</sup></li>
+                <li>micro (µ) : 10<sup>−6</sup> · nano (n) : 10<sup>−9</sup> · pico (p) : 10<sup>−12</sup></li>
+                <li>femto (f) : 10<sup>−15</sup> · atto (a) : 10<sup>−18</sup></li>
+              </ul>
+            </article>
+          </div>
+          <h3>Deux exemples complétés</h3>
+          <ul class="bullets">
+            <li>Électronique : 1 Go = 1 gigaoctet = 10<sup>9</sup> octets = 1 000 000 000 octets.</li>
+            <li>Masse d’une cellule : 1 ng = 1 nanogramme = 10<sup>−9</sup> g = 0,000 000 001 g.</li>
+            <li>Représentation d’un octet : 8 bits numérotés de 7 à 0, qui valent 128, 64, 32, 16, 8, 4, 2 et 1 (les puissances de 2, de 2<sup>7</sup> à 2<sup>0</sup>). L’octet de la fiche, 1 0 0 0 1 0 1 0, vaut 128 + 8 + 2 = 138.</li>
+            <li>Les dimensions dans l’Univers : un atome mesure environ 10<sup>−10</sup> m, son noyau 10<sup>−15</sup> m, l’électron et les quarks sont de l’ordre de 10<sup>−18</sup> m. Ce sont les mêmes ordres de grandeur que dans le cours de physique-chimie.</li>
+          </ul>
+          <h3>Écriture scientifique</h3>
+          <p>N’importe quel nombre décimal peut s’écrire <strong>a × 10<sup>k</sup></strong>, avec <strong>1 ≤ a &lt; 10</strong> et k un entier relatif (ce que tu as écrit en jaune sur la fiche).</p>
+          <ul class="bullets">
+            <li>Distance Terre-Soleil : 149 597 870 km (écriture décimale) = 1,49 × 10<sup>8</sup> km (écriture scientifique, arrondie). La valeur exacte serait 1,4959787 × 10<sup>8</sup> km.</li>
+            <li>Rayon d’un atome de fer : 0,000 000 000 126 m (écriture décimale) = 1,26 × 10<sup>−10</sup> m (écriture scientifique).</li>
+          </ul>
+          <p><strong>Méthode</strong> : on place la virgule juste après le premier chiffre non nul (1,49… ou 1,26), puis on compte de combien de rangs on l’a déplacée. Pour 149 597 870, la virgule recule de 8 rangs vers la gauche : exposant 8. Pour 0,000 000 000 126, elle avance de 10 rangs vers la droite : exposant −10. Vérification : 1,49 × 10<sup>8</sup> = 149 000 000, du bon ordre de grandeur.</p>
+          <p class="note">Retouche signalée : pour la distance Terre-Soleil, tu avais d’abord écrit 1,49 × 10³ (barré), puis corrigé en 10<sup>8</sup>. 1,49 × 10³ ne ferait que 1 490 km. Compte toujours les rangs de la virgule : 149 597 870 a 9 chiffres, donc la virgule se déplace de 8 rangs.</p>
+          <figure class="figure">
+            <img src="../drive/files/1BaDIlzFVppsWoThIZvhqIEHEz5NHGW4v/pages/page-2.png" alt="Fiche Puissances de dix : positives, négatives, préfixes, octet, écriture scientifique" />
+            <figcaption>Fiche « Cas particulier : les puissances de dix », version élève, page 2.</figcaption>
+          </figure>
         </article>
       </section>
 
@@ -537,6 +656,19 @@
             <li>Le Mont-Blanc mesure environ 4 805 m ; la hauteur exacte varie de quelques mètres selon la neige du sommet.</li>
           </ul>
         </article>
+
+        <article class="card">
+          <span class="tag">Extra · puissances</span>
+          <h2>Pièges et repères sur les puissances</h2>
+          <ul class="bullets">
+            <li>Priorités : (−3)² = (−3) × (−3) = 9, mais −3² = −(3 × 3) = −9. Sans parenthèses, l’exposant ne porte que sur le 3, et le signe moins reste devant. La calculatrice applique la même règle.</li>
+            <li>Signe d’une puissance d’un nombre négatif : avec un exposant pair, les signes moins vont par paires et le résultat est positif, (−2)<sup>4</sup> = 16 ; avec un exposant impair, il en reste un, (−3)³ = −27. Même chose pour les exposants négatifs : (−3)<sup>−4</sup> = 1/81, mais (−2)<sup>−3</sup> = 1/(−8) = −0,125.</li>
+            <li>Calculatrice : la touche x<sup>y</sup> (ou ^) calcule n’importe quelle puissance, 3 ^ 7 = 2 187 ; la touche 10<sup>x</sup> donne directement une puissance de dix. Pour un exposant négatif, utilise la touche (−) du signe, pas la touche de soustraction, et mets les parenthèses autour d’une base négative.</li>
+            <li>Les puissances de 2 reviennent partout en informatique : 2<sup>8</sup> = 256 (le nombre de valeurs d’un octet), 2<sup>10</sup> = 1 024. Comme 1 024 est proche de 1 000, on a longtemps dit « 1 Ko = 1 024 octets ». Aujourd’hui, 1 ko vaut officiellement 1 000 octets, et 1 024 octets s’appelle un kibioctet (Kio). C’est pour cela qu’un disque vendu « 1 To » affiche un peu moins de 1 000 Go sur l’ordinateur.</li>
+            <li>Ordre de grandeur : la puissance de dix la plus proche d’un nombre. La distance Terre-Soleil, 1,49 × 10<sup>8</sup> km, est de l’ordre de 10<sup>8</sup> km ; la taille d’un atome, 10<sup>−10</sup> m. L’écriture scientifique sert justement à lire l’ordre de grandeur d’un coup d’œil : c’est l’exposant de 10.</li>
+            <li>Rappel utile : 10<sup>−2</sup> = 0,01, et non −100. Un exposant négatif donne un nombre plus petit que 1, jamais un nombre négatif.</li>
+          </ul>
+        </article>
       </section>
     </div>
 
@@ -551,11 +683,11 @@
     </section>
 
     <footer>
-      Sources : deux PDF du 4 octobre, des pages du cahier de leçons (fractions, racines carrées, Pythagore, unités, fiches de mémorisation) et du cahier d’exercices (questions du jour, nombres, fonctions, problèmes, calcul littéral).
+      Sources : deux PDF du 4 octobre, des pages du cahier de leçons (fractions, racines carrées, Pythagore, unités, fiches de mémorisation) et du cahier d’exercices (questions du jour, nombres, fonctions, problèmes, calcul littéral), puis la fiche Puissances numérisée le 19 octobre, 2 pages.
       L’orthographe est corrigée. Les erreurs relevées sont signalées, et les exercices non faits restent indiqués comme tels.
     </footer>
   </div>
 
-  <script src="../cahier.js?v=19"></script>
+  <script src="../cahier.js?v=20"></script>
 </body>
 </html>

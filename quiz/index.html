@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../cahier.css?v=19" />
+  <link rel="stylesheet" href="../cahier.css?v=20" />
 </head>
 <body data-page="quiz">
   <div class="wrap">
@@ -55,7 +55,7 @@
     <footer>Les questions reprennent ton cahier. Les questions « Extra » vont au-delà du cours.</footer>
   </div>
 
-  <script src="../cahier.js?v=19"></script>
+  <script src="../cahier.js?v=20"></script>
   <script>
     (() => {
       const banques = {};
@@ -74,11 +74,14 @@
         });
       }
 
+      // Même version que cahier.css : un seul bump invalide aussi le cache des banques.
+      const VERSION = (document.querySelector('link[href*="cahier.css"]').getAttribute("href").split("?v=")[1] || "0");
+
       // quiz.js crée window.QUIZ (cahier, extra) ; explications.js y ajoute QUIZ.expliquer.
       function charger(slug) {
         window.QUIZ = null;
-        return script("../" + slug + "/quiz.js")
-          .then(() => script("../" + slug + "/explications.js"))
+        return script("../" + slug + "/quiz.js?v=" + VERSION)
+          .then(() => script("../" + slug + "/explications.js?v=" + VERSION))
           .then(() => { if (window.QUIZ) banques[slug] = window.QUIZ; });
       }
 

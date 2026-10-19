@@ -257,6 +257,162 @@ QUIZ.cahier = [
     choices: ["Qui ne se compose que d’un atome", "Qui ne possède qu’un seul électron", "Qui ne porte qu’une seule charge", "Qui contient plusieurs atomes"],
     answer: 0,
     why: "Le contraire est polyatomique."
+  },
+  {
+    q: "Chapitre 3 : de quoi est formée une molécule ?",
+    choices: ["D’un atome qui a perdu ou gagné plusieurs électrons", "D’au moins deux atomes reliés par des liaisons", "D’un noyau entouré de ses électrons", "D’un mélange de plusieurs corps purs"],
+    answer: 1,
+    why: "Au moins deux atomes, reliés ensemble par des liaisons chimiques."
+  },
+  {
+    q: "Comment représente-t-on une molécule ?",
+    choices: ["Par un symbole et un numéro atomique Z", "Par une formule et un modèle moléculaire", "Par sa masse volumique et son volume", "Par un dessin de son noyau et de ses électrons"],
+    answer: 1,
+    why: "La formule, comme CO₂, et le modèle moléculaire avec des boules."
+  },
+  {
+    q: "Dans l’écriture réactifs → produits, où sont les réactifs ?",
+    choices: ["À droite de la flèche", "À gauche de la flèche", "Des deux côtés de la flèche", "Au-dessus de la flèche"],
+    answer: 1,
+    why: "Réactifs à gauche, produits à droite, séparés par des +."
+  },
+  {
+    q: "Que deviennent les atomes au cours d’une réaction chimique ?",
+    choices: ["Ils disparaissent et d’autres sont créés", "Ils se réarrangent sans disparaître", "Ils se transforment en électrons", "Ils perdent tous leur noyau"],
+    answer: 1,
+    why: "Les atomes se réarrangent mais ne disparaissent pas. C’est pour cela qu’on équilibre."
+  },
+  {
+    q: "Quelle est l’équation de la combustion complète du carbone ?",
+    choices: ["C + O₂ → CO₂", "C + O → CO", "C + O₂ → CO", "C₂ + O₂ → CO₂"],
+    answer: 0,
+    why: "Carbone + dioxygène → dioxyde de carbone. 1 C et 2 O de chaque côté."
+  },
+  {
+    q: "Dans C₅H₁₂ + 8 O₂ → 5 CO₂ + 6 H₂O, que sont les nombres 8, 5 et 6 ?",
+    choices: ["Des indices", "Des coefficients", "Des numéros atomiques", "Des nombres de masse"],
+    answer: 1,
+    why: "Les coefficients, écrits devant les formules, servent à équilibrer. Les indices sont les petits chiffres dans les formules."
+  },
+  {
+    q: "Quels coefficients équilibrent C₅H₁₂ + … O₂ → … CO₂ + … H₂O ?",
+    choices: ["8, 5 et 6", "5, 5 et 12", "6, 5 et 8", "8, 6 et 5"],
+    answer: 0,
+    why: "C : 5 = 5. H : 12 = 6 × 2. O : 8 × 2 = 16 = 5 × 2 + 6."
+  },
+  {
+    q: "Que veut dire « une équation de réaction est équilibrée » ?",
+    choices: ["Il y a autant de molécules à gauche qu’à droite", "Mêmes atomes, en même nombre, de chaque côté", "Il y a autant de réactifs que de produits formés", "Les coefficients sont tous égaux à 1"],
+    answer: 1,
+    why: "Les mêmes atomes figurent, en même nombre, dans les réactifs et dans les produits."
+  },
+  {
+    q: "L’équation C₅H₁₂ + O₂ → CO₂ + H₂O est-elle équilibrée ?",
+    choices: ["Oui, puisque les atomes sont tous présents des deux côtés", "Non : par exemple 5 C à gauche et 1 seul à droite", "Oui, car il y a deux réactifs et deux produits", "Non : il manque le carbone dans les produits"],
+    answer: 1,
+    why: "Les atomes sont les mêmes mais pas en même nombre. Il faut les coefficients 8, 5 et 6."
+  },
+  {
+    q: "Pour équilibrer une équation, que ne faut-il jamais modifier ?",
+    choices: ["Les coefficients devant les formules", "Les indices dans les formules", "L’ordre des réactifs", "Le sens de la flèche"],
+    answer: 1,
+    why: "Changer un indice, c’est changer de molécule : CO₃ n’est pas CO₂."
+  },
+  {
+    q: "Qui a dit « Rien ne se perd, rien ne se crée, tout se transforme » ?",
+    choices: ["Rutherford", "Lavoisier", "Thomson", "Perrin"],
+    answer: 1,
+    why: "Lavoisier, en 1777 d’après le cahier. La phrase résume la conservation de la masse."
+  },
+  {
+    q: "Que dit la conservation de la masse ?",
+    choices: ["La masse des produits formés est toujours plus grande", "Masse des réactifs disparus = masse des produits", "La masse des réactifs est toujours plus grande", "La masse diminue car des gaz s’échappent"],
+    answer: 1,
+    why: "La masse des réactifs disparus est égale à la masse des produits formés."
+  },
+  {
+    q: "12 g de carbone brûlent complètement avec 32 g de dioxygène. Quelle masse de CO₂ se forme ?",
+    choices: ["20 g", "44 g", "32 g", "12 g"],
+    answer: 1,
+    why: "Conservation de la masse : 12 + 32 = 44 g."
+  },
+  {
+    q: "Manuel : le noyau atomique est combien de fois plus petit que l’atome ?",
+    choices: ["1 000 fois", "10 000 fois", "100 000 fois", "1 000 000 de fois"],
+    answer: 2,
+    why: "Atome 10⁻¹⁰ m, noyau 10⁻¹⁵ m : un rapport de 10⁵ = 100 000."
+  },
+  {
+    q: "Manuel : quel est l’ordre de grandeur de la dimension du noyau ?",
+    choices: ["10⁻⁹ m", "10⁻¹⁰ m", "10⁻¹⁵ m", "10⁻²⁷ m"],
+    answer: 2,
+    why: "10⁻¹⁵ m pour le noyau. 10⁻¹⁰ m, c’est l’atome entier."
+  },
+  {
+    q: "Manuel : comment appelle-t-on les particules qui constituent le noyau ?",
+    choices: ["Les électrons", "Les nucléons", "Les ions", "Les isotopes"],
+    answer: 1,
+    why: "Les nucléons : protons et neutrons."
+  },
+  {
+    q: "Manuel : quelle est la charge du proton et celle du neutron ?",
+    choices: ["Proton positif, neutron négatif", "Proton positif, neutron neutre", "Proton neutre, neutron positif", "Proton négatif, neutron neutre"],
+    answer: 1,
+    why: "Protons chargés positivement, neutrons électriquement neutres."
+  },
+  {
+    q: "Manuel : quelle part de la masse d’un atome se trouve dans son noyau ?",
+    choices: ["Environ la moitié", "Plus de 99 %", "Moins de 1 %", "Environ 90 %"],
+    answer: 1,
+    why: "La masse des électrons est négligeable devant celle des nucléons."
+  },
+  {
+    q: "Manuel : à quoi est égal le nombre de protons Z d’un atome ?",
+    choices: ["Au nombre de neutrons", "Au nombre d’électrons", "Au nombre de nucléons", "Au nombre de masse"],
+    answer: 1,
+    why: "L’atome est électriquement neutre : autant de protons que d’électrons."
+  },
+  {
+    q: "Manuel : le noyau de lithium a 7 nucléons et 3 protons. Combien de neutrons ?",
+    choices: ["3", "4", "7", "10"],
+    answer: 1,
+    why: "N = A − Z = 7 − 3 = 4."
+  },
+  {
+    q: "Manuel : dans le symbole ⁶³₂₉Cu, que représente 63 ?",
+    choices: ["Le nombre de protons", "Le nombre de nucléons", "Le nombre de neutrons", "Le nombre d’électrons"],
+    answer: 1,
+    why: "En haut à gauche, A = 63 nucléons. En bas, Z = 29 protons. N = 34."
+  },
+  {
+    q: "Manuel : où s’écrivent A et Z dans le symbole d’un noyau ?",
+    choices: ["A en haut à droite, Z en bas à droite", "A en haut à gauche, Z en bas à gauche", "Z en haut à gauche, A en bas à gauche", "A en haut à gauche, Z en bas à droite"],
+    answer: 1,
+    why: "Tous les deux à gauche du symbole, A au-dessus de Z. À droite en haut, c’est la charge d’un ion."
+  },
+  {
+    q: "Manuel : qu’est-ce qu’un élément chimique ?",
+    choices: ["L’ensemble des atomes qui ont la même masse", "L’ensemble des atomes, ions… qui ont le même Z", "L’ensemble des atomes qui ont le même nombre de nucléons", "Un atome qui ne peut pas se transformer"],
+    answer: 1,
+    why: "Même nombre de protons, donc même numéro atomique Z. Cu, Cu²⁺ et CuO contiennent l’élément cuivre."
+  },
+  {
+    q: "Manuel : quand deux atomes sont-ils isotopes ?",
+    choices: ["Même A, Z différents", "Même Z, A différents", "Même Z et même A", "Même nombre de neutrons"],
+    answer: 1,
+    why: "Même nombre de protons, nombres de nucléons différents : carbone 12, 13 et 14."
+  },
+  {
+    q: "Manuel, exercice 16 : A (13 p, 14 n), B (12 p, 14 n), C (13 p, 13 n), D (12 p, 13 n), E (14 p, 13 n). Lesquels sont isotopes ?",
+    choices: ["A et C seulement", "A et C, et aussi B et D", "A et B, qui ont 14 neutrons", "C, D et E, qui ont 13 neutrons"],
+    answer: 1,
+    why: "Isotopes = même nombre de protons. A et C ont 13 protons ; B et D ont 12 protons. Le nombre de neutrons ne compte pas."
+  },
+  {
+    q: "Manuel : un élément chimique peut-il se transformer en un autre lors d’une transformation chimique ?",
+    choices: ["Oui, si on chauffe assez fort", "Non, jamais", "Oui, c’est le principe de la combustion", "Oui, mais seulement pour les métaux"],
+    answer: 1,
+    why: "Les atomes se réarrangent mais ne disparaissent pas : l’élément reste le même."
   }
 ];
 
@@ -293,9 +449,9 @@ QUIZ.extra = [
   },
   {
     q: "Le noyau est-il beaucoup plus petit que l’atome ?",
-    choices: ["Non, il a presque la même taille", "Oui, mais seulement 2 à 3 fois plus petit", "Oui, des dizaines de milliers de fois", "Oui, environ 100 fois plus petit"],
+    choices: ["Non, il a presque la même taille", "Oui, mais seulement 2 à 3 fois plus petit", "Oui, environ 100 000 fois plus petit", "Oui, environ 100 fois plus petit"],
     answer: 2,
-    why: "D’où la structure lacunaire. L’exercice 6 du manuel fait calculer ce rapport."
+    why: "10⁻¹⁵ m contre 10⁻¹⁰ m. D’où la structure lacunaire. Le chapitre 13 du manuel le dit en toutes lettres."
   },
   {
     q: "Où se trouve presque toute la masse d’un atome ?",
@@ -356,5 +512,59 @@ QUIZ.extra = [
     choices: ["À colorer les précipités", "À dater des restes très anciens", "À mesurer la masse volumique des roches", "À conduire le courant dans les solutions"],
     answer: 1,
     why: "C’est un isotope radioactif qui se transforme lentement."
+  },
+  {
+    q: "Pourquoi le sel NaCl n’est-il pas une molécule ?",
+    choices: ["Parce qu’il contient deux sortes d’atomes différents", "C’est un cristal ionique, un empilement d’ions", "Parce qu’il se dissout dans l’eau", "Parce que ses atomes ne sont pas reliés"],
+    answer: 1,
+    why: "NaCl est un empilement d’ions Na⁺ et Cl⁻. La formule donne seulement la proportion des ions."
+  },
+  {
+    q: "Dans un modèle moléculaire, de quelle couleur est l’atome d’oxygène ?",
+    choices: ["Noir", "Blanc", "Rouge", "Bleu"],
+    answer: 2,
+    why: "C noir, H blanc, O rouge, N bleu."
+  },
+  {
+    q: "Quel gaz dangereux se forme lors d’une combustion incomplète ?",
+    choices: ["Le dioxyde de carbone CO₂", "Le monoxyde de carbone CO", "Le diazote N₂", "Le dioxygène O₂"],
+    answer: 1,
+    why: "Par manque de dioxygène. Le CO est invisible, inodore et très toxique."
+  },
+  {
+    q: "Avec quoi teste-t-on la présence de dioxyde de carbone ?",
+    choices: ["Le nitrate d’argent, qui noircit", "L’eau de chaux, qui se trouble", "La soude", "Une flamme qui s’éteint"],
+    answer: 1,
+    why: "Le CO₂ trouble l’eau de chaux, qui devient blanchâtre."
+  },
+  {
+    q: "Qu’est-il arrivé à Lavoisier en 1794 ?",
+    choices: ["Il a reçu le prix Nobel", "Il a été guillotiné", "Il a publié son traité", "Il a découvert l’oxygène"],
+    answer: 1,
+    why: "Pendant la Révolution. Son Traité élémentaire de chimie date de 1789."
+  },
+  {
+    q: "En quelle année James Chadwick a-t-il découvert le neutron ?",
+    choices: ["1897", "1911", "1932", "1935"],
+    answer: 2,
+    why: "En bombardant du béryllium avec des particules alpha. L’exercice 22 du manuel raconte l’histoire."
+  },
+  {
+    q: "Quelle est la demi-vie du carbone 14, utilisé pour dater ?",
+    choices: ["573 ans", "5 730 ans", "57 300 ans", "5,73 millions d’années"],
+    answer: 1,
+    why: "Tous les 5 730 ans, la moitié des noyaux de carbone 14 s’est transformée en azote 14."
+  },
+  {
+    q: "Quel isotope est utilisé dans les centrales nucléaires ?",
+    choices: ["L’uranium 234", "L’uranium 235", "L’uranium 238", "Le carbone 14"],
+    answer: 1,
+    why: "92 protons et 143 neutrons. Sa fission libère de l’énergie."
+  },
+  {
+    q: "Un proton est environ combien de fois plus lourd qu’un électron ?",
+    choices: ["Aussi lourd", "18 fois", "1 836 fois", "100 000 fois"],
+    answer: 2,
+    why: "C’est pour cela que plus de 99 % de la masse de l’atome est dans le noyau."
   }
 ];

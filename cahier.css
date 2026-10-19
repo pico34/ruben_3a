@@ -521,3 +521,15 @@ footer { padding: 8px 0 40px; color: var(--muted); font-size: 13px; }
   .barre-accueil { font-size: 16px; }
   header.top { padding-top: 18px; }
 }
+
+/* Tableaux (mots interrogatifs, verbes irréguliers, etc.) */
+.tableau-scroll { overflow-x: auto; margin: 10px 0 14px; }
+.tableau { width: 100%; border-collapse: collapse; font-size: 15px; }
+.tableau th, .tableau td { border-top: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+.tableau thead th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); border-top: 0; }
+.tableau tr.bloc th { background: var(--blue-soft); color: var(--blue); font-family: Fraunces, Georgia, serif; font-size: 16px; padding: 9px 10px; }
+.tableau td.num { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tableau td.mot { font-weight: 650; }
+.tableau.compact { font-size: 14px; }
+.tableau.compact th, .tableau.compact td { padding: 5px 8px; }
+@media (max-width: 720px) { .tableau { font-size: 13px; } .tableau th, .tableau td { padding: 5px 6px; } }

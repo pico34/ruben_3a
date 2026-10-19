@@ -317,6 +317,192 @@ QUIZ.cahier = [
     choices: ["Ils reçoivent des terres supplémentaires de l’État", "Déportation au goulag, les plus actifs sont fusillés", "Ils sont présentés en héros du travail par la propagande", "Ils sont expulsés vers l’Allemagne et la Pologne"],
     answer: 1,
     why: "Liquidation des « contre-révolutionnaires », déportation massive au goulag, rations de famine."
+  },
+  {
+    q: "Qu’est-ce que la Grande Terreur, d’après le cours ?",
+    choices: ["La famine organisée en Ukraine en 1933", "L’élimination des « ennemis du Parti » de 1936 à 1938", "La collectivisation forcée des campagnes à partir de 1929", "La guerre civile entre bolcheviks et partisans du tsar"],
+    answer: 1,
+    why: "De 1936 à 1938, Staline fait éliminer « les ennemis du Parti », les grandes figures du Parti et ses anciens proches."
+  },
+  {
+    q: "Combien de morts le cahier attribue-t-il à la Grande Terreur ?",
+    choices: ["0,7 million", "6 millions", "20 millions", "10 millions"],
+    answer: 0,
+    why: "0,7 million de morts, soit environ 700 000 exécutions. Les 6 millions, c’est la famine de 1933 ; les 20 millions, les déportés."
+  },
+  {
+    q: "Que sont les « purges staliniennes » ?",
+    choices: ["L’élimination des anciens du Parti", "La déportation des koulaks au goulag", "Le trucage des chiffres de production", "Le remplacement des paysans par des ouvriers"],
+    answer: 0,
+    why: "La délation, les quotas d’exécution, les anciens du Parti éliminés : on appelle cela les purges staliniennes."
+  },
+  {
+    q: "Comment s’appelle le fait de glorifier et de déifier Staline ?",
+    choices: ["Le culte de la personnalité", "La propagande totale", "Le stakhanovisme", "La dictature du prolétariat"],
+    answer: 0,
+    why: "Staline est déifié, glorifié : c’est le culte de la personnalité, écrit en rouge dans le cahier."
+  },
+  {
+    q: "À quoi sont condamnés les « ennemis du peuple » ?",
+    choices: ["À l’exil à l’étranger ou à une amende", "À la mort ou à la « rééducation par le travail »", "À travailler dans les fermes collectives", "À la perte de leur carte du Parti"],
+    answer: 1,
+    why: "Condamnés à mort ou à la « rééducation par le travail » dans les goulags."
+  },
+  {
+    q: "Quelle phrase, en rouge, conclut la leçon sur le contrôle des hommes ?",
+    choices: ["Aucun individu n’échappe au contrôle du régime", "Le contrôle de l’économie soviétique est total", "La révolution doit s’étendre au monde entier", "Le peuple suit son chef sans jamais discuter"],
+    answer: 0,
+    why: "« Système totalitaire : aucun individu n’échappe au contrôle du régime. »"
+  },
+  {
+    q: "Quelles sont les trois étapes de la méthode d’analyse d’un document ?",
+    choices: ["Je lis, je recopie, je conclus", "Je vois, je sais, j’en déduis", "L’auteur, la date, le destinataire", "Je décris, je critique, je compare"],
+    answer: 1,
+    why: "1. Ce que je vois, 2. Ce que je sais, 3. Ce que j’en déduis."
+  },
+  {
+    q: "Quel régime est mis en place en Allemagne dès 1918 ?",
+    choices: ["La République de Weimar", "Le IIIe Reich", "L’Empire allemand", "La République fédérale d’Allemagne"],
+    answer: 0,
+    why: "La République de Weimar, avec le président Hindenburg à sa tête d’après le cahier."
+  },
+  {
+    q: "Combien de chômeurs compte l’Allemagne en 1932 ?",
+    choices: ["600 000", "2 millions", "6 millions", "20 millions"],
+    answer: 2,
+    why: "6 millions de chômeurs en 1932, un record absolu."
+  },
+  {
+    q: "Pourquoi la crise de 1929 touche-t-elle l’Allemagne ?",
+    choices: ["Les États-Unis rapatrient les capitaux investis en Europe", "La France exige le paiement immédiat de toutes les réparations", "Les communistes organisent une grève générale", "L’Allemagne perd ses colonies et ses marchés"],
+    answer: 0,
+    why: "La crise part des États-Unis, qui rapatrient leurs capitaux : l’Allemagne plonge dans une crise profonde."
+  },
+  {
+    q: "Que se passe-t-il le 30 janvier 1933 ?",
+    choices: ["Hitler devient chancelier", "Hindenburg meurt", "Le parti nazi est fondé", "Hitler devient Führer et remporte les élections"],
+    answer: 0,
+    why: "Hitler devient chancelier, c’est-à-dire Premier ministre."
+  },
+  {
+    q: "Quand Hindenburg meurt-il ?",
+    choices: ["En janvier 1933", "En août 1934", "En 1920", "En 1945"],
+    answer: 1,
+    why: "Hindenburg meurt en août 1934. Hitler détient alors tous les pouvoirs."
+  },
+  {
+    q: "En quelle année est fondé le NSDAP, le parti nazi ?",
+    choices: ["1918", "1920", "1929", "1933"],
+    answer: 1,
+    why: "1920 = NSDAP, écrit sur la carte mentale."
+  },
+  {
+    q: "Comment doit-on appeler Hitler ?",
+    choices: ["Le Führer", "Le Kaiser", "Le Duce", "Le chancelier du Reich"],
+    answer: 0,
+    why: "On doit l’appeler le Führer. Il détient tous les pouvoirs de 1933 à 1945."
+  },
+  {
+    q: "Qu’est-ce que la Gestapo ?",
+    choices: ["La police politique nazie", "Le parti nazi", "La jeunesse nazie", "L’armée de l’Allemagne nazie"],
+    answer: 0,
+    why: "La Gestapo est l’exemple de police politique donné par le cahier."
+  },
+  {
+    q: "Qui peut être arrêté, déporté, torturé ou exécuté dans l’Allemagne nazie, d’après le cahier ?",
+    choices: ["Toute personne jugée « socialement nuisible »", "Seulement les communistes", "Seulement les étrangers", "Seulement les anciens combattants"],
+    answer: 0,
+    why: "Toute personne jugée « socialement nuisible », et les opposants."
+  },
+  {
+    q: "Vers quoi l’économie de l’Allemagne nazie est-elle tournée ?",
+    choices: ["Vers la guerre", "Vers l’agriculture", "Vers le commerce", "Vers les biens de consommation"],
+    answer: 0,
+    why: "Une économie tournée vers la guerre : production d’armes, moins de chômeurs, plus de productivité."
+  },
+  {
+    q: "D’après le manuel, quels sont les quatre moyens d’un régime totalitaire ?",
+    choices: ["Parti unique, terreur, propagande, contrôle de l’économie", "Armée, police, justice, école", "Élections truquées, parlement, presse contrôlée, syndicats", "Un chef, une religion, une armée, une monnaie"],
+    answer: 0,
+    why: "Une dictature qui contrôle l’ensemble de la société au moyen d’un parti unique, de la terreur, de la propagande et du contrôle de l’économie."
+  },
+  {
+    q: "Qu’est-ce qu’une démocratie, d’après le manuel ?",
+    choices: ["Un régime où le pouvoir appartient au peuple", "Un régime dirigé par un parti unique", "Un régime où le roi gouverne avec un parlement", "Un régime où l’armée contrôle l’État"],
+    answer: 0,
+    why: "Régime politique dans lequel le pouvoir appartient au peuple. En 1938 : France, Royaume-Uni, Belgique, Tchécoslovaquie…"
+  },
+  {
+    q: "Qu’est-ce qu’un parti unique ?",
+    choices: ["Le seul parti autorisé, il contrôle l’État", "Le parti qui a gagné les élections", "Le parti le plus ancien du pays", "Le parti du chef de l’armée"],
+    answer: 0,
+    why: "Seul parti politique autorisé dans un régime totalitaire. Il contrôle étroitement l’État."
+  },
+  {
+    q: "Quel régime totalitaire dirige Mussolini ?",
+    choices: ["Le fascisme, en Italie", "Le nazisme, en Allemagne", "Le stalinisme, en URSS", "Le franquisme, en Espagne"],
+    answer: 0,
+    why: "Trois totalitarismes sur la carte de 1938 : fascisme (Mussolini), stalinisme (Staline), nazisme (Hitler)."
+  },
+  {
+    q: "En quelle année Mussolini arrive-t-il au pouvoir, d’après la carte du manuel ?",
+    choices: ["1917", "1922", "1924", "1933"],
+    answer: 1,
+    why: "Mussolini 1922, Staline 1924, Hitler 1933."
+  },
+  {
+    q: "Quelle limite le traité de Versailles fixe-t-il à l’armée allemande ?",
+    choices: ["100 000 hommes", "1 million d’hommes", "10 000 hommes", "500 000 hommes"],
+    answer: 0,
+    why: "L’armée ne devra pas dépasser 100 000 hommes ; la fabrication et l’importation de chars sont interdites."
+  },
+  {
+    q: "Quel pourcentage des voix obtient le parti nazi en juillet 1932 ?",
+    choices: ["2,6 %", "18,3 %", "37,3 %", "51 %"],
+    answer: 2,
+    why: "2,6 % en 1928, 18,3 % en 1930, 37,3 % en juillet 1932, pendant que le chômage explose."
+  },
+  {
+    q: "À quoi sert l’incendie du Reichstag aux nazis, en février 1933 ?",
+    choices: ["À interdire le parti communiste et abolir les libertés", "À reconstruire un parlement plus grand", "À faire élire Hitler président", "À obtenir de nouvelles élections législatives en Allemagne"],
+    answer: 0,
+    why: "Ils attribuent abusivement l’incendie à un communiste pour interdire le parti et abolir les libertés fondamentales."
+  },
+  {
+    q: "Quand et où Hitler rédige-t-il Mein Kampf ?",
+    choices: ["En prison, après son coup d’État manqué de 1923", "Au front, pendant la Première Guerre mondiale, en 1916", "À la chancellerie, après janvier 1933", "En exil en Autriche, après 1918"],
+    answer: 0,
+    why: "Après une tentative de coup d’État en 1923, il rédige Mein Kampf en prison."
+  },
+  {
+    q: "Qu’est-ce que le Komintern, créé par Lénine en 1919 ?",
+    choices: ["La IIIe Internationale, qui coordonne les partis communistes", "La police politique soviétique", "Le plan économique de l’URSS", "L’armée des bolcheviks pendant la guerre civile"],
+    answer: 0,
+    why: "Pour permettre une révolution communiste mondiale."
+  },
+  {
+    q: "Qu’est-ce que le « Grand tournant » de 1929 ?",
+    choices: ["Staline décide de collectiviser les terres", "Lénine signe la paix séparée avec l’Allemagne", "Hitler est nommé chancelier", "Staline lance la Grande Terreur"],
+    answer: 0,
+    why: "Staline décide d’exproprier les paysans et de collectiviser les terres. La dékoulakisation est décidée la même année."
+  },
+  {
+    q: "Qu’est-ce qu’un kolkhoze ?",
+    choices: ["Une exploitation agricole collective", "Un camp de travaux forcés", "Un paysan aisé opposé à la collectivisation", "Une usine d’État"],
+    answer: 0,
+    why: "Exploitation agricole appartenant à un groupe de paysans qui mettent en commun terres, bétail et outils."
+  },
+  {
+    q: "À quel âge entre-t-on aux Jeunesses hitlériennes, d’après le manuel ?",
+    choices: ["6 ans", "10 ans", "14 ans", "18 ans"],
+    answer: 2,
+    why: "Initiation dès 6 ans, Jeune Peuple à 10 ans, Jeunesses hitlériennes de 14 à 18 ans."
+  },
+  {
+    q: "Comment s’appellent les Jeunesses communistes en URSS ?",
+    choices: ["Les Komsomols", "Les Pionniers", "Les Enfants d’Octobre", "Les kolkhoziens"],
+    answer: 0,
+    why: "Enfants d’Octobre jusqu’à 9 ans, Pionniers de 10 à 14 ans, puis Komsomols."
   }
 ];
 
@@ -440,5 +626,59 @@ QUIZ.extra = [
     choices: ["Le petit père des peuples", "Le père de la révolution", "Le Tigre", "Le père la Victoire"],
     answer: 0,
     why: "C’est le culte de la personnalité."
+  },
+  {
+    q: "Que se passe-t-il dans la nuit du 27 février 1933 en Allemagne ?",
+    choices: ["L’incendie du Reichstag", "La Nuit de cristal", "La Nuit des longs couteaux", "L’ouverture du camp de Dachau"],
+    answer: 0,
+    why: "Le parlement brûle. Les nazis accusent les communistes, qui sont arrêtés en masse, et les libertés sont suspendues."
+  },
+  {
+    q: "Que décident les lois de Nuremberg de 1935 ?",
+    choices: ["Elles retirent aux Juifs la citoyenneté allemande", "Elles donnent les pleins pouvoirs à Hitler", "Elles interdisent le parti communiste", "Elles rendent obligatoires les Jeunesses hitlériennes"],
+    answer: 0,
+    why: "Septembre 1935 : les Juifs perdent la citoyenneté allemande, les mariages avec des « Aryens » sont interdits."
+  },
+  {
+    q: "Qu’est-ce que la Nuit de cristal, en novembre 1938 ?",
+    choices: ["Un pogrom contre les Juifs d’Allemagne", "L’élimination des chefs de la SA", "Un défilé aux flambeaux pour Hitler", "L’ouverture des Jeux olympiques de Berlin"],
+    answer: 0,
+    why: "Du 9 au 10 novembre 1938 : synagogues incendiées, magasins pillés, environ 30 000 Juifs envoyés dans des camps."
+  },
+  {
+    q: "Qui est le ministre de la Propagande de Hitler ?",
+    choices: ["Goebbels", "Himmler", "Göring", "Hindenburg"],
+    answer: 0,
+    why: "Goebbels, à partir de mars 1933 : radio, cinéma, grands rassemblements."
+  },
+  {
+    q: "Quel titre Hitler prend-il à la mort de Hindenburg, en août 1934 ?",
+    choices: ["Führer et chancelier du Reich", "Président de la République", "Kaiser", "Reichsmarschall"],
+    answer: 0,
+    why: "Il cumule les fonctions de président et de chancelier. L’armée lui prête serment personnellement."
+  },
+  {
+    q: "Qu’est-ce que la Nuit des longs couteaux, le 30 juin 1934 ?",
+    choices: ["L’élimination des chefs de la SA et d’autres rivaux", "L’incendie du parlement allemand", "L’arrestation de tous les députés communistes du Reichstag", "L’attaque des magasins juifs dans toute l’Allemagne"],
+    answer: 0,
+    why: "Hitler fait assassiner les chefs de la SA, la milice du parti, et d’autres rivaux."
+  },
+  {
+    q: "Qui est accusé de l’incendie du Reichstag et exécuté en 1934 ?",
+    choices: ["Marinus van der Lubbe", "Ernst Röhm, chef de la SA", "Léon Trotski", "Heinrich Hoffmann"],
+    answer: 0,
+    why: "Un jeune communiste néerlandais. Les nazis s’en servent pour interdire le parti communiste."
+  },
+  {
+    q: "Combien de temps Hitler reste-t-il en prison après le putsch de 1923 ?",
+    choices: ["Environ neuf mois", "Cinq ans, toute sa peine", "Deux semaines", "Dix ans"],
+    answer: 0,
+    why: "Condamné à cinq ans, il n’en fait que neuf mois et y dicte Mein Kampf."
+  },
+  {
+    q: "Quel nom portent les fermes d’État soviétiques, à côté des kolkhozes ?",
+    choices: ["Les sovkhozes", "Les soviets", "Les Komsomols", "Les goulags"],
+    answer: 0,
+    why: "Sovkhoze : ferme d’État où les paysans sont salariés. Kolkhoze : coopérative."
   }
 ];

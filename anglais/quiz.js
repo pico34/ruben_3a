@@ -33,7 +33,25 @@ QUIZ.cahier = [
   { q: "Réponse brève à « Did he have breakfast? » (non) ?", choices: ["No, he not had.", "No, he didn’t.", "No, he hadn’t breakfast.", "No, didn’t he."], answer: 1, why: "Réponse brève avec l’auxiliaire : No, he didn’t." },
   { q: "Complète : « He ____ (NOT/ARRIVE) late at work. »", choices: ["didn’t arrived", "didn’t arrive", "not arrived", "wasn’t arrive"], answer: 1, why: "Didn’t + base verbale." },
   { q: "Complète : « He ____ (BEGIN) a book. »", choices: ["beginned", "begun", "began", "begin"], answer: 2, why: "Begin – began – begun." },
-  { q: "True or false : « The first plane hit during the meeting. »", choices: ["True, it hit at 9.00, during the meeting", "False, it hit before the meeting", "True, the meeting started at 8.46", "False, it hit after the meeting"], answer: 1, why: "He had a meeting at 9 am. The first plane hit at 8.46, before the meeting." }
+  { q: "True or false : « The first plane hit during the meeting. »", choices: ["True, it hit at 9.00, during the meeting", "False, it hit before the meeting", "True, the meeting started at 8.46", "False, it hit after the meeting"], answer: 1, why: "He had a meeting at 9 am. The first plane hit at 8.46, before the meeting." },
+  { q: "Quel mot interrogatif sert à demander la distance ?", choices: ["How long", "How far", "How deep", "How often"], answer: 1, why: "How far is the station? À quelle distance se trouve la gare ?" },
+  { q: "« How often does he play tennis? » interroge sur…", choices: ["la fréquence", "la manière", "la longueur du match", "la quantité"], answer: 0, why: "How often : la fréquence. Avec quelle fréquence joue-t-il au tennis ?" },
+  { q: "Quel mot pour demander à qui appartient quelque chose ?", choices: ["Who", "Whose", "Which", "What"], answer: 1, why: "Whose interroge sur le possesseur : Whose book is this? À qui est ce livre ?" },
+  { q: "Pour demander le prix d’un livre, tu dis…", choices: ["How many is this book?", "How much is this book?", "How long is this book?", "How big is this book?"], answer: 1, why: "How much : la quantité ou le prix. How many : le nombre." },
+  { q: "Traduis : « Quelle est la profondeur de la rivière ? »", choices: ["How wide is the river?", "How long is the river?", "How deep is the river?", "How tall is the river?"], answer: 2, why: "How deep : la profondeur. How wide : la largeur. How long : la longueur." },
+  { q: "Dans les mots croisés, « se disputer » se dit…", choices: ["to reach", "to argue", "to sway", "to shout"], answer: 1, why: "To argue : se disputer. To reach : atteindre. To sway : osciller." },
+  { q: "« Jack took the stairs, because the … were no longer working. »", choices: ["firefighters", "elevators", "nightmares", "skyscrapers"], answer: 1, why: "Les ascenseurs (elevators) ne marchaient plus : il a pris les escaliers." },
+  { q: "Comment dit-on « l’ascenseur » en anglais britannique ?", choices: ["The elevator", "The lift", "The stairs", "The storey"], answer: 1, why: "Lift (GB), elevator (USA)." },
+  { q: "Quelle est la hauteur de l’Empire State Building ?", choices: ["381 meters", "1931 meters", "37.5 meters", "3.5 million meters"], answer: 0, why: "One of New York’s tallest skyscrapers at 381 meters." },
+  { q: "En quelle année l’Empire State Building a-t-il été achevé ?", choices: ["1901", "1931", "1981", "2001"], answer: 1, why: "It was completed in 1931 : nineteen thirty-one." },
+  { q: "Combien de visiteurs Central Park reçoit-il chaque année ?", choices: ["3.5 million", "37.5 million", "381 thousand", "1,931"], answer: 1, why: "37.5 million visitors every year. 3.5 million, c’est l’Empire State Building." },
+  { q: "Comment écrit-on l’année 1931 en lettres ?", choices: ["one thousand nine hundred thirty-one", "nineteen thirty-one", "nineteen hundred and thirty-one", "ninety thirty-one"], answer: 1, why: "Une année se lit par paires : nineteen / thirty-one." },
+  { q: "Pour quoi Times Square est-il connu ?", choices: ["Its lake and its zoo", "Its colourful neon lights", "Its hot dog vendors only", "Its two ice skating rinks"], answer: 1, why: "Colourful neon lights and advertising, theaters, restaurants and shops. Le lac et le zoo sont à Central Park." },
+  { q: "Prétérit de « begin » ?", choices: ["begun", "beginned", "began", "begin"], answer: 2, why: "Begin – began – begun (n° 4, Test 1)." },
+  { q: "Participe passé de « choose » ?", choices: ["choosed", "chose", "chosen", "chooses"], answer: 2, why: "Choose – chose – chosen (n° 17, Test 1)." },
+  { q: "Prétérit de « catch » ?", choices: ["catched", "caught", "cought", "catch"], answer: 1, why: "Catch – caught – caught (n° 16), comme teach – taught." },
+  { q: "Prétérit de « go » ?", choices: ["goed", "gone", "went", "wented"], answer: 2, why: "Go – went – gone (n° 39, Test 2). Gone est le participe passé." },
+  { q: "Dans quel test tombe le verbe n° 39, « go » ?", choices: ["Test 1 (1 à 20)", "Test 2 (21 à 40)", "Test 3 (41 à 60)", "Test 4 (61 à 80)"], answer: 1, why: "Test 2 couvre les verbes 21 à 40, de do à grow." }
 ];
 
 QUIZ.extra = [
@@ -46,5 +64,10 @@ QUIZ.extra = [
   { q: "Que décrit « he was having a cup of coffee » ?", choices: ["Une habitude répétée dans le passé", "Une action en cours dans le passé", "Une action passée, terminée et datée", "Une action en cours au moment présent"], answer: 1, why: "Prétérit en be + -ing : action en cours, interrompue par le choc de l’avion." },
   { q: "Que signifie « My husband used to work in the Twin Towers » ?", choices: ["Il y travaille encore aujourd’hui", "Il y travaillait avant, plus maintenant", "Il a l’habitude d’y travailler tous les jours", "Il n’y a jamais vraiment travaillé"], answer: 1, why: "Used to : habitude passée révolue." },
   { q: "Question correcte avec « be » ?", choices: ["Did they were in the tower?", "Were they in the tower?", "Did they be in the tower?", "Was they in the tower?"], answer: 1, why: "Be ne prend pas did : on inverse sujet et verbe." },
-  { q: "Participe passé de « see » ?", choices: ["saw", "seen", "seed", "sawn"], answer: 1, why: "See – saw – seen." }
+  { q: "Participe passé de « see » ?", choices: ["saw", "seen", "seed", "sawn"], answer: 1, why: "See – saw – seen." },
+  { q: "Avec un nom indénombrable comme « water », on demande…", choices: ["How many water?", "How much water?", "How often water?", "How long water?"], answer: 1, why: "How much + indénombrable ; how many + dénombrable pluriel." },
+  { q: "Lequel de ces verbes irréguliers ne change jamais de forme ?", choices: ["sing", "cut", "drink", "swim"], answer: 1, why: "Cut – cut – cut, comme put, hit, shut, cost, let." },
+  { q: "Comment dit-on l’année 2001 ?", choices: ["twenty oh one", "two thousand and one", "twenty hundred one", "two thousand one hundred"], answer: 1, why: "Les années 2000 à 2009 se disent avec two thousand (and)." },
+  { q: "Quel prétérit rime avec « bought » ?", choices: ["taught", "took", "threw", "wrote"], answer: 0, why: "Famille -ought / -aught : bought, brought, thought, caught, taught." },
+  { q: "Tu choisis entre deux couleurs précises : quel mot ?", choices: ["What colour do you want?", "Which colour do you want?", "Whose colour do you want?", "How colour do you want?"], answer: 1, why: "Which quand le choix est limité (red or blue?), what pour une question ouverte." }
 ];
