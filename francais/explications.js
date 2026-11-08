@@ -96,7 +96,7 @@ QUIZ.expliquer = [
   },
   {
     q: "Explique la différence entre un énoncé ancré dans la situation d’énonciation et un énoncé coupé, avec un exemple de récit de naissance.",
-    reponse: "Un énoncé coupé de la situation d’énonciation se comprend tout seul, sans savoir qui parle ni quand : c’est le cas des récits et des textes documentaires. Il utilise des dates précises et le passé simple : « Le 3 mars 1950, je vins au monde dans une petite ville du Nord. » Un énoncé ancré dans la situation d’énonciation ne se comprend que si l’on connaît le moment où l’on parle : repères relatifs au présent et passé composé. « Il y a bien longtemps, je suis venu au monde dans une petite ville du Nord. »",
+    reponse: "Un énoncé coupé de la situation d’énonciation se comprend sans connaître les circonstances dans lesquelles il est émis : c’est le cas des récits historiques et des textes documentaires. Pour couper le récit de sa naissance du moment de l’énonciation, on emploie une date précise et le passé simple : « Le 3 mars 1950, je vins au monde dans une petite ville du Nord. » À l’inverse, un énoncé ancré dépend de la situation d’énonciation : il utilise des repères liés au présent et le passé composé, comme « Il y a bien longtemps, je suis venu au monde dans une petite ville du Nord. »",
     cles: ["coupé", "ancré", "passé simple", "passé composé"]
   },
   {
@@ -106,7 +106,7 @@ QUIZ.expliquer = [
   },
   {
     q: "Raconte le mythe d’Œdipe en quelques phrases.",
-    reponse: "Laïos, roi de Thèbes, abandonne son fils parce que l’oracle a prédit que l’enfant le tuerait et épouserait sa mère. Recueilli à Corinthe par Polybe et Mérope, Œdipe apprend la prophétie et fuit pour protéger ceux qu’il croit ses parents. À un carrefour, en Phocide, il tue un vieil homme : Laïos. Il délivre Thèbes du Sphinx en répondant « l’Homme » à son énigme, reçoit la couronne et épouse la reine Jocaste, sa mère. Des années plus tard, la peste frappe la ville ; le devin Tirésias révèle la vérité. Jocaste se pend, Œdipe se crève les yeux.",
+    reponse: "Laïos, roi de Thèbes, abandonne son fils parce que l’oracle a prédit que l’enfant le tuerait et épouserait sa mère. Recueilli à Corinthe par Polybe et Mérope, Œdipe apprend la prophétie et fuit pour protéger ceux qu’il croit ses parents. À un carrefour, en Phocide, il tue un vieil homme : Laïos. Il délivre Thèbes du Sphinx en répondant « l’Homme » à son énigme, reçoit la couronne et épouse la reine Jocaste, sa mère. Des années plus tard, la peste frappe la ville ; le devin Tirésias révèle la vérité. Jocaste se pend, Œdipe s’arrache les yeux avec les agrafes d’or de sa robe.",
     cles: ["Laïos", "Corinthe", "Sphinx", "Jocaste", "Tirésias"]
   },
   {
@@ -116,7 +116,7 @@ QUIZ.expliquer = [
   },
   {
     q: "Décris le tableau d’Ingres, Œdipe explique l’énigme du Sphinx, et explique ce qu’il représente.",
-    reponse: "Œdipe explique l’énigme du Sphinx est une huile sur toile du peintre néo-classique Ingres, peinte en 1808 et conservée au musée du Louvre. Œdipe, nu, en pleine lumière, le pied posé sur un rocher, pointe le doigt vers le Sphinx, tapi dans l’ombre : corps de femme, pattes de lion, ailes d’aigle. Au sol, des ossements de victimes ; au fond, un compagnon s’enfuit et l’on aperçoit Thèbes. Le tableau montre la victoire de l’intelligence humaine sur l’irrationnel, mais cette victoire n’est qu’apparente : Œdipe a déjà tué son père et va épouser sa mère.",
+    reponse: "Œdipe explique l’énigme du Sphinx est une huile sur toile du peintre néo-classique Ingres, peinte en 1808 et conservée au musée du Louvre. Œdipe, nu, en pleine lumière, le pied posé sur un rocher, pointe le doigt vers le Sphinx, tapi dans l’ombre : corps de femme, pattes de lion, ailes d’aigle. Au sol, des ossements de victimes ; au fond, un compagnon s’enfuit et l’on aperçoit Thèbes. Le tableau montre la victoire de l’intelligence humaine sur l’irrationnel, mais cette victoire n’est qu’apparente : Œdipe a déjà tué son père Laïos (le parricide) et va épouser sa mère Jocaste (l’inceste).",
     cles: ["1808", "Louvre", "lumière", "corps de femme", "Thèbes", "apparente"]
   }
 ];

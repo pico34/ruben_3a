@@ -3,10 +3,10 @@ QUIZ.cahier = [
   {
     q: "Dans quel ordre le message circule-t-il lors d’un mouvement ?",
     choices: [
-      "Organe effecteur → nerf sensitif → cerveau → organe récepteur",
+      "Organe effecteur → nerf moteur → centre nerveux → nerf sensitif → organe récepteur",
       "Organe récepteur → nerf sensitif → centre nerveux → nerf moteur → organe effecteur",
-      "Centre nerveux → organe récepteur → nerf moteur → muscle",
-      "Organe récepteur → nerf moteur → centre nerveux → nerf sensitif → muscle"
+      "Centre nerveux → nerf sensitif → organe récepteur → nerf moteur → organe effecteur",
+      "Organe récepteur → nerf moteur → centre nerveux → nerf sensitif → organe effecteur"
     ],
     answer: 1,
     why: "Le récepteur capte le stimulus, le nerf sensitif amène le message au centre nerveux, le nerf moteur l’envoie au muscle."
@@ -107,13 +107,13 @@ QUIZ.cahier = [
   },
   {
     q: "Le sujet voit un flash lumineux. Quelle aire s’active ?",
-    choices: ["L’aire auditive", "L’aire visuelle primaire", "L’aire motrice primaire", "L’aire olfactive"],
+    choices: ["L’aire auditive primaire", "L’aire visuelle primaire", "L’aire motrice primaire", "L’aire olfactive primaire"],
     answer: 1,
     why: "Situation B du tableau : aire visuelle primaire."
   },
   {
     q: "Comment Alain a-t-il pu remarcher après son accident ?",
-    choices: ["Son cerveau s’est adapté grâce à la rééducation", "Ses neurones détruits ont repoussé", "Sa moelle épinière a remplacé son cerveau", "Ses muscles ont guéri sans le cerveau"],
+    choices: ["Son cerveau s’est adapté grâce à la rééducation", "Ses neurones détruits se sont divisés et ont repoussé", "Sa moelle épinière a pris la place de son cerveau", "Ses muscles ont appris à fonctionner sans le cerveau"],
     answer: 0,
     why: "Les zones activées ont changé : c’est la plasticité cérébrale."
   },
@@ -125,13 +125,13 @@ QUIZ.cahier = [
   },
   {
     q: "Que traverse le neurotransmetteur ?",
-    choices: ["L’axone", "L’espace synaptique", "Le noyau", "La gaine de myéline"],
+    choices: ["L’axone", "L’espace synaptique", "Le corps cellulaire", "La membrane plasmique"],
     answer: 1,
     why: "Il traverse l’espace synaptique et déclenche un message dans le neurone suivant."
   },
   {
     q: "Les récepteurs du neurone postsynaptique sont bloqués. Que se passe-t-il ?",
-    choices: ["Le muscle se contracte plus fort", "Le message ne passe pas, pas de contraction", "Le message passe, le muscle se contracte", "Le message repart vers le premier neurone"],
+    choices: ["Le message s’amplifie et le muscle se contracte plus fort", "Le message ne passe pas, pas de contraction", "Le message passe quand même et le muscle se contracte", "Le message repart en arrière vers le premier neurone"],
     answer: 1,
     why: "Document 3 : sans récepteurs fonctionnels, aucune contraction."
   },
@@ -143,7 +143,7 @@ QUIZ.cahier = [
   },
   {
     q: "Lequel favorise le bon fonctionnement du système nerveux ?",
-    choices: ["Le tabac", "Un sommeil suffisant", "Le stress important", "L’alcool"],
+    choices: ["Les écrans tard le soir", "Un sommeil suffisant", "Un stress très important", "La consommation d’alcool"],
     answer: 1,
     why: "Sommeil suffisant et sport régulier le favorisent."
   },
@@ -167,7 +167,7 @@ QUIZ.cahier = [
   },
   {
     q: "Quand relire la leçon, d’après la fiche méthode ?",
-    choices: ["Seulement la veille du contrôle", "Le soir même, puis la veille du cours suivant", "Uniquement pendant le cours suivant", "Le week-end, quand on a plus de temps"],
+    choices: ["Seulement la veille de l’évaluation de fin de séquence", "Le soir même, puis la veille du cours suivant", "Uniquement en classe au début du cours suivant", "Le week-end, quand tous les exercices sont finis"],
     answer: 1,
     why: "Le soir même, puis la veille du cours suivant."
   },
@@ -179,7 +179,7 @@ QUIZ.cahier = [
   },
   {
     q: "Chapitre 2 : quel micro-organisme transforme le lait de brebis en roquefort ?",
-    choices: ["Une bactérie en forme de bâtonnet, un bacille", "Un protozoaire qui vit dans le lait stagnant", "Un champignon microscopique, Penicillium roqueforti", "Une paramécie recouverte de cils"],
+    choices: ["Une bactérie lactique en forme de bâtonnet, un bacille", "Un protozoaire unicellulaire qui vit dans l’eau stagnante", "Un champignon microscopique, Penicillium roqueforti", "Une paramécie allongée et entièrement recouverte de cils"],
     answer: 2,
     why: "Les moisissures du roquefort sont des champignons microscopiques, comme Penicillium roqueforti."
   },
@@ -233,7 +233,7 @@ QUIZ.cahier = [
   },
   {
     q: "Quel est le bilan écrit sous l’activité 1 du chapitre 2 ?",
-    choices: ["Les microbes sont tous dangereux pour la santé", "Les microbes sont des êtres vivants invisibles", "Les microbes ne vivent que dans les aliments", "Les microbes ne sont pas vivants"],
+    choices: ["Les microbes sont tous dangereux pour notre santé", "Les microbes sont des êtres vivants invisibles", "Les microbes ne vivent que dans les produits laitiers", "Les microbes observés au microscope ne sont pas vivants"],
     answer: 1,
     why: "Invisibles à l’œil nu, visibles au microscope : ce sont bien des êtres vivants."
   },
@@ -269,7 +269,7 @@ QUIZ.cahier = [
   },
   {
     q: "Définition en rouge : qu’est-ce qu’un virus ?",
-    choices: ["Un organisme unicellulaire sans noyau, en forme de bâtonnet", "Un être vivant microscopique capable de pénétrer dans une cellule et de s’y multiplier", "Un champignon microscopique qui produit des spores", "Un animal unicellulaire qui vit dans l’eau stagnante"],
+    choices: ["Un organisme unicellulaire sans noyau qui transforme le sucre du lait en acide lactique", "Un être vivant microscopique capable de pénétrer dans une cellule et de s’y multiplier", "Un champignon microscopique fait de filaments qui produit des spores en forme de sphères", "Un organisme unicellulaire à noyau qui vit dans l’eau stagnante et nage avec des cils"],
     answer: 1,
     why: "Formulation du cours : être vivant microscopique capable de pénétrer dans une cellule et de s’y multiplier."
   },
@@ -338,7 +338,7 @@ QUIZ.extra = [
   },
   {
     q: "Que fait le curare ?",
-    choices: ["Il bloque les récepteurs des muscles", "Il accélère l’influx nerveux", "Il libère plus d’acétylcholine", "Il favorise l’endormissement"],
+    choices: ["Il bloque les récepteurs des muscles", "Il accélère l’influx nerveux dans l’axone", "Il libère beaucoup plus d’acétylcholine", "Il favorise l’endormissement profond"],
     answer: 0,
     why: "Le message ne passe plus : les muscles sont paralysés."
   },
@@ -368,9 +368,15 @@ QUIZ.extra = [
   },
   {
     q: "Paul Broca a décrit en 1861 une aire du…",
-    choices: ["langage", "goût", "équilibre", "sommeil"],
+    choices: ["langage", "goût", "mouvement", "sommeil"],
     answer: 0,
     why: "L’aire de Broca, liée à la production du langage."
+  },
+  {
+    q: "Pourquoi un bruit trop fort peut-il faire baisser l’audition de façon définitive ?",
+    choices: ["Parce qu’il détruit les cellules ciliées de la cochlée, qui ne se régénèrent pas", "Parce qu’il bloque durablement la sécrétion de mélatonine dans tout l’encéphale", "Parce qu’il empêche l’acétylcholine de traverser l’espace synaptique des muscles", "Parce qu’il dissout la gaine de myéline qui entoure les axones des nerfs moteurs"],
+    answer: 0,
+    why: "Les cellules ciliées de l’oreille interne (cochlée) sont les récepteurs de l’audition : une fois détruites, elles ne repoussent pas."
   },
   {
     q: "Quelle est la taille approximative d’une bactérie ?",
@@ -380,19 +386,19 @@ QUIZ.extra = [
   },
   {
     q: "Pourquoi dit-on qu’un virus n’est pas un être vivant au sens strict ?",
-    choices: ["Parce qu’il est trop petit pour être vu au microscope optique", "Parce qu’il ne vit que dans l’eau stagnante", "Il n’est pas fait de cellules et se multiplie seulement dans une cellule infectée", "Parce qu’il ne produit pas d’acide lactique"],
+    choices: ["Parce qu’il est trop petit pour être observé avec un microscope optique de collège", "Parce qu’il vit uniquement dans l’eau stagnante et ne survit jamais à l’air libre", "Parce qu’il n’est pas une cellule et ne se multiplie que dans une cellule hôte", "Parce qu’il ne possède pas de cils pour se déplacer ni produire d’acide lactique"],
     answer: 2,
     why: "Un virus n’est pas une cellule et dépend d’une cellule hôte pour se multiplier."
   },
   {
     q: "Qu’est-ce que la pasteurisation ?",
-    choices: ["Ajouter des bactéries lactiques au lait pour le faire coaguler", "Chauffer un liquide pour détruire la plupart des microbes, puis le refroidir", "Filtrer l’eau stagnante pour enlever les paramécies", "Laisser moisir le lait pour qu’il devienne fromage"],
+    choices: ["Ajouter des bactéries lactiques au lait tiède pour le faire coaguler en yaourt", "Chauffer un liquide pour détruire la plupart des microbes, puis le refroidir", "Filtrer l’eau stagnante à travers une membrane pour retenir les paramécies", "Ensemencer le lait de brebis avec des moisissures pour obtenir du roquefort"],
     answer: 1,
     why: "Technique mise au point par Louis Pasteur au XIXe siècle."
   },
   {
     q: "Que désigne le microbiote intestinal ?",
-    choices: ["Les virus qui provoquent les gastro-entérites", "Les moisissures du fromage une fois digérées", "Les milliers de milliards de bactéries qui vivent dans notre intestin", "Les cils qui tapissent la paroi de l’intestin"],
+    choices: ["Les virus dangereux qui infectent les cellules et donnent la gastro-entérite", "Les moisissures du fromage qui continuent à produire des spores après digestion", "Les milliers de milliards de bactéries utiles qui vivent dans notre intestin", "Les petits cils microscopiques qui tapissent toute la paroi de notre intestin"],
     answer: 2,
     why: "Il aide à digérer, fabrique des vitamines et protège contre les microbes dangereux."
   },

@@ -201,7 +201,7 @@
     let serieCourante = 0;
     let record = Number(localStorage.getItem(cleRecord) || 0);
     function serie(bonne) {
-      if (bonne) serieCourante += 1;
+      if (bonne === true) serieCourante += 1;
       if (serieCourante > record) {
         record = serieCourante;
         localStorage.setItem(cleRecord, String(record));
@@ -215,7 +215,7 @@
       zone.append(el("span", { class: "serie-mascotte", title: palier[2] }, palier[1]));
       let texte;
       if (serieCourante === 0) texte = "Chaque bonne réponse te fait grandir. Prochain : " + suivant[1] + " " + suivant[2];
-      else if (!bonne && suivant) texte = "Tu restes " + palier[2] + ". Une bonne réponse et tu deviens " + suivant[1] + " " + suivant[2];
+      else if (bonne === false && suivant) texte = "Tu restes " + palier[2] + ". Une bonne réponse et tu deviens " + suivant[1] + " " + suivant[2];
       else if (!suivant) texte = serieCourante + " bonnes réponses : " + palier[2] + ", le sommet !";
       else texte = serieCourante + (serieCourante > 1 ? " bonnes réponses" : " bonne réponse") + " : tu es " + palier[2] + " ! Prochain : " + suivant[1] + " " + suivant[2];
       zone.append(el("span", { class: "serie-flammes" }, flammes), el("span", { class: "serie-texte" }, texte));
@@ -223,7 +223,7 @@
         const meilleur = PALIERS.filter((p) => record >= p[0]).pop();
         zone.append(el("span", { class: "serie-record", title: "Meilleur score en une session" }, "Record : " + record + " " + meilleur[1]));
       }
-      if (bonne && serieCourante === palier[0] && palier[0] > 0) {
+      if (bonne === true && serieCourante === palier[0] && palier[0] > 0) {
         zone.classList.add("palier");
         setTimeout(() => zone.classList.remove("palier"), 900);
       }
@@ -242,8 +242,7 @@
         mesurerJauge();
         if (window.ResizeObserver) new ResizeObserver(mesurerJauge).observe(jaugeEl);
       }
-      serieCourante = 0;
-      serie(false);
+      serie(null);
     }
 
     function reserve() {
@@ -482,7 +481,10 @@
       else cartes(pool, mode);
     }
 
-    if (nouveau) nouveau.onclick = () => tirage();
+    if (nouveau) nouveau.onclick = () => {
+      if (modeActif() !== "qcm") serieCourante = 0;
+      tirage();
+    };
     if (avecExtra) avecExtra.onchange = () => tirage();
     modes.forEach((input) => { input.onchange = () => tirage(); });
     tirage();

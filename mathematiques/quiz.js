@@ -2,7 +2,7 @@ window.QUIZ = {};
 QUIZ.cahier = [
   {
     q: "Qu’est-ce que l’abscisse d’un point ?",
-    choices: ["Le nombre qui correspond à sa place sur une droite graduée", "La distance entre deux graduations voisines", "Le nombre de graduations de la droite", "L’unité de référence"],
+    choices: ["Le nombre qui correspond à sa place sur une droite graduée", "La distance qui sépare deux graduations voisines de l’axe", "Le nombre total de graduations tracées sur la droite", "L’unité de référence choisie pour graduer la droite"],
     answer: 0,
     why: "L’abscisse est le nombre correspondant à l’emplacement du point sur la droite graduée."
   },
@@ -20,7 +20,7 @@ QUIZ.cahier = [
   },
   {
     q: "Sur une droite où l’unité est partagée en 6, le point B est à 3 graduations de 0. Son abscisse est…",
-    choices: ["3", "1/3", "3/6, soit 1/2", "6/3"],
+    choices: ["3, soit 18/6", "1/3, soit 2/6", "3/6, soit 1/2", "6/3, soit 2"],
     answer: 2,
     why: "Exemple du cours : B a pour abscisse 3/6 ou 1/2."
   },
@@ -44,20 +44,20 @@ QUIZ.cahier = [
   },
   {
     q: "Pour additionner deux fractions, que fait-on en premier ?",
-    choices: ["On ajoute les dénominateurs", "On les ramène au même dénominateur", "On multiplie les numérateurs", "On simplifie"],
-    answer: 1,
+    choices: ["On additionne les deux dénominateurs", "On multiplie les deux numérateurs", "On additionne les deux numérateurs", "On les ramène au même dénominateur"],
+    answer: 3,
     why: "Puis on ajoute les numérateurs, on garde le dénominateur et on simplifie."
   },
   {
     q: "3/4 + 2/3 = ?",
-    choices: ["5/7", "17/12", "5/12", "6/12"],
-    answer: 1,
+    choices: ["5/7", "5/12", "17/12", "6/12"],
+    answer: 2,
     why: "9/12 + 8/12 = 17/12."
   },
   {
     q: "Quel est l’inverse de 2/3 ?",
-    choices: ["−2/3", "3/2", "−3/2", "1/3"],
-    answer: 1,
+    choices: ["−2/3", "−3/2", "1/3", "3/2"],
+    answer: 3,
     why: "L’inverse de a/b est b/a."
   },
   {
@@ -80,14 +80,14 @@ QUIZ.cahier = [
   },
   {
     q: "Combien vaut √0,16 ?",
-    choices: ["0,04", "0,4", "0,8", "0,0256"],
-    answer: 1,
+    choices: ["0,04", "0,8", "0,4", "0,0256"],
+    answer: 2,
     why: "0,4² = 0,16 et 0,4 est positif."
   },
   {
     q: "Combien vaut √16 ?",
-    choices: ["8", "4", "−4", "256"],
-    answer: 1,
+    choices: ["8", "−4", "256", "4"],
+    answer: 3,
     why: "4² = 16 et 4 est positif."
   },
   {
@@ -104,8 +104,8 @@ QUIZ.cahier = [
   },
   {
     q: "Combien vaut √(144 + 25) ?",
-    choices: ["17", "13", "169", "12,5"],
-    answer: 1,
+    choices: ["17", "169", "12,5", "13"],
+    answer: 3,
     why: "√169 = 13."
   },
   {
@@ -116,8 +116,8 @@ QUIZ.cahier = [
   },
   {
     q: "Quelles sont les solutions de x² = 225 ?",
-    choices: ["15 seulement", "15 et −15", "112,5", "Aucune"],
-    answer: 1,
+    choices: ["15 seulement", "112,5", "15 et −15", "Aucune"],
+    answer: 2,
     why: "Pour a > 0, x² = a a deux solutions : √a et −√a."
   },
   {
@@ -140,8 +140,8 @@ QUIZ.cahier = [
   },
   {
     q: "Combien vaut (−12)² ?",
-    choices: ["−144", "144", "−24", "24"],
-    answer: 1,
+    choices: ["−144", "−24", "24", "144"],
+    answer: 3,
     why: "(−12) × (−12) = 144 : un carré est toujours positif."
   },
   {
@@ -152,8 +152,8 @@ QUIZ.cahier = [
   },
   {
     q: "Dans un triangle rectangle, comment s’appelle le côté opposé à l’angle droit ?",
-    choices: ["La médiane", "L’hypoténuse", "La hauteur", "La diagonale"],
-    answer: 1,
+    choices: ["La médiane", "La hauteur", "L’hypoténuse", "La diagonale"],
+    answer: 2,
     why: "C’est aussi le plus grand côté."
   },
   {
@@ -164,20 +164,20 @@ QUIZ.cahier = [
   },
   {
     q: "AR = 2 cm et RE = 3 cm, ARE rectangle en R. AE vaut…",
-    choices: ["5 cm", "√13 cm, soit environ 3,6 cm", "13 cm", "√5 cm"],
-    answer: 1,
+    choices: ["5 cm (valeur exacte)", "13 cm (valeur exacte)", "√5 cm, soit environ 2,2 cm", "√13 cm, soit environ 3,6 cm"],
+    answer: 3,
     why: "AE² = 9 + 4 = 13."
   },
   {
     q: "Pour calculer un côté de l’angle droit, on fait…",
-    choices: ["une addition des carrés", "une soustraction : hypoténuse² − autre côté²", "une soustraction : autre côté² − hypoténuse²", "une soustraction : hypoténuse − autre côté"],
+    choices: ["une addition des deux carrés connus", "une soustraction : hypoténuse² − autre côté²", "une soustraction : autre côté² − hypoténuse²", "une soustraction : hypoténuse − autre côté"],
     answer: 1,
     why: "Remarque du cours : on utilise une soustraction."
   },
   {
     q: "Comment s’appelle la relation « carré de l’hypoténuse = somme des carrés des deux autres côtés » ?",
-    choices: ["La réciproque", "L’égalité de Pythagore", "La propriété de Thalès", "La contraposée"],
-    answer: 1,
+    choices: ["La réciproque", "La propriété de Thalès", "L’égalité de Pythagore", "La contraposée"],
+    answer: 2,
     why: "En rouge dans le cahier : cette relation s’appelle l’égalité de Pythagore."
   },
   {
@@ -188,13 +188,13 @@ QUIZ.cahier = [
   },
   {
     q: "L’égalité de Pythagore n’est pas vérifiée. On conclut avec…",
-    choices: ["la réciproque : le triangle est rectangle", "la contraposée : le triangle n’est pas rectangle", "le théorème : on calcule une longueur", "la réciproque : le triangle n’est pas rectangle"],
-    answer: 1,
+    choices: ["la réciproque : le triangle est rectangle", "le théorème : on calcule une longueur", "la réciproque : le triangle n’est pas rectangle", "la contraposée : le triangle n’est pas rectangle"],
+    answer: 3,
     why: "Contraposée : si l’égalité n’est pas vérifiée, le triangle ne peut pas être rectangle."
   },
   {
     q: "Triangle DHB : HB = 7 cm, DH = 4,1 cm, DB = 5,7 cm. Est-il rectangle ?",
-    choices: ["Oui, en D", "Non, car 49 ≠ 49,3", "Oui, en H", "On ne peut pas savoir"],
+    choices: ["Oui, en D, car 49 = 49", "Non, car 49 ≠ 49,3", "Oui, en H, car 7 < 9,8", "Non, car 7 ≠ 4,1 + 5,7"],
     answer: 1,
     why: "HB² = 49 et DH² + DB² = 49,3."
   },
@@ -212,8 +212,8 @@ QUIZ.cahier = [
   },
   {
     q: "L’armoire : 80 cm de large, 250 cm de haut, plafond à 260 cm. Peut-on la redresser ?",
-    choices: ["Oui, la diagonale fait 250 cm", "Non, la diagonale fait environ 262,5 cm", "Oui, la diagonale fait 255 cm", "Non, la diagonale fait 330 cm"],
-    answer: 1,
+    choices: ["Oui, la diagonale mesure exactement 250 cm", "Oui, la diagonale fait environ 255,5 cm", "Non, la diagonale fait environ 262,5 cm", "Non, la diagonale mesure exactement 330 cm"],
+    answer: 2,
     why: "AC² = 80² + 250² = 68 900, AC ≈ 262,5 cm, plus que 260."
   },
   {
@@ -224,8 +224,8 @@ QUIZ.cahier = [
   },
   {
     q: "Hypoténuse 17, un côté 15 : l’autre côté mesure…",
-    choices: ["2", "8", "√514", "64"],
-    answer: 1,
+    choices: ["2", "√514", "64", "8"],
+    answer: 3,
     why: "17² − 15² = 289 − 225 = 64, √64 = 8."
   },
   {
@@ -278,8 +278,8 @@ QUIZ.cahier = [
   },
   {
     q: "0,75 h = …",
-    choices: ["75 min", "45 min", "7 min 30 s", "30 min"],
-    answer: 1,
+    choices: ["75 min", "7 min 30 s", "30 min", "45 min"],
+    answer: 3,
     why: "0,75 × 60 = 45."
   },
   {
@@ -290,8 +290,8 @@ QUIZ.cahier = [
   },
   {
     q: "25 m/s, c’est…",
-    choices: ["25 km/h", "90 km/h", "250 km/h", "6,9 km/h"],
-    answer: 1,
+    choices: ["25 km/h", "250 km/h", "90 km/h", "6,9 km/h"],
+    answer: 2,
     why: "25 m × 3 600 = 90 000 m = 90 km en une heure."
   },
   {
@@ -320,8 +320,8 @@ QUIZ.cahier = [
   },
   {
     q: "Machine : ajouter 7, multiplier par 3, soustraire 1. Quelle écriture convient ?",
-    choices: ["f(x) = x + 7 × 3 − 1", "f(x) = (x + 7) × 3 − 1", "f(x) = x × 3 + 7 − 1", "f(x) = (x − 1) × 3 + 7"],
-    answer: 1,
+    choices: ["f(x) = x + 7 × 3 − 1", "f(x) = x × 3 + 7 − 1", "f(x) = (x + 7) × 3 − 1", "f(x) = (x − 1) × 3 + 7"],
+    answer: 2,
     why: "Les parenthèses imposent d’ajouter 7 avant de multiplier."
   },
   {
@@ -332,8 +332,8 @@ QUIZ.cahier = [
   },
   {
     q: "Machine : multiplier par x, soustraire 20, diviser par 10. Quelle écriture convient ?",
-    choices: ["f(x) = 10 : (x² − 20)", "f(x) = (x² − 20) : 10", "f(x) = x − 20 : 10", "f(x) = (2x − 20) : 10"],
-    answer: 1,
+    choices: ["f(x) = 10 : (x² − 20)", "f(x) = x − 20 : 10", "f(x) = (2x − 20) : 10", "f(x) = (x² − 20) : 10"],
+    answer: 3,
     why: "x × x = x², puis − 20, puis : 10."
   },
   {
@@ -344,7 +344,7 @@ QUIZ.cahier = [
   },
   {
     q: "Pour faire une « marche arrière » dans une machine de calcul, on…",
-    choices: ["refait les mêmes opérations", "fait les opérations contraires, en partant de la fin", "fait les opérations contraires, dans le même ordre", "refait les mêmes opérations, en partant de la fin"],
+    choices: ["refait les mêmes opérations, dans le même ordre", "fait les opérations contraires, en partant de la fin", "fait les opérations contraires, dans le même ordre", "refait les mêmes opérations, en partant de la fin"],
     answer: 1,
     why: "Une division défait une multiplication, une soustraction défait une addition."
   },
@@ -368,8 +368,8 @@ QUIZ.cahier = [
   },
   {
     q: "5x × 3x = ?",
-    choices: ["15x", "15x²", "8x", "8x²"],
-    answer: 1,
+    choices: ["15x", "8x", "15x²", "8x²"],
+    answer: 2,
     why: "5 × 3 = 15 et x × x = x²."
   },
   {
@@ -380,25 +380,25 @@ QUIZ.cahier = [
   },
   {
     q: "5x − 3x = ?",
-    choices: ["2", "2x", "2x²", "8x"],
-    answer: 1,
+    choices: ["2", "2x²", "8x", "2x"],
+    answer: 3,
     why: "5 − 3 = 2, on garde x."
   },
   {
     q: "Un basketteur réussit 8 tirs sur 10, un autre 16 sur 20. Qui est le plus performant ?",
-    choices: ["Le premier", "Le second", "Ils sont aussi performants", "On ne peut pas savoir"],
+    choices: ["Le premier basketteur (8 sur 10)", "Le second basketteur (16 sur 20)", "Ils sont aussi performants (80 %)", "On ne peut pas comparer leurs tirs"],
     answer: 2,
     why: "8/10 = 16/20 = 80 %."
   },
   {
     q: "34/20 est-il un nombre décimal ?",
-    choices: ["Oui, 1,7", "Non", "Oui, 0,17", "Oui, 0,58"],
+    choices: ["Oui, il vaut 1,7", "Non, l’écriture est infinie", "Oui, il vaut 0,17", "Oui, il vaut 0,58"],
     answer: 0,
     why: "34/20 = 17/10 = 1,7."
   },
   {
     q: "5/15 est-il un nombre décimal ?",
-    choices: ["Oui, 0,3", "Non, c’est 1/3", "Oui, 0,33", "Oui, 3"],
+    choices: ["Oui, il vaut 0,3", "Non, c’est 1/3", "Oui, il vaut 0,33", "Oui, il vaut 3"],
     answer: 1,
     why: "1/3 = 0,333… ne s’arrête jamais : c’est un rationnel non décimal."
   },
@@ -508,10 +508,10 @@ QUIZ.cahier = [
     q: "La distance Terre-Soleil, 149 597 870 km, s’écrit en écriture scientifique (arrondie)…",
     choices: ["1,49 × 10³ km", "1,49 × 10⁹ km", "1,49 × 10⁸ km", "149 × 10⁶ km"],
     answer: 2,
-    why: "La virgule recule de 8 rangs : 1,49 × 10⁸ = 149 000 000. Le 10³ barré sur la fiche ne ferait que 1 490 km."
+    why: "La virgule recule de 8 rangs : 1,49 × 10⁸ = 149 000 000 (149 × 10⁶ n’est pas une écriture scientifique car 149 ≥ 10). Le 10³ barré sur la fiche ne ferait que 1 490 km."
   },
   {
-    q: "Le rayon d’un atome de fer, 0,000 000 000 126 m, s’écrit…",
+    q: "En écriture scientifique, le rayon d’un atome de fer (0,000 000 000 126 m) s’écrit…",
     choices: ["1,26 × 10⁻¹⁰ m", "1,26 × 10⁻¹² m", "1,26 × 10¹⁰ m", "126 × 10⁻¹² m"],
     answer: 0,
     why: "La virgule avance de 10 rangs vers la droite : exposant −10. 126 × 10⁻¹² a la bonne valeur, mais 126 n’est pas entre 1 et 10."
@@ -545,7 +545,7 @@ QUIZ.extra = [
   },
   {
     q: "√(4 × 9) = ?",
-    choices: ["√4 × √9 = 6", "4 × 9 = 36", "√13", "13"],
+    choices: ["√4 × √9 = 6", "4 × 9 = 36", "√4 + √9 = 5", "√(4 + 9) = √13"],
     answer: 0,
     why: "Pour un produit, √(a × b) = √a × √b."
   },
@@ -575,8 +575,8 @@ QUIZ.extra = [
   },
   {
     q: "f : x ↦ 4x + 5 se lit…",
-    choices: ["f est l’image de 4x + 5", "f est la fonction qui à x associe 4x + 5", "f vaut 9x", "x est l’image de f"],
-    answer: 1,
+    choices: ["f est l’antécédent qui a pour image 4x + 5", "x est la fonction qui à f associe 4x + 5", "f est la fonction qui à x associe 4x + 5", "f est l’équation qui a pour solution 4x + 5"],
+    answer: 2,
     why: "La flèche ↦ se lit « associe »."
   },
   {
@@ -610,7 +610,7 @@ QUIZ.extra = [
     why: "1 ha = 1 hm² = 100 m × 100 m."
   },
   {
-    q: "Environ quelle est l’altitude du Mont-Blanc ?",
+    q: "Quelle est environ l’altitude du Mont-Blanc ?",
     choices: ["4 100 m", "4 805 m", "3 500 m", "8 848 m"],
     answer: 1,
     why: "Environ 4 805 m, selon la neige au sommet. 8 848 m, c’est l’Everest."
@@ -643,6 +643,6 @@ QUIZ.extra = [
     q: "Quel est l’ordre de grandeur de la distance Terre-Soleil, 1,49 × 10⁸ km ?",
     choices: ["10⁶ km", "10⁸ km", "10¹⁰ km", "10⁹ km"],
     answer: 1,
-    why: "L’ordre de grandeur se lit sur l’exposant de l’écriture scientifique : 10⁸ km."
+    why: "Comme 1,49 est proche de 1, l’ordre de grandeur est donné par la puissance de dix de l’écriture scientifique : 10⁸ km."
   }
 ];

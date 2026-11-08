@@ -15,21 +15,6 @@ QUIZ.expliquer = [
     cles: ["se déplacent et attaquent", "offensives", "front n’évolue presque plus", "tranchées"]
   },
   {
-    q: "Définis : collectivisation.",
-    reponse: "La collectivisation est la mise en commun des terres, des bâtiments et des outils dans de grandes exploitations collectives. En URSS, Staline l’impose de force dans les campagnes : en 1937, 93 % des terres sont collectivisées. Les paysans qui refusent, surtout les koulaks, sont déportés au goulag par le parti et la police politique, le NKVD.",
-    cles: ["mise en commun des terres", "exploitations collectives", "1937", "93 %", "koulaks"]
-  },
-  {
-    q: "Définis : goulag.",
-    reponse: "Le goulag est un camp de concentration et de travaux forcés où le régime de Staline déporte ceux qui refusent sa politique, par exemple les koulaks opposés à la collectivisation. Les déportés y subissent des conditions extrêmes, souvent en Sibérie, avec des rations de famine. D’après le cours, 20 millions de personnes sont déportées entre 1929 et 1953.",
-    cles: ["camp de concentration", "travaux forcés", "koulaks", "20 millions", "1929 et 1953"]
-  },
-  {
-    q: "Définis : propagande, et donne deux exemples de son usage en URSS.",
-    reponse: "La propagande consiste à montrer la réalité non pas telle qu’elle est, mais telle qu’elle devrait être. En URSS, elle est omniprésente : les journaux, les cinéastes et les écrivains sont au service du régime. Par exemple, les chiffres de production sont truqués pour afficher de bons résultats, et des héros sont inventés, comme l’ouvrier Stakhanov qui bat un record à la mine le 31 août 1935.",
-    cles: ["telle qu’elle devrait être", "omniprésente", "chiffres", "truqués", "Stakhanov"]
-  },
-  {
     q: "Raconte en quelques phrases comment l’attentat de Sarajevo déclenche la guerre.",
     reponse: "Le 28 juin 1914, l’héritier du trône d’Autriche-Hongrie est assassiné à Sarajevo par un Serbe. L’Autriche-Hongrie déclare alors la guerre à la Serbie. La Russie, alliée de la Serbie, mobilise, donc l’Allemagne lui déclare la guerre le 1er août 1914. L’enchaînement des alliances entraîne ainsi toute l’Europe dans la guerre : la Triple Entente d’un côté, la Triple Alliance de l’autre.",
     cles: ["28 juin 1914", "Sarajevo", "Autriche-Hongrie", "Serbie", "alliances"]
@@ -75,6 +60,21 @@ QUIZ.expliquer = [
     cles: ["juin 1919", "responsable", "Diktat", "géant enchaîné", "négociations"]
   },
   {
+    q: "Définis : collectivisation.",
+    reponse: "La collectivisation est la mise en commun des terres, des bâtiments et des outils dans de grandes exploitations collectives. En URSS, Staline l’impose de force dans les campagnes : en 1937, 93 % des terres sont collectivisées. Les paysans qui refusent, surtout les koulaks, sont déportés au goulag par le parti et la police politique, le NKVD.",
+    cles: ["mise en commun des terres", "exploitations collectives", "1937", "93 %", "koulaks"]
+  },
+  {
+    q: "Définis : goulag.",
+    reponse: "Le goulag est un camp de concentration et de travaux forcés où le régime de Staline déporte ceux qui refusent sa politique, par exemple les koulaks opposés à la collectivisation. Les déportés y subissent des conditions extrêmes, souvent en Sibérie, avec des rations de famine. D’après le cours, 20 millions de personnes sont déportées entre 1929 et 1953.",
+    cles: ["camp de concentration", "travaux forcés", "koulaks", "20 millions", "1929 et 1953"]
+  },
+  {
+    q: "Définis : propagande, et donne deux exemples de son usage en URSS.",
+    reponse: "La propagande consiste à montrer la réalité non pas telle qu’elle est, mais telle qu’elle devrait être. En URSS, elle est omniprésente : les journaux, les cinéastes et les écrivains sont au service du régime. Par exemple, les chiffres de production sont truqués pour afficher de bons résultats, et des héros sont inventés, comme l’ouvrier Stakhanov qui bat un record à la mine le 31 août 1935.",
+    cles: ["telle qu’elle devrait être", "omniprésente", "chiffres", "truqués", "Stakhanov"]
+  },
+  {
     q: "Explique pourquoi l’URSS de Staline est un système totalitaire.",
     reponse: "L’URSS de Staline, de 1924 à 1953, est un système totalitaire parce qu’un seul chef, Staline, détient tous les pouvoirs : c’est une dictature. Le régime repose sur une idéologie, le communisme, et sur des symboles comme le drapeau rouge, le marteau et la faucille. Il contrôle la population par la propagande, omniprésente, et par la terreur : le parti et la police politique, le NKVD, envoient au goulag ceux qui refusent. Enfin, le contrôle de l’économie est total, avec l’agriculture collectivisée de force et la priorité à l’industrie lourde.",
     cles: ["un seul chef", "dictature", "communisme", "propagande", "terreur"]
@@ -86,7 +86,7 @@ QUIZ.expliquer = [
   },
   {
     q: "Explique comment le régime stalinien utilise Stakhanov dans sa politique industrielle.",
-    reponse: "Staline donne la priorité à l’industrie lourde et veut montrer de bons résultats économiques. Le 31 août 1935, l’ouvrier Stakhanov bat un record de production à la mine : le régime en fait un héros, inventé de toutes pièces par la propagande, pour pousser les autres ouvriers à produire davantage. Les chiffres sont aussi truqués pour afficher la réussite du régime. Le cours en conclut que le contrôle de l’économie est total.",
+    reponse: "Staline donne la priorité à l’industrie lourde et veut montrer de bons résultats économiques. Le 31 août 1935, l’ouvrier Stakhanov bat un record de production à la mine : le régime, qui invente des héros de toutes pièces, fait de lui un modèle de la propagande pour pousser les autres ouvriers à produire davantage. Les chiffres sont aussi truqués pour afficher la réussite du régime. Le cours en conclut que le contrôle de l’économie est total.",
     cles: ["industrie lourde", "31 août 1935", "Stakhanov", "héros", "truqués"]
   },
   {

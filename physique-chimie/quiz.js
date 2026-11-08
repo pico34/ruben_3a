@@ -37,7 +37,7 @@ QUIZ.cahier = [
     why: "Autant de charges + que de charges −."
   },
   {
-    q: "Pour le cuivre 63 sur 29, combien de neutrons ?",
+    q: "Pour le cuivre ⁶³₂₉Cu, combien y a-t-il de neutrons ?",
     choices: ["63", "29", "34", "92"],
     answer: 2,
     why: "N = A − Z = 63 − 29 = 34."
@@ -49,14 +49,14 @@ QUIZ.cahier = [
     why: "Même élément, même nombre de protons, nombres de masse différents."
   },
   {
-    q: "Dans quelle unité le cours exprime-t-il la masse volumique ?",
+    q: "Dans quelle unité la fiche du cahier exprime-t-elle ρ (avec m en g et V en mL) ?",
     choices: ["g/mL", "mL/g", "g/L", "kg/m³"],
     answer: 0,
     why: "Masse en g, volume en mL, donc ρ en g/mL."
   },
   {
     q: "Quelle est la masse volumique de l’eau ?",
-    choices: ["0,918 g/mL", "1 g/mL, soit 1 g/cm³", "6,71 g/mL", "13,5 g/mL"],
+    choices: ["0,918 g/mL", "1 g/mL", "6,71 g/mL", "13,5 g/mL"],
     answer: 1,
     why: "1 g/mL, soit 1 g/cm³. C’est une convention."
   },
@@ -86,7 +86,7 @@ QUIZ.cahier = [
   },
   {
     q: "Comment s’appelle le mélange eau + huile ?",
-    choices: ["Un mélange homogène", "Un mélange hétérogène", "Une solution", "Un corps pur"],
+    choices: ["Un mélange homogène", "Un mélange hétérogène", "Une solution aqueuse", "Un corps pur liquide"],
     answer: 1,
     why: "On voit deux couches : le mélange est hétérogène."
   },
@@ -98,7 +98,7 @@ QUIZ.cahier = [
   },
   {
     q: "Que fait-on avant de verser le liquide dans l’éprouvette posée sur la balance ?",
-    choices: ["On la rince à l’eau", "On tare la balance avec l’éprouvette vide", "On lit le volume initial", "On règle la balance sur 100 g"],
+    choices: ["On rince l’éprouvette avec de l’eau salée", "On tare la balance avec l’éprouvette vide", "On note d’abord le volume maximal gradué", "On règle la balance sur une masse de 100 g"],
     answer: 1,
     why: "On tare pour ne peser que le liquide."
   },
@@ -110,7 +110,7 @@ QUIZ.cahier = [
   },
   {
     q: "Que représente Z ?",
-    choices: ["Le nombre de neutrons", "Le nombre de protons du noyau", "Le nombre de nucléons", "Le nombre de masse"],
+    choices: ["Le nombre de neutrons", "Le nombre de protons", "Le nombre de nucléons", "Le nombre de masse"],
     answer: 1,
     why: "Z est le numéro atomique, le nombre de protons."
   },
@@ -140,7 +140,7 @@ QUIZ.cahier = [
   },
   {
     q: "Que veut dire « structure lacunaire » ?",
-    choices: ["L’atome est entièrement rempli de matière", "Il y a surtout du vide entre le noyau et les électrons", "Il y a du vide à l’intérieur du noyau", "Les électrons sont collés au noyau"],
+    choices: ["L’atome est entièrement rempli de matière", "Il y a du vide entre le noyau et les électrons", "Le noyau est vide et entouré par les protons", "Les électrons sont collés tout contre le noyau"],
     answer: 1,
     why: "Entre les électrons et le noyau, il y a du vide."
   },
@@ -164,7 +164,7 @@ QUIZ.cahier = [
   },
   {
     q: "Méthode : comment reformuler une consigne ?",
-    choices: ["En question : « Que dois-je… ? »", "En phrase affirmative : « Pour répondre, je dois… »", "En la recopiant mot pour mot", "En un seul mot-clé souligné"],
+    choices: ["En question directe : « Que dois-je faire ici ? »", "En phrase affirmative : « Pour répondre, je dois… »", "En recopiant l’énoncé de départ mot pour mot", "En soulignant uniquement le dernier mot-clé"],
     answer: 1,
     why: "On reformule en phrase affirmative : « Pour répondre, je dois… »"
   },
@@ -224,7 +224,7 @@ QUIZ.cahier = [
   },
   {
     q: "Manuel : pourquoi une solution qui contient des ions conduit-elle le courant ?",
-    choices: ["Parce que les ions dissous sont chargés électriquement", "Parce que les molécules d’eau sont chargées", "Parce qu’elle contient des électrons libres", "Parce que la solution est électriquement neutre"],
+    choices: ["Parce que les ions dissous sont chargés", "Parce que les molécules d’eau sont chargées", "Parce qu’elle contient des électrons libres", "Parce que la solution est globalement neutre"],
     answer: 0,
     why: "La présence d’ions, chargés électriquement, rend une solution conductrice."
   },
@@ -242,13 +242,13 @@ QUIZ.cahier = [
   },
   {
     q: "Manuel : sur quoi fait-on un test caractéristique ?",
-    choices: ["Sur la totalité de la solution", "Sur un petit échantillon de la solution", "Sur un échantillon d’eau distillée", "Sur le réactif avant de l’ajouter"],
+    choices: ["Sur la totalité de la solution", "Sur un échantillon de la solution", "Sur un échantillon d’eau distillée", "Sur le réactif avant de l’ajouter"],
     answer: 1,
     why: "Jamais sur la totalité de la solution."
   },
   {
     q: "Manuel : qu’est-ce qu’un précipité ?",
-    choices: ["Un gaz qui se dégage d’un liquide lors d’une réaction", "Un solide en suspension dans un liquide, formé par une réaction", "Un ion qui apparaît dans la solution lors d’une réaction", "Un liquide qui change de couleur lors d’une réaction"],
+    choices: ["Un gaz qui se dégage d’un liquide lors d’une réaction", "Un solide en suspension formé lors d’une réaction", "Un ion qui apparaît dans l’eau lors d’une réaction", "Un liquide qui change de couleur lors d’une réaction"],
     answer: 1,
     why: "Définition des mots du chapitre 9 : un solide en suspension dans un liquide, formé par une réaction chimique."
   },
@@ -257,6 +257,84 @@ QUIZ.cahier = [
     choices: ["Qui ne se compose que d’un atome", "Qui ne possède qu’un seul électron", "Qui ne porte qu’une seule charge", "Qui contient plusieurs atomes"],
     answer: 0,
     why: "Le contraire est polyatomique."
+  },
+  {
+    q: "Manuel : le noyau atomique est combien de fois plus petit que l’atome ?",
+    choices: ["1 000 fois", "10 000 fois", "100 000 fois", "1 000 000 de fois"],
+    answer: 2,
+    why: "Atome 10⁻¹⁰ m, noyau 10⁻¹⁵ m : un rapport de 10⁵ = 100 000."
+  },
+  {
+    q: "Manuel : quel est l’ordre de grandeur de la dimension du noyau ?",
+    choices: ["10⁻⁹ m", "10⁻¹⁰ m", "10⁻¹⁵ m", "10⁻²⁷ m"],
+    answer: 2,
+    why: "10⁻¹⁵ m pour le noyau. 10⁻¹⁰ m, c’est l’atome entier."
+  },
+  {
+    q: "Manuel : comment appelle-t-on les particules qui constituent le noyau ?",
+    choices: ["Les électrons", "Les nucléons", "Les ions", "Les isotopes"],
+    answer: 1,
+    why: "Les nucléons : protons et neutrons."
+  },
+  {
+    q: "Manuel : quelle est la charge du proton et celle du neutron ?",
+    choices: ["Proton positif, neutron négatif", "Proton positif, neutron neutre", "Proton neutre, neutron positif", "Proton négatif, neutron neutre"],
+    answer: 1,
+    why: "Protons chargés positivement, neutrons électriquement neutres."
+  },
+  {
+    q: "Manuel : quelle part de la masse d’un atome se trouve dans son noyau ?",
+    choices: ["Environ la moitié", "Plus de 99 %", "Moins de 1 %", "Environ 90 %"],
+    answer: 1,
+    why: "La masse des électrons est négligeable devant celle des nucléons."
+  },
+  {
+    q: "Manuel : à quoi est égal le nombre de protons Z d’un atome ?",
+    choices: ["Au nombre de neutrons", "Au nombre d’électrons", "Au nombre de nucléons", "Au nombre de masse"],
+    answer: 1,
+    why: "L’atome est électriquement neutre : autant de protons que d’électrons."
+  },
+  {
+    q: "Manuel : le noyau de lithium a 7 nucléons et 3 protons. Combien de neutrons ?",
+    choices: ["3", "4", "7", "10"],
+    answer: 1,
+    why: "N = A − Z = 7 − 3 = 4."
+  },
+  {
+    q: "Manuel : dans le symbole ⁶³₂₉Cu, que représente 63 ?",
+    choices: ["Le nombre de protons", "Le nombre de nucléons", "Le nombre de neutrons", "Le nombre d’électrons"],
+    answer: 1,
+    why: "En haut à gauche, A = 63 nucléons. En bas, Z = 29 protons. N = 34."
+  },
+  {
+    q: "Manuel : où s’écrivent A et Z dans le symbole d’un noyau ?",
+    choices: ["A en haut à droite, Z en bas à droite", "A en haut à gauche, Z en bas à gauche", "Z en haut à gauche, A en bas à gauche", "A en haut à gauche, Z en bas à droite"],
+    answer: 1,
+    why: "Tous les deux à gauche du symbole, A au-dessus de Z. À droite en haut, c’est la charge d’un ion."
+  },
+  {
+    q: "Manuel : qu’est-ce qu’un élément chimique ?",
+    choices: ["L’ensemble des atomes qui ont la même masse", "L’ensemble des atomes, ions… qui ont le même Z", "L’ensemble des atomes qui ont le même nombre de nucléons", "Un atome qui ne peut pas se transformer"],
+    answer: 1,
+    why: "Même nombre de protons, donc même numéro atomique Z. Cu, Cu²⁺ et CuO contiennent l’élément cuivre."
+  },
+  {
+    q: "Manuel : quand deux atomes sont-ils isotopes ?",
+    choices: ["Même A, Z différents", "Même Z, A différents", "Même Z et même A", "Même nombre de neutrons"],
+    answer: 1,
+    why: "Même nombre de protons, nombres de nucléons différents : carbone 12, 13 et 14."
+  },
+  {
+    q: "Manuel : pourquoi le carbone 12 (¹²₆C) et le carbone 14 (¹⁴₆C) sont-ils isotopes ?",
+    choices: ["Ils ont 6 neutrons chacun, mais pas le même nombre Z", "Ils ont tous deux Z = 6 protons, mais 6 et 8 neutrons", "Ils ont tous les deux le même nombre de masse A = 12", "L’un est un atome neutre alors que l’autre est un ion"],
+    answer: 1,
+    why: "Deux isotopes ont le même nombre de protons (ici Z = 6), mais des nombres de neutrons différents (6 et 8, donc A = 12 et A = 14)."
+  },
+  {
+    q: "Manuel : un élément chimique peut-il se transformer en un autre lors d’une transformation chimique ?",
+    choices: ["Oui, si on chauffe assez fort", "Non, jamais", "Oui, c’est le principe de la combustion", "Oui, mais seulement pour les métaux"],
+    answer: 1,
+    why: "Les atomes se réarrangent mais ne disparaissent pas : l’élément reste le même."
   },
   {
     q: "Chapitre 3 : de quoi est formée une molécule ?",
@@ -326,7 +404,7 @@ QUIZ.cahier = [
   },
   {
     q: "Que dit la conservation de la masse ?",
-    choices: ["La masse des produits formés est toujours plus grande", "Masse des réactifs disparus = masse des produits", "La masse des réactifs est toujours plus grande", "La masse diminue car des gaz s’échappent"],
+    choices: ["La masse des produits formés est toujours plus grande", "Masse des réactifs disparus = masse des produits formés", "La masse des réactifs est toujours plus grande", "La masse diminue car des gaz s’échappent"],
     answer: 1,
     why: "La masse des réactifs disparus est égale à la masse des produits formés."
   },
@@ -335,84 +413,6 @@ QUIZ.cahier = [
     choices: ["20 g", "44 g", "32 g", "12 g"],
     answer: 1,
     why: "Conservation de la masse : 12 + 32 = 44 g."
-  },
-  {
-    q: "Manuel : le noyau atomique est combien de fois plus petit que l’atome ?",
-    choices: ["1 000 fois", "10 000 fois", "100 000 fois", "1 000 000 de fois"],
-    answer: 2,
-    why: "Atome 10⁻¹⁰ m, noyau 10⁻¹⁵ m : un rapport de 10⁵ = 100 000."
-  },
-  {
-    q: "Manuel : quel est l’ordre de grandeur de la dimension du noyau ?",
-    choices: ["10⁻⁹ m", "10⁻¹⁰ m", "10⁻¹⁵ m", "10⁻²⁷ m"],
-    answer: 2,
-    why: "10⁻¹⁵ m pour le noyau. 10⁻¹⁰ m, c’est l’atome entier."
-  },
-  {
-    q: "Manuel : comment appelle-t-on les particules qui constituent le noyau ?",
-    choices: ["Les électrons", "Les nucléons", "Les ions", "Les isotopes"],
-    answer: 1,
-    why: "Les nucléons : protons et neutrons."
-  },
-  {
-    q: "Manuel : quelle est la charge du proton et celle du neutron ?",
-    choices: ["Proton positif, neutron négatif", "Proton positif, neutron neutre", "Proton neutre, neutron positif", "Proton négatif, neutron neutre"],
-    answer: 1,
-    why: "Protons chargés positivement, neutrons électriquement neutres."
-  },
-  {
-    q: "Manuel : quelle part de la masse d’un atome se trouve dans son noyau ?",
-    choices: ["Environ la moitié", "Plus de 99 %", "Moins de 1 %", "Environ 90 %"],
-    answer: 1,
-    why: "La masse des électrons est négligeable devant celle des nucléons."
-  },
-  {
-    q: "Manuel : à quoi est égal le nombre de protons Z d’un atome ?",
-    choices: ["Au nombre de neutrons", "Au nombre d’électrons", "Au nombre de nucléons", "Au nombre de masse"],
-    answer: 1,
-    why: "L’atome est électriquement neutre : autant de protons que d’électrons."
-  },
-  {
-    q: "Manuel : le noyau de lithium a 7 nucléons et 3 protons. Combien de neutrons ?",
-    choices: ["3", "4", "7", "10"],
-    answer: 1,
-    why: "N = A − Z = 7 − 3 = 4."
-  },
-  {
-    q: "Manuel : dans le symbole ⁶³₂₉Cu, que représente 63 ?",
-    choices: ["Le nombre de protons", "Le nombre de nucléons", "Le nombre de neutrons", "Le nombre d’électrons"],
-    answer: 1,
-    why: "En haut à gauche, A = 63 nucléons. En bas, Z = 29 protons. N = 34."
-  },
-  {
-    q: "Manuel : où s’écrivent A et Z dans le symbole d’un noyau ?",
-    choices: ["A en haut à droite, Z en bas à droite", "A en haut à gauche, Z en bas à gauche", "Z en haut à gauche, A en bas à gauche", "A en haut à gauche, Z en bas à droite"],
-    answer: 1,
-    why: "Tous les deux à gauche du symbole, A au-dessus de Z. À droite en haut, c’est la charge d’un ion."
-  },
-  {
-    q: "Manuel : qu’est-ce qu’un élément chimique ?",
-    choices: ["L’ensemble des atomes qui ont la même masse", "L’ensemble des atomes, ions… qui ont le même Z", "L’ensemble des atomes qui ont le même nombre de nucléons", "Un atome qui ne peut pas se transformer"],
-    answer: 1,
-    why: "Même nombre de protons, donc même numéro atomique Z. Cu, Cu²⁺ et CuO contiennent l’élément cuivre."
-  },
-  {
-    q: "Manuel : quand deux atomes sont-ils isotopes ?",
-    choices: ["Même A, Z différents", "Même Z, A différents", "Même Z et même A", "Même nombre de neutrons"],
-    answer: 1,
-    why: "Même nombre de protons, nombres de nucléons différents : carbone 12, 13 et 14."
-  },
-  {
-    q: "Manuel, exercice 16 : A (13 p, 14 n), B (12 p, 14 n), C (13 p, 13 n), D (12 p, 13 n), E (14 p, 13 n). Lesquels sont isotopes ?",
-    choices: ["A et C seulement", "A et C, et aussi B et D", "A et B, qui ont 14 neutrons", "C, D et E, qui ont 13 neutrons"],
-    answer: 1,
-    why: "Isotopes = même nombre de protons. A et C ont 13 protons ; B et D ont 12 protons. Le nombre de neutrons ne compte pas."
-  },
-  {
-    q: "Manuel : un élément chimique peut-il se transformer en un autre lors d’une transformation chimique ?",
-    choices: ["Oui, si on chauffe assez fort", "Non, jamais", "Oui, c’est le principe de la combustion", "Oui, mais seulement pour les métaux"],
-    answer: 1,
-    why: "Les atomes se réarrangent mais ne disparaissent pas : l’élément reste le même."
   }
 ];
 
@@ -437,15 +437,15 @@ QUIZ.extra = [
   },
   {
     q: "Une bille d’acier (7,9 g/cm³) est posée sur du mercure (13,5 g/cm³). Que se passe-t-il ?",
-    choices: ["Elle coule", "Elle flotte à la surface du mercure", "Elle reste entre deux eaux", "Elle coule lentement"],
+    choices: ["Elle coule au fond du récipient", "Elle flotte à la surface du mercure", "Elle reste immobile entre deux eaux", "Elle se dissout dans le mercure"],
     answer: 1,
     why: "7,9 est plus petit que 13,5 : la bille flotte sur le mercure."
   },
   {
     q: "Quel métal a la plus grande masse volumique parmi ceux-ci ?",
-    choices: ["Aluminium", "Fer", "Or", "Plomb"],
+    choices: ["Aluminium", "Fer", "Or", "Mercure"],
     answer: 2,
-    why: "L’or : 19,3 g/cm³, devant le plomb (11,3) et le fer (7,9)."
+    why: "L’or : 19,3 g/cm³, devant le mercure (13,5), le fer (7,9) et l’aluminium (2,7)."
   },
   {
     q: "Le noyau est-il beaucoup plus petit que l’atome ?",
@@ -455,9 +455,15 @@ QUIZ.extra = [
   },
   {
     q: "Où se trouve presque toute la masse d’un atome ?",
-    choices: ["Dans les électrons", "Dans le noyau, protons et neutrons", "Dans le vide autour du noyau", "Elle est répartie également"],
+    choices: ["Dans les électrons qui gravitent autour", "Dans le noyau, protons et neutrons", "Dans le vide situé autour du noyau", "Répartie également dans tout l’atome"],
     answer: 1,
     why: "L’électron est beaucoup plus léger que le noyau."
+  },
+  {
+    q: "Un proton est environ combien de fois plus lourd qu’un électron ?",
+    choices: ["Aussi lourd", "18 fois", "1 836 fois", "100 000 fois"],
+    answer: 2,
+    why: "C’est pour cela que plus de 99 % de la masse de l’atome est dans le noyau."
   },
   {
     q: "Quelle expérience de 1911 montre que l’atome est surtout du vide ?",
@@ -466,10 +472,16 @@ QUIZ.extra = [
     why: "Presque toutes les particules envoyées traversent la feuille d’or."
   },
   {
-    q: "Quand un atome devient un ion, qu’est-ce qui change ?",
-    choices: ["Le nombre de protons", "Le numéro atomique Z", "Le nombre d’électrons", "Le nombre de neutrons"],
+    q: "Qui propose en 1913 des orbites bien définies pour les électrons ?",
+    choices: ["Démocrite", "Niels Bohr", "Thomson", "Chadwick"],
+    answer: 1,
+    why: "Niels Bohr précise le modèle planétaire."
+  },
+  {
+    q: "En quelle année James Chadwick a-t-il découvert le neutron ?",
+    choices: ["1897", "1911", "1932", "1935"],
     answer: 2,
-    why: "Seul le nombre d’électrons change. Le noyau et Z restent les mêmes : l’élément ne change pas."
+    why: "En bombardant du béryllium avec des particules alpha. L’exercice 22 du manuel raconte l’histoire."
   },
   {
     q: "Combien de neutrons dans l’aluminium 27 (Z = 13) ?",
@@ -478,10 +490,28 @@ QUIZ.extra = [
     why: "N = A − Z = 27 − 13 = 14."
   },
   {
-    q: "Qui propose en 1913 des orbites bien définies pour les électrons ?",
-    choices: ["Démocrite", "Niels Bohr", "Thomson", "Chadwick"],
+    q: "À quoi sert le carbone 14 ?",
+    choices: ["À colorer les précipités", "À dater des restes très anciens", "À mesurer la masse volumique des roches", "À conduire le courant dans les solutions"],
     answer: 1,
-    why: "Niels Bohr précise le modèle planétaire."
+    why: "C’est un isotope radioactif qui se transforme lentement."
+  },
+  {
+    q: "Quelle est la demi-vie du carbone 14, utilisé pour dater ?",
+    choices: ["573 ans", "5 730 ans", "57 300 ans", "5,73 millions d’années"],
+    answer: 1,
+    why: "Tous les 5 730 ans, la moitié des noyaux de carbone 14 s’est transformée en azote 14."
+  },
+  {
+    q: "Quel isotope est utilisé dans les centrales nucléaires ?",
+    choices: ["L’uranium 234", "L’uranium 235", "L’uranium 238", "Le carbone 14"],
+    answer: 1,
+    why: "92 protons et 143 neutrons. Sa fission libère de l’énergie."
+  },
+  {
+    q: "Quand un atome devient un ion, qu’est-ce qui change ?",
+    choices: ["Le nombre de protons", "Le numéro atomique Z", "Le nombre d’électrons", "Le nombre de neutrons"],
+    answer: 2,
+    why: "Seul le nombre d’électrons change. Le noyau et Z restent les mêmes : l’élément ne change pas."
   },
   {
     q: "Pourquoi l’eau pure conduit-elle très mal le courant ?",
@@ -508,12 +538,6 @@ QUIZ.extra = [
     why: "Calcium, magnésium, sodium, hydrogénocarbonate, sulfate…"
   },
   {
-    q: "À quoi sert le carbone 14 ?",
-    choices: ["À colorer les précipités", "À dater des restes très anciens", "À mesurer la masse volumique des roches", "À conduire le courant dans les solutions"],
-    answer: 1,
-    why: "C’est un isotope radioactif qui se transforme lentement."
-  },
-  {
     q: "Pourquoi le sel NaCl n’est-il pas une molécule ?",
     choices: ["Parce qu’il contient deux sortes d’atomes différents", "C’est un cristal ionique, un empilement d’ions", "Parce qu’il se dissout dans l’eau", "Parce que ses atomes ne sont pas reliés"],
     answer: 1,
@@ -523,7 +547,7 @@ QUIZ.extra = [
     q: "Dans un modèle moléculaire, de quelle couleur est l’atome d’oxygène ?",
     choices: ["Noir", "Blanc", "Rouge", "Bleu"],
     answer: 2,
-    why: "C noir, H blanc, O rouge, N bleu."
+    why: "C noir, H blanc, O rouge, N bleu, Cl vert."
   },
   {
     q: "Quel gaz dangereux se forme lors d’une combustion incomplète ?",
@@ -542,29 +566,5 @@ QUIZ.extra = [
     choices: ["Il a reçu le prix Nobel", "Il a été guillotiné", "Il a publié son traité", "Il a découvert l’oxygène"],
     answer: 1,
     why: "Pendant la Révolution. Son Traité élémentaire de chimie date de 1789."
-  },
-  {
-    q: "En quelle année James Chadwick a-t-il découvert le neutron ?",
-    choices: ["1897", "1911", "1932", "1935"],
-    answer: 2,
-    why: "En bombardant du béryllium avec des particules alpha. L’exercice 22 du manuel raconte l’histoire."
-  },
-  {
-    q: "Quelle est la demi-vie du carbone 14, utilisé pour dater ?",
-    choices: ["573 ans", "5 730 ans", "57 300 ans", "5,73 millions d’années"],
-    answer: 1,
-    why: "Tous les 5 730 ans, la moitié des noyaux de carbone 14 s’est transformée en azote 14."
-  },
-  {
-    q: "Quel isotope est utilisé dans les centrales nucléaires ?",
-    choices: ["L’uranium 234", "L’uranium 235", "L’uranium 238", "Le carbone 14"],
-    answer: 1,
-    why: "92 protons et 143 neutrons. Sa fission libère de l’énergie."
-  },
-  {
-    q: "Un proton est environ combien de fois plus lourd qu’un électron ?",
-    choices: ["Aussi lourd", "18 fois", "1 836 fois", "100 000 fois"],
-    answer: 2,
-    why: "C’est pour cela que plus de 99 % de la masse de l’atome est dans le noyau."
   }
 ];

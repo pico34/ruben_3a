@@ -80,6 +80,31 @@ QUIZ.expliquer = [
     cles: ["électron", "pudding", "modèle planétaire", "vide", "Perrin est confirmée"]
   },
   {
+    q: "Décris le noyau atomique : dimension, constitution, masse.",
+    reponse: "Le noyau atomique est la partie centrale de l’atome, autour de laquelle gravitent les électrons. Sa dimension a pour ordre de grandeur 10⁻¹⁵ m : le noyau est 100 000 fois plus petit que l’atome, qui mesure environ 10⁻¹⁰ m. Il est constitué de nucléons : les protons, chargés positivement, et les neutrons, électriquement neutres. Comme la masse des électrons est négligeable, plus de 99 % de la masse d’un atome est concentrée dans son noyau. Exemple : le noyau de lithium a 7 nucléons, 3 protons et 4 neutrons.",
+    cles: ["10⁻¹⁵ m", "100 000 fois plus petit", "nucléons", "protons", "neutrons", "99 %"]
+  },
+  {
+    q: "Que représentent Z, A et N ? Explique comment on calcule N à partir du symbole d’un noyau.",
+    reponse: "Le numéro atomique Z est le nombre de protons présents dans le noyau d’un atome ; comme l’atome est neutre, c’est aussi son nombre d’électrons. Le nombre de masse A est le nombre de nucléons, protons et neutrons réunis. Le nombre de neutrons N est la différence : N = A − Z. Dans le symbole d’un noyau, A est écrit en haut à gauche et Z en bas à gauche. Pour le cuivre ⁶³₂₉Cu, on lit A = 63 et Z = 29, donc N = 63 − 29 = 34 neutrons.",
+    cles: ["nombre de protons", "nombre de nucléons", "N = A − Z", "en haut à gauche", "34 neutrons"]
+  },
+  {
+    q: "Définis : élément chimique. Donne un exemple.",
+    reponse: "Un élément chimique est l’ensemble des atomes, ions… qui ont le même nombre de protons dans leur noyau, c’est-à-dire le même numéro atomique Z. Par exemple, le métal cuivre Cu, l’ion cuivre Cu²⁺ et le cuivre de l’oxyde de cuivre CuO sont des espèces chimiques différentes qui contiennent toutes l’élément cuivre, Z = 29. Un élément chimique ne peut pas se transformer en un autre élément par une transformation chimique. Il existe plus d’une centaine d’éléments, répertoriés dans le tableau périodique des éléments.",
+    cles: ["même nombre de protons", "numéro atomique Z", "élément cuivre", "ne peut pas se transformer", "tableau périodique"]
+  },
+  {
+    q: "Qu’est-ce que des isotopes ? Explique avec l’exemple du carbone, selon le manuel.",
+    reponse: "Deux atomes sont isotopes s’ils ont le même numéro atomique Z mais des nombres de masse A différents : ils ont le même nombre de protons, donc appartiennent au même élément chimique, mais pas le même nombre de neutrons. Les isotopes d’un même élément ont souvent les mêmes propriétés chimiques mais des masses différentes. Exemple : le carbone 12, le carbone 13 et le carbone 14 ont tous 6 protons ; ils ont respectivement 6, 7 et 8 neutrons, puisque N = A − Z. Ce sont trois isotopes de l’élément carbone.",
+    cles: ["même numéro atomique Z", "nombres de masse A différents", "mêmes propriétés chimiques", "masses différentes", "6 protons"]
+  },
+  {
+    q: "Pourquoi presque toute la masse d’un atome est-elle dans son noyau ?",
+    reponse: "Un atome est formé d’un noyau et d’électrons qui gravitent autour. Le noyau contient les nucléons, protons et neutrons, qui sont très lourds par rapport aux électrons : la masse d’un électron est négligeable devant celle d’un nucléon. C’est pourquoi plus de 99 % de la masse d’un atome est concentrée dans son noyau, alors que le noyau est 100 000 fois plus petit que l’atome. C’est aussi pour cela que le nombre de nucléons A est appelé nombre de masse.",
+    cles: ["nucléons", "négligeable", "99 %", "concentrée dans son noyau", "nombre de masse"]
+  },
+  {
     q: "Définis : molécule. Comment la représente-t-on ?",
     reponse: "Une molécule est formée d’au moins deux atomes reliés ensemble par des liaisons chimiques. La matière est un assemblage d’atomes, mais la façon dont ils s’assemblent est très différente suivant le corps considéré. On représente une molécule par une formule et par un modèle moléculaire. Dans la formule, l’indice écrit en bas à droite d’un symbole donne le nombre d’atomes : la molécule de dioxyde de carbone CO₂ contient un atome de carbone et deux atomes d’oxygène.",
     cles: ["au moins deux atomes", "liaisons chimiques", "formule", "modèle moléculaire"]
@@ -108,30 +133,5 @@ QUIZ.expliquer = [
     q: "Explique la différence entre un réactif et un produit, et comment on écrit une réaction chimique.",
     reponse: "Une réaction chimique se modélise par la transformation chimique des réactifs en produits. Les réactifs sont les espèces chimiques qui disparaissent au cours de la réaction ; les produits sont celles qui se forment. On écrit les réactifs à gauche de la flèche et les produits à droite, séparés par des +. Par exemple, dans la combustion du pentane, C₅H₁₂ + 8 O₂ → 5 CO₂ + 6 H₂O, le pentane et le dioxygène sont les réactifs ; le dioxyde de carbone et l’eau sont les produits.",
     cles: ["réactifs", "produits", "disparaissent", "se forment", "flèche"]
-  },
-  {
-    q: "Décris le noyau atomique : dimension, constitution, masse.",
-    reponse: "Le noyau atomique est la partie centrale de l’atome, autour de laquelle gravitent les électrons. Sa dimension a pour ordre de grandeur 10⁻¹⁵ m : le noyau est 100 000 fois plus petit que l’atome, qui mesure environ 10⁻¹⁰ m. Il est constitué de nucléons : les protons, chargés positivement, et les neutrons, électriquement neutres. Comme la masse des électrons est négligeable, plus de 99 % de la masse d’un atome est concentrée dans son noyau. Exemple : le noyau de lithium a 7 nucléons, 3 protons et 4 neutrons.",
-    cles: ["10⁻¹⁵ m", "100 000 fois plus petit", "nucléons", "protons", "neutrons", "99 %"]
-  },
-  {
-    q: "Que représentent Z, A et N ? Explique comment on calcule N à partir du symbole d’un noyau.",
-    reponse: "Le numéro atomique Z est le nombre de protons présents dans le noyau d’un atome ; comme l’atome est neutre, c’est aussi son nombre d’électrons. Le nombre de masse A est le nombre de nucléons, protons et neutrons réunis. Le nombre de neutrons N est la différence : N = A − Z. Dans le symbole d’un noyau, A est écrit en haut à gauche et Z en bas à gauche. Pour le cuivre ⁶³₂₉Cu, on lit A = 63 et Z = 29, donc N = 63 − 29 = 34 neutrons.",
-    cles: ["nombre de protons", "nombre de nucléons", "N = A − Z", "en haut à gauche", "34 neutrons"]
-  },
-  {
-    q: "Définis : élément chimique. Donne un exemple.",
-    reponse: "Un élément chimique est l’ensemble des atomes, ions… qui ont le même nombre de protons dans leur noyau, c’est-à-dire le même numéro atomique Z. Par exemple, le métal cuivre Cu, l’ion cuivre Cu²⁺ et le cuivre de l’oxyde de cuivre CuO sont des espèces chimiques différentes qui contiennent toutes l’élément cuivre, Z = 29. Un élément chimique ne peut pas se transformer en un autre élément par une transformation chimique. Il existe plus d’une centaine d’éléments, répertoriés dans le tableau périodique des éléments.",
-    cles: ["même nombre de protons", "numéro atomique Z", "élément cuivre", "ne peut pas se transformer", "tableau périodique"]
-  },
-  {
-    q: "Qu’est-ce que des isotopes ? Explique avec l’exemple du carbone, selon le manuel.",
-    reponse: "Deux atomes sont isotopes s’ils ont le même numéro atomique Z mais des nombres de masse A différents : ils ont le même nombre de protons, donc appartiennent au même élément chimique, mais pas le même nombre de neutrons. Les isotopes d’un même élément ont souvent les mêmes propriétés chimiques mais des masses différentes. Exemple : le carbone 12, le carbone 13 et le carbone 14 ont tous 6 protons ; ils ont respectivement 6, 7 et 8 neutrons, puisque N = A − Z. Ce sont trois isotopes de l’élément carbone.",
-    cles: ["même numéro atomique Z", "nombres de masse A différents", "mêmes propriétés chimiques", "masses différentes", "6 protons"]
-  },
-  {
-    q: "Pourquoi presque toute la masse d’un atome est-elle dans son noyau ?",
-    reponse: "Un atome est formé d’un noyau et d’électrons qui gravitent autour. Le noyau contient les nucléons, protons et neutrons, qui sont très lourds par rapport aux électrons : la masse d’un électron est négligeable devant celle d’un nucléon. C’est pourquoi plus de 99 % de la masse d’un atome est concentrée dans son noyau, alors que le noyau est 100 000 fois plus petit que l’atome. C’est aussi pour cela que le nombre de nucléons A est appelé nombre de masse.",
-    cles: ["nucléons", "négligeable", "99 %", "concentrée dans son noyau", "nombre de masse"]
-  },
+  }
 ];

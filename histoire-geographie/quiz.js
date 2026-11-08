@@ -14,7 +14,7 @@ QUIZ.cahier = [
   },
   {
     q: "Quelle définition correspond à la guerre de position ?",
-    choices: ["Les armées se déplacent et lancent des offensives", "Le front n’évolue presque plus", "Les combats cessent après un cessez-le-feu", "Le pays entier est mobilisé pour la guerre"],
+    choices: ["Les armées se déplacent et lancent des offensives", "Le front n’évolue presque plus, dans les tranchées", "Les combats cessent après un cessez-le-feu", "Le pays entier est mobilisé pour la guerre"],
     answer: 1,
     why: "Guerre de position : front presque figé, défense dans les tranchées."
   },
@@ -145,9 +145,9 @@ QUIZ.cahier = [
     why: "Il coupe l’Allemagne en deux."
   },
   {
-    q: "Quel bilan humain le cahier donne-t-il à la fin du chapitre ?",
-    choices: ["Environ 1 million de morts", "Environ 10 millions de morts", "Environ 70 millions de morts", "Environ 300 000 morts"],
-    answer: 1,
+    q: "Quel bilan humain de la Grande Guerre le cahier donne-t-il à la fin du chapitre 1 ?",
+    choices: ["Environ 1 million de morts", "Environ 70 millions de morts", "Environ 300 000 morts", "Environ 10 millions de morts"],
+    answer: 3,
     why: "10 millions de morts, des millions de mutilés, des veuves et des orphelins."
   },
   {
@@ -158,8 +158,8 @@ QUIZ.cahier = [
   },
   {
     q: "Que font les femmes à l’arrière ?",
-    choices: ["Elles combattent dans les tranchées aux côtés des hommes", "Elles remplacent les hommes aux champs et à l’usine", "Elles sont évacuées loin du front avec les enfants", "Elles obtiennent le droit de vote dès 1918"],
-    answer: 1,
+    choices: ["Elles combattent dans les tranchées aux côtés des hommes", "Elles sont évacuées loin du front avec les enfants", "Elles remplacent les hommes aux champs et à l’usine", "Elles obtiennent le droit de vote en France dès 1918"],
+    answer: 2,
     why: "Mobilisation de tout le pays : les femmes remplacent les hommes partis au front."
   },
   {
@@ -170,8 +170,8 @@ QUIZ.cahier = [
   },
   {
     q: "Dans quel pays agissent les spartakistes ?",
-    choices: ["En Russie", "En Allemagne", "En France", "En Serbie"],
-    answer: 1,
+    choices: ["En Russie", "En France", "En Serbie", "En Allemagne"],
+    answer: 3,
     why: "Ils s’inspirent du modèle russe. Leur mouvement échoue."
   },
   {
@@ -188,14 +188,14 @@ QUIZ.cahier = [
   },
   {
     q: "Qu’est-ce qui fait de 1914-1918 une guerre totale ?",
-    choices: ["Elle se termine par la défaite totale d’un camp", "Le pays entier, civils compris, est mobilisé", "Seuls les soldats professionnels sont concernés", "Elle se déroule uniquement dans les tranchées"],
-    answer: 1,
+    choices: ["Elle se termine par la défaite totale d’un camp", "Seuls les soldats professionnels sont concernés", "Le pays entier, civils compris, est mobilisé", "Elle se déroule uniquement dans les tranchées"],
+    answer: 2,
     why: "Le pays consacre tout à la guerre, les civils sont impliqués, de nombreux pays sont concernés."
   },
   {
-    q: "Ce que subissent les habitants du Nord de la France et de Belgique ?",
-    choices: ["L’occupation : travail forcé, réquisitions", "La déportation vers le désert syrien", "Des combats dans les rues de leurs villes", "Une famine organisée par leur gouvernement"],
-    answer: 0,
+    q: "Que subissent les habitants du Nord de la France et de la Belgique ?",
+    choices: ["La déportation vers le désert syrien", "Des combats dans les rues de leurs villes", "Une famine organisée par leur gouvernement", "L’occupation : travail forcé, réquisitions"],
+    answer: 3,
     why: "Ils supportent le poids de l’occupation."
   },
   {
@@ -224,7 +224,7 @@ QUIZ.cahier = [
   },
   {
     q: "Un seul chef détient tous les pouvoirs : comment s’appelle ce régime ?",
-    choices: ["Une république", "Une dictature", "Une monarchie absolue", "Une révolution"],
+    choices: ["Une république", "Une dictature", "Une démocratie", "Une révolution"],
     answer: 1,
     why: "Staline détient tous les pouvoirs : c’est une dictature."
   },
@@ -364,7 +364,7 @@ QUIZ.cahier = [
     q: "Quel régime est mis en place en Allemagne dès 1918 ?",
     choices: ["La République de Weimar", "Le IIIe Reich", "L’Empire allemand", "La République fédérale d’Allemagne"],
     answer: 0,
-    why: "La République de Weimar, avec le président Hindenburg à sa tête d’après le cahier."
+    why: "La République de Weimar (premier président Friedrich Ebert, puis Hindenburg élu en 1925)."
   },
   {
     q: "Combien de chômeurs compte l’Allemagne en 1932 ?",
@@ -374,8 +374,8 @@ QUIZ.cahier = [
   },
   {
     q: "Pourquoi la crise de 1929 touche-t-elle l’Allemagne ?",
-    choices: ["Les États-Unis rapatrient les capitaux investis en Europe", "La France exige le paiement immédiat de toutes les réparations", "Les communistes organisent une grève générale", "L’Allemagne perd ses colonies et ses marchés"],
-    answer: 0,
+    choices: ["La France exige le paiement immédiat de toutes les réparations", "Les communistes organisent une grève générale dans le pays", "Les États-Unis rapatrient les capitaux investis en Europe", "L’Allemagne perd ses colonies et ses marchés extérieurs"],
+    answer: 2,
     why: "La crise part des États-Unis, qui rapatrient leurs capitaux : l’Allemagne plonge dans une crise profonde."
   },
   {
@@ -397,51 +397,51 @@ QUIZ.cahier = [
     why: "1920 = NSDAP, écrit sur la carte mentale."
   },
   {
-    q: "Comment doit-on appeler Hitler ?",
-    choices: ["Le Führer", "Le Kaiser", "Le Duce", "Le chancelier du Reich"],
-    answer: 0,
+    q: "Quel titre signifiant « le guide » doit-on donner à Hitler ?",
+    choices: ["Le Kaiser", "Le Duce", "Le Tsar", "Le Führer"],
+    answer: 3,
     why: "On doit l’appeler le Führer. Il détient tous les pouvoirs de 1933 à 1945."
   },
   {
     q: "Qu’est-ce que la Gestapo ?",
-    choices: ["La police politique nazie", "Le parti nazi", "La jeunesse nazie", "L’armée de l’Allemagne nazie"],
-    answer: 0,
+    choices: ["Le parti nazi", "La police politique nazie", "La jeunesse nazie", "L’armée de l’Allemagne nazie"],
+    answer: 1,
     why: "La Gestapo est l’exemple de police politique donné par le cahier."
   },
   {
     q: "Qui peut être arrêté, déporté, torturé ou exécuté dans l’Allemagne nazie, d’après le cahier ?",
-    choices: ["Toute personne jugée « socialement nuisible »", "Seulement les communistes", "Seulement les étrangers", "Seulement les anciens combattants"],
-    answer: 0,
-    why: "Toute personne jugée « socialement nuisible », et les opposants."
+    choices: ["Uniquement les soldats des armées ennemies", "Les citoyens ayant refusé de servir dans l’armée", "Toute personne jugée « socialement nuisible »", "Les grands industriels et la haute bourgeoisie"],
+    answer: 2,
+    why: "Toute personne jugée « socialement nuisible », ainsi que les opposants."
   },
   {
     q: "Vers quoi l’économie de l’Allemagne nazie est-elle tournée ?",
-    choices: ["Vers la guerre", "Vers l’agriculture", "Vers le commerce", "Vers les biens de consommation"],
-    answer: 0,
+    choices: ["Vers l’agriculture", "Vers le commerce", "Vers les biens de consommation", "Vers la guerre"],
+    answer: 3,
     why: "Une économie tournée vers la guerre : production d’armes, moins de chômeurs, plus de productivité."
   },
   {
     q: "D’après le manuel, quels sont les quatre moyens d’un régime totalitaire ?",
-    choices: ["Parti unique, terreur, propagande, contrôle de l’économie", "Armée, police, justice, école", "Élections truquées, parlement, presse contrôlée, syndicats", "Un chef, une religion, une armée, une monnaie"],
-    answer: 0,
+    choices: ["Armée, police, justice indépendante, école publique", "Élections libres, parlement, presse contrôlée, syndicats", "Parti unique, terreur, propagande, contrôle de l’économie", "Un roi, une religion d’État, une armée, une monnaie"],
+    answer: 2,
     why: "Une dictature qui contrôle l’ensemble de la société au moyen d’un parti unique, de la terreur, de la propagande et du contrôle de l’économie."
   },
   {
     q: "Qu’est-ce qu’une démocratie, d’après le manuel ?",
-    choices: ["Un régime où le pouvoir appartient au peuple", "Un régime dirigé par un parti unique", "Un régime où le roi gouverne avec un parlement", "Un régime où l’armée contrôle l’État"],
+    choices: ["Un régime où le pouvoir appartient au peuple", "Un régime dirigé par un parti unique", "Un régime où un seul chef détient tous les pouvoirs", "Un régime où l’armée contrôle l’État"],
     answer: 0,
     why: "Régime politique dans lequel le pouvoir appartient au peuple. En 1938 : France, Royaume-Uni, Belgique, Tchécoslovaquie…"
   },
   {
     q: "Qu’est-ce qu’un parti unique ?",
-    choices: ["Le seul parti autorisé, il contrôle l’État", "Le parti qui a gagné les élections", "Le parti le plus ancien du pays", "Le parti du chef de l’armée"],
-    answer: 0,
+    choices: ["Le parti qui a remporté les élections libres", "Le seul parti autorisé, qui contrôle l’État", "Le parti politique le plus ancien du pays", "Le parti fondé par le chef de l’armée"],
+    answer: 1,
     why: "Seul parti politique autorisé dans un régime totalitaire. Il contrôle étroitement l’État."
   },
   {
     q: "Quel régime totalitaire dirige Mussolini ?",
-    choices: ["Le fascisme, en Italie", "Le nazisme, en Allemagne", "Le stalinisme, en URSS", "Le franquisme, en Espagne"],
-    answer: 0,
+    choices: ["Le nazisme, en Allemagne", "Le stalinisme, en URSS", "Le franquisme, en Espagne", "Le fascisme, en Italie"],
+    answer: 3,
     why: "Trois totalitarismes sur la carte de 1938 : fascisme (Mussolini), stalinisme (Staline), nazisme (Hitler)."
   },
   {
@@ -464,20 +464,20 @@ QUIZ.cahier = [
   },
   {
     q: "À quoi sert l’incendie du Reichstag aux nazis, en février 1933 ?",
-    choices: ["À interdire le parti communiste et abolir les libertés", "À reconstruire un parlement plus grand", "À faire élire Hitler président", "À obtenir de nouvelles élections législatives en Allemagne"],
-    answer: 0,
+    choices: ["À reconstruire un parlement plus moderne à Berlin", "À interdire le parti communiste et abolir les libertés", "À faire élire Hitler président de la République", "À signer une alliance militaire avec l’Union soviétique"],
+    answer: 1,
     why: "Ils attribuent abusivement l’incendie à un communiste pour interdire le parti et abolir les libertés fondamentales."
   },
   {
     q: "Quand et où Hitler rédige-t-il Mein Kampf ?",
-    choices: ["En prison, après son coup d’État manqué de 1923", "Au front, pendant la Première Guerre mondiale, en 1916", "À la chancellerie, après janvier 1933", "En exil en Autriche, après 1918"],
-    answer: 0,
+    choices: ["Au front, pendant la Première Guerre mondiale, en 1916", "À la chancellerie, après janvier 1933", "En exil en Autriche, après 1918", "En prison, après son coup d’État manqué de 1923"],
+    answer: 3,
     why: "Après une tentative de coup d’État en 1923, il rédige Mein Kampf en prison."
   },
   {
     q: "Qu’est-ce que le Komintern, créé par Lénine en 1919 ?",
-    choices: ["La IIIe Internationale, qui coordonne les partis communistes", "La police politique soviétique", "Le plan économique de l’URSS", "L’armée des bolcheviks pendant la guerre civile"],
-    answer: 0,
+    choices: ["La police politique chargée de surveiller les opposants", "Le grand programme économique quinquennal de l’URSS", "La IIIe Internationale, qui coordonne les partis communistes", "L’armée révolutionnaire des bolcheviks pendant la guerre civile"],
+    answer: 2,
     why: "Pour permettre une révolution communiste mondiale."
   },
   {
@@ -488,8 +488,8 @@ QUIZ.cahier = [
   },
   {
     q: "Qu’est-ce qu’un kolkhoze ?",
-    choices: ["Une exploitation agricole collective", "Un camp de travaux forcés", "Un paysan aisé opposé à la collectivisation", "Une usine d’État"],
-    answer: 0,
+    choices: ["Un camp de travaux forcés", "Une exploitation agricole collective", "Un paysan aisé opposé à la collectivisation", "Une grande usine d’armement"],
+    answer: 1,
     why: "Exploitation agricole appartenant à un groupe de paysans qui mettent en commun terres, bétail et outils."
   },
   {
@@ -500,8 +500,8 @@ QUIZ.cahier = [
   },
   {
     q: "Comment s’appellent les Jeunesses communistes en URSS ?",
-    choices: ["Les Komsomols", "Les Pionniers", "Les Enfants d’Octobre", "Les kolkhoziens"],
-    answer: 0,
+    choices: ["Les Pionniers", "Les Enfants d’Octobre", "Les kolkhoziens", "Les Komsomols"],
+    answer: 3,
     why: "Enfants d’Octobre jusqu’à 9 ans, Pionniers de 10 à 14 ans, puis Komsomols."
   }
 ];
@@ -589,13 +589,19 @@ QUIZ.extra = [
     q: "Qu’est-ce qu’un plan quinquennal ?",
     choices: ["Un plan de bataille de l’Armée rouge sur cinq ans", "Un programme économique de l’État sur cinq ans", "Une carte des camps du goulag en Sibérie", "Un traité de paix valable cinq ans"],
     answer: 1,
-    why: "Les plans quinquennaux commencent en 1928 : l’économie est planifiée."
+    why: "Le premier plan quinquennal est lancé en 1928-1929 (1929-1933 selon le manuel) : l’économie est planifiée."
   },
   {
     q: "Comment s’appellent les coopératives agricoles soviétiques ?",
-    choices: ["Les kolkhozes", "Les soviets", "Les goulags", "Les bolcheviks"],
-    answer: 0,
+    choices: ["Les soviets", "Les goulags", "Les kolkhozes", "Les bolcheviks"],
+    answer: 2,
     why: "Kolkhozes (coopératives) et sovkhozes (fermes d’État)."
+  },
+  {
+    q: "Quel nom portent les fermes d’État soviétiques, à côté des kolkhozes ?",
+    choices: ["Les soviets", "Les Komsomols", "Les goulags", "Les sovkhozes"],
+    answer: 3,
+    why: "Sovkhoze : ferme d’État où les paysans sont salariés. Kolkhoze : coopérative."
   },
   {
     q: "Qu’arrive-t-il à Trotski ?",
@@ -611,8 +617,8 @@ QUIZ.extra = [
   },
   {
     q: "Quel livre de Soljenitsyne fait connaître le goulag ?",
-    choices: ["L’Archipel du Goulag", "Guerre et Paix", "Le Capital", "À l’Ouest rien de nouveau"],
-    answer: 0,
+    choices: ["Guerre et Paix", "Le Capital", "L’Archipel du Goulag", "À l’Ouest rien de nouveau"],
+    answer: 2,
     why: "L’Archipel du Goulag, publié en 1973."
   },
   {
@@ -623,8 +629,8 @@ QUIZ.extra = [
   },
   {
     q: "Quel surnom donne la propagande à Staline ?",
-    choices: ["Le petit père des peuples", "Le père de la révolution", "Le Tigre", "Le père la Victoire"],
-    answer: 0,
+    choices: ["Le père de la révolution", "Le Tigre", "Le père la Victoire", "Le petit père des peuples"],
+    answer: 3,
     why: "C’est le culte de la personnalité."
   },
   {
@@ -635,20 +641,20 @@ QUIZ.extra = [
   },
   {
     q: "Que décident les lois de Nuremberg de 1935 ?",
-    choices: ["Elles retirent aux Juifs la citoyenneté allemande", "Elles donnent les pleins pouvoirs à Hitler", "Elles interdisent le parti communiste", "Elles rendent obligatoires les Jeunesses hitlériennes"],
-    answer: 0,
+    choices: ["Elles donnent les pleins pouvoirs à Hitler", "Elles interdisent le parti communiste", "Elles retirent aux Juifs la citoyenneté allemande", "Elles rendent obligatoires les Jeunesses hitlériennes"],
+    answer: 2,
     why: "Septembre 1935 : les Juifs perdent la citoyenneté allemande, les mariages avec des « Aryens » sont interdits."
   },
   {
     q: "Qu’est-ce que la Nuit de cristal, en novembre 1938 ?",
-    choices: ["Un pogrom contre les Juifs d’Allemagne", "L’élimination des chefs de la SA", "Un défilé aux flambeaux pour Hitler", "L’ouverture des Jeux olympiques de Berlin"],
-    answer: 0,
+    choices: ["L’élimination des chefs de la SA", "Un pogrom contre les Juifs d’Allemagne", "Un défilé aux flambeaux pour Hitler", "L’ouverture des Jeux olympiques de Berlin"],
+    answer: 1,
     why: "Du 9 au 10 novembre 1938 : synagogues incendiées, magasins pillés, environ 30 000 Juifs envoyés dans des camps."
   },
   {
     q: "Qui est le ministre de la Propagande de Hitler ?",
-    choices: ["Goebbels", "Himmler", "Göring", "Hindenburg"],
-    answer: 0,
+    choices: ["Himmler", "Göring", "Hindenburg", "Goebbels"],
+    answer: 3,
     why: "Goebbels, à partir de mars 1933 : radio, cinéma, grands rassemblements."
   },
   {
@@ -659,26 +665,20 @@ QUIZ.extra = [
   },
   {
     q: "Qu’est-ce que la Nuit des longs couteaux, le 30 juin 1934 ?",
-    choices: ["L’élimination des chefs de la SA et d’autres rivaux", "L’incendie du parlement allemand", "L’arrestation de tous les députés communistes du Reichstag", "L’attaque des magasins juifs dans toute l’Allemagne"],
-    answer: 0,
+    choices: ["L’incendie du parlement allemand", "L’arrestation de tous les députés communistes du Reichstag", "L’élimination des chefs de la SA et d’autres rivaux", "L’attaque des magasins juifs dans toute l’Allemagne"],
+    answer: 2,
     why: "Hitler fait assassiner les chefs de la SA, la milice du parti, et d’autres rivaux."
   },
   {
     q: "Qui est accusé de l’incendie du Reichstag et exécuté en 1934 ?",
-    choices: ["Marinus van der Lubbe", "Ernst Röhm, chef de la SA", "Léon Trotski", "Heinrich Hoffmann"],
-    answer: 0,
+    choices: ["Ernst Röhm, chef de la SA", "Marinus van der Lubbe", "Léon Trotski", "Heinrich Hoffmann"],
+    answer: 1,
     why: "Un jeune communiste néerlandais. Les nazis s’en servent pour interdire le parti communiste."
   },
   {
     q: "Combien de temps Hitler reste-t-il en prison après le putsch de 1923 ?",
-    choices: ["Environ neuf mois", "Cinq ans, toute sa peine", "Deux semaines", "Dix ans"],
-    answer: 0,
+    choices: ["Cinq ans, toute sa peine", "Deux semaines", "Dix ans", "Environ neuf mois"],
+    answer: 3,
     why: "Condamné à cinq ans, il n’en fait que neuf mois et y dicte Mein Kampf."
-  },
-  {
-    q: "Quel nom portent les fermes d’État soviétiques, à côté des kolkhozes ?",
-    choices: ["Les sovkhozes", "Les soviets", "Les Komsomols", "Les goulags"],
-    answer: 0,
-    why: "Sovkhoze : ferme d’État où les paysans sont salariés. Kolkhoze : coopérative."
   }
 ];
