@@ -248,6 +248,66 @@ QUIZ.cahier = [
     choices: ["×40", "×400", "×1200", "×10"],
     answer: 2,
     why: "Bactéries ×1200, paramécie ×400, moisissures ×40 : plus c’est petit, plus il faut grossir."
+  },
+  {
+    q: "Définition en rouge : qu’est-ce que l’ubiquité ?",
+    choices: ["Extrême abondance dans l’environnement", "Capacité à pénétrer dans une cellule", "Taille invisible à l’œil nu", "Transformation du lait en yaourt ou en fromage"],
+    answer: 0,
+    why: "Ubiquité : extrême abondance dans l’environnement. Les microbes sont partout, en grand nombre."
+  },
+  {
+    q: "Combien y a-t-il de principaux groupes de microbes, et lesquels ?",
+    choices: ["2 : les bactéries et les virus", "3 : les bactéries, les moisissures et les paramécies", "4 : les bactéries, les virus, les protozoaires et les champignons", "5 : les bactéries, les virus, les protozoaires, les champignons et les spores"],
+    answer: 2,
+    why: "Quatre groupes : bactéries, virus, protozoaires, champignons. Les spores ne sont pas un groupe, ce sont des productions des moisissures."
+  },
+  {
+    q: "Définition en rouge : qu’est-ce qu’une bactérie ?",
+    choices: ["Un organisme unicellulaire sans noyau", "Un organisme unicellulaire avec un noyau", "Un organisme pluricellulaire microscopique", "Un être capable de pénétrer dans une cellule et de s’y multiplier"],
+    answer: 0,
+    why: "Bactérie : organisme unicellulaire sans noyau. La dernière réponse est la définition du virus."
+  },
+  {
+    q: "Définition en rouge : qu’est-ce qu’un virus ?",
+    choices: ["Un organisme unicellulaire sans noyau, en forme de bâtonnet", "Un être vivant microscopique capable de pénétrer dans une cellule et de s’y multiplier", "Un champignon microscopique qui produit des spores", "Un animal unicellulaire qui vit dans l’eau stagnante"],
+    answer: 1,
+    why: "Formulation du cours : être vivant microscopique capable de pénétrer dans une cellule et de s’y multiplier."
+  },
+  {
+    q: "D’après le bilan de la leçon, quel lien les microbes ont-ils avec notre organisme ?",
+    choices: ["Ils sont en contact permanent avec lui", "Ils n’y entrent qu’en cas de maladie", "Ils ne vivent que dans les aliments", "Ils sont tous détruits par la peau avant tout contact"],
+    answer: 0,
+    why: "Les microbes vivent dans tous les milieux : ils sont partout, en grand nombre et en contact permanent avec notre organisme."
+  },
+  {
+    q: "Méthode du DM : que mesure-t-on en premier à la règle ?",
+    choices: ["La longueur de la barre d’échelle sur la photo, en mm", "La taille réelle du micro-organisme, en µm", "Le grossissement du microscope", "Le nombre de micro-organismes visibles sur la photographie"],
+    answer: 0,
+    why: "Étape 1 : mesurer la barre d’échelle (L). Étape 2 : lire la taille réelle qu’elle représente (E). Étape 3 : mesurer le micro-organisme (l)."
+  },
+  {
+    q: "Quelle est la formule du DM pour la taille réelle ?",
+    choices: ["Taille réelle = l × E ÷ L", "Taille réelle = L × E ÷ l", "Taille réelle = l ÷ E × L", "Taille réelle = l + E − L"],
+    answer: 0,
+    why: "l : taille du micro-organisme sur la photo ; E : taille réelle de la barre ; L : longueur de la barre sur la photo. C’est un produit en croix."
+  },
+  {
+    q: "Barre d’échelle : 7 mm sur la photo pour 0,5 µm réels. La bactérie mesure 60 mm sur la photo. Sa taille réelle ?",
+    choices: ["Environ 4,3 µm", "Environ 4,3 mm", "Environ 840 µm", "Environ 0,06 µm"],
+    answer: 0,
+    why: "60 × 0,5 ÷ 7 ≈ 4,3. Le résultat est dans l’unité de la barre d’échelle, donc en µm."
+  },
+  {
+    q: "Complète : 1 mm = … µm et 1 µm = … nm.",
+    choices: ["1 000 et 1 000", "1 000 000 et 1 000", "1 000 et 10", "10 et 1 000"],
+    answer: 0,
+    why: "1 mm = 1 000 µm et 1 µm = 1 000 nm : un facteur 1 000 à chaque fois."
+  },
+  {
+    q: "Dans le DM, les mesures à la règle sont en mm et la barre d’échelle vaut 0,5 µm. Dans quelle unité est la taille réelle calculée ?",
+    choices: ["En mm, comme les mesures à la règle", "En µm, l’unité de la barre d’échelle", "En cm, l’unité de la règle", "En nm, parce que les microbes sont très petits"],
+    answer: 1,
+    why: "Dans l × E ÷ L, les mm de l et de L se compensent : il reste l’unité de E. Une bactérie de 4,28 mm serait visible à l’œil nu, impossible."
   }
 ];
 
@@ -335,5 +395,23 @@ QUIZ.extra = [
     choices: ["Les virus qui provoquent les gastro-entérites", "Les moisissures du fromage une fois digérées", "Les milliers de milliards de bactéries qui vivent dans notre intestin", "Les cils qui tapissent la paroi de l’intestin"],
     answer: 2,
     why: "Il aide à digérer, fabrique des vitamines et protège contre les microbes dangereux."
+  },
+  {
+    q: "Quel est l’ordre de grandeur de la taille d’un virus ?",
+    choices: ["20 à 300 nm", "1 à 10 µm", "10 à 500 µm", "0,2 à 2 mm"],
+    answer: 0,
+    why: "Virus : 20 à 300 nm. Bactérie : 1 à 10 µm. Protozoaire : 10 à 500 µm."
+  },
+  {
+    q: "Classe du plus petit au plus grand.",
+    choices: ["Virus < bactérie < protozoaire", "Bactérie < virus < protozoaire", "Protozoaire < bactérie < virus", "Virus < protozoaire < bactérie"],
+    answer: 0,
+    why: "Un facteur 1 000 entre le virus (nm) et la bactérie (µm), puis encore jusqu’à 100 entre la bactérie et un gros protozoaire."
+  },
+  {
+    q: "Pourquoi ne voit-on pas les virus au microscope du collège ?",
+    choices: ["Parce qu’ils sont transparents", "Ils sont trop petits : il faut un microscope électronique", "Parce qu’ils ne vivent que dans les cellules humaines", "Ils bougent trop vite pour être photographiés nettement au microscope"],
+    answer: 1,
+    why: "Un microscope optique ne descend pas sous 0,2 µm environ ; un virus mesure 20 à 300 nm."
   }
 ];

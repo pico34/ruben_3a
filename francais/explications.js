@@ -88,5 +88,35 @@ QUIZ.expliquer = [
     q: "Explique comment les racines latines et grecques aident à comprendre un mot français. Donne plusieurs exemples.",
     reponse: "Beaucoup de mots français sont formés de racines latines ou grecques dont le sens éclaire le mot entier. Le préfixe latin omni- signifie « tout » : omniscient, omnivore. Le préfixe grec chrono- signifie « temps » : chronomètre, anachronisme. Le suffixe latin -cide signifie « tuer » : fratricide, régicide ; le suffixe grec -ite signifie « inflammation » : otite, arthrite. Le préfixe grec a- signifie « sans, privé de » : aphone, athée. Enfin, hypo- (en dessous) s’oppose à hyper- (au-dessus) : hypothermie, hyperthermie.",
     cles: ["omni-", "chrono-", "-cide", "-ite", "a-"]
+  },
+  {
+    q: "Définis : l’énoncé, l’énonciateur, le destinataire et la situation d’énonciation.",
+    reponse: "Un énoncé est ce que dit une personne, à l’écrit ou à l’oral : un message. L’énonciateur, ou émetteur, est celui qui s’exprime ; le destinataire est celui à qui il s’adresse. La situation d’énonciation est l’ensemble des circonstances dans lesquelles le message est émis : qui parle ? à qui ? où ? quand ? dans quel but ? Sans elle, une phrase comme « J’arrive demain. Soyez là pour m’ouvrir ! » reste incompréhensible : on ne sait ni qui arrive, ni quel jour.",
+    cles: ["message", "énonciateur", "destinataire", "circonstances", "qui parle"]
+  },
+  {
+    q: "Explique la différence entre un énoncé ancré dans la situation d’énonciation et un énoncé coupé, avec un exemple de récit de naissance.",
+    reponse: "Un énoncé coupé de la situation d’énonciation se comprend tout seul, sans savoir qui parle ni quand : c’est le cas des récits et des textes documentaires. Il utilise des dates précises et le passé simple : « Le 3 mars 1950, je vins au monde dans une petite ville du Nord. » Un énoncé ancré dans la situation d’énonciation ne se comprend que si l’on connaît le moment où l’on parle : repères relatifs au présent et passé composé. « Il y a bien longtemps, je suis venu au monde dans une petite ville du Nord. »",
+    cles: ["coupé", "ancré", "passé simple", "passé composé"]
+  },
+  {
+    q: "Quelles sont les marques d’énonciation ? Donne des exemples.",
+    reponse: "Les marques d’énonciation sont les mots qui renvoient à la situation d’énonciation. Il y a d’abord les marques de personne, qui désignent les interlocuteurs : les pronoms personnels je, tu, nous, vous, mais aussi les déterminants et pronoms possessifs correspondants, mon, ma, les nôtres, les vôtres. Il y a ensuite les marques de lieu ou de temps : ici, maintenant, hier, demain, la semaine dernière, la semaine prochaine. Ces mots changent de sens selon qui parle, où et quand.",
+    cles: ["marques de personne", "je", "possessifs", "marques de lieu ou de temps", "demain"]
+  },
+  {
+    q: "Raconte le mythe d’Œdipe en quelques phrases.",
+    reponse: "Laïos, roi de Thèbes, abandonne son fils parce que l’oracle a prédit que l’enfant le tuerait et épouserait sa mère. Recueilli à Corinthe par Polybe et Mérope, Œdipe apprend la prophétie et fuit pour protéger ceux qu’il croit ses parents. À un carrefour, en Phocide, il tue un vieil homme : Laïos. Il délivre Thèbes du Sphinx en répondant « l’Homme » à son énigme, reçoit la couronne et épouse la reine Jocaste, sa mère. Des années plus tard, la peste frappe la ville ; le devin Tirésias révèle la vérité. Jocaste se pend, Œdipe se crève les yeux.",
+    cles: ["Laïos", "Corinthe", "Sphinx", "Jocaste", "Tirésias"]
+  },
+  {
+    q: "Pourquoi le mythe d’Œdipe illustre-t-il l’idée qu’on n’échappe pas à son destin ?",
+    reponse: "Tout le mythe repose sur un paradoxe : chaque personnage tente d’éviter la prophétie de l’oracle, et c’est justement cela qui la réalise. Laïos abandonne son fils pour ne pas être tué par lui : Œdipe grandit donc loin de Thèbes, sans connaître son père. Œdipe fuit Corinthe pour ne pas tuer Polybe, et c’est sur la route de sa fuite qu’il tue Laïos puis épouse Jocaste. En fuyant son destin, Œdipe a couru exactement à sa rencontre : l’être humain ne peut échapper à sa condition.",
+    cles: ["oracle", "fuyant son destin", "à sa rencontre", "condition"]
+  },
+  {
+    q: "Décris le tableau d’Ingres, Œdipe explique l’énigme du Sphinx, et explique ce qu’il représente.",
+    reponse: "Œdipe explique l’énigme du Sphinx est une huile sur toile du peintre néo-classique Ingres, peinte en 1808 et conservée au musée du Louvre. Œdipe, nu, en pleine lumière, le pied posé sur un rocher, pointe le doigt vers le Sphinx, tapi dans l’ombre : corps de femme, pattes de lion, ailes d’aigle. Au sol, des ossements de victimes ; au fond, un compagnon s’enfuit et l’on aperçoit Thèbes. Le tableau montre la victoire de l’intelligence humaine sur l’irrationnel, mais cette victoire n’est qu’apparente : Œdipe a déjà tué son père et va épouser sa mère.",
+    cles: ["1808", "Louvre", "lumière", "corps de femme", "Thèbes", "apparente"]
   }
 ];
