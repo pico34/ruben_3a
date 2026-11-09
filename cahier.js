@@ -194,6 +194,19 @@
     return copy;
   }
 
+  // Progression de bonnes réponses : des flammes qui s'accumulent et une mascotte qui évolue.
+  // Un nouvel animal à chaque bonne réponse, de plus en plus fort, 25 paliers.
+  // Conservé dans localStorage et partagé entre tous les tirages et toutes les matières.
+  const PALIERS = [
+    "🐛 chenille", "🐜 fourmi", "🐌 escargot", "🐸 grenouille", "🐭 souris", "🐢 tortue", "🐇 lapin",
+    "🐈 chat", "🦊 renard", "🐕 chien", "🐺 loup", "🐗 sanglier", "🦌 cerf", "🐆 léopard", "🐅 tigre",
+    "🦁 lion", "🐻 ours", "🦍 gorille", "🐊 crocodile", "🦈 requin", "🐘 éléphant", "🦏 rhinocéros",
+    "🦣 mammouth", "🦖 T. rex", "🐉 dragon", "👑 légende vivante",
+  ].map((s, i) => [i, s.slice(0, s.indexOf(" ")), s.slice(s.indexOf(" ") + 1)]);
+  const CLE_PROGRESSION = "progression-bonnes-reponses";
+  let serieCourante = Math.max(0, Number(localStorage.getItem(CLE_PROGRESSION) || 0));
+  let jaugeEl = null;
+
   // bank : { cahier: [...], extra: [...], expliquer: [...], slug? } ; chaque question peut porter
   // « matiere » et « slug » (mode mélangé). Trois modes, choisis par les radios name="quizMode" :
   // « qcm » (4 choix), « cartes » (question seule, réponse cachée, auto-évaluation) et « expliquer »
@@ -215,7 +228,6 @@
 
     // Jauge de progression : une barre qui se remplit en vert (réussites) et en rouge clair
     // (à revoir), avec un mot d'encouragement. Remplace le compteur chiffré.
-    let jaugeEl = null;
     function jauge(ok, mauvais, total, unite) {
       if (!jaugeEl) return;
       const faits = ok + mauvais;
@@ -233,20 +245,15 @@
       else mot = "Ce qui est à revoir reviendra : c’est comme ça qu’on progresse.";
       texte.append(el("strong", {}, ok + (ok > 1 ? " réussies" : " réussie")), " sur " + faits + " " + unite + (faits > 1 ? "s" : "") + (total ? " (" + total + " au total)" : "") + " · " + mot);
     }
-    // Série de bonnes réponses d'affilée : des flammes qui s'accumulent et une mascotte qui évolue.
-    // Un nouvel animal à chaque bonne réponse d'affilée, de plus en plus fort, 25 paliers.
-    const PALIERS = [
-      "🐛 chenille", "🐜 fourmi", "🐌 escargot", "🐸 grenouille", "🐭 souris", "🐢 tortue", "🐇 lapin",
-      "🐈 chat", "🦊 renard", "🐕 chien", "🐺 loup", "🐗 sanglier", "🦌 cerf", "🐆 léopard", "🐅 tigre",
-      "🦁 lion", "🐻 ours", "🦍 gorille", "🐊 crocodile", "🦈 requin", "🐘 éléphant", "🦏 rhinocéros",
-      "🦣 mammouth", "🦖 T. rex", "🐉 dragon", "👑 légende vivante",
-    ].map((s, i) => [i, s.slice(0, s.indexOf(" ")), s.slice(s.indexOf(" ") + 1)]);
+
     // Une mauvaise réponse ne fait pas reculer : on reste au même animal, et on repart à la bonne suivante.
     const cleRecord = "progression-record-" + (bank.slug || "tout");
-    let serieCourante = 0;
-    let record = Number(localStorage.getItem(cleRecord) || 0);
+    let record = Math.max(serieCourante, Number(localStorage.getItem(cleRecord) || 0));
     function serie(bonne) {
-      if (bonne === true) serieCourante += 1;
+      if (bonne === true) {
+        serieCourante += 1;
+        localStorage.setItem(CLE_PROGRESSION, String(serieCourante));
+      }
       if (serieCourante > record) {
         record = serieCourante;
         localStorage.setItem(cleRecord, String(record));
@@ -266,7 +273,7 @@
       zone.append(el("span", { class: "serie-flammes" }, flammes), el("span", { class: "serie-texte" }, texte));
       if (record >= 3) {
         const meilleur = PALIERS.filter((p) => record >= p[0]).pop();
-        zone.append(el("span", { class: "serie-record", title: "Meilleur score en une session" }, "Record : " + record + " " + meilleur[1]));
+        zone.append(el("span", { class: "serie-record", title: "Total de bonnes réponses" }, "Total : " + serieCourante + " " + meilleur[1]));
       }
       if (bonne === true && serieCourante === palier[0] && palier[0] > 0) {
         zone.classList.add("palier");
@@ -526,7 +533,7 @@
       if (total) total.textContent = pool.length + (pool.length > 1 ? " questions" : " question") + (recentOnly ? (pool.length > 1 ? " récentes" : " récente") : "");
       root.innerHTML = "";
       root.dataset.mode = mode;
-      if (nouveau) nouveau.textContent = mode === "qcm" ? "Nouveau tirage" : "Recommencer à zéro";
+      if (nouveau) nouveau.textContent = "Nouveau tirage";
       if (!pool.length) {
         root.appendChild(el("p", { class: "note" }, "Pas encore de questions pour cette sélection."));
         return;
@@ -535,10 +542,7 @@
       else cartes(pool, mode);
     }
 
-    if (nouveau) nouveau.onclick = () => {
-      if (modeActif() !== "qcm") serieCourante = 0;
-      tirage();
-    };
+    if (nouveau) nouveau.onclick = () => tirage();
     if (avecExtra) avecExtra.onchange = () => tirage();
     if (uniquementRecent) uniquementRecent.onchange = () => tirage();
     modes.forEach((input) => { input.onchange = () => tirage(); });
