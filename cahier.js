@@ -196,7 +196,8 @@
 
   // Progression de bonnes réponses : des flammes qui s'accumulent et une mascotte qui évolue.
   // Un nouvel animal à chaque bonne réponse, de plus en plus fort, 25 paliers.
-  // Conservé dans localStorage et partagé entre tous les tirages et toutes les matières.
+  // Conservé pendant toute la journée d'entraînement (quels que soient la matière, le mode ou le tirage),
+  // puis remis à zéro le lendemain pour repartir sur un nouveau défi quotidien, tout en gardant le record.
   const PALIERS = [
     "🐛 chenille", "🐜 fourmi", "🐌 escargot", "🐸 grenouille", "🐭 souris", "🐢 tortue", "🐇 lapin",
     "🐈 chat", "🦊 renard", "🐕 chien", "🐺 loup", "🐗 sanglier", "🦌 cerf", "🐆 léopard", "🐅 tigre",
@@ -204,7 +205,15 @@
     "🦣 mammouth", "🦖 T. rex", "🐉 dragon", "👑 légende vivante",
   ].map((s, i) => [i, s.slice(0, s.indexOf(" ")), s.slice(s.indexOf(" ") + 1)]);
   const CLE_PROGRESSION = "progression-bonnes-reponses";
+  const CLE_DATE = "progression-date";
+  const CLE_RECORD_GLOBAL = "progression-record-global";
+  const aujourdhui = new Date().toISOString().slice(0, 10);
+  if (localStorage.getItem(CLE_DATE) !== aujourdhui) {
+    localStorage.setItem(CLE_DATE, aujourdhui);
+    localStorage.setItem(CLE_PROGRESSION, "0");
+  }
   let serieCourante = Math.max(0, Number(localStorage.getItem(CLE_PROGRESSION) || 0));
+  let recordGlobal = Math.max(serieCourante, Number(localStorage.getItem(CLE_RECORD_GLOBAL) || 0));
   let jaugeEl = null;
 
   // bank : { cahier: [...], extra: [...], expliquer: [...], slug? } ; chaque question peut porter
@@ -248,7 +257,7 @@
 
     // Une mauvaise réponse ne fait pas reculer : on reste au même animal, et on repart à la bonne suivante.
     const cleRecord = "progression-record-" + (bank.slug || "tout");
-    let record = Math.max(serieCourante, Number(localStorage.getItem(cleRecord) || 0));
+    let record = Math.max(recordGlobal, Number(localStorage.getItem(cleRecord) || 0));
     function serie(bonne) {
       if (bonne === true) {
         serieCourante += 1;
@@ -256,7 +265,9 @@
       }
       if (serieCourante > record) {
         record = serieCourante;
+        recordGlobal = serieCourante;
         localStorage.setItem(cleRecord, String(record));
+        localStorage.setItem(CLE_RECORD_GLOBAL, String(recordGlobal));
       }
       if (!jaugeEl) return;
       const zone = jaugeEl.querySelector(".serie");
@@ -271,9 +282,18 @@
       else if (!suivant) texte = serieCourante + " bonnes réponses : " + palier[2] + ", le sommet !";
       else texte = serieCourante + (serieCourante > 1 ? " bonnes réponses" : " bonne réponse") + " : tu es " + palier[2] + " ! Prochain : " + suivant[1] + " " + suivant[2];
       zone.append(el("span", { class: "serie-flammes" }, flammes), el("span", { class: "serie-texte" }, texte));
+      if (serieCourante > 0) {
+        const reinit = el("button", { type: "button", class: "serie-reset", title: "Repartir de la chenille (le record est conservé)" }, !suivant ? "Rejouer ↺" : "↺");
+        reinit.addEventListener("click", () => {
+          serieCourante = 0;
+          localStorage.setItem(CLE_PROGRESSION, "0");
+          serie(null);
+        });
+        zone.appendChild(reinit);
+      }
       if (record >= 3) {
         const meilleur = PALIERS.filter((p) => record >= p[0]).pop();
-        zone.append(el("span", { class: "serie-record", title: "Total de bonnes réponses" }, "Total : " + serieCourante + " " + meilleur[1]));
+        zone.append(el("span", { class: "serie-record", title: "Meilleur score sur une journée" }, "Record : " + record + " " + meilleur[1]));
       }
       if (bonne === true && serieCourante === palier[0] && palier[0] > 0) {
         zone.classList.add("palier");

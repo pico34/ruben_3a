@@ -343,6 +343,8 @@ body[data-recent="1"] section:not(:has(.card[data-recent], .suite-quiz)) {
 .serie-mascotte { font-size: 24px; line-height: 1; transition: transform 0.3s ease; flex: none; }
 .serie-flammes { font-size: 14px; letter-spacing: -2px; flex: none; }
 .serie-texte { font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.serie-reset { flex: none; font: inherit; font-size: 12px; font-weight: 650; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 1px 7px; cursor: pointer; }
+.serie-reset:hover { color: var(--blue); border-color: var(--blue); background: var(--blue-soft); }
 .serie-record { margin-left: auto; flex: none; font-size: 12px; font-weight: 700; color: #7a5a12; background: #f5ebd3; border-radius: 999px; padding: 2px 8px; }
 body[data-page="quiz"] .wrap { padding-bottom: calc(var(--jauge-h, 0px) + 16px); }
 .serie.palier .serie-mascotte { animation: saut 0.9s ease; }
