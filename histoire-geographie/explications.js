@@ -92,61 +92,73 @@ QUIZ.expliquer = [
   {
     q: "Définis : Grande Terreur.",
     reponse: "La Grande Terreur est la période de 1936 à 1938 pendant laquelle Staline fait éliminer « les ennemis du Parti », les grandes figures du Parti et tous ses anciens proches. Il utilise la délation, des quotas d’exécution et des procès truqués. Les opposants sont torturés et jugés sommairement, des scientifiques et des ingénieurs sont accusés de saboter l’économie soviétique. Le cours donne 0,7 million de morts.",
-    cles: ["1936 à 1938", "ennemis du Parti", "délation", "quotas d’exécution", "procès truqués"]
+    cles: ["1936 à 1938", "ennemis du Parti", "délation", "quotas d’exécution", "procès truqués"],
+    recent: true
   },
   {
     q: "Définis : culte de la personnalité.",
     reponse: "Le culte de la personnalité désigne les pratiques diverses qui poussent à considérer un homme comme un héros, un surhomme. En URSS, la propagande déifie et glorifie Staline : les journaux, les écrivains et les cinéastes sont au service du régime, et les affiches le présentent comme un père protecteur entouré d’enfants souriants. En Allemagne nazie, Hitler est de la même façon présenté comme le Führer, le guide que le peuple suit.",
-    cles: ["héros", "surhomme", "propagande", "déifie", "père protecteur"]
+    cles: ["héros", "surhomme", "propagande", "déifie", "père protecteur"],
+    recent: true
   },
   {
     q: "Que sont les purges staliniennes ?",
     reponse: "Les purges staliniennes désignent l’élimination des anciens du Parti par Staline. Elles reposent sur la délation, encouragée par le régime, et sur des quotas d’exécution. Pendant la Grande Terreur, de 1936 à 1938, Staline fait ainsi disparaître les grandes figures du Parti et tous ses anciens proches, au cours de procès truqués. Les « ennemis du peuple » sont condamnés à mort ou à la « rééducation par le travail » dans les goulags.",
-    cles: ["anciens du Parti", "délation", "quotas d’exécution", "Grande Terreur", "goulags"]
+    cles: ["anciens du Parti", "délation", "quotas d’exécution", "Grande Terreur", "goulags"],
+    recent: true
   },
   {
     q: "Explique la phrase du cours : « Système totalitaire : aucun individu n’échappe au contrôle du régime. »",
     reponse: "Dans un système totalitaire comme l’URSS de Staline, le régime contrôle toute la vie des habitants. D’abord, un seul chef détient tous les pouvoirs : c’est une dictature. La propagande, omniprésente, impose l’idéologie et le culte de la personnalité. La Terreur frappe tout le monde : la police politique, le NKVD, arrête, torture et déporte au goulag, et la Grande Terreur élimine même les anciens du Parti. Enfin, le contrôle de l’économie est total. Personne n’y échappe.",
-    cles: ["un seul chef", "dictature", "propagande", "Terreur", "NKVD"]
+    cles: ["un seul chef", "dictature", "propagande", "Terreur", "NKVD"],
+    recent: true
   },
   {
     q: "Explique pourquoi Hitler arrive au pouvoir en Allemagne en 1933.",
     reponse: "Plusieurs causes portent Hitler au pouvoir. Il promet de laver l’affront du traité de Versailles, le Diktat, et séduit les anciens combattants. Face aux violences des communistes, il se présente comme le rempart. La crise de 1929, partie des États-Unis, plonge l’Allemagne dans une crise profonde : 6 millions de chômeurs en 1932. Hitler se présente alors comme le sauveur et promet du travail. La grande bourgeoisie et les grands industriels le soutiennent. En 1932, le parti nazi arrive en tête aux législatives, et le 30 janvier 1933 Hitler devient chancelier.",
-    cles: ["Versailles", "rempart", "crise de 1929", "6 millions de chômeurs", "30 janvier 1933"]
+    cles: ["Versailles", "rempart", "crise de 1929", "6 millions de chômeurs", "30 janvier 1933"],
+    recent: true
   },
   {
     q: "Explique pourquoi l’Allemagne nazie est une dictature.",
     reponse: "L’Allemagne nazie est une dictature parce qu’un seul chef, Hitler, détient tous les pouvoirs de 1933 à 1945, et le peuple le suit. Le 30 janvier 1933, il devient chancelier, c’est-à-dire Premier ministre. Quand le président Hindenburg meurt en août 1934, plus personne n’est au-dessus de lui. On doit l’appeler le Führer. Son parti, le NSDAP, créé en 1920, impose son idéologie, le nazisme, antisémite et raciste, avec ses symboles : la croix gammée et le salut nazi.",
-    cles: ["tous les pouvoirs", "1933 à 1945", "chancelier", "août 1934", "Führer"]
+    cles: ["tous les pouvoirs", "1933 à 1945", "chancelier", "août 1934", "Führer"],
+    recent: true
   },
   {
     q: "Comment l’Allemagne nazie contrôle-t-elle la population ?",
     reponse: "L’Allemagne nazie contrôle la population de deux façons. Par la propagande d’abord : le culte de la personnalité fait de Hitler un héros, un surhomme ; la jeunesse est embrigadée dès 10 ans pour penser allemand, vivre allemand, soutenir l’Allemagne ; le régime impose la vision d’un corps parfait et la supériorité de la race aryenne. Par la Terreur ensuite : toute personne jugée « socialement nuisible » peut être arrêtée, déportée dans un camp, torturée ou exécutée. La police politique s’appelle la Gestapo.",
-    cles: ["propagande", "culte de la personnalité", "dès 10 ans", "race aryenne", "Gestapo"]
+    cles: ["propagande", "culte de la personnalité", "dès 10 ans", "race aryenne", "Gestapo"],
+    recent: true
   },
   {
     q: "Explique l’expression du cours : « une économie tournée vers la guerre ».",
     reponse: "Dans l’Allemagne nazie, le contrôle de l’économie est total et l’économie est tournée vers la guerre : le régime développe la production d’armes pour préparer les conflits à venir. Cela crée du travail : il y a moins de chômeurs, plus de travail et plus de productivité, alors que l’Allemagne comptait 6 millions de chômeurs en 1932. Hitler tient ainsi sa promesse de donner du travail, mais c’est au service du réarmement et de la guerre.",
-    cles: ["production d’armes", "moins de chômeurs", "productivité", "6 millions de chômeurs", "guerre"]
+    cles: ["production d’armes", "moins de chômeurs", "productivité", "6 millions de chômeurs", "guerre"],
+    recent: true
   },
   {
     q: "Qu’est-ce qu’un régime totalitaire ? Donne les trois exemples du manuel.",
     reponse: "D’après le manuel, un régime totalitaire est une dictature qui contrôle l’ensemble de la société au moyen d’un parti unique, de la terreur, de la propagande et du contrôle de l’économie. Toute personne jugée « socialement nuisible » peut être arrêtée, déportée ou exécutée, et le chef fait l’objet d’un culte de la personnalité. En Europe, trois régimes totalitaires apparaissent après la Première Guerre mondiale : le fascisme en Italie avec Mussolini (1922), le stalinisme en URSS avec Staline (1924) et le nazisme en Allemagne avec Hitler (1933).",
-    cles: ["dictature", "parti unique", "terreur", "propagande", "contrôle de l’économie"]
+    cles: ["dictature", "parti unique", "terreur", "propagande", "contrôle de l’économie"],
+    recent: true
   },
   {
     q: "Explique pourquoi de nombreux Allemands votent pour le parti nazi en 1932.",
     reponse: "Les Allemands n’ont pas accepté le traité de Versailles, le Diktat : perte de territoires, armée limitée à 100 000 hommes, réparations. Le parti nazi promet d’abroger ce traité. Surtout, la crise de 1929 ruine le pays : le nombre de chômeurs passe d’environ 1,3 million en 1928 à 5,5 millions en juillet 1932. Les affiches nazies promettent « Notre dernier espoir : Hitler ». Hitler se présente comme le sauveur et le rempart contre les communistes. Le parti nazi passe ainsi de 2,6 % des voix en 1928 à 37,3 % en juillet 1932.",
-    cles: ["Versailles", "crise de 1929", "chômeurs", "sauveur", "37,3 %"]
+    cles: ["Versailles", "crise de 1929", "chômeurs", "sauveur", "37,3 %"],
+    recent: true
   },
   {
     q: "Raconte comment Lénine puis Staline mettent en place une dictature totalitaire en URSS.",
     reponse: "La révolution d’octobre 1917 porte Lénine, chef des bolcheviks, au pouvoir. Pour lui, le communisme passe par la dictature du prolétariat : il faut mater les capitalistes. Pendant la guerre civile (1918-1921), il met en place une dictature et crée le Komintern en 1919. À sa mort en 1924, Staline, secrétaire général du parti depuis 1922, élimine tous ses adversaires, dont Trotski. Seul au pouvoir à partir de 1928, il décide en 1929 le Grand tournant : collectiviser les terres, supprimer les koulaks, industrialiser par les plans quinquennaux. Le régime repose sur la terreur.",
-    cles: ["octobre 1917", "dictature du prolétariat", "1924", "1928", "collectiviser"]
+    cles: ["octobre 1917", "dictature du prolétariat", "1924", "1928", "collectiviser"],
+    recent: true
   },
   {
     q: "Explique comment les régimes totalitaires embrigadent la jeunesse.",
     reponse: "Dans l’Allemagne nazie comme en URSS, l’État encadre les jeunes dans des organisations de masse, du plus jeune âge jusqu’à l’âge adulte. En Allemagne, les garçons sont initiés dès 6 ans, entrent au Jeune Peuple à 10 ans, puis aux Jeunesses hitlériennes de 14 à 18 ans. En URSS, les enfants sont Enfants d’Octobre, puis Pionniers de 10 à 14 ans, puis Komsomols. Ils y reçoivent une formation physique, avec le maniement des armes, et idéologique. La propagande, le culte du chef et les grands défilés leur apprennent à penser et à vivre selon le régime.",
-    cles: ["Jeune Peuple", "Jeunesses hitlériennes", "Pionniers", "Komsomols", "propagande"]
+    cles: ["Jeune Peuple", "Jeunesses hitlériennes", "Pionniers", "Komsomols", "propagande"],
+    recent: true
   }
 ];

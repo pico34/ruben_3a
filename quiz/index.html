@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../cahier.css?v=22" />
+  <link rel="stylesheet" href="../cahier.css?v=23" />
 </head>
 <body data-page="quiz">
   <div class="wrap">
@@ -25,7 +25,10 @@
 
     <section>
       <article class="card">
-        <h2>Choisis une matière</h2>
+        <div class="choix-entete">
+          <h2>Choisis une matière</h2>
+          <label class="pilule-recent"><input type="checkbox" id="quizRecentHaut" autocomplete="off" /> <span class="badge-recent">Récent</span> Nouveautés seulement</label>
+        </div>
         <div class="choix-matieres" id="choix" role="group" aria-label="Matière du quiz"></div>
       </article>
     </section>
@@ -36,7 +39,7 @@
         <div class="quiz-head">
           <div>
             <h2 id="quizTitre">Quiz</h2>
-            <p class="note"><span id="quizTotal"></span> questions dans cette banque. QCM : 10 questions puis un bilan. Cartes et oral : sans fin, le compteur suit tes réponses, et ce que tu marques « À revoir » revient en priorité.</p>
+            <p class="note"><span id="quizTotal"></span> dans cette banque. QCM : 10 questions puis un bilan. Cartes et oral : sans fin, le compteur suit tes réponses, et ce que tu marques « À revoir » revient en priorité.</p>
           </div>
         </div>
         <div class="quiz-modes" role="group" aria-label="Mode d’entraînement">
@@ -46,7 +49,8 @@
         </div>
         <div class="quiz-actions">
           <button type="button" id="quizNouveau">Nouveau tirage</button>
-          <label><input type="checkbox" id="quizExtra" /> Ajouter les questions Extra</label>
+          <label><input type="checkbox" id="quizRecent" autocomplete="off" /> <span class="badge-recent">Récent</span> Nouveautés seulement</label>
+          <label><input type="checkbox" id="quizExtra" autocomplete="off" /> Ajouter les questions Extra</label>
         </div>
         <div id="quiz"></div>
       </article>
@@ -55,7 +59,7 @@
     <footer>Les questions reprennent ton cahier. Les questions « Extra » vont au-delà du cours.</footer>
   </div>
 
-  <script src="../cahier.js?v=22"></script>
+  <script src="../cahier.js?v=23"></script>
   <script>
     (() => {
       const banques = {};
@@ -99,21 +103,38 @@
         return { cahier, extra, expliquer };
       }
 
+      const recentBas = document.getElementById("quizRecent");
+      const recentHaut = document.getElementById("quizRecentHaut");
+
+      function majRappel(slug) {
+        const m = MATIERES.find((x) => x.slug === slug);
+        if (!m) return;
+        rappel.innerHTML = "";
+        rappel.append("As-tu relu le cours avant de te tester ? ");
+        const lien = document.createElement("a");
+        lien.href = "../" + m.slug + "/";
+        lien.textContent = "Relire le cours de " + m.nom;
+        rappel.appendChild(lien);
+      }
+
+      function urlQuiz(slug) {
+        if (!slug) return;
+        const mode = document.querySelector('input[name="quizMode"]:checked');
+        const q = new URLSearchParams();
+        q.set("m", slug);
+        if (mode && mode.value !== "qcm") q.set("mode", mode.value);
+        history.replaceState(null, "", "?" + q.toString());
+      }
+
       function choisir(slug) {
         const m = MATIERES.find((x) => x.slug === slug);
         if (!m && slug !== "tout") return;
         choix.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.slug === slug ? "true" : "false"));
-        const mode = document.querySelector('input[name="quizMode"]:checked');
-        history.replaceState(null, "", "?m=" + slug + (mode && mode.value !== "qcm" ? "&mode=" + mode.value : ""));
+        urlQuiz(slug);
         zone.hidden = false;
         if (m) {
           titre.textContent = "Quiz · " + m.nom;
-          rappel.innerHTML = "";
-          rappel.append("As-tu relu le cours avant de te tester ? ");
-          const lien = document.createElement("a");
-          lien.href = "../" + m.slug + "/";
-          lien.textContent = "Relire le cours de " + m.nom;
-          rappel.appendChild(lien);
+          majRappel(slug);
           Cahier.lancerQuiz({ ...banques[slug], slug: m.slug });
         } else {
           titre.textContent = "Quiz · toutes les matières";
@@ -123,8 +144,28 @@
       }
 
       MATIERES.reduce((suite, m) => suite.then(() => charger(m.slug)), Promise.resolve()).then(() => {
-        const options = MATIERES.filter((m) => banques[m.slug]).map((m) => ({ slug: m.slug, nom: m.nom, n: banques[m.slug].cahier.length }));
-        options.push({ slug: "tout", nom: "Toutes les matières", n: options.reduce((t, o) => t + o.n, 0) });
+        const options = MATIERES.filter((m) => banques[m.slug]).map((m) => ({
+          slug: m.slug,
+          nom: m.nom,
+          n: banques[m.slug].cahier.length,
+          r: banques[m.slug].cahier.filter((q) => q.recent).length,
+        }));
+        options.push({
+          slug: "tout",
+          nom: "Toutes les matières",
+          n: options.reduce((t, o) => t + o.n, 0),
+          r: options.reduce((t, o) => t + o.r, 0),
+        });
+        function majCompteurs() {
+          const rec = recentBas && recentBas.checked;
+          choix.querySelectorAll("button").forEach((b) => {
+            const o = options.find((x) => x.slug === b.dataset.slug);
+            if (!o) return;
+            b.querySelector("span").textContent = rec
+              ? o.r + " questions récentes"
+              : o.n + " questions · " + o.r + " récentes";
+          });
+        }
         options.forEach((o) => {
           const b = document.createElement("button");
           b.type = "button";
@@ -133,7 +174,6 @@
           const nom = document.createElement("strong");
           nom.textContent = o.nom;
           const n = document.createElement("span");
-          n.textContent = o.n + " questions";
           b.append(nom, n);
           b.addEventListener("click", () => {
             choisir(o.slug);
@@ -141,15 +181,32 @@
           });
           choix.appendChild(b);
         });
+        function syncRecent(val, relancer) {
+          if (recentBas) recentBas.checked = val;
+          if (recentHaut) recentHaut.checked = val;
+          majCompteurs();
+          const m = new URLSearchParams(location.search).get("m");
+          if (m) {
+            urlQuiz(m);
+            if (relancer && recentBas && recentBas.onchange) recentBas.onchange();
+          }
+        }
+        if (recentHaut) recentHaut.addEventListener("change", () => syncRecent(recentHaut.checked, true));
+        if (recentBas) recentBas.addEventListener("change", () => syncRecent(recentBas.checked, false));
         document.querySelectorAll('input[name="quizMode"]').forEach((input) => {
           input.addEventListener("change", () => {
             const m = new URLSearchParams(location.search).get("m");
-            if (m) history.replaceState(null, "", "?m=" + m + (input.value !== "qcm" ? "&mode=" + input.value : ""));
+            if (m) urlQuiz(m);
           });
+        });
+        window.addEventListener("pageshow", (e) => {
+          if (e.persisted) syncRecent(false, true);
         });
         const params = new URLSearchParams(location.search);
         const modeDemande = document.querySelector('input[name="quizMode"][value="' + params.get("mode") + '"]');
         if (modeDemande) modeDemande.checked = true;
+        // Par défaut toujours décoché (sauf clic ponctuel sur « Quiz sur les nouveautés », aussitôt retiré de l'URL)
+        syncRecent(params.get("recent") === "1", false);
         const demande = params.get("m");
         if (demande) choisir(demande);
       });

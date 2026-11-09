@@ -196,6 +196,76 @@ body[data-vue="extra"] .vue-extra { display: block; }
   padding: 2px 7px;
   vertical-align: middle;
 }
+.badge-recent {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ok);
+  background: var(--ok-soft);
+  border-radius: 999px;
+  padding: 2px 7px;
+  vertical-align: middle;
+}
+.card > .badge-recent { margin-bottom: 8px; }
+.toolbar button.filtre-recent {
+  border-color: #a8cbb8;
+  color: var(--ok);
+  background: #fff;
+}
+.toolbar button.filtre-recent[aria-pressed="true"] {
+  background: var(--ok);
+  border-color: var(--ok);
+  color: white;
+}
+body[data-recent="1"] .vue-complet .card:not([data-recent]),
+body[data-recent="1"] .vue-synthese .card:not([data-recent]),
+body[data-recent="1"] .vue-extra .card:not([data-recent]),
+body[data-recent="1"] section:not(:has(.card[data-recent], .suite-quiz)) {
+  display: none;
+}
+.bandeau-recent {
+  margin: 12px 0 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--ok-soft);
+  border: 1px solid #a8cbb8;
+  color: #174f35;
+  font-size: 14px;
+}
+.bandeau-recent a, .bandeau-recent .lien-action {
+  font: inherit;
+  font-weight: 650;
+  color: var(--ok);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.choix-entete {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.choix-entete h2 { margin: 0; }
+.pilule-recent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #a8cbb8;
+  border-radius: 999px;
+  padding: 5px 11px;
+  cursor: pointer;
+}
+.pilule-recent:has(input:checked) { background: var(--ok-soft); border-color: var(--ok); }
 .rouge { color: var(--red); font-weight: 650; }
 
 .quiz-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px; }

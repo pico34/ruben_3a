@@ -92,31 +92,37 @@ QUIZ.expliquer = [
   {
     q: "Définis : l’énoncé, l’énonciateur, le destinataire et la situation d’énonciation.",
     reponse: "Un énoncé est ce que dit une personne, à l’écrit ou à l’oral : un message. L’énonciateur, ou émetteur, est celui qui s’exprime ; le destinataire est celui à qui il s’adresse. La situation d’énonciation est l’ensemble des circonstances dans lesquelles le message est émis : qui parle ? à qui ? où ? quand ? dans quel but ? Sans elle, une phrase comme « J’arrive demain. Soyez là pour m’ouvrir ! » reste incompréhensible : on ne sait ni qui arrive, ni quel jour.",
-    cles: ["message", "énonciateur", "destinataire", "circonstances", "qui parle"]
+    cles: ["message", "énonciateur", "destinataire", "circonstances", "qui parle"],
+    recent: true
   },
   {
     q: "Explique la différence entre un énoncé ancré dans la situation d’énonciation et un énoncé coupé, avec un exemple de récit de naissance.",
     reponse: "Un énoncé coupé de la situation d’énonciation se comprend sans connaître les circonstances dans lesquelles il est émis : c’est le cas des récits historiques et des textes documentaires. Pour couper le récit de sa naissance du moment de l’énonciation, on emploie une date précise et le passé simple : « Le 3 mars 1950, je vins au monde dans une petite ville du Nord. » À l’inverse, un énoncé ancré dépend de la situation d’énonciation : il utilise des repères liés au présent et le passé composé, comme « Il y a bien longtemps, je suis venu au monde dans une petite ville du Nord. »",
-    cles: ["coupé", "ancré", "passé simple", "passé composé"]
+    cles: ["coupé", "ancré", "passé simple", "passé composé"],
+    recent: true
   },
   {
     q: "Quelles sont les marques d’énonciation ? Donne des exemples.",
     reponse: "Les marques d’énonciation sont les mots qui renvoient à la situation d’énonciation. Il y a d’abord les marques de personne, qui désignent les interlocuteurs : les pronoms personnels je, tu, nous, vous, mais aussi les déterminants et pronoms possessifs correspondants, mon, ma, les nôtres, les vôtres. Il y a ensuite les marques de lieu ou de temps : ici, maintenant, hier, demain, la semaine dernière, la semaine prochaine. Ces mots changent de sens selon qui parle, où et quand.",
-    cles: ["marques de personne", "je", "possessifs", "marques de lieu ou de temps", "demain"]
+    cles: ["marques de personne", "je", "possessifs", "marques de lieu ou de temps", "demain"],
+    recent: true
   },
   {
     q: "Raconte le mythe d’Œdipe en quelques phrases.",
     reponse: "Laïos, roi de Thèbes, abandonne son fils parce que l’oracle a prédit que l’enfant le tuerait et épouserait sa mère. Recueilli à Corinthe par Polybe et Mérope, Œdipe apprend la prophétie et fuit pour protéger ceux qu’il croit ses parents. À un carrefour, en Phocide, il tue un vieil homme : Laïos. Il délivre Thèbes du Sphinx en répondant « l’Homme » à son énigme, reçoit la couronne et épouse la reine Jocaste, sa mère. Des années plus tard, la peste frappe la ville ; le devin Tirésias révèle la vérité. Jocaste se pend, Œdipe s’arrache les yeux avec les agrafes d’or de sa robe.",
-    cles: ["Laïos", "Corinthe", "Sphinx", "Jocaste", "Tirésias"]
+    cles: ["Laïos", "Corinthe", "Sphinx", "Jocaste", "Tirésias"],
+    recent: true
   },
   {
     q: "Pourquoi le mythe d’Œdipe illustre-t-il l’idée qu’on n’échappe pas à son destin ?",
     reponse: "Tout le mythe repose sur un paradoxe : chaque personnage tente d’éviter la prophétie de l’oracle, et c’est justement cela qui la réalise. Laïos abandonne son fils pour ne pas être tué par lui : Œdipe grandit donc loin de Thèbes, sans connaître son père. Œdipe fuit Corinthe pour ne pas tuer Polybe, et c’est sur la route de sa fuite qu’il tue Laïos puis épouse Jocaste. En fuyant son destin, Œdipe a couru exactement à sa rencontre : l’être humain ne peut échapper à sa condition.",
-    cles: ["oracle", "fuyant son destin", "à sa rencontre", "condition"]
+    cles: ["oracle", "fuyant son destin", "à sa rencontre", "condition"],
+    recent: true
   },
   {
     q: "Décris le tableau d’Ingres, Œdipe explique l’énigme du Sphinx, et explique ce qu’il représente.",
     reponse: "Œdipe explique l’énigme du Sphinx est une huile sur toile du peintre néo-classique Ingres, peinte en 1808 et conservée au musée du Louvre. Œdipe, nu, en pleine lumière, le pied posé sur un rocher, pointe le doigt vers le Sphinx, tapi dans l’ombre : corps de femme, pattes de lion, ailes d’aigle. Au sol, des ossements de victimes ; au fond, un compagnon s’enfuit et l’on aperçoit Thèbes. Le tableau montre la victoire de l’intelligence humaine sur l’irrationnel, mais cette victoire n’est qu’apparente : Œdipe a déjà tué son père Laïos (le parricide) et va épouser sa mère Jocaste (l’inceste).",
-    cles: ["1808", "Louvre", "lumière", "corps de femme", "Thèbes", "apparente"]
+    cles: ["1808", "Louvre", "lumière", "corps de femme", "Thèbes", "apparente"],
+    recent: true
   }
 ];

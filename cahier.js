@@ -75,6 +75,39 @@
     toolbar.classList.add("barre-vues");
     outils.appendChild(toolbar);
 
+    document.querySelectorAll(".card[data-recent]").forEach((card) => {
+      const badge = el("span", { class: "badge-recent" }, "Récent");
+      const tag = card.querySelector(":scope > .tag");
+      if (tag) tag.after(" ", badge);
+      else card.prepend(badge);
+    });
+
+    const btnRecent = el("button", { type: "button", class: "filtre-recent", "aria-pressed": "false", title: "Afficher uniquement les derniers cours ajoutés" }, "Récent");
+    toolbar.appendChild(btnRecent);
+
+    const bandeauRecent = el("p", { class: "bandeau-recent" });
+    bandeauRecent.hidden = true;
+    const toutVoir = el("button", { type: "button", class: "lien-action" }, "Voir tout le cours");
+    const lienQuizRecent = el("a", { href: base + "quiz/?" + (slug ? "m=" + slug + "&" : "") + "recent=1" }, "Quiz sur ces nouveautés →");
+    bandeauRecent.append("Affichage des cours récents uniquement · ", toutVoir, " · ", lienQuizRecent);
+    if (debut) debut.before(bandeauRecent);
+
+    function setRecent(actif, defiler) {
+      if (actif) body.dataset.recent = "1";
+      else delete body.dataset.recent;
+      btnRecent.setAttribute("aria-pressed", actif ? "true" : "false");
+      bandeauRecent.hidden = !actif;
+      if (defiler && bandeauRecent && !bandeauRecent.hidden && bandeauRecent.getBoundingClientRect().top < 0) {
+        bandeauRecent.scrollIntoView();
+      }
+    }
+
+    btnRecent.addEventListener("click", () => {
+      fermer();
+      setRecent(body.dataset.recent !== "1", true);
+    });
+    toutVoir.addEventListener("click", () => setRecent(false, false));
+
     const bouton = el("button", { type: "button", class: "barre-sommaire", "aria-expanded": "false" }, "Sommaire");
     const panneau = el("div", { class: "sommaire" });
     panneau.hidden = true;
@@ -105,6 +138,10 @@
         if (!titre.id) titre.id = "titre-" + n;
         const item = el("li");
         const lien = el("a", { href: "#" + titre.id }, titre.textContent);
+        const card = titre.closest(".card");
+        if (card && card.hasAttribute("data-recent")) {
+          lien.append(" ", el("span", { class: "badge-recent" }, "Récent"));
+        }
         lien.addEventListener("click", fermer);
         item.appendChild(lien);
         liste.appendChild(item);
@@ -128,7 +165,14 @@
       if (event.key === "Escape") fermer();
     });
 
+    window.addEventListener("pageshow", (e) => {
+      if (e.persisted) setRecent(false, false);
+    });
     setVue("complet", false);
+    if (new URLSearchParams(location.search).get("recent") === "1") {
+      setRecent(true, false);
+      history.replaceState(null, "", location.pathname);
+    }
     buttons.forEach((button) => button.addEventListener("click", () => {
       fermer();
       setVue(button.dataset.vue, true);
@@ -160,6 +204,7 @@
     const size = bank.taille || 10;
     const nouveau = document.getElementById("quizNouveau");
     const avecExtra = document.getElementById("quizExtra");
+    const uniquementRecent = document.getElementById("quizRecent");
     const total = document.getElementById("quizTotal");
     const modes = Array.from(document.querySelectorAll('input[name="quizMode"]'));
 
@@ -246,9 +291,14 @@
     }
 
     function reserve() {
-      const pool = bank.cahier.map((item) => ({ ...item, extra: false }));
+      const recentOnly = uniquementRecent && uniquementRecent.checked;
+      const pool = bank.cahier
+        .filter((item) => !recentOnly || item.recent)
+        .map((item) => ({ ...item, extra: false }));
       if (avecExtra && avecExtra.checked && bank.extra) {
-        bank.extra.forEach((item) => pool.push({ ...item, extra: true }));
+        bank.extra
+          .filter((item) => !recentOnly || item.recent)
+          .forEach((item) => pool.push({ ...item, extra: true }));
       }
       return pool;
     }
@@ -284,6 +334,7 @@
     function titreDe(item, numero) {
       const title = el("h3", {}, (numero ? numero + ". " : "") + item.q);
       if (item.matiere) title.append(" ", el("span", { class: "badge-matiere" }, item.matiere));
+      if (item.recent) title.append(" ", el("span", { class: "badge-recent" }, "Récent"));
       if (item.extra) title.append(" ", el("span", { class: "badge-extra" }, "Extra"));
       return title;
     }
@@ -468,13 +519,16 @@
 
     function tirage(forcees) {
       const mode = modeActif();
-      const pool = mode === "expliquer" ? (bank.expliquer || []) : reserve();
-      if (total) total.textContent = pool.length;
+      const recentOnly = uniquementRecent && uniquementRecent.checked;
+      const pool = mode === "expliquer"
+        ? (bank.expliquer || []).filter((item) => !recentOnly || item.recent)
+        : reserve();
+      if (total) total.textContent = pool.length + (pool.length > 1 ? " questions" : " question") + (recentOnly ? (pool.length > 1 ? " récentes" : " récente") : "");
       root.innerHTML = "";
       root.dataset.mode = mode;
       if (nouveau) nouveau.textContent = mode === "qcm" ? "Nouveau tirage" : "Recommencer à zéro";
       if (!pool.length) {
-        root.appendChild(el("p", { class: "note" }, "Pas encore de questions « Expliquer » pour cette matière."));
+        root.appendChild(el("p", { class: "note" }, "Pas encore de questions pour cette sélection."));
         return;
       }
       if (mode === "qcm") qcm(forcees || shuffle(pool).slice(0, Math.min(size, pool.length)));
@@ -486,6 +540,7 @@
       tirage();
     };
     if (avecExtra) avecExtra.onchange = () => tirage();
+    if (uniquementRecent) uniquementRecent.onchange = () => tirage();
     modes.forEach((input) => { input.onchange = () => tirage(); });
     tirage();
   }

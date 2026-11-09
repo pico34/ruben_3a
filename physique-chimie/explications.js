@@ -82,56 +82,67 @@ QUIZ.expliquer = [
   {
     q: "Décris le noyau atomique : dimension, constitution, masse.",
     reponse: "Le noyau atomique est la partie centrale de l’atome, autour de laquelle gravitent les électrons. Sa dimension a pour ordre de grandeur 10⁻¹⁵ m : le noyau est 100 000 fois plus petit que l’atome, qui mesure environ 10⁻¹⁰ m. Il est constitué de nucléons : les protons, chargés positivement, et les neutrons, électriquement neutres. Comme la masse des électrons est négligeable, plus de 99 % de la masse d’un atome est concentrée dans son noyau. Exemple : le noyau de lithium a 7 nucléons, 3 protons et 4 neutrons.",
-    cles: ["10⁻¹⁵ m", "100 000 fois plus petit", "nucléons", "protons", "neutrons", "99 %"]
+    cles: ["10⁻¹⁵ m", "100 000 fois plus petit", "nucléons", "protons", "neutrons", "99 %"],
+    recent: true
   },
   {
     q: "Que représentent Z, A et N ? Explique comment on calcule N à partir du symbole d’un noyau.",
     reponse: "Le numéro atomique Z est le nombre de protons présents dans le noyau d’un atome ; comme l’atome est neutre, c’est aussi son nombre d’électrons. Le nombre de masse A est le nombre de nucléons, protons et neutrons réunis. Le nombre de neutrons N est la différence : N = A − Z. Dans le symbole d’un noyau, A est écrit en haut à gauche et Z en bas à gauche. Pour le cuivre ⁶³₂₉Cu, on lit A = 63 et Z = 29, donc N = 63 − 29 = 34 neutrons.",
-    cles: ["nombre de protons", "nombre de nucléons", "N = A − Z", "en haut à gauche", "34 neutrons"]
+    cles: ["nombre de protons", "nombre de nucléons", "N = A − Z", "en haut à gauche", "34 neutrons"],
+    recent: true
   },
   {
     q: "Définis : élément chimique. Donne un exemple.",
     reponse: "Un élément chimique est l’ensemble des atomes, ions… qui ont le même nombre de protons dans leur noyau, c’est-à-dire le même numéro atomique Z. Par exemple, le métal cuivre Cu, l’ion cuivre Cu²⁺ et le cuivre de l’oxyde de cuivre CuO sont des espèces chimiques différentes qui contiennent toutes l’élément cuivre, Z = 29. Un élément chimique ne peut pas se transformer en un autre élément par une transformation chimique. Il existe plus d’une centaine d’éléments, répertoriés dans le tableau périodique des éléments.",
-    cles: ["même nombre de protons", "numéro atomique Z", "élément cuivre", "ne peut pas se transformer", "tableau périodique"]
+    cles: ["même nombre de protons", "numéro atomique Z", "élément cuivre", "ne peut pas se transformer", "tableau périodique"],
+    recent: true
   },
   {
     q: "Qu’est-ce que des isotopes ? Explique avec l’exemple du carbone, selon le manuel.",
     reponse: "Deux atomes sont isotopes s’ils ont le même numéro atomique Z mais des nombres de masse A différents : ils ont le même nombre de protons, donc appartiennent au même élément chimique, mais pas le même nombre de neutrons. Les isotopes d’un même élément ont souvent les mêmes propriétés chimiques mais des masses différentes. Exemple : le carbone 12, le carbone 13 et le carbone 14 ont tous 6 protons ; ils ont respectivement 6, 7 et 8 neutrons, puisque N = A − Z. Ce sont trois isotopes de l’élément carbone.",
-    cles: ["même numéro atomique Z", "nombres de masse A différents", "mêmes propriétés chimiques", "masses différentes", "6 protons"]
+    cles: ["même numéro atomique Z", "nombres de masse A différents", "mêmes propriétés chimiques", "masses différentes", "6 protons"],
+    recent: true
   },
   {
     q: "Pourquoi presque toute la masse d’un atome est-elle dans son noyau ?",
     reponse: "Un atome est formé d’un noyau et d’électrons qui gravitent autour. Le noyau contient les nucléons, protons et neutrons, qui sont très lourds par rapport aux électrons : la masse d’un électron est négligeable devant celle d’un nucléon. C’est pourquoi plus de 99 % de la masse d’un atome est concentrée dans son noyau, alors que le noyau est 100 000 fois plus petit que l’atome. C’est aussi pour cela que le nombre de nucléons A est appelé nombre de masse.",
-    cles: ["nucléons", "négligeable", "99 %", "concentrée dans son noyau", "nombre de masse"]
+    cles: ["nucléons", "négligeable", "99 %", "concentrée dans son noyau", "nombre de masse"],
+    recent: true
   },
   {
     q: "Définis : molécule. Comment la représente-t-on ?",
     reponse: "Une molécule est formée d’au moins deux atomes reliés ensemble par des liaisons chimiques. La matière est un assemblage d’atomes, mais la façon dont ils s’assemblent est très différente suivant le corps considéré. On représente une molécule par une formule et par un modèle moléculaire. Dans la formule, l’indice écrit en bas à droite d’un symbole donne le nombre d’atomes : la molécule de dioxyde de carbone CO₂ contient un atome de carbone et deux atomes d’oxygène.",
-    cles: ["au moins deux atomes", "liaisons chimiques", "formule", "modèle moléculaire"]
+    cles: ["au moins deux atomes", "liaisons chimiques", "formule", "modèle moléculaire"],
+    recent: true
   },
   {
     q: "Que deviennent les atomes au cours d’une réaction chimique ?",
     reponse: "Lors d’une réaction chimique, les atomes se réarrangent mais ne disparaissent pas. Les réactifs disparaissent et des produits se forment, mais ce sont les mêmes atomes, simplement reliés autrement. C’est pour cela que l’équation de réaction doit être équilibrée : les mêmes atomes figurent, en même nombre, dans les réactifs et dans les produits. Par exemple, dans C + O₂ → CO₂, on retrouve un atome de carbone et deux atomes d’oxygène de chaque côté de la flèche.",
-    cles: ["se réarrangent", "ne disparaissent pas", "réactifs", "produits", "équilibrée"]
+    cles: ["se réarrangent", "ne disparaissent pas", "réactifs", "produits", "équilibrée"],
+    recent: true
   },
   {
     q: "Explique pourquoi et comment on équilibre une équation de réaction.",
     reponse: "On équilibre une équation parce que les atomes se réarrangent sans disparaître : les mêmes atomes doivent figurer, en même nombre, dans les réactifs et dans les produits. Pour cela, on compte chaque sorte d’atome à gauche puis à droite de la flèche, et on ajuste les coefficients placés devant les formules. On ne change jamais les indices d’une formule, sinon on change de molécule. Exemple du cahier : C₅H₁₂ + 8 O₂ → 5 CO₂ + 6 H₂O, soit 5 C, 12 H et 16 O de chaque côté.",
-    cles: ["en même nombre", "on compte", "coefficients", "indices", "8 O₂"]
+    cles: ["en même nombre", "on compte", "coefficients", "indices", "8 O₂"],
+    recent: true
   },
   {
     q: "Énonce la conservation de la masse et explique-la.",
     reponse: "Lavoisier, en 1777, a résumé la conservation de la masse par la phrase « Rien ne se perd, rien ne se crée, tout se transforme ». Au cours d’une réaction chimique, la masse des réactifs disparus est égale à la masse des produits formés. En effet, les atomes se réarrangent mais ne disparaissent pas : ils sont tous encore là dans les produits, donc la masse totale ne change pas. Exemple : 12 g de carbone brûlés avec 32 g de dioxygène donnent 44 g de dioxyde de carbone.",
-    cles: ["Lavoisier", "Rien ne se perd, rien ne se crée, tout se transforme", "masse des réactifs disparus", "masse des produits formés", "44 g"]
+    cles: ["Lavoisier", "Rien ne se perd, rien ne se crée, tout se transforme", "masse des réactifs disparus", "masse des produits formés", "44 g"],
+    recent: true
   },
   {
     q: "Décris la combustion complète du carbone et écris son équation.",
     reponse: "Lors de la combustion complète du carbone dans le dioxygène, il se forme du dioxyde de carbone. Les réactifs sont le carbone C et le dioxygène O₂ ; le produit est le dioxyde de carbone CO₂. L’équation de réaction s’écrit C + O₂ → CO₂. Elle est équilibrée : on compte un atome de carbone et deux atomes d’oxygène dans les réactifs comme dans les produits. Les atomes se sont réarrangés sans disparaître, et la masse s’est conservée.",
-    cles: ["dioxygène", "dioxyde de carbone", "C + O₂ → CO₂", "équilibrée"]
+    cles: ["dioxygène", "dioxyde de carbone", "C + O₂ → CO₂", "équilibrée"],
+    recent: true
   },
   {
     q: "Explique la différence entre un réactif et un produit, et comment on écrit une réaction chimique.",
     reponse: "Une réaction chimique se modélise par la transformation chimique des réactifs en produits. Les réactifs sont les espèces chimiques qui disparaissent au cours de la réaction ; les produits sont celles qui se forment. On écrit les réactifs à gauche de la flèche et les produits à droite, séparés par des +. Par exemple, dans la combustion du pentane, C₅H₁₂ + 8 O₂ → 5 CO₂ + 6 H₂O, le pentane et le dioxygène sont les réactifs ; le dioxyde de carbone et l’eau sont les produits.",
-    cles: ["réactifs", "produits", "disparaissent", "se forment", "flèche"]
+    cles: ["réactifs", "produits", "disparaissent", "se forment", "flèche"],
+    recent: true
   }
 ];
